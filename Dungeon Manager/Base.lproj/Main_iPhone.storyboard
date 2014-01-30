@@ -16,10 +16,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="oM4-MH-iHW">
+                            <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="oM4-MH-iHW">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" red="0.19209929440000001" green="0.0" blue="0.52261844759999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.050151209677419352" green="0.0" blue="0.14021547379032259" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="b0X-HE-trB">
                                     <size key="itemSize" width="300" height="100"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -48,6 +48,7 @@
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <color key="backgroundColor" red="0.19209929440000001" green="0.0" blue="0.52261844759999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="campaignImageView" destination="CuC-zn-5rn" id="Hbi-Hf-tic"/>
                                             <outlet property="campaignLabel" destination="EXs-DG-T43" id="pPQ-6A-J5z"/>
@@ -56,22 +57,31 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kjW-50-9ea">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kjW-50-9ea">
                                 <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" red="0.4074155746" green="0.28002142140000003" blue="0.7238218246" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
                                     <barButtonItem title="New Campaign" width="290" style="plain" id="DRh-bW-sQt">
-                                        <color key="tintColor" red="0.19209929435483872" green="0.0" blue="0.52261844758064513" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="0.59986139112903225" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <action selector="createCampaign:" destination="vXZ-lx-hvc" id="4iw-hn-iYV"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
-                                <color key="barTintColor" red="0.25888356854838712" green="0.616242439516129" blue="0.58571698588709675" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="barTintColor" red="0.11706149193548387" green="0.25381174395161288" blue="0.33659904233870969" alpha="1" colorSpace="calibratedRGB"/>
                             </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="kjW-50-9ea" secondAttribute="bottom" id="696-Mo-slD"/>
+                            <constraint firstItem="kjW-50-9ea" firstAttribute="trailing" secondItem="oM4-MH-iHW" secondAttribute="trailing" id="Gun-zc-H0a"/>
+                            <constraint firstItem="oM4-MH-iHW" firstAttribute="leading" secondItem="kjW-50-9ea" secondAttribute="leading" id="aqm-x4-fn0"/>
+                            <constraint firstItem="oM4-MH-iHW" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="cs0-tp-Owx"/>
+                            <constraint firstItem="kjW-50-9ea" firstAttribute="top" secondItem="oM4-MH-iHW" secondAttribute="bottom" id="nYa-xp-VLB"/>
+                            <constraint firstAttribute="trailing" secondItem="kjW-50-9ea" secondAttribute="trailing" id="qPo-X6-TVl"/>
+                            <constraint firstItem="oM4-MH-iHW" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="uO9-OB-9j7"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="yQh-nf-QyX"/>
                     <connections>
@@ -93,7 +103,20 @@
                     <view key="view" contentMode="scaleToFill" id="gOe-UN-VPi">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tez-XV-yM4">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" red="0.4074155746" green="0.28002142140000003" blue="0.7238218246" alpha="1" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <barButtonItem title="&lt; Campaigns" width="290" style="plain" id="feS-nP-qNR">
+                                        <color key="tintColor" red="0.59986139110000003" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </barButtonItem>
+                                </items>
+                                <color key="barTintColor" red="0.11706149189999999" green="0.25381174400000001" blue="0.33659904229999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" red="0.050151209680000003" green="0.0" blue="0.14021547379999999" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="nCT-NM-Rw7"/>
                 </viewController>

@@ -10,7 +10,6 @@
 
 @interface InitialViewController ()
 
-@property (weak, nonatomic) IBOutlet UICollectionView *campaignCollection;
 @property (strong, nonatomic) NSMutableArray *campaignArray;
 
 @end
@@ -20,6 +19,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.campaignArray = [[NSMutableArray alloc] init];
+    self.navigationController.navigationBarHidden = YES;
+    
+    Campaign *newCampaign = [[Campaign alloc] init];
+    newCampaign.title = @"Untitled campaign";
+    [self.campaignArray addObject:newCampaign];
+
+    self.campaignCollection.dataSource = self;
+    self.campaignCollection.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning
@@ -30,7 +38,7 @@
 
 #pragma mark -Campaign Collection View
 
--(CampaignCell *) collectionView:(UICollectionView *)campaignCollection cellForItemAtIndexPath:path
+-(UICollectionViewCell *) collectionView:(UICollectionView *)campaignCollection cellForItemAtIndexPath:path
 {
     CampaignCell *cell = [self.campaignCollection dequeueReusableCellWithReuseIdentifier:@"campaignCell" forIndexPath:path];
     return cell;
@@ -48,6 +56,7 @@
     Campaign *newCampaign = [[Campaign alloc] init];
     newCampaign.title = @"Untitled campaign";
     [self.campaignArray addObject:newCampaign];
+    [self.campaignCollection reloadData];
 }
 
 //Sends campaign data to the new VC when you click on a cell, then segues

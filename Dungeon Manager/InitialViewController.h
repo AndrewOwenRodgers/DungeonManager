@@ -14,4 +14,6 @@
 @interface InitialViewController : UIViewController
 <UICollectionViewDataSource, UICollectionViewDelegate, NSCoding>
 
+@property (weak, nonatomic) IBOutlet UICollectionView *campaignCollection;
+
 @end
