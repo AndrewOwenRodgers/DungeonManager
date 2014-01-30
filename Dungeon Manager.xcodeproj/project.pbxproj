@@ -15,13 +15,16 @@
 		07F8BC74189AF2B200DA8806 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F8BC73189AF2B200DA8806 /* AppDelegate.m */; };
 		07F8BC77189AF2B200DA8806 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07F8BC75189AF2B200DA8806 /* Main_iPhone.storyboard */; };
 		07F8BC7A189AF2B200DA8806 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07F8BC78189AF2B200DA8806 /* Main_iPad.storyboard */; };
-		07F8BC7D189AF2B200DA8806 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F8BC7C189AF2B200DA8806 /* ViewController.m */; };
+		07F8BC7D189AF2B200DA8806 /* InitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F8BC7C189AF2B200DA8806 /* InitialViewController.m */; };
 		07F8BC7F189AF2B200DA8806 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07F8BC7E189AF2B200DA8806 /* Images.xcassets */; };
 		07F8BC86189AF2B200DA8806 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07F8BC85189AF2B200DA8806 /* XCTest.framework */; };
 		07F8BC87189AF2B200DA8806 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07F8BC63189AF2B200DA8806 /* Foundation.framework */; };
 		07F8BC88189AF2B200DA8806 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07F8BC67189AF2B200DA8806 /* UIKit.framework */; };
 		07F8BC90189AF2B200DA8806 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07F8BC8E189AF2B200DA8806 /* InfoPlist.strings */; };
 		07F8BC92189AF2B200DA8806 /* Dungeon_ManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F8BC91189AF2B200DA8806 /* Dungeon_ManagerTests.m */; };
+		07F8BC9D189AF82A00DA8806 /* CampaignVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F8BC9C189AF82A00DA8806 /* CampaignVC.m */; };
+		07F8BCA0189AF9D800DA8806 /* CampaignCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F8BC9F189AF9D800DA8806 /* CampaignCell.m */; };
+		07F8BCA3189AFA3300DA8806 /* Campaign.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F8BCA2189AFA3300DA8806 /* Campaign.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,14 +50,20 @@
 		07F8BC73189AF2B200DA8806 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		07F8BC76189AF2B200DA8806 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		07F8BC79189AF2B200DA8806 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		07F8BC7B189AF2B200DA8806 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		07F8BC7C189AF2B200DA8806 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		07F8BC7B189AF2B200DA8806 /* InitialViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InitialViewController.h; sourceTree = "<group>"; };
+		07F8BC7C189AF2B200DA8806 /* InitialViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InitialViewController.m; sourceTree = "<group>"; };
 		07F8BC7E189AF2B200DA8806 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		07F8BC84189AF2B200DA8806 /* Dungeon ManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dungeon ManagerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07F8BC85189AF2B200DA8806 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		07F8BC8D189AF2B200DA8806 /* Dungeon ManagerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Dungeon ManagerTests-Info.plist"; sourceTree = "<group>"; };
 		07F8BC8F189AF2B200DA8806 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		07F8BC91189AF2B200DA8806 /* Dungeon_ManagerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Dungeon_ManagerTests.m; sourceTree = "<group>"; };
+		07F8BC9B189AF82A00DA8806 /* CampaignVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CampaignVC.h; sourceTree = "<group>"; };
+		07F8BC9C189AF82A00DA8806 /* CampaignVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CampaignVC.m; sourceTree = "<group>"; };
+		07F8BC9E189AF9D800DA8806 /* CampaignCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CampaignCell.h; sourceTree = "<group>"; };
+		07F8BC9F189AF9D800DA8806 /* CampaignCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CampaignCell.m; sourceTree = "<group>"; };
+		07F8BCA1189AFA3300DA8806 /* Campaign.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Campaign.h; sourceTree = "<group>"; };
+		07F8BCA2189AFA3300DA8806 /* Campaign.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Campaign.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,8 +127,14 @@
 				07F8BC73189AF2B200DA8806 /* AppDelegate.m */,
 				07F8BC75189AF2B200DA8806 /* Main_iPhone.storyboard */,
 				07F8BC78189AF2B200DA8806 /* Main_iPad.storyboard */,
-				07F8BC7B189AF2B200DA8806 /* ViewController.h */,
-				07F8BC7C189AF2B200DA8806 /* ViewController.m */,
+				07F8BC7B189AF2B200DA8806 /* InitialViewController.h */,
+				07F8BC7C189AF2B200DA8806 /* InitialViewController.m */,
+				07F8BC9B189AF82A00DA8806 /* CampaignVC.h */,
+				07F8BC9C189AF82A00DA8806 /* CampaignVC.m */,
+				07F8BC9E189AF9D800DA8806 /* CampaignCell.h */,
+				07F8BC9F189AF9D800DA8806 /* CampaignCell.m */,
+				07F8BCA1189AFA3300DA8806 /* Campaign.h */,
+				07F8BCA2189AFA3300DA8806 /* Campaign.m */,
 				07F8BC7E189AF2B200DA8806 /* Images.xcassets */,
 				07F8BC6A189AF2B200DA8806 /* Supporting Files */,
 			);
@@ -253,7 +268,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07F8BC7D189AF2B200DA8806 /* ViewController.m in Sources */,
+				07F8BC9D189AF82A00DA8806 /* CampaignVC.m in Sources */,
+				07F8BCA3189AFA3300DA8806 /* Campaign.m in Sources */,
+				07F8BC7D189AF2B200DA8806 /* InitialViewController.m in Sources */,
+				07F8BCA0189AF9D800DA8806 /* CampaignCell.m in Sources */,
 				07F8BC74189AF2B200DA8806 /* AppDelegate.m in Sources */,
 				07F8BC70189AF2B200DA8806 /* main.m in Sources */,
 			);
