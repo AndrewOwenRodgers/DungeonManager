@@ -25,6 +25,7 @@
 		07F8BC9D189AF82A00DA8806 /* CampaignVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F8BC9C189AF82A00DA8806 /* CampaignVC.m */; };
 		07F8BCA0189AF9D800DA8806 /* CampaignCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F8BC9F189AF9D800DA8806 /* CampaignCell.m */; };
 		07F8BCA3189AFA3300DA8806 /* Campaign.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F8BCA2189AFA3300DA8806 /* Campaign.m */; };
+		07F8BCA7189C706400DA8806 /* CharacterCollectionVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F8BCA6189C706400DA8806 /* CharacterCollectionVCViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,8 @@
 		07F8BC9F189AF9D800DA8806 /* CampaignCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CampaignCell.m; sourceTree = "<group>"; };
 		07F8BCA1189AFA3300DA8806 /* Campaign.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Campaign.h; sourceTree = "<group>"; };
 		07F8BCA2189AFA3300DA8806 /* Campaign.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Campaign.m; sourceTree = "<group>"; };
+		07F8BCA5189C706300DA8806 /* CharacterCollectionVCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterCollectionVCViewController.h; sourceTree = "<group>"; };
+		07F8BCA6189C706400DA8806 /* CharacterCollectionVCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharacterCollectionVCViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +138,8 @@
 				07F8BC9F189AF9D800DA8806 /* CampaignCell.m */,
 				07F8BCA1189AFA3300DA8806 /* Campaign.h */,
 				07F8BCA2189AFA3300DA8806 /* Campaign.m */,
+				07F8BCA5189C706300DA8806 /* CharacterCollectionVCViewController.h */,
+				07F8BCA6189C706400DA8806 /* CharacterCollectionVCViewController.m */,
 				07F8BC7E189AF2B200DA8806 /* Images.xcassets */,
 				07F8BC6A189AF2B200DA8806 /* Supporting Files */,
 			);
@@ -271,6 +276,7 @@
 				07F8BC9D189AF82A00DA8806 /* CampaignVC.m in Sources */,
 				07F8BCA3189AFA3300DA8806 /* Campaign.m in Sources */,
 				07F8BC7D189AF2B200DA8806 /* InitialViewController.m in Sources */,
+				07F8BCA7189C706400DA8806 /* CharacterCollectionVCViewController.m in Sources */,
 				07F8BCA0189AF9D800DA8806 /* CampaignCell.m in Sources */,
 				07F8BC74189AF2B200DA8806 /* AppDelegate.m in Sources */,
 				07F8BC70189AF2B200DA8806 /* main.m in Sources */,
