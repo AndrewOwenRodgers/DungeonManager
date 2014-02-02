@@ -164,10 +164,10 @@
             </objects>
             <point key="canvasLocation" x="1191" y="25"/>
         </scene>
-        <!--View Controller-->
+        <!--Character CollectionVC View Controller-->
         <scene sceneID="c0z-Oq-vgw">
             <objects>
-                <viewController id="aUK-YM-iqV" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="characterVC" id="aUK-YM-iqV" customClass="CharacterCollectionVCViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0jR-GD-5J8"/>
                         <viewControllerLayoutGuide type="bottom" id="cRA-AG-1OV"/>
@@ -223,10 +223,12 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" red="0.4074155746" green="0.28002142140000003" blue="0.7238218246" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
-                                    <barButtonItem title="New Character" width="290" style="plain" id="UAF-2i-ec1">
+                                    <barButtonItem title="New Character" width="190" style="plain" id="UAF-2i-ec1">
                                         <color key="tintColor" red="0.59986139110000003" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </barButtonItem>
+                                    <barButtonItem title="&lt; Menu" width="80" id="w97-nD-DIG"/>
                                 </items>
+                                <color key="tintColor" red="0.59986139110000003" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="barTintColor" red="0.11706149189999999" green="0.25381174400000001" blue="0.33659904229999998" alpha="1" colorSpace="calibratedRGB"/>
                             </toolbar>
                         </subviews>
