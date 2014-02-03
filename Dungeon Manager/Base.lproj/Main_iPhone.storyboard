@@ -251,6 +251,11 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <color key="backgroundColor" red="0.19209929440000001" green="0.0" blue="0.52261844759999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="characterAvatar" destination="q78-au-1TJ" id="QWV-6g-Muk"/>
+                                            <outlet property="characterName" destination="ptL-yy-qgx" id="Obr-1b-ZJo"/>
+                                            <outlet property="levelAndClass" destination="jE7-MR-Ije" id="reK-wU-KCL"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -280,6 +285,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="hh7-WP-VWH"/>
+                    <connections>
+                        <outlet property="characterCollection" destination="91A-QB-r9E" id="1tm-E0-eXA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NME-tV-C9z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

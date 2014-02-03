@@ -12,5 +12,6 @@
 
 @property (strong, nonatomic) NSArray *characters;
 @property (nonatomic) BOOL isPCVC;
+@property (weak, nonatomic) IBOutlet UICollectionView *characterCollection;
 
 @end

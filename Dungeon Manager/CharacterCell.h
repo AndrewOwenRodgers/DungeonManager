@@ -10,4 +10,8 @@
 
 @interface CharacterCell : UICollectionViewCell
 
+@property (weak, nonatomic) IBOutlet UIImageView *characterAvatar;
+@property (weak, nonatomic) IBOutlet UILabel *characterName;
+@property (weak, nonatomic) IBOutlet UILabel *levelAndClass;
+
 @end
