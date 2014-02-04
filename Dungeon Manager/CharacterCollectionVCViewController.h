@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CharacterCell.h"
+#import "GameCharacter.h"
 
 @interface CharacterCollectionVCViewController : UIViewController
+<UICollectionViewDelegate, UICollectionViewDataSource>
 
-@property (strong, nonatomic) NSArray *characters;
+@property (strong, nonatomic) NSMutableArray *characters;
 @property (nonatomic) BOOL isPCVC;
 @property (weak, nonatomic) IBOutlet UICollectionView *characterCollection;
 

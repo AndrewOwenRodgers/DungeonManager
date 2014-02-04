@@ -21,10 +21,6 @@
     [super viewDidLoad];
     self.campaignArray = [[NSMutableArray alloc] init];
     self.navigationController.navigationBarHidden = YES;
-    
-    Campaign *newCampaign = [[Campaign alloc] init];
-    newCampaign.title = @"Untitled campaign";
-    [self.campaignArray addObject:newCampaign];
 
     self.campaignCollection.dataSource = self;
     self.campaignCollection.delegate = self;
@@ -38,9 +34,21 @@
 
 #pragma mark -Campaign Collection View
 
--(UICollectionViewCell *) collectionView:(UICollectionView *)campaignCollection cellForItemAtIndexPath:path
+-(UICollectionViewCell *) collectionView:(UICollectionView *)campaignCollection cellForItemAtIndexPath:indexPath
 {
-    CampaignCell *cell = [self.campaignCollection dequeueReusableCellWithReuseIdentifier:@"campaignCell" forIndexPath:path];
+    CampaignCell *cell = [self.campaignCollection dequeueReusableCellWithReuseIdentifier:@"campaignCell" forIndexPath:indexPath];
+    Campaign *campaign = [self.campaignArray objectAtIndex:[indexPath row]];
+    cell.campaignLabel.text = campaign.title;
+    
+    if (campaign.imagePath)
+    {
+        cell.campaignImageView.image = [UIImage imageWithContentsOfFile:campaign.imagePath];
+    }
+    else
+    {
+        cell.campaignImageView.image = nil;
+    }
+    
     return cell;
 }
 

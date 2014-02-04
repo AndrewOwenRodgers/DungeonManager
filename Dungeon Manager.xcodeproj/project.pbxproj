@@ -27,6 +27,7 @@
 		07F8BCA3189AFA3300DA8806 /* Campaign.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F8BCA2189AFA3300DA8806 /* Campaign.m */; };
 		07F8BCA7189C706400DA8806 /* CharacterCollectionVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F8BCA6189C706400DA8806 /* CharacterCollectionVCViewController.m */; };
 		07F8BCAA189E191A00DA8806 /* CharacterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F8BCA9189E191A00DA8806 /* CharacterCell.m */; };
+		07F8BCAD18A0AD1E00DA8806 /* GameCharacter.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F8BCAC18A0AD1E00DA8806 /* GameCharacter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,8 @@
 		07F8BCA6189C706400DA8806 /* CharacterCollectionVCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharacterCollectionVCViewController.m; sourceTree = "<group>"; };
 		07F8BCA8189E191A00DA8806 /* CharacterCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterCell.h; sourceTree = "<group>"; };
 		07F8BCA9189E191A00DA8806 /* CharacterCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharacterCell.m; sourceTree = "<group>"; };
+		07F8BCAB18A0AD1E00DA8806 /* GameCharacter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameCharacter.h; sourceTree = "<group>"; };
+		07F8BCAC18A0AD1E00DA8806 /* GameCharacter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameCharacter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +148,8 @@
 				07F8BCA6189C706400DA8806 /* CharacterCollectionVCViewController.m */,
 				07F8BCA8189E191A00DA8806 /* CharacterCell.h */,
 				07F8BCA9189E191A00DA8806 /* CharacterCell.m */,
+				07F8BCAB18A0AD1E00DA8806 /* GameCharacter.h */,
+				07F8BCAC18A0AD1E00DA8806 /* GameCharacter.m */,
 				07F8BC7E189AF2B200DA8806 /* Images.xcassets */,
 				07F8BC6A189AF2B200DA8806 /* Supporting Files */,
 			);
@@ -278,6 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07F8BCAD18A0AD1E00DA8806 /* GameCharacter.m in Sources */,
 				07F8BC9D189AF82A00DA8806 /* CampaignVC.m in Sources */,
 				07F8BCA3189AFA3300DA8806 /* Campaign.m in Sources */,
 				07F8BC7D189AF2B200DA8806 /* InitialViewController.m in Sources */,
@@ -504,6 +510,7 @@
 				07F8BC97189AF2B200DA8806 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		07F8BC98189AF2B200DA8806 /* Build configuration list for PBXNativeTarget "Dungeon ManagerTests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +519,7 @@
 				07F8BC9A189AF2B200DA8806 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
