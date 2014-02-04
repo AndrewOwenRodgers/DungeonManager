@@ -10,4 +10,10 @@
 
 @interface GameCharacter : NSObject
 
+@property (nonatomic) NSString *characterName;
+@property (nonatomic) NSString *primaryClass;
+@property (nonatomic) NSString *avatarPath;
+@property (nonatomic) int totalLevel;
+@property (nonatomic) BOOL isNPC;
+
 @end

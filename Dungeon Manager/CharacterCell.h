@@ -7,11 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GameCharacter.h"
 
 @interface CharacterCell : UICollectionViewCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *characterAvatar;
 @property (weak, nonatomic) IBOutlet UILabel *characterName;
 @property (weak, nonatomic) IBOutlet UILabel *levelAndClass;
+@property (weak, nonatomic) GameCharacter *cellCharacter;
+
+-(void)initializeDisplay;
 
 @end

@@ -19,4 +19,19 @@
     return self;
 }
 
+- (void) initializeDisplay
+{
+    self.characterName.text = self.cellCharacter.characterName;
+    self.levelAndClass.text = [NSString stringWithFormat:@"Level %i %@", self.cellCharacter.totalLevel, self.cellCharacter.primaryClass];
+    
+    if (self.cellCharacter.avatarPath)
+    {
+        self.characterAvatar.image = [UIImage imageWithContentsOfFile:self.cellCharacter.avatarPath];
+    }
+    else
+    {
+        self.characterAvatar.image = nil;
+    }
+}
+
 @end

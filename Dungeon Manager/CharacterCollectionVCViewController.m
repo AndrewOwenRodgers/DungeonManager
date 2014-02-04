@@ -34,12 +34,21 @@
 {
     GameCharacter *character = [[GameCharacter alloc] init];
     [self.characters addObject:character];
+    
+    character.characterName = @"Some dude";
+    character.primaryClass = @"Person";
+    character.totalLevel = 1;
+    
     [self.characterCollection reloadData];
 }
 
 -(UICollectionViewCell *) collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)path
 {
     CharacterCell *cell = [self.characterCollection dequeueReusableCellWithReuseIdentifier:@"characterCell" forIndexPath:path];
+    cell.cellCharacter = [self.characters objectAtIndex:[path row]];
+    
+    [cell initializeDisplay];
+    
     return cell;
 }
 
