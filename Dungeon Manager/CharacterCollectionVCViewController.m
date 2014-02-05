@@ -21,6 +21,12 @@
     
     self.characterCollection.dataSource = self;
     self.characterCollection.delegate = self;
+    
+    NSFileManager *fm = [[NSFileManager alloc] init];
+    if ([fm fileExistsAtPath:self.filePath])
+    {
+        self.characters = [NSKeyedUnarchiver unarchiveObjectWithFile:self.filePath];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -50,6 +56,9 @@
     
     character.primaryClass = @"Person";
     character.totalLevel = 1;
+    
+    [NSKeyedArchiver archiveRootObject:self.characters
+                                toFile:self.filePath];
     
     [self.characterCollection reloadData];
 }

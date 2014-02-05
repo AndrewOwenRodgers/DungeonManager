@@ -15,6 +15,5 @@
 @property (nonatomic) NSString *primaryClass;
 @property (nonatomic) NSString *avatarPath;
 @property (nonatomic) int totalLevel;
-@property (nonatomic) BOOL isNPC;
 
 @end

@@ -42,7 +42,8 @@
 
 -(UICollectionViewCell *) collectionView:(UICollectionView *)campaignCollection cellForItemAtIndexPath:indexPath
 {
-    CampaignCell *cell = [self.campaignCollection dequeueReusableCellWithReuseIdentifier:@"campaignCell" forIndexPath:indexPath];
+    CampaignCell *cell = [self.campaignCollection dequeueReusableCellWithReuseIdentifier:@"campaignCell"
+                                                                            forIndexPath:indexPath];
     Campaign *campaign = [self.campaignArray objectAtIndex:[indexPath row]];
     cell.campaignLabel.text = campaign.title;
     
@@ -97,6 +98,7 @@
     {
         CampaignVC *destinationVC = segue.destinationViewController;
         destinationVC.campaign = self.campaignArray[itemNumber];
+        destinationVC.campaignFilePath = self.campaignFilePath;
     }
 }
 

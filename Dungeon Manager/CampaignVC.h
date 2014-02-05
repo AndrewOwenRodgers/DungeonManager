@@ -12,5 +12,6 @@
 @interface CampaignVC : UIViewController
 
 @property (weak, nonatomic) Campaign *campaign;
+@property (weak, nonatomic) NSString *campaignFilePath;
 
 @end

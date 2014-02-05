@@ -7,6 +7,7 @@
 //
 
 #import "CampaignVC.h"
+#import "CharacterCollectionVCViewController.h"
 
 @interface CampaignVC ()
 
@@ -22,6 +23,20 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+}
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"NPCSegue"])
+    {
+        CharacterCollectionVCViewController *dest = (CharacterCollectionVCViewController *) segue.destinationViewController;
+        dest.filePath = [NSString stringWithFormat:@"%@NPC", self.campaignFilePath];
+    }
+    else if ([segue.identifier isEqualToString:@"characterSegue"])
+    {
+        CharacterCollectionVCViewController *dest = (CharacterCollectionVCViewController *) segue.destinationViewController;
+        dest.filePath = [NSString stringWithFormat:@"%@Characters", self.campaignFilePath];
+    }
 }
 
 @end
