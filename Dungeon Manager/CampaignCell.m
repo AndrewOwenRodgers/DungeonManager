@@ -10,4 +10,9 @@
 
 @implementation CampaignCell
 
+- (IBAction)deleteButton:(id)sender
+{
+    [self.delegate deleteCampaign:self.campaignNumber];
+}
+
 @end

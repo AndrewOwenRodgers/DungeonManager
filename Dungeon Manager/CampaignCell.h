@@ -8,10 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol CampaignDeletion <NSObject>
+
+-(void) deleteCampaign:(int)campaignNumber;
+
+@end
+
 @interface CampaignCell : UICollectionViewCell
 
+@property (unsafe_unretained) id <CampaignDeletion> delegate;
 @property (weak, nonatomic) IBOutlet UILabel *campaignLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *campaignImageView;
-@property (weak, nonatomic) IBOutlet UIButton *deleteButton;
+@property int campaignNumber;
 
 @end

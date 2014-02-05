@@ -30,6 +30,11 @@
     self.campaignFilePath = [NSString stringWithFormat:@"%@/campaigns", [getDocumentsDirectory docs]];
     
     self.campaignArray = [NSKeyedUnarchiver unarchiveObjectWithFile:self.campaignFilePath];
+    
+    if (!self.campaignArray)
+    {
+        self.campaignArray = [[NSMutableArray alloc] init];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -45,7 +50,9 @@
     CampaignCell *cell = [self.campaignCollection dequeueReusableCellWithReuseIdentifier:@"campaignCell"
                                                                             forIndexPath:indexPath];
     Campaign *campaign = [self.campaignArray objectAtIndex:[indexPath row]];
+    cell.campaignNumber = [indexPath row];
     cell.campaignLabel.text = campaign.title;
+    cell.delegate = self;
     
     if (campaign.imagePath)
     {

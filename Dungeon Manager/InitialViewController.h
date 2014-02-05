@@ -12,7 +12,7 @@
 #import "CampaignVC.h"
 
 @interface InitialViewController : UIViewController
-<UICollectionViewDataSource, UICollectionViewDelegate, NSCoding>
+<UICollectionViewDataSource, UICollectionViewDelegate, NSCoding, CampaignDeletion>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *campaignCollection;
 
