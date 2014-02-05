@@ -116,7 +116,7 @@
     
     NSFileManager *fileManager = [NSFileManager defaultManager];
     NSArray *filesInDocs = [fileManager contentsOfDirectoryAtPath:[getDocumentsDirectory docs]
-                                     error:nil];
+                                                            error:nil];
     
     for (NSString *path in filesInDocs)
     {
@@ -127,6 +127,7 @@
     }
     
     [self.campaignCollection reloadData];
+    [NSKeyedArchiver archiveRootObject:self.campaignArray toFile:self.campaignFilePath];
 }
 
 @end

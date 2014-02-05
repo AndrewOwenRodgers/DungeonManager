@@ -34,7 +34,7 @@
     [super didReceiveMemoryWarning];
 }
 
-#pragma mark -Collection view management
+#pragma mark -Character array handling
 
 - (IBAction)newCharacter:(id)sender
 {
@@ -63,10 +63,21 @@
     [self.characterCollection reloadData];
 }
 
+-(void)deleteCharacter: (int)characterNumber
+{
+    [self.characters removeObjectAtIndex:characterNumber];
+    
+    [self.characterCollection reloadData];
+    [NSKeyedArchiver archiveRootObject:self.characters toFile:self.filePath];
+}
+
+#pragma mark -Collection view management
+
 -(UICollectionViewCell *) collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)path
 {
     CharacterCell *cell = [self.characterCollection dequeueReusableCellWithReuseIdentifier:@"characterCell" forIndexPath:path];
     cell.cellCharacter = [self.characters objectAtIndex:[path row]];
+    cell.delegate = self;
     
     [cell initializeDisplay];
     

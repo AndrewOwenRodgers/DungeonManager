@@ -11,11 +11,13 @@
 #import "GameCharacter.h"
 
 @interface CharacterCollectionVCViewController : UIViewController
-<UICollectionViewDelegate, UICollectionViewDataSource, NSCoding>
+<UICollectionViewDelegate, UICollectionViewDataSource, NSCoding, CharacterDeletion>
 
 @property (strong, nonatomic) NSMutableArray *characters;
 @property (nonatomic) BOOL isPCVC;
 @property (weak, nonatomic) IBOutlet UICollectionView *characterCollection;
 @property (strong, nonatomic) NSString *filePath;
+
+-(void)deleteCharacter:(int)characterNumber;
 
 @end

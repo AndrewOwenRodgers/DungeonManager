@@ -34,4 +34,9 @@
     }
 }
 
+- (IBAction)deleteButton:(id)sender
+{
+    [self.delegate deleteCharacter:self.characterIndex];
+}
+
 @end
