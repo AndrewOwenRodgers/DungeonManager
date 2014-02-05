@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface GameCharacter : NSObject
+<NSCoding>;
 
 @property (nonatomic) NSString *characterName;
 @property (nonatomic) NSString *primaryClass;

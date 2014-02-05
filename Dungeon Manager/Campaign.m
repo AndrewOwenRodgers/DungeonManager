@@ -10,4 +10,19 @@
 
 @implementation Campaign
 
+-(id)initWithCoder:(NSCoder *)decoder
+{
+    self = [super init];
+    return self;
+    self.title = [decoder decodeObjectForKey:@"title"];
+    self.imagePath = [decoder decodeObjectForKey:@"imagePath"];
+     
+}
+
+-(void)encodeWithCoder:(NSCoder *)coder
+{
+    [coder encodeObject:self.title forKey:@"title"];
+    [coder encodeObject:self.imagePath forKey:@"imagePath"];
+}
+
 @end

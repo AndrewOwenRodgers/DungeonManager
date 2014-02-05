@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface Campaign : NSObject
+<NSCoding>;
 
 @property (strong, nonatomic) NSString *title;
 @property (strong, nonatomic) NSString *imagePath;

@@ -44,6 +44,7 @@
     {
         cell.campaignImageView.image = [UIImage imageWithContentsOfFile:campaign.imagePath];
     }
+    
     else
     {
         cell.campaignImageView.image = nil;

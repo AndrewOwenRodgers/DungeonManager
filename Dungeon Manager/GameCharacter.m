@@ -96,6 +96,7 @@
     self.characterName = [decoder decodeObjectForKey:@"characterName"];
     self.primaryClass = [decoder decodeObjectForKey:@"primaryClass"];
     self.totalLevel = [decoder decodeIntForKey:@"totalLevel"];
+    self.avatarPath = [decoder decodeObjectForKey:@"avatarPath"];
     
     return self;
 }
@@ -141,6 +142,7 @@
     [encoder encodeObject:self.characterName forKey:@"characterName"];
     [encoder encodeObject:self.primaryClass forKey:@"primaryClass"];
     [encoder encodeInt:self.totalLevel forKey:@"totalLevel"];
+    [encoder encodeObject:self.avatarPath forKey:@"avatarPath"];
 }
 
 @end
