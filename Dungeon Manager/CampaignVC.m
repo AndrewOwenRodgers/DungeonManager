@@ -30,12 +30,12 @@
     if ([segue.identifier isEqualToString:@"NPCSegue"])
     {
         CharacterCollectionVCViewController *dest = (CharacterCollectionVCViewController *) segue.destinationViewController;
-        dest.filePath = [NSString stringWithFormat:@"%@NPC", self.campaignFilePath];
+        dest.filePath = [NSString stringWithFormat:@"%@%@NPCs", self.campaignFilePath, self.campaign.title];
     }
     else if ([segue.identifier isEqualToString:@"characterSegue"])
     {
         CharacterCollectionVCViewController *dest = (CharacterCollectionVCViewController *) segue.destinationViewController;
-        dest.filePath = [NSString stringWithFormat:@"%@Characters", self.campaignFilePath];
+        dest.filePath = [NSString stringWithFormat:@"%@%@Characters", self.campaignFilePath, self.campaign.title];
     }
 }
 
