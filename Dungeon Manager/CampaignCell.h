@@ -12,5 +12,6 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *campaignLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *campaignImageView;
+@property (weak, nonatomic) IBOutlet UIButton *deleteButton;
 
 @end

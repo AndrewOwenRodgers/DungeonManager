@@ -16,4 +16,6 @@
 
 @property (weak, nonatomic) IBOutlet UICollectionView *campaignCollection;
 
+-(void)deleteCampaign: (int)campaignNumber;
+
 @end

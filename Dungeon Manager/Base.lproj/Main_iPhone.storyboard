@@ -52,6 +52,9 @@
                                                         <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="deleteButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="SHu-YP-aM8"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -60,6 +63,7 @@
                                         <connections>
                                             <outlet property="campaignImageView" destination="CuC-zn-5rn" id="Hbi-Hf-tic"/>
                                             <outlet property="campaignLabel" destination="EXs-DG-T43" id="pPQ-6A-J5z"/>
+                                            <outlet property="deleteButton" destination="7dJ-2o-O7G" id="cXC-KN-4xc"/>
                                             <segue destination="Om5-Q0-7yp" kind="push" identifier="campaignSegue" id="moj-uk-gs3"/>
                                         </connections>
                                     </collectionViewCell>

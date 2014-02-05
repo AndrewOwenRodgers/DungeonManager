@@ -51,7 +51,6 @@
     {
         cell.campaignImageView.image = [UIImage imageWithContentsOfFile:campaign.imagePath];
     }
-    
     else
     {
         cell.campaignImageView.image = nil;
@@ -100,6 +99,27 @@
         destinationVC.campaign = self.campaignArray[itemNumber];
         destinationVC.campaignFilePath = self.campaignFilePath;
     }
+}
+
+-(void)deleteCampaign: (int)campaignNumber
+{
+    Campaign *deletedCampaign = [self.campaignArray objectAtIndex:campaignNumber];
+    [self.campaignArray removeObjectAtIndex:campaignNumber];
+    NSString *searchString = deletedCampaign.title;
+    
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSArray *filesInDocs = [fileManager contentsOfDirectoryAtPath:[getDocumentsDirectory docs]
+                                     error:nil];
+    
+    for (NSString *path in filesInDocs)
+    {
+        if (!([path rangeOfString:searchString].location == NSNotFound))
+        {
+            [fileManager removeItemAtPath:path error:nil];
+        }
+    }
+    
+    [self.campaignCollection reloadData];
 }
 
 @end
