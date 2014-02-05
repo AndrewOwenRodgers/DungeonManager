@@ -13,10 +13,11 @@
 -(id)initWithCoder:(NSCoder *)decoder
 {
     self = [super init];
-    return self;
+    
     self.title = [decoder decodeObjectForKey:@"title"];
     self.imagePath = [decoder decodeObjectForKey:@"imagePath"];
-     
+    
+    return self;
 }
 
 -(void)encodeWithCoder:(NSCoder *)coder

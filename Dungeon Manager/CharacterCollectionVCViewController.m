@@ -34,8 +34,20 @@
 {
     GameCharacter *character = [[GameCharacter alloc] init];
     [self.characters addObject:character];
+
+    int matchingTitleCounter = 1;
     
-    character.characterName = @"Some dude";
+    for (GameCharacter *comparisonCharacter in self.characters)
+    {
+        if ([comparisonCharacter.characterName isEqualToString:[NSString stringWithFormat:@"Unnamed %i", matchingTitleCounter]])
+        {
+            matchingTitleCounter++;
+        }
+        else break;
+    }
+    
+    character.characterName = [NSString stringWithFormat:@"Unnamed %i", matchingTitleCounter];
+    
     character.primaryClass = @"Person";
     character.totalLevel = 1;
     

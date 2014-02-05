@@ -7,10 +7,12 @@
 //
 
 #import "InitialViewController.h"
+#import "getDocumentsDirectory.h"
 
 @interface InitialViewController ()
 
 @property (strong, nonatomic) NSMutableArray *campaignArray;
+@property (strong, nonatomic) NSString *campaignFilePath;
 
 @end
 
@@ -24,6 +26,10 @@
 
     self.campaignCollection.dataSource = self;
     self.campaignCollection.delegate = self;
+    
+    self.campaignFilePath = [NSString stringWithFormat:@"%@/campaigns", [getDocumentsDirectory docs]];
+    
+    self.campaignArray = [NSKeyedUnarchiver unarchiveObjectWithFile:self.campaignFilePath];
 }
 
 - (void)didReceiveMemoryWarning
@@ -63,9 +69,23 @@
 - (IBAction)createCampaign:(id)sender
 {
     Campaign *newCampaign = [[Campaign alloc] init];
-    newCampaign.title = @"Untitled campaign";
+    int matchingTitleCounter = 1;
+    
+    for (Campaign *campaign in self.campaignArray)
+    {
+        if ([campaign.title isEqualToString:[NSString stringWithFormat:@"Unnamed %i", matchingTitleCounter]])
+        {
+            matchingTitleCounter++;
+        }
+        else break;
+    }
+    
+    newCampaign.title = [NSString stringWithFormat:@"Unnamed %i", matchingTitleCounter];
+    
     [self.campaignArray addObject:newCampaign];
     [self.campaignCollection reloadData];
+    
+    [NSKeyedArchiver archiveRootObject:self.campaignArray toFile:self.campaignFilePath];
 }
 
 //Sends campaign data to the new VC when you click on a cell, then segues
