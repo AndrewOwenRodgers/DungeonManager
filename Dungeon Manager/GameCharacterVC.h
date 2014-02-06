@@ -16,7 +16,7 @@
 @end
 
 @interface GameCharacterVC : UIViewController
-<UITextFieldDelegate>
+<UITextFieldDelegate, UITextViewDelegate>
 
 @property (unsafe_unretained) id <CharacterSaving> delegate;
 @property (weak, nonatomic) GameCharacter *character;

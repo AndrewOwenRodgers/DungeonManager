@@ -21,7 +21,7 @@
         return nil;
     }
     
-    self.bio.text = [decoder decodeObjectForKey:@"biotext"];
+    self.bio = [decoder decodeObjectForKey:@"biotext"];
     self.race = [decoder decodeObjectForKey:@"race"];
     self.gender = [decoder decodeObjectForKey:@"gender"];
     self.homeland = [decoder decodeObjectForKey:@"homeland"];
@@ -55,19 +55,20 @@
     self.inventoryWeights = [decoder decodeObjectForKey:@"inventoryWeights"];
     self.inventoryTotalWeight = [decoder decodeIntForKey:@"inventoryTotalWeight"];
     self.xp = [decoder decodeIntForKey:@"xp"];
-    self.otherAbilitiesAndWounds.text = [decoder decodeObjectForKey:@"otherAbilitiesAndWounds"];
+    self.otherAbilitiesAndWounds = [decoder decodeObjectForKey:@"otherAbilitiesAndWounds"];
     
     self.characterName = [decoder decodeObjectForKey:@"characterName"];
     self.primaryClass = [decoder decodeObjectForKey:@"primaryClass"];
     self.totalLevel = [decoder decodeIntForKey:@"totalLevel"];
     self.avatarPath = [decoder decodeObjectForKey:@"avatarPath"];
+    self.skinColor = [decoder decodeObjectForKey:@"skinColor"];
     
     return self;
 }
 
 -(void)encodeWithCoder:(NSCoder *)encoder
 {
-    [encoder encodeObject:self.bio.text forKey:@"biotext"];
+    [encoder encodeObject:self.bio forKey:@"biotext"];
     [encoder encodeObject:self.race forKey:@"race"];
     [encoder encodeObject:self.gender forKey:@"gender"];
     [encoder encodeObject:self.homeland forKey:@"homeland"];
@@ -101,12 +102,13 @@
     [encoder encodeObject:self.inventoryWeights forKey:@"inventoryWeights"];
     [encoder encodeInt:self.inventoryTotalWeight forKey:@"inventoryTotalWeight"];
     [encoder encodeInt:self.xp forKey:@"xp"];
-    [encoder encodeObject:self.otherAbilitiesAndWounds.text forKey:@"otherAbilitiesAndWounds"];
+    [encoder encodeObject:self.otherAbilitiesAndWounds forKey:@"otherAbilitiesAndWounds"];
     
     [encoder encodeObject:self.characterName forKey:@"characterName"];
     [encoder encodeObject:self.primaryClass forKey:@"primaryClass"];
     [encoder encodeInt:self.totalLevel forKey:@"totalLevel"];
     [encoder encodeObject:self.avatarPath forKey:@"avatarPath"];
+    [encoder encodeObject:self.skinColor forKey:@"skinColor"];
 }
 
 @end
