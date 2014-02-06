@@ -118,7 +118,6 @@
         NSString *completePath = [[[getDocumentsDirectory docs] stringByAppendingString:@"/"] stringByAppendingString:path];
         if (!([completePath rangeOfString:searchString].location == NSNotFound))
         {
-            NSLog(@"%@", completePath);
             [fileManager removeItemAtPath:completePath error:nil];
         }
     }
