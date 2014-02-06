@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "GameCharacter.h"
+#import <SwipeView.h>
 
 @protocol CharacterSaving <NSObject>
 
@@ -16,9 +17,13 @@
 @end
 
 @interface GameCharacterVC : UIViewController
-<UITextFieldDelegate, UITextViewDelegate>
+<UITextFieldDelegate, UITextViewDelegate, SwipeViewDataSource, SwipeViewDelegate>
+
+
+@property (weak, nonatomic) IBOutlet SwipeView *formView;
 
 @property (unsafe_unretained) id <CharacterSaving> delegate;
 @property (weak, nonatomic) GameCharacter *character;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @end

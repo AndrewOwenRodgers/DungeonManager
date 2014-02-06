@@ -69,6 +69,8 @@
         self.character.race = textField.text;
     }
     
+    // [textField.text intValue]
+    
     [self.delegate saveCharacters];
 }
 
@@ -82,6 +84,39 @@
 {
     self.character.bio = textView.text;
     [self.delegate saveCharacters];
+}
+
+#pragma mark -Swipe View Methods
+
+- (IBAction)showNextView:(id)sender
+{
+    NSInteger nextIndex = [_formView currentItemIndex] +1;
+    [_formView scrollToItemAtIndex:nextIndex duration:0.4];
+}
+
+- (IBAction)showPreviousView:(id)sender
+{
+    NSInteger nextIndex = [_formView currentItemIndex] -1;
+    [_formView scrollToItemAtIndex:nextIndex duration:0.4];
+}
+
+- (NSInteger)numberOfItemsInSwipeView:(SwipeView *)swipeView
+{
+    return 8;
+}
+
+- (UIView *)swipeView:(SwipeView *)swipeView viewForItemAtIndex:(NSInteger)index reusingView:(UIView *)view
+{
+    if (index == 2)
+    {
+        return self.scrollView;
+    }
+    UIView *stuff = [[UIView alloc] initWithFrame:swipeView.frame];
+    stuff.backgroundColor = [UIColor redColor];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(100, 150, 120, 120)];
+    label.text = [NSString stringWithFormat:@"view number %d", index];
+    [stuff addSubview:label];
+    return stuff;
 }
 
 @end
