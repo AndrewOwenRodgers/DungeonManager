@@ -78,6 +78,7 @@
     CharacterCell *cell = [self.characterCollection dequeueReusableCellWithReuseIdentifier:@"characterCell" forIndexPath:path];
     cell.cellCharacter = [self.characters objectAtIndex:[path row]];
     cell.delegate = self;
+    cell.characterIndex = [path row];
     
     [cell initializeDisplay];
     

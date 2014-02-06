@@ -84,7 +84,6 @@
         {
             matchingTitleCounter++;
         }
-        else break;
     }
     
     newCampaign.title = [NSString stringWithFormat:@"Unnamed %i", matchingTitleCounter];
