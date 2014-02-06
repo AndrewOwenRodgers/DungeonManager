@@ -103,20 +103,6 @@
     [self saveCampaigns];
 }
 
-//Sends campaign data to the new VC when you click on a cell, then segues
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    NSInteger itemNumber = [self.campaignCollection indexPathForCell:sender].row;
-    
-    if ([segue.identifier isEqualToString: @"campaignSegue"])
-    {
-        CampaignVC *destinationVC = segue.destinationViewController;
-        destinationVC.delegate = self;
-        destinationVC.campaign = self.campaignArray[itemNumber];
-        destinationVC.campaignFilePath = self.campaignFilePath;
-    }
-}
-
 -(void)deleteCampaign: (int)campaignNumber
 {
     Campaign *deletedCampaign = [self.campaignArray objectAtIndex:campaignNumber];
@@ -143,6 +129,21 @@
 -(void) saveCampaigns
 {
     [NSKeyedArchiver archiveRootObject:self.campaignArray toFile:self.campaignFilePath];
+}
+
+#pragma mark -Transition Handling
+//Sends campaign data to the new VC when you click on a cell, then segues
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    NSInteger itemNumber = [self.campaignCollection indexPathForCell:sender].row;
+    
+    if ([segue.identifier isEqualToString: @"campaignSegue"])
+    {
+        CampaignVC *destinationVC = segue.destinationViewController;
+        destinationVC.delegate = self;
+        destinationVC.campaign = self.campaignArray[itemNumber];
+        destinationVC.campaignFilePath = self.campaignFilePath;
+    }
 }
 
 @end

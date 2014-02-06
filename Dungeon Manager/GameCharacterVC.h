@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GameCharacter.h"
 
 @interface GameCharacterVC : UIViewController
+<UITextFieldDelegate>
+
+@property (weak, nonatomic) GameCharacter *character;
 
 @end

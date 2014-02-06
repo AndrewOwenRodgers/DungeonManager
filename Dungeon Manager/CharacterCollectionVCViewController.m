@@ -7,6 +7,7 @@
 //
 
 #import "CharacterCollectionVCViewController.h"
+#import "GameCharacterVC.h"
 
 @interface CharacterCollectionVCViewController ()
 
@@ -32,11 +33,6 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-}
-
-- (IBAction)backButton:(id)sender
-{
-    [self.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma mark -Character array handling
@@ -96,6 +92,23 @@
 -(NSInteger) collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     return self.characters.count;
+}
+
+#pragma mark -Transition handling
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    NSInteger itemNumber = [self.characterCollection indexPathForCell:sender].row;
+    if ([segue.identifier isEqualToString:@"characterVCSegue"])
+    {
+        GameCharacterVC *destination = (GameCharacterVC *)segue.destinationViewController;
+        destination.character = self.characters[itemNumber];
+    }
+}
+
+-(IBAction)backButton:(id)sender
+{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 @end
