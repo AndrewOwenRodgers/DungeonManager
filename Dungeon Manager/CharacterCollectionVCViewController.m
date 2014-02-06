@@ -43,14 +43,17 @@
 
     int matchingTitleCounter = 1;
     
-    for (GameCharacter *comparisonCharacter in self.characters)
+    for (int i = 0; i < self.characters.count; i++)
     {
-        if ([comparisonCharacter.characterName isEqualToString:[NSString stringWithFormat:@"Unnamed %i", matchingTitleCounter]])
+        for (GameCharacter *character in self.characters)
         {
-            matchingTitleCounter++;
+            if ([character.characterName isEqualToString:[NSString stringWithFormat:@"Unnamed %i", matchingTitleCounter]])
+            {
+                matchingTitleCounter++;
+            }
         }
-        else break;
     }
+    //There are better ways to run this search, but I'll do that later.
     
     character.characterName = [NSString stringWithFormat:@"Unnamed %i", matchingTitleCounter];
     

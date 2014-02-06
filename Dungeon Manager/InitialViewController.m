@@ -78,14 +78,17 @@
     Campaign *newCampaign = [[Campaign alloc] init];
     int matchingTitleCounter = 1;
     
-    for (Campaign *campaign in self.campaignArray)
+    for (int i = 0; i < self.campaignArray.count; i++)
     {
-        if ([campaign.title isEqualToString:[NSString stringWithFormat:@"Unnamed %i", matchingTitleCounter]])
+        for (Campaign *campaign in self.campaignArray)
         {
-            matchingTitleCounter++;
+            if ([campaign.title isEqualToString:[NSString stringWithFormat:@"Unnamed %i", matchingTitleCounter]])
+            {
+                matchingTitleCounter++;
+            }
         }
     }
-    
+
     newCampaign.title = [NSString stringWithFormat:@"Unnamed %i", matchingTitleCounter];
     
     [self.campaignArray addObject:newCampaign];
