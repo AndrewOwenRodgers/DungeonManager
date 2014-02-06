@@ -37,6 +37,12 @@
     }
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.campaignCollection reloadData];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -123,9 +129,11 @@
     
     for (NSString *path in filesInDocs)
     {
-        if (!([path rangeOfString:searchString].location == NSNotFound))
+        NSString *completePath = [[[getDocumentsDirectory docs] stringByAppendingString:@"/"] stringByAppendingString:path];
+        if (!([completePath rangeOfString:searchString].location == NSNotFound))
         {
-            [fileManager removeItemAtPath:path error:nil];
+            NSLog(@"%@", completePath);
+            [fileManager removeItemAtPath:completePath error:nil];
         }
     }
     [self saveCampaigns];

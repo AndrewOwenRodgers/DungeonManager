@@ -42,6 +42,11 @@
     }
 }
 
+- (IBAction)backButton:(id)sender
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     [self.campaignTitleTextField resignFirstResponder];
@@ -58,10 +63,11 @@
                                                             error:nil];
     for (NSString *filePath in filesInDocs)
     {
-        if (!([filePath rangeOfString:self.lastCampaignName].location == NSNotFound))
+        NSString *completePath = [[[getDocumentsDirectory docs] stringByAppendingString:@"/"] stringByAppendingString:filePath];
+        if (!([completePath rangeOfString:self.lastCampaignName].location == NSNotFound))
         {
-            NSString *newPath = [filePath stringByReplacingOccurrencesOfString:self.lastCampaignName withString:self.campaign.title];
-            [fileManager moveItemAtPath:filePath toPath:newPath error:nil];
+            NSString *newPath = [completePath stringByReplacingOccurrencesOfString:self.lastCampaignName withString:self.campaign.title];
+            [fileManager moveItemAtPath:completePath toPath:newPath error:nil];
         }
     }
     [self.delegate saveCampaigns];

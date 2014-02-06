@@ -122,6 +122,9 @@
                                 <items>
                                     <barButtonItem title="&lt; Campaigns" width="290" style="plain" id="feS-nP-qNR">
                                         <color key="tintColor" red="0.59986139110000003" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="backButton:" destination="Om5-Q0-7yp" id="mrC-Ag-Jo5"/>
+                                        </connections>
                                     </barButtonItem>
                                 </items>
                                 <color key="barTintColor" red="0.11706149189999999" green="0.25381174400000001" blue="0.33659904229999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -171,12 +174,12 @@
                                     <segue destination="t4k-Zw-yC3" kind="push" identifier="notesSegue" id="T0P-U1-5xv"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Unnamed campaign" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UCF-8T-Rjj">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Unnamed campaign" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UCF-8T-Rjj">
                                 <rect key="frame" x="20" y="218" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.11706149189999999" green="0.25381174400000001" blue="0.33659904229999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" red="0.59986139110000003" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
@@ -293,7 +296,11 @@
                                             <action selector="newCharacter:" destination="aUK-YM-iqV" id="krQ-jT-ouT"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="&lt; Menu" width="80" id="w97-nD-DIG"/>
+                                    <barButtonItem title="&lt; Menu" width="80" id="w97-nD-DIG">
+                                        <connections>
+                                            <action selector="backButton:" destination="aUK-YM-iqV" id="Ziz-8X-O8f"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                                 <color key="tintColor" red="0.59986139110000003" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="barTintColor" red="0.11706149189999999" green="0.25381174400000001" blue="0.33659904229999998" alpha="1" colorSpace="calibratedRGB"/>

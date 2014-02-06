@@ -34,6 +34,11 @@
     [super didReceiveMemoryWarning];
 }
 
+- (IBAction)backButton:(id)sender
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 #pragma mark -Character array handling
 
 - (IBAction)newCharacter:(id)sender
