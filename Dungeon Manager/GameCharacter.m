@@ -10,42 +10,6 @@
 
 @interface GameCharacter()
 
-@property (nonatomic) UITextView *bio;
-@property (nonatomic) NSString *race;
-@property (nonatomic) NSString *gender;
-@property (nonatomic) NSString *homeland;
-@property (nonatomic) NSString *deity;
-@property (nonatomic) NSString *alignment;
-@property (nonatomic) int age;
-@property (nonatomic) NSString *height;
-@property (nonatomic) int weight;
-@property (nonatomic) NSString *hairColor;
-@property (nonatomic) NSString *eyeColor;
-
-@property (nonatomic) int maxHealth;
-@property (nonatomic) NSMutableDictionary *coreAttributes;
-@property (nonatomic) NSMutableDictionary *classSkills;
-@property (nonatomic) NSMutableDictionary *classSkillAttributes;
-@property (nonatomic) NSMutableDictionary *feats;
-@property (nonatomic) NSMutableDictionary *spells;
-@property (nonatomic) NSString *domain;
-@property (nonatomic) NSMutableDictionary *speeds;
-@property (nonatomic) NSMutableArray *languages;
-@property (nonatomic) int primaryLevel;
-@property (nonatomic) int initiativeModifier;
-@property (nonatomic) int baseAttackBonus;
-@property (nonatomic) int spellResistance;
-@property (nonatomic) NSMutableDictionary *savingThrows;
-@property (nonatomic) NSMutableDictionary *secondaryClasses;
-
-@property (nonatomic) int currentHealth;
-@property (nonatomic) int currency;
-@property (nonatomic) NSMutableDictionary *inventory;
-@property (nonatomic) NSMutableDictionary *inventoryWeights;
-@property (nonatomic) int inventoryTotalWeight;
-@property (nonatomic) int xp;
-@property (nonatomic) UITextView *otherAbilitiesAndWounds;
-
 @end
 
 @implementation GameCharacter
@@ -65,7 +29,7 @@
     self.alignment = [decoder decodeObjectForKey:@"alignment"];
     self.age = [decoder decodeIntForKey:@"age"];
     self.height = [decoder decodeObjectForKey:@"height"];
-    self.weight = [decoder decodeIntForKey:@"weight"];
+    self.weight = [decoder decodeObjectForKey:@"weight"];
     self.hairColor = [decoder decodeObjectForKey:@"hairColor"];
     self.eyeColor = [decoder decodeObjectForKey:@"eyeColor"];
     
@@ -111,7 +75,7 @@
     [encoder encodeObject:self.alignment forKey:@"alignment"];
     [encoder encodeInt:self.age forKey:@"age"];
     [encoder encodeObject:self.height forKey:@"height"];
-    [encoder encodeInt:self.weight forKey:@"weight"];
+    [encoder encodeObject:self.weight forKey:@"weight"];
     [encoder encodeObject:self.hairColor forKey:@"hairColor"];
     [encoder encodeObject:self.eyeColor forKey:@"eyeColor"];
     

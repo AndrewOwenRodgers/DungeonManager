@@ -7,7 +7,6 @@
 //
 
 #import "CharacterCollectionVCViewController.h"
-#import "GameCharacterVC.h"
 
 @interface CharacterCollectionVCViewController ()
 
@@ -33,6 +32,11 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [self.characterCollection reloadData];
 }
 
 #pragma mark -Character array handling
@@ -61,8 +65,7 @@
     character.primaryClass = @"Person";
     character.totalLevel = 1;
     
-    [NSKeyedArchiver archiveRootObject:self.characters
-                                toFile:self.filePath];
+    [self saveCharacters];
     
     [self.characterCollection reloadData];
 }
@@ -72,7 +75,13 @@
     [self.characters removeObjectAtIndex:characterNumber];
     
     [self.characterCollection reloadData];
-    [NSKeyedArchiver archiveRootObject:self.characters toFile:self.filePath];
+    [self saveCharacters];
+}
+
+-(void)saveCharacters
+{
+    [NSKeyedArchiver archiveRootObject:self.characters
+                                toFile:self.filePath];
 }
 
 #pragma mark -Collection view management
@@ -103,6 +112,7 @@
     {
         GameCharacterVC *destination = (GameCharacterVC *)segue.destinationViewController;
         destination.character = self.characters[itemNumber];
+        destination.delegate = self;
     }
 }
 

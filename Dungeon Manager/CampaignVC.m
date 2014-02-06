@@ -47,12 +47,16 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-- (BOOL)textFieldShouldReturn:(UITextField *)textField
+-(void)textFieldDidEndEditing:(UITextField *)textField
 {
-    [self.campaignTitleTextField resignFirstResponder];
     self.lastCampaignName = self.campaign.title;
     self.campaign.title = self.campaignTitleTextField.text;
     [self changeCampaigns];
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [self.campaignTitleTextField resignFirstResponder];
     return YES;
 }
 

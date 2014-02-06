@@ -9,9 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "CharacterCell.h"
 #import "GameCharacter.h"
+#import "GameCharacterVC.h"
 
 @interface CharacterCollectionVCViewController : UIViewController
-<UICollectionViewDelegate, UICollectionViewDataSource, NSCoding, CharacterDeletion>
+<UICollectionViewDelegate, UICollectionViewDataSource, NSCoding, CharacterDeletion, CharacterSaving>
 
 @property (strong, nonatomic) NSMutableArray *characters;
 @property (nonatomic) BOOL isPCVC;

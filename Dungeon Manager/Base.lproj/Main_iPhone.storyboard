@@ -239,7 +239,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Class" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Nb-Gk-xb8">
+                                    <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Class" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Nb-Gk-xb8">
                                         <rect key="frame" x="0.0" y="158" width="320" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.11706149189999999" green="0.25381174400000001" blue="0.33659904229999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -248,7 +248,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Race" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RXX-Gy-xvZ">
+                                    <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Race" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RXX-Gy-xvZ">
                                         <rect key="frame" x="0.0" y="196" width="97" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.11706149189999999" green="0.25381174400000001" blue="0.33659904229999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -257,7 +257,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="00" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lBV-X7-SbB">
+                                    <textField opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lBV-X7-SbB">
                                         <rect key="frame" x="155" y="196" width="49" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.11706149189999999" green="0.25381174400000001" blue="0.33659904229999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -269,19 +269,19 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="00" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xrD-xQ-DJW">
+                                    <textField opaque="NO" clipsSubviews="YES" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xrD-xQ-DJW">
                                         <rect key="frame" x="248" y="196" width="72" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.11706149189999999" green="0.25381174400000001" blue="0.33659904229999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="tintColor" red="0.11706149189999999" green="0.25381174400000001" blue="0.33659904229999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="51" id="gQ8-p7-Tt5"/>
+                                            <constraint firstAttribute="width" constant="72" id="gQ8-p7-Tt5"/>
                                         </constraints>
                                         <color key="textColor" red="0.59986139110000003" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Level:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4sA-hb-TP2">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4sA-hb-TP2">
                                         <rect key="frame" x="105" y="200" width="50" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <constraints>
@@ -291,7 +291,7 @@
                                         <color key="textColor" red="0.59986139110000003" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="XP:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7O6-3u-3Z4">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XP:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7O6-3u-3Z4">
                                         <rect key="frame" x="212" y="200" width="28" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <constraints>
@@ -317,7 +317,7 @@
                                     <constraint firstItem="xrD-xQ-DJW" firstAttribute="leading" secondItem="7O6-3u-3Z4" secondAttribute="trailing" constant="8" symbolic="YES" id="3oT-9y-acG"/>
                                     <constraint firstItem="RXX-Gy-xvZ" firstAttribute="leading" secondItem="2Nb-Gk-xb8" secondAttribute="leading" id="4F9-ha-lqL"/>
                                     <constraint firstAttribute="trailing" secondItem="xrD-xQ-DJW" secondAttribute="trailing" id="9b7-6t-q7n"/>
-                                    <constraint firstItem="lBV-X7-SbB" firstAttribute="leading" secondItem="4sA-hb-TP2" secondAttribute="trailing" constant="8" symbolic="YES" id="9ry-Tx-eFV"/>
+                                    <constraint firstItem="lBV-X7-SbB" firstAttribute="leading" secondItem="4sA-hb-TP2" secondAttribute="trailing" id="9ry-Tx-eFV"/>
                                     <constraint firstItem="7O6-3u-3Z4" firstAttribute="baseline" secondItem="xrD-xQ-DJW" secondAttribute="baseline" id="A2Y-5b-ZKP"/>
                                     <constraint firstItem="JTG-k5-aCy" firstAttribute="centerX" secondItem="AK0-UK-jl1" secondAttribute="centerX" id="B3F-IL-ffk"/>
                                     <constraint firstItem="JTG-k5-aCy" firstAttribute="trailing" secondItem="2Nb-Gk-xb8" secondAttribute="trailing" id="Ddi-SG-INp"/>
@@ -325,14 +325,14 @@
                                     <constraint firstItem="2Nb-Gk-xb8" firstAttribute="centerX" secondItem="Dqk-Ih-uWN" secondAttribute="centerX" id="H3Y-Pb-OXt"/>
                                     <constraint firstItem="lBV-X7-SbB" firstAttribute="baseline" secondItem="7O6-3u-3Z4" secondAttribute="baseline" id="JSe-7Z-Cr9"/>
                                     <constraint firstItem="JTG-k5-aCy" firstAttribute="leading" secondItem="2Nb-Gk-xb8" secondAttribute="leading" id="KXp-2g-ajd"/>
-                                    <constraint firstItem="7O6-3u-3Z4" firstAttribute="leading" secondItem="lBV-X7-SbB" secondAttribute="trailing" constant="15" id="LPV-8N-nvC"/>
+                                    <constraint firstItem="7O6-3u-3Z4" firstAttribute="leading" secondItem="lBV-X7-SbB" secondAttribute="trailing" constant="8" id="LPV-8N-nvC"/>
                                     <constraint firstItem="JTG-k5-aCy" firstAttribute="top" secondItem="AK0-UK-jl1" secondAttribute="bottom" constant="8" symbolic="YES" id="QsH-ey-Irs"/>
                                     <constraint firstItem="RXX-Gy-xvZ" firstAttribute="top" secondItem="2Nb-Gk-xb8" secondAttribute="bottom" constant="8" symbolic="YES" id="SyK-Jx-atb"/>
                                     <constraint firstItem="2Nb-Gk-xb8" firstAttribute="top" secondItem="JTG-k5-aCy" secondAttribute="bottom" constant="8" symbolic="YES" id="bXl-zv-jy3"/>
                                     <constraint firstItem="JTG-k5-aCy" firstAttribute="leading" secondItem="Dqk-Ih-uWN" secondAttribute="leading" id="bl0-sF-TpP"/>
                                     <constraint firstAttribute="bottom" secondItem="RXX-Gy-xvZ" secondAttribute="bottom" constant="298" id="cTu-Hk-Jel"/>
                                     <constraint firstItem="4sA-hb-TP2" firstAttribute="baseline" secondItem="RXX-Gy-xvZ" secondAttribute="baseline" id="ie1-68-x7S"/>
-                                    <constraint firstItem="4sA-hb-TP2" firstAttribute="leading" secondItem="RXX-Gy-xvZ" secondAttribute="trailing" constant="14" id="tfw-Rd-RjW"/>
+                                    <constraint firstItem="4sA-hb-TP2" firstAttribute="leading" secondItem="RXX-Gy-xvZ" secondAttribute="trailing" constant="8" id="tfw-Rd-RjW"/>
                                     <constraint firstAttribute="trailing" secondItem="JTG-k5-aCy" secondAttribute="trailing" id="wHq-9k-w8k"/>
                                 </constraints>
                             </scrollView>
@@ -363,6 +363,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="cRj-Yo-Hgy"/>
+                    <connections>
+                        <outlet property="XPTextField" destination="xrD-xQ-DJW" id="dsz-lo-QIX"/>
+                        <outlet property="classTextField" destination="2Nb-Gk-xb8" id="mYz-ZV-gpK"/>
+                        <outlet property="levelTextField" destination="lBV-X7-SbB" id="HQl-dr-bvH"/>
+                        <outlet property="nameTextField" destination="JTG-k5-aCy" id="Kbw-uG-i0R"/>
+                        <outlet property="raceTextField" destination="RXX-Gy-xvZ" id="ywz-Pt-7K6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="49W-q2-Mw0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
