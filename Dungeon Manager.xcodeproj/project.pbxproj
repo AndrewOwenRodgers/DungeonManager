@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07157A5218A419BB0098B94A /* GameCharacterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 07157A5118A419BB0098B94A /* GameCharacterVC.m */; };
 		07F8BC64189AF2B200DA8806 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07F8BC63189AF2B200DA8806 /* Foundation.framework */; };
 		07F8BC66189AF2B200DA8806 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07F8BC65189AF2B200DA8806 /* CoreGraphics.framework */; };
 		07F8BC68189AF2B200DA8806 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07F8BC67189AF2B200DA8806 /* UIKit.framework */; };
@@ -42,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		07157A5018A419BB0098B94A /* GameCharacterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameCharacterVC.h; sourceTree = "<group>"; };
+		07157A5118A419BB0098B94A /* GameCharacterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameCharacterVC.m; sourceTree = "<group>"; };
 		07F8BC60189AF2B200DA8806 /* Dungeon Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dungeon Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07F8BC63189AF2B200DA8806 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		07F8BC65189AF2B200DA8806 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -153,6 +156,8 @@
 				07F8BCA9189E191A00DA8806 /* CharacterCell.m */,
 				07F8BCAB18A0AD1E00DA8806 /* GameCharacter.h */,
 				07F8BCAC18A0AD1E00DA8806 /* GameCharacter.m */,
+				07157A5018A419BB0098B94A /* GameCharacterVC.h */,
+				07157A5118A419BB0098B94A /* GameCharacterVC.m */,
 				07F8BCAE18A1C4C200DA8806 /* getDocumentsDirectory.h */,
 				07F8BCAF18A1C4C200DA8806 /* getDocumentsDirectory.m */,
 				07F8BC7E189AF2B200DA8806 /* Images.xcassets */,
@@ -295,6 +300,7 @@
 				07F8BC7D189AF2B200DA8806 /* InitialViewController.m in Sources */,
 				07F8BCA7189C706400DA8806 /* CharacterCollectionVCViewController.m in Sources */,
 				07F8BCA0189AF9D800DA8806 /* CampaignCell.m in Sources */,
+				07157A5218A419BB0098B94A /* GameCharacterVC.m in Sources */,
 				07F8BC74189AF2B200DA8806 /* AppDelegate.m in Sources */,
 				07F8BC70189AF2B200DA8806 /* main.m in Sources */,
 				07F8BCAA189E191A00DA8806 /* CharacterCell.m in Sources */,

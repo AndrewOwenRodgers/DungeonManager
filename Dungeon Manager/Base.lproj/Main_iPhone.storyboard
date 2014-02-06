@@ -214,6 +214,47 @@
             </objects>
             <point key="canvasLocation" x="1191" y="25"/>
         </scene>
+        <!--Game CharacterVC-->
+        <scene sceneID="MEy-sY-eba">
+            <objects>
+                <viewController id="71M-0M-1Af" customClass="GameCharacterVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yfs-Tk-joK"/>
+                        <viewControllerLayoutGuide type="bottom" id="EbL-Wy-iWb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kyW-c0-3Vp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dqk-Ih-uWN">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="0.050151209680000003" green="0.0" blue="0.14021547379999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.050151209680000003" green="0.0" blue="0.14021547379999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </scrollView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0l7-En-Is0">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" red="0.11706149189999999" green="0.25381174400000001" blue="0.33659904229999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <barButtonItem title="&lt; Characters" width="295" id="Ja6-DF-8Yz">
+                                        <color key="tintColor" red="0.59986139110000003" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="backButton:" destination="71M-0M-1Af" id="jfS-WE-6Si"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <color key="barTintColor" red="0.11706149189999999" green="0.25381174400000001" blue="0.33659904229999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="cRj-Yo-Hgy"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="49W-q2-Mw0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2140" y="25"/>
+        </scene>
         <!--Character CollectionVC View Controller-->
         <scene sceneID="c0z-Oq-vgw">
             <objects>
@@ -281,6 +322,7 @@
                                             <outlet property="characterAvatar" destination="q78-au-1TJ" id="QWV-6g-Muk"/>
                                             <outlet property="characterName" destination="ptL-yy-qgx" id="Obr-1b-ZJo"/>
                                             <outlet property="levelAndClass" destination="jE7-MR-Ije" id="reK-wU-KCL"/>
+                                            <segue destination="71M-0M-1Af" kind="push" id="a7b-Ez-mnc"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
