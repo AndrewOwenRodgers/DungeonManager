@@ -9,9 +9,19 @@
 #import <UIKit/UIKit.h>
 #import "Campaign.h"
 
-@interface CampaignVC : UIViewController
+@protocol CampaignSaver <NSObject>
 
+-(void)saveCampaigns;
+
+@end
+
+@interface CampaignVC : UIViewController
+<UITextFieldDelegate>
+
+@property (unsafe_unretained) id <CampaignSaver> delegate;
 @property (weak, nonatomic) Campaign *campaign;
 @property (weak, nonatomic) NSString *campaignFilePath;
+@property (strong, nonatomic) NSString *lastCampaignName;
+@property (weak, nonatomic) IBOutlet UITextField *campaignTitleTextField;
 
 @end

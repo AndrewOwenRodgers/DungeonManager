@@ -94,7 +94,7 @@
     [self.campaignArray addObject:newCampaign];
     [self.campaignCollection reloadData];
     
-    [NSKeyedArchiver archiveRootObject:self.campaignArray toFile:self.campaignFilePath];
+    [self saveCampaigns];
 }
 
 //Sends campaign data to the new VC when you click on a cell, then segues
@@ -105,6 +105,7 @@
     if ([segue.identifier isEqualToString: @"campaignSegue"])
     {
         CampaignVC *destinationVC = segue.destinationViewController;
+        destinationVC.delegate = self;
         destinationVC.campaign = self.campaignArray[itemNumber];
         destinationVC.campaignFilePath = self.campaignFilePath;
     }
@@ -127,8 +128,12 @@
             [fileManager removeItemAtPath:path error:nil];
         }
     }
-    
+    [self saveCampaigns];
     [self.campaignCollection reloadData];
+}
+
+-(void) saveCampaigns
+{
     [NSKeyedArchiver archiveRootObject:self.campaignArray toFile:self.campaignFilePath];
 }
 

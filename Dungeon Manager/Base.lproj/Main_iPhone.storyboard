@@ -133,16 +133,6 @@
                                     <constraint firstAttribute="width" constant="100" id="0if-DE-JIs"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Campaign title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XRF-KX-0cW">
-                                <rect key="frame" x="20" y="218" width="280" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="lv5-wK-3xJ"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7E1-xN-3UL">
                                 <rect key="frame" x="20" y="301" width="280" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -181,30 +171,41 @@
                                     <segue destination="t4k-Zw-yC3" kind="push" identifier="notesSegue" id="T0P-U1-5xv"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Unnamed campaign" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UCF-8T-Rjj">
+                                <rect key="frame" x="20" y="218" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.11706149189999999" green="0.25381174400000001" blue="0.33659904229999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.59986139110000003" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.050151209680000003" green="0.0" blue="0.14021547379999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="EqM-nS-W5q" firstAttribute="centerX" secondItem="Tez-XV-yM4" secondAttribute="centerX" id="2vm-JG-24e"/>
                             <constraint firstItem="EqM-nS-W5q" firstAttribute="trailing" secondItem="9Cc-hf-sQe" secondAttribute="trailing" id="3EC-Yk-ejv"/>
-                            <constraint firstItem="7E1-xN-3UL" firstAttribute="top" secondItem="XRF-KX-0cW" secondAttribute="bottom" constant="39" id="54e-rb-CWO"/>
+                            <constraint firstAttribute="trailing" secondItem="UCF-8T-Rjj" secondAttribute="trailing" constant="20" symbolic="YES" id="56A-Pu-h2O"/>
                             <constraint firstItem="Tez-XV-yM4" firstAttribute="top" secondItem="EqM-nS-W5q" secondAttribute="bottom" constant="15" id="70f-3M-3AA"/>
-                            <constraint firstItem="7E1-xN-3UL" firstAttribute="trailing" secondItem="XRF-KX-0cW" secondAttribute="trailing" id="8u6-bi-zzz"/>
-                            <constraint firstItem="XRF-KX-0cW" firstAttribute="leading" secondItem="7E1-xN-3UL" secondAttribute="leading" id="BJX-Te-CcV"/>
+                            <constraint firstItem="7E1-xN-3UL" firstAttribute="top" secondItem="UCF-8T-Rjj" secondAttribute="bottom" constant="53" id="CLl-Aq-Kyh"/>
                             <constraint firstItem="9Cc-hf-sQe" firstAttribute="leading" secondItem="7E1-xN-3UL" secondAttribute="leading" id="DaD-Fu-p3y"/>
                             <constraint firstItem="TzK-Lq-A42" firstAttribute="top" secondItem="g4B-T3-1dq" secondAttribute="bottom" constant="46" id="HJL-WT-2Rg"/>
                             <constraint firstItem="7E1-xN-3UL" firstAttribute="trailing" secondItem="9Cc-hf-sQe" secondAttribute="trailing" id="IAn-dZ-sZ6"/>
+                            <constraint firstItem="UCF-8T-Rjj" firstAttribute="top" secondItem="TzK-Lq-A42" secondAttribute="bottom" constant="8" symbolic="YES" id="PKW-la-FoA"/>
                             <constraint firstItem="Tez-XV-yM4" firstAttribute="leading" secondItem="gOe-UN-VPi" secondAttribute="leading" id="Snn-eQ-8iq"/>
+                            <constraint firstItem="UCF-8T-Rjj" firstAttribute="leading" secondItem="gOe-UN-VPi" secondAttribute="leading" constant="20" symbolic="YES" id="X1b-G9-s3i"/>
                             <constraint firstItem="EqM-nS-W5q" firstAttribute="top" secondItem="9Cc-hf-sQe" secondAttribute="bottom" constant="8" symbolic="YES" id="Zs7-bO-mRb"/>
-                            <constraint firstAttribute="trailing" secondItem="XRF-KX-0cW" secondAttribute="trailing" constant="20" symbolic="YES" id="e07-fM-36l"/>
-                            <constraint firstItem="TzK-Lq-A42" firstAttribute="centerX" secondItem="XRF-KX-0cW" secondAttribute="centerX" id="iPO-uO-UOQ"/>
-                            <constraint firstItem="XRF-KX-0cW" firstAttribute="top" secondItem="TzK-Lq-A42" secondAttribute="bottom" constant="8" symbolic="YES" id="kaZ-qM-BWs"/>
-                            <constraint firstItem="XRF-KX-0cW" firstAttribute="leading" secondItem="gOe-UN-VPi" secondAttribute="leading" constant="20" symbolic="YES" id="mpI-BG-dxm"/>
+                            <constraint firstItem="7E1-xN-3UL" firstAttribute="leading" secondItem="UCF-8T-Rjj" secondAttribute="leading" id="aVA-ag-rG7"/>
+                            <constraint firstItem="UCF-8T-Rjj" firstAttribute="trailing" secondItem="7E1-xN-3UL" secondAttribute="trailing" id="ezz-YH-bSo"/>
+                            <constraint firstItem="TzK-Lq-A42" firstAttribute="centerX" secondItem="UCF-8T-Rjj" secondAttribute="centerX" id="h8N-T4-srj"/>
                             <constraint firstItem="9Cc-hf-sQe" firstAttribute="top" secondItem="7E1-xN-3UL" secondAttribute="bottom" constant="8" symbolic="YES" id="o1k-gq-rh4"/>
                             <constraint firstAttribute="bottom" secondItem="Tez-XV-yM4" secondAttribute="bottom" id="yPR-n4-oKZ"/>
                             <constraint firstItem="EqM-nS-W5q" firstAttribute="leading" secondItem="9Cc-hf-sQe" secondAttribute="leading" id="zaq-dB-HXs"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="nCT-NM-Rw7"/>
+                    <connections>
+                        <outlet property="campaignTitleTextField" destination="UCF-8T-Rjj" id="a09-yr-wyR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xZ5-1h-qAC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -356,6 +357,7 @@
             <point key="canvasLocation" x="257" y="25"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

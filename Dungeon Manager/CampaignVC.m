@@ -8,6 +8,7 @@
 
 #import "CampaignVC.h"
 #import "CharacterCollectionVCViewController.h"
+#import "getDocumentsDirectory.h"
 
 @interface CampaignVC ()
 
@@ -18,6 +19,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.campaignTitleTextField.delegate = self;
+    self.campaignTitleTextField.text = self.campaign.title;
 }
 
 - (void)didReceiveMemoryWarning
@@ -37,6 +40,31 @@
         CharacterCollectionVCViewController *dest = (CharacterCollectionVCViewController *) segue.destinationViewController;
         dest.filePath = [NSString stringWithFormat:@"%@%@Characters", self.campaignFilePath, self.campaign.title];
     }
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [self.campaignTitleTextField resignFirstResponder];
+    self.lastCampaignName = self.campaign.title;
+    self.campaign.title = self.campaignTitleTextField.text;
+    [self changeCampaigns];
+    return YES;
+}
+
+-(void)changeCampaigns
+{
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSArray *filesInDocs = [fileManager contentsOfDirectoryAtPath:[getDocumentsDirectory docs]
+                                                            error:nil];
+    for (NSString *filePath in filesInDocs)
+    {
+        if (!([filePath rangeOfString:self.lastCampaignName].location == NSNotFound))
+        {
+            NSString *newPath = [filePath stringByReplacingOccurrencesOfString:self.lastCampaignName withString:self.campaign.title];
+            [fileManager moveItemAtPath:filePath toPath:newPath error:nil];
+        }
+    }
+    [self.delegate saveCampaigns];
 }
 
 @end
