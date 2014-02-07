@@ -61,6 +61,12 @@
     
     
     self.BioTextView.text = self.character.bio;
+    
+    
+    self.attributeCollection.delegate = self;
+    self.attributeCollection.dataSource = self;
+    self.skillsCollection.delegate = self;
+    self.skillsCollection.dataSource = self;
 }
 
 - (void)didReceiveMemoryWarning
@@ -84,11 +90,19 @@
     
     if ([sender tag] == 0)
     {
+        if (!self.character.coreAttributes)
+        {
+            self.character.coreAttributes = [NSMutableArray array];
+        }
         [self.character.coreAttributes addObject:attribute];
         [self.attributeCollection reloadData];
     }
     if ([sender tag] == 1)
     {
+        if (!self.character.classSkills)
+        {
+            self.character.classSkills = [NSMutableArray array];
+        }
         attribute.secondaryAttribute = @"New";
         [self.character.classSkills addObject:attribute];
         [self.skillsCollection reloadData];
