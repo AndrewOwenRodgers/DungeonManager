@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "AttributeData.h"
 
 @interface GameCharacter : NSObject
 <NSCoding>;
@@ -67,27 +68,25 @@
 //
 
 //STATISTICS TWO VIEW
-@property (nonatomic) NSMutableDictionary *speeds;
+@property (nonatomic) NSMutableArray *speeds;
 @property (nonatomic) NSMutableArray *languages;
-@property (nonatomic) NSMutableDictionary *savingThrows;
-@property (nonatomic) NSMutableDictionary *secondaryClasses;
+@property (nonatomic) NSMutableArray *savingThrows;
+@property (nonatomic) NSMutableArray *secondaryClasses;
 
 //ATTRIBUTES VIEW
-@property (nonatomic) NSMutableDictionary *coreAttributes;
+@property (nonatomic) NSMutableArray *coreAttributes;
 
 //CLASS SKILLS VIEW
-@property (nonatomic) NSMutableDictionary *classSkills;
-@property (nonatomic) NSMutableDictionary *classSkillAttributes;
+@property (nonatomic) NSMutableArray *classSkills;
 
 //FEATS VIEW
-@property (nonatomic) NSMutableDictionary *feats;
+@property (nonatomic) NSMutableArray *feats;
 
 //SPELLS VIEW
-@property (nonatomic) NSMutableDictionary *spells;
+@property (nonatomic) NSMutableArray *spells;
 @property (nonatomic) NSString *domain;
 
-@property (nonatomic) NSMutableDictionary *inventory;
-@property (nonatomic) NSMutableDictionary *inventoryWeights;
+@property (nonatomic) NSMutableArray *inventory;
 @property (nonatomic) NSInteger inventoryTotalWeight;
 @property (nonatomic) NSString *otherAbilitiesAndWounds;
 

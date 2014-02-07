@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AttributeData.h"
 
 @interface AttributeCell : UICollectionViewCell
 <UITextFieldDelegate>
 
-@property (weak, nonatomic) NSMutableDictionary *attributes;
+@property (weak, nonatomic) AttributeData *attribute;
 @property (weak, nonatomic) UITextField *attributeTextField;
 @property (weak, nonatomic) UITextField *valueTextField;
 @property (weak, nonatomic) UITextField *secondaryAttributeTextField;

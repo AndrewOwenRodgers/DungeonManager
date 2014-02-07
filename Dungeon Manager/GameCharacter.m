@@ -36,7 +36,6 @@
     self.maxHealth = [decoder decodeIntegerForKey:@"maxHealth"];
     self.coreAttributes = [decoder decodeObjectForKey:@"coreAttributes"];
     self.classSkills = [decoder decodeObjectForKey:@"classSkills"];
-    self.classSkillAttributes = [decoder decodeObjectForKey:@"classSkillsAttributes"];
     self.feats = [decoder decodeObjectForKey:@"feats"];
     self.spells = [decoder decodeObjectForKey:@"spells"];
     self.domain = [decoder decodeObjectForKey:@"domain"];
@@ -53,7 +52,6 @@
     self.currentHealth = [decoder decodeIntegerForKey:@"currentHealth"];
     self.currency = [decoder decodeIntegerForKey:@"currency"];
     self.inventory = [decoder decodeObjectForKey:@"inventory"];
-    self.inventoryWeights = [decoder decodeObjectForKey:@"inventoryWeights"];
     self.inventoryTotalWeight = [decoder decodeIntegerForKey:@"inventoryTotalWeight"];
     self.xp = [decoder decodeIntegerForKey:@"xp"];
     self.otherAbilitiesAndWounds = [decoder decodeObjectForKey:@"otherAbilitiesAndWounds"];
@@ -84,7 +82,6 @@
     [encoder encodeInteger:self.maxHealth forKey:@"maxHealth"];
     [encoder encodeObject:self.coreAttributes forKey:@"coreAttributes"];
     [encoder encodeObject:self.classSkills forKey:@"classSkills"];
-    [encoder encodeObject:self.classSkillAttributes forKey:@"classSkillsAttributes"];
     [encoder encodeObject:self.feats forKey:@"feats"];
     [encoder encodeObject:self.spells forKey:@"spells"];
     [encoder encodeObject:self.domain forKey:@"domain"];
@@ -101,7 +98,6 @@
     [encoder encodeInteger:self.currentHealth forKey:@"currentHealth"];
     [encoder encodeInteger:self.currency forKey:@"currency"];
     [encoder encodeObject:self.inventory forKey:@"inventory"];
-    [encoder encodeObject:self.inventoryWeights forKey:@"inventoryWeights"];
     [encoder encodeInteger:self.inventoryTotalWeight forKey:@"inventoryTotalWeight"];
     [encoder encodeInteger:self.xp forKey:@"xp"];
     [encoder encodeObject:self.otherAbilitiesAndWounds forKey:@"otherAbilitiesAndWounds"];

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		07157A5218A419BB0098B94A /* GameCharacterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 07157A5118A419BB0098B94A /* GameCharacterVC.m */; };
 		07157A5818A4987F0098B94A /* AttributeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 07157A5718A4987F0098B94A /* AttributeCell.m */; };
+		07157A5B18A4A3B80098B94A /* AttributeData.m in Sources */ = {isa = PBXBuildFile; fileRef = 07157A5A18A4A3B80098B94A /* AttributeData.m */; };
 		07F8BC64189AF2B200DA8806 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07F8BC63189AF2B200DA8806 /* Foundation.framework */; };
 		07F8BC66189AF2B200DA8806 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07F8BC65189AF2B200DA8806 /* CoreGraphics.framework */; };
 		07F8BC68189AF2B200DA8806 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07F8BC67189AF2B200DA8806 /* UIKit.framework */; };
@@ -49,6 +50,8 @@
 		07157A5118A419BB0098B94A /* GameCharacterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameCharacterVC.m; sourceTree = "<group>"; };
 		07157A5618A4987F0098B94A /* AttributeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = AttributeCell.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		07157A5718A4987F0098B94A /* AttributeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttributeCell.m; sourceTree = "<group>"; };
+		07157A5918A4A3B80098B94A /* AttributeData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttributeData.h; sourceTree = "<group>"; };
+		07157A5A18A4A3B80098B94A /* AttributeData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttributeData.m; sourceTree = "<group>"; };
 		07F8BC60189AF2B200DA8806 /* Dungeon Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dungeon Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07F8BC63189AF2B200DA8806 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		07F8BC65189AF2B200DA8806 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -169,6 +172,8 @@
 				07F8BCAC18A0AD1E00DA8806 /* GameCharacter.m */,
 				07157A5618A4987F0098B94A /* AttributeCell.h */,
 				07157A5718A4987F0098B94A /* AttributeCell.m */,
+				07157A5918A4A3B80098B94A /* AttributeData.h */,
+				07157A5A18A4A3B80098B94A /* AttributeData.m */,
 				07F8BCAE18A1C4C200DA8806 /* getDocumentsDirectory.h */,
 				07F8BCAF18A1C4C200DA8806 /* getDocumentsDirectory.m */,
 				07F8BC7E189AF2B200DA8806 /* Images.xcassets */,
@@ -340,6 +345,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07F8BCAD18A0AD1E00DA8806 /* GameCharacter.m in Sources */,
+				07157A5B18A4A3B80098B94A /* AttributeData.m in Sources */,
 				07F8BC9D189AF82A00DA8806 /* CampaignVC.m in Sources */,
 				07F8BCA3189AFA3300DA8806 /* Campaign.m in Sources */,
 				07F8BCB018A1C4C200DA8806 /* getDocumentsDirectory.m in Sources */,
