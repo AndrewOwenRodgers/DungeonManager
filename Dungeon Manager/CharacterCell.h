@@ -11,7 +11,7 @@
 
 @protocol CharacterDeletion <NSObject>
 
--(void)deleteCharacter:(int)characterNumber;
+-(void)deleteCharacter:(NSInteger)characterNumber;
 
 @end
 
@@ -21,7 +21,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *characterAvatar;
 @property (weak, nonatomic) IBOutlet UILabel *characterName;
 @property (weak, nonatomic) IBOutlet UILabel *levelAndClass;
-@property (nonatomic) int characterIndex;
+@property (nonatomic) NSInteger characterIndex;
 @property (weak, nonatomic) GameCharacter *cellCharacter;
 
 -(void)initializeDisplay;

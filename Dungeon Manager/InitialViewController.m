@@ -82,9 +82,9 @@
 - (IBAction)createCampaign:(id)sender
 {
     Campaign *newCampaign = [[Campaign alloc] init];
-    int matchingTitleCounter = 1;
+    NSInteger matchingTitleCounter = 1;
     
-    for (int i = 0; i < self.campaignArray.count; i++)
+    for (NSInteger i = 0; i < self.campaignArray.count; i++)
     {
         for (Campaign *campaign in self.campaignArray)
         {
@@ -103,7 +103,7 @@
     [self saveCampaigns];
 }
 
--(void)deleteCampaign: (int)campaignNumber
+-(void)deleteCampaign: (NSInteger)campaignNumber
 {
     Campaign *deletedCampaign = [self.campaignArray objectAtIndex:campaignNumber];
     [self.campaignArray removeObjectAtIndex:campaignNumber];

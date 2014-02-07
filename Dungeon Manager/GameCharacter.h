@@ -16,11 +16,11 @@
 //
 @property (nonatomic) NSString *primaryClass;
 //
-@property (nonatomic) int primaryLevel;
+@property (nonatomic) NSInteger primaryLevel;
 //
 @property (nonatomic) NSString *race;
 //
-@property (nonatomic) int xp;
+@property (nonatomic) NSInteger xp;
 //
 
 //BACKGROUND VIEW
@@ -30,7 +30,7 @@
 //
 @property (nonatomic) NSString *alignment;
 //
-@property (nonatomic) int age;
+@property (nonatomic) NSInteger age;
 //
 @property (nonatomic) NSString *bio;
 //
@@ -51,38 +51,48 @@
 
 
 //STATISTICS ONE VIEW
-@property (nonatomic) int maxHealth;
+@property (nonatomic) NSInteger maxHealth;
 //
-@property (nonatomic) int currentHealth;
+@property (nonatomic) NSInteger currentHealth;
 //
-@property (nonatomic) int initiativeModifier;
+@property (nonatomic) NSInteger initiativeModifier;
 //
-@property (nonatomic) int baseAttackBonus;
+@property (nonatomic) NSInteger baseAttackBonus;
 //
-@property (nonatomic) int spellResistance;
+@property (nonatomic) NSInteger spellResistance;
 //
-@property (nonatomic) int currency;
+@property (nonatomic) NSInteger currency;
 //
-@property (nonatomic) int armorClass;
+@property (nonatomic) NSInteger armorClass;
+//
 
-@property (nonatomic) NSMutableDictionary *coreAttributes;
-@property (nonatomic) NSMutableDictionary *classSkills;
-@property (nonatomic) NSMutableDictionary *classSkillAttributes;
-@property (nonatomic) NSMutableDictionary *feats;
-@property (nonatomic) NSMutableDictionary *spells;
-@property (nonatomic) NSString *domain;
+//STATISTICS TWO VIEW
 @property (nonatomic) NSMutableDictionary *speeds;
 @property (nonatomic) NSMutableArray *languages;
 @property (nonatomic) NSMutableDictionary *savingThrows;
 @property (nonatomic) NSMutableDictionary *secondaryClasses;
 
+//ATTRIBUTES VIEW
+@property (nonatomic) NSMutableDictionary *coreAttributes;
+
+//CLASS SKILLS VIEW
+@property (nonatomic) NSMutableDictionary *classSkills;
+@property (nonatomic) NSMutableDictionary *classSkillAttributes;
+
+//FEATS VIEW
+@property (nonatomic) NSMutableDictionary *feats;
+
+//SPELLS VIEW
+@property (nonatomic) NSMutableDictionary *spells;
+@property (nonatomic) NSString *domain;
+
 @property (nonatomic) NSMutableDictionary *inventory;
 @property (nonatomic) NSMutableDictionary *inventoryWeights;
-@property (nonatomic) int inventoryTotalWeight;
+@property (nonatomic) NSInteger inventoryTotalWeight;
 @property (nonatomic) NSString *otherAbilitiesAndWounds;
 
 //OTHERS
-@property (nonatomic) int totalLevel;
+@property (nonatomic) NSInteger totalLevel;
 //
 @property (nonatomic) NSString *avatarPath;
 

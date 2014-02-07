@@ -10,7 +10,7 @@
 
 @protocol CampaignDeletion <NSObject>
 
--(void) deleteCampaign:(int)campaignNumber;
+-(void) deleteCampaign:(NSInteger)campaignNumber;
 
 @end
 
@@ -19,6 +19,6 @@
 @property (unsafe_unretained) id <CampaignDeletion> delegate;
 @property (weak, nonatomic) IBOutlet UILabel *campaignLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *campaignImageView;
-@property int campaignNumber;
+@property NSInteger campaignNumber;
 
 @end

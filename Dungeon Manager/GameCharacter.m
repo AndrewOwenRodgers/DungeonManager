@@ -33,7 +33,7 @@
     self.hairColor = [decoder decodeObjectForKey:@"hairColor"];
     self.eyeColor = [decoder decodeObjectForKey:@"eyeColor"];
     
-    self.maxHealth = [decoder decodeIntForKey:@"maxHealth"];
+    self.maxHealth = [decoder decodeIntegerForKey:@"maxHealth"];
     self.coreAttributes = [decoder decodeObjectForKey:@"coreAttributes"];
     self.classSkills = [decoder decodeObjectForKey:@"classSkills"];
     self.classSkillAttributes = [decoder decodeObjectForKey:@"classSkillsAttributes"];
@@ -42,25 +42,25 @@
     self.domain = [decoder decodeObjectForKey:@"domain"];
     self.speeds = [decoder decodeObjectForKey:@"speeds"];
     self.languages = [decoder decodeObjectForKey:@"languages"];
-    self.primaryLevel = [decoder decodeIntForKey:@"primaryLevel"];
-    self.initiativeModifier = [decoder decodeIntForKey:@"initiativeModifier"];
-    self.baseAttackBonus = [decoder decodeIntForKey:@"baseAttackBonus"];
-    self.spellResistance = [decoder decodeIntForKey:@"spellResistance"];
-    self.armorClass = [decoder decodeIntForKey:@"armorClass"];
+    self.primaryLevel = [decoder decodeIntegerForKey:@"primaryLevel"];
+    self.initiativeModifier = [decoder decodeIntegerForKey:@"initiativeModifier"];
+    self.baseAttackBonus = [decoder decodeIntegerForKey:@"baseAttackBonus"];
+    self.spellResistance = [decoder decodeIntegerForKey:@"spellResistance"];
+    self.armorClass = [decoder decodeIntegerForKey:@"armorClass"];
     self.savingThrows = [decoder decodeObjectForKey:@"savingThrows"];
     self.secondaryClasses = [decoder decodeObjectForKey:@"secondaryClasses"];
     
-    self.currentHealth = [decoder decodeIntForKey:@"currentHealth"];
-    self.currency = [decoder decodeIntForKey:@"currency"];
+    self.currentHealth = [decoder decodeIntegerForKey:@"currentHealth"];
+    self.currency = [decoder decodeIntegerForKey:@"currency"];
     self.inventory = [decoder decodeObjectForKey:@"inventory"];
     self.inventoryWeights = [decoder decodeObjectForKey:@"inventoryWeights"];
-    self.inventoryTotalWeight = [decoder decodeIntForKey:@"inventoryTotalWeight"];
-    self.xp = [decoder decodeIntForKey:@"xp"];
+    self.inventoryTotalWeight = [decoder decodeIntegerForKey:@"inventoryTotalWeight"];
+    self.xp = [decoder decodeIntegerForKey:@"xp"];
     self.otherAbilitiesAndWounds = [decoder decodeObjectForKey:@"otherAbilitiesAndWounds"];
     
     self.characterName = [decoder decodeObjectForKey:@"characterName"];
     self.primaryClass = [decoder decodeObjectForKey:@"primaryClass"];
-    self.totalLevel = [decoder decodeIntForKey:@"totalLevel"];
+    self.totalLevel = [decoder decodeIntegerForKey:@"totalLevel"];
     self.avatarPath = [decoder decodeObjectForKey:@"avatarPath"];
     self.skinColor = [decoder decodeObjectForKey:@"skinColor"];
     
@@ -75,13 +75,13 @@
     [encoder encodeObject:self.homeland forKey:@"homeland"];
     [encoder encodeObject:self.deity forKey:@"deity"];
     [encoder encodeObject:self.alignment forKey:@"alignment"];
-    [encoder encodeInt:self.age forKey:@"age"];
+    [encoder encodeInteger:self.age forKey:@"age"];
     [encoder encodeObject:self.height forKey:@"height"];
     [encoder encodeObject:self.weight forKey:@"weight"];
     [encoder encodeObject:self.hairColor forKey:@"hairColor"];
     [encoder encodeObject:self.eyeColor forKey:@"eyeColor"];
     
-    [encoder encodeInt:self.maxHealth forKey:@"maxHealth"];
+    [encoder encodeInteger:self.maxHealth forKey:@"maxHealth"];
     [encoder encodeObject:self.coreAttributes forKey:@"coreAttributes"];
     [encoder encodeObject:self.classSkills forKey:@"classSkills"];
     [encoder encodeObject:self.classSkillAttributes forKey:@"classSkillsAttributes"];
@@ -90,25 +90,25 @@
     [encoder encodeObject:self.domain forKey:@"domain"];
     [encoder encodeObject:self.speeds forKey:@"speeds"];
     [encoder encodeObject:self.languages forKey:@"languages"];
-    [encoder encodeInt:self.primaryLevel forKey:@"primaryLevel"];
-    [encoder encodeInt:self.initiativeModifier forKey:@"initiativeModifier"];
-    [encoder encodeInt:self.baseAttackBonus forKey:@"baseAttackBonus"];
-    [encoder encodeInt:self.spellResistance forKey:@"spellResistance"];
+    [encoder encodeInteger:self.primaryLevel forKey:@"primaryLevel"];
+    [encoder encodeInteger:self.initiativeModifier forKey:@"initiativeModifier"];
+    [encoder encodeInteger:self.baseAttackBonus forKey:@"baseAttackBonus"];
+    [encoder encodeInteger:self.spellResistance forKey:@"spellResistance"];
     [encoder encodeInteger:self.armorClass forKey:@"armorClass"];
     [encoder encodeObject:self.savingThrows forKey:@"savingThrows"];
     [encoder encodeObject:self.secondaryClasses forKey:@"secondaryClasses"];
     
-    [encoder encodeInt:self.currentHealth forKey:@"currentHealth"];
-    [encoder encodeInt:self.currency forKey:@"currency"];
+    [encoder encodeInteger:self.currentHealth forKey:@"currentHealth"];
+    [encoder encodeInteger:self.currency forKey:@"currency"];
     [encoder encodeObject:self.inventory forKey:@"inventory"];
     [encoder encodeObject:self.inventoryWeights forKey:@"inventoryWeights"];
-    [encoder encodeInt:self.inventoryTotalWeight forKey:@"inventoryTotalWeight"];
-    [encoder encodeInt:self.xp forKey:@"xp"];
+    [encoder encodeInteger:self.inventoryTotalWeight forKey:@"inventoryTotalWeight"];
+    [encoder encodeInteger:self.xp forKey:@"xp"];
     [encoder encodeObject:self.otherAbilitiesAndWounds forKey:@"otherAbilitiesAndWounds"];
     
     [encoder encodeObject:self.characterName forKey:@"characterName"];
     [encoder encodeObject:self.primaryClass forKey:@"primaryClass"];
-    [encoder encodeInt:self.totalLevel forKey:@"totalLevel"];
+    [encoder encodeInteger:self.totalLevel forKey:@"totalLevel"];
     [encoder encodeObject:self.avatarPath forKey:@"avatarPath"];
     [encoder encodeObject:self.skinColor forKey:@"skinColor"];
 }

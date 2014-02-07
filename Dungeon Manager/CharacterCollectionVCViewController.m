@@ -46,9 +46,9 @@
     GameCharacter *character = [[GameCharacter alloc] init];
     [self.characters addObject:character];
 
-    int matchingTitleCounter = 1;
+    NSInteger matchingTitleCounter = 1;
     
-    for (int i = 0; i < self.characters.count; i++)
+    for (NSInteger i = 0; i < self.characters.count; i++)
     {
         for (GameCharacter *character in self.characters)
         {
@@ -70,7 +70,7 @@
     [self.characterCollection reloadData];
 }
 
--(void)deleteCharacter: (int)characterNumber
+-(void)deleteCharacter: (NSInteger)characterNumber
 {
     [self.characters removeObjectAtIndex:characterNumber];
     

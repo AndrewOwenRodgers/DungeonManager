@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		07157A5218A419BB0098B94A /* GameCharacterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 07157A5118A419BB0098B94A /* GameCharacterVC.m */; };
+		07157A5818A4987F0098B94A /* AttributeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 07157A5718A4987F0098B94A /* AttributeCell.m */; };
 		07F8BC64189AF2B200DA8806 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07F8BC63189AF2B200DA8806 /* Foundation.framework */; };
 		07F8BC66189AF2B200DA8806 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07F8BC65189AF2B200DA8806 /* CoreGraphics.framework */; };
 		07F8BC68189AF2B200DA8806 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07F8BC67189AF2B200DA8806 /* UIKit.framework */; };
@@ -46,6 +47,8 @@
 /* Begin PBXFileReference section */
 		07157A5018A419BB0098B94A /* GameCharacterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameCharacterVC.h; sourceTree = "<group>"; };
 		07157A5118A419BB0098B94A /* GameCharacterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameCharacterVC.m; sourceTree = "<group>"; };
+		07157A5618A4987F0098B94A /* AttributeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = AttributeCell.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		07157A5718A4987F0098B94A /* AttributeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttributeCell.m; sourceTree = "<group>"; };
 		07F8BC60189AF2B200DA8806 /* Dungeon Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dungeon Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07F8BC63189AF2B200DA8806 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		07F8BC65189AF2B200DA8806 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -54,8 +57,8 @@
 		07F8BC6D189AF2B200DA8806 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		07F8BC6F189AF2B200DA8806 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		07F8BC71189AF2B200DA8806 /* Dungeon Manager-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Dungeon Manager-Prefix.pch"; sourceTree = "<group>"; };
-		07F8BC72189AF2B200DA8806 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		07F8BC73189AF2B200DA8806 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		07F8BC72189AF2B200DA8806 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = AppDelegate.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		07F8BC73189AF2B200DA8806 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AppDelegate.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		07F8BC76189AF2B200DA8806 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		07F8BC79189AF2B200DA8806 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		07F8BC7B189AF2B200DA8806 /* InitialViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InitialViewController.h; sourceTree = "<group>"; };
@@ -68,9 +71,9 @@
 		07F8BC91189AF2B200DA8806 /* Dungeon_ManagerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Dungeon_ManagerTests.m; sourceTree = "<group>"; };
 		07F8BC9B189AF82A00DA8806 /* CampaignVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CampaignVC.h; sourceTree = "<group>"; };
 		07F8BC9C189AF82A00DA8806 /* CampaignVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CampaignVC.m; sourceTree = "<group>"; };
-		07F8BC9E189AF9D800DA8806 /* CampaignCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CampaignCell.h; sourceTree = "<group>"; };
+		07F8BC9E189AF9D800DA8806 /* CampaignCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = CampaignCell.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		07F8BC9F189AF9D800DA8806 /* CampaignCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CampaignCell.m; sourceTree = "<group>"; };
-		07F8BCA1189AFA3300DA8806 /* Campaign.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Campaign.h; sourceTree = "<group>"; };
+		07F8BCA1189AFA3300DA8806 /* Campaign.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = Campaign.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		07F8BCA2189AFA3300DA8806 /* Campaign.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Campaign.m; sourceTree = "<group>"; };
 		07F8BCA5189C706300DA8806 /* CharacterCollectionVCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterCollectionVCViewController.h; sourceTree = "<group>"; };
 		07F8BCA6189C706400DA8806 /* CharacterCollectionVCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharacterCollectionVCViewController.m; sourceTree = "<group>"; };
@@ -160,10 +163,12 @@
 				07F8BCA6189C706400DA8806 /* CharacterCollectionVCViewController.m */,
 				07F8BCA8189E191A00DA8806 /* CharacterCell.h */,
 				07F8BCA9189E191A00DA8806 /* CharacterCell.m */,
-				07F8BCAB18A0AD1E00DA8806 /* GameCharacter.h */,
-				07F8BCAC18A0AD1E00DA8806 /* GameCharacter.m */,
 				07157A5018A419BB0098B94A /* GameCharacterVC.h */,
 				07157A5118A419BB0098B94A /* GameCharacterVC.m */,
+				07F8BCAB18A0AD1E00DA8806 /* GameCharacter.h */,
+				07F8BCAC18A0AD1E00DA8806 /* GameCharacter.m */,
+				07157A5618A4987F0098B94A /* AttributeCell.h */,
+				07157A5718A4987F0098B94A /* AttributeCell.m */,
 				07F8BCAE18A1C4C200DA8806 /* getDocumentsDirectory.h */,
 				07F8BCAF18A1C4C200DA8806 /* getDocumentsDirectory.m */,
 				07F8BC7E189AF2B200DA8806 /* Images.xcassets */,
@@ -340,6 +345,7 @@
 				07F8BCB018A1C4C200DA8806 /* getDocumentsDirectory.m in Sources */,
 				07F8BC7D189AF2B200DA8806 /* InitialViewController.m in Sources */,
 				07F8BCA7189C706400DA8806 /* CharacterCollectionVCViewController.m in Sources */,
+				07157A5818A4987F0098B94A /* AttributeCell.m in Sources */,
 				07F8BCA0189AF9D800DA8806 /* CampaignCell.m in Sources */,
 				07157A5218A419BB0098B94A /* GameCharacterVC.m in Sources */,
 				07F8BC74189AF2B200DA8806 /* AppDelegate.m in Sources */,
