@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "AttributeData.h"
-#import "GameCharacterVC.h"
 
 @protocol DeleteAttribute <NSObject>
 
@@ -20,7 +19,7 @@
 <UITextFieldDelegate>
 
 @property (unsafe_unretained) id <DeleteAttribute> deletionDelegate;
-@property (unsafe_unretained) id <CharacterSaving> delegate;
+//@property (unsafe_unretained) id <CharacterSaving> delegate;
 @property (weak, nonatomic) AttributeData *attribute;
 @property (weak, nonatomic) IBOutlet UITextField *attributeTextField;
 @property (weak, nonatomic) IBOutlet UITextField *valueTextField;

@@ -129,7 +129,7 @@
     
     cell.attribute.attributeType = collectionView.tag;
     [cell buildView];
-    cell.delegate = self.delegate;
+//    cell.delegate = self.delegate;
     cell.deletionDelegate = self;
     cell.attribute.attributeIndex = [indexPath row];
     return cell;
@@ -208,6 +208,18 @@
     if (index == 3)
     {
         return self.physicalView;
+    }
+    if (index == 4)
+    {
+        return self.statistics1View;
+    }
+    if (index == 5)
+    {
+        return self.attributesView;
+    }
+    if (index == 6)
+    {
+        return self.skillsCollection;
     }
     UIView *stuff = [[UIView alloc] initWithFrame:swipeView.frame];
     stuff.backgroundColor = [UIColor redColor];

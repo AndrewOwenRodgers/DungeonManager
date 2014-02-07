@@ -276,12 +276,38 @@
                     </view>
                     <navigationItem key="navigationItem" id="cRj-Yo-Hgy"/>
                     <connections>
-                        <outlet property="BioTextView" destination="n9O-Ot-ecR" id="QXL-fJ-tCH"/>
-                        <outlet property="backgroundView" destination="9W8-0j-vlB" id="IgJ-HX-wii"/>
+                        <outlet property="BioTextView" destination="n9O-Ot-ecR" id="lk6-l4-sa1"/>
+                        <outlet property="XPTextField" destination="gf2-F1-f4I" id="hPo-Rn-ltv"/>
+                        <outlet property="ageTextField" destination="c4n-na-Gbo" id="vss-Xa-I6Z"/>
+                        <outlet property="alignmentTextField" destination="gcs-i9-fUl" id="E83-0i-yam"/>
+                        <outlet property="armorClassTextField" destination="OdN-Il-F0f" id="hBg-bt-x0M"/>
+                        <outlet property="attributeCollection" destination="OZS-xx-qpX" id="gLo-XI-sN7"/>
+                        <outlet property="attributesView" destination="Slc-J1-18a" id="enl-m6-6bd"/>
+                        <outlet property="babTextField" destination="hva-rO-ENl" id="cfV-on-bmu"/>
+                        <outlet property="backgroundView" destination="9W8-0j-vlB" id="1Tp-y9-0bi"/>
+                        <outlet property="classTextField" destination="8dw-Cb-ZZr" id="G1n-fe-pOu"/>
+                        <outlet property="currentHPTextField" destination="Gv4-tj-TtB" id="R9I-6h-lAG"/>
+                        <outlet property="deityTextField" destination="Mg2-Kc-2My" id="iU1-FE-x81"/>
+                        <outlet property="eyeColorTextField" destination="lSP-6h-sSJ" id="2aZ-LI-PHJ"/>
                         <outlet property="formView" destination="kyW-c0-3Vp" id="UWi-KH-BFJ"/>
-                        <outlet property="genderTextField" destination="GJs-Mj-W3g" id="cAx-6E-407"/>
-                        <outlet property="nameView" destination="lsI-Ch-jh7" id="oJs-1K-3qz"/>
-                        <outlet property="physicalView" destination="3Ow-GR-BZT" id="gUG-M6-toR"/>
+                        <outlet property="genderTextField" destination="GJs-Mj-W3g" id="RfZ-Bn-fiJ"/>
+                        <outlet property="hairColorTextField" destination="mnF-eJ-ESz" id="3Ga-K3-mvM"/>
+                        <outlet property="heightTextField" destination="bnL-39-Bl1" id="RBh-DJ-nHh"/>
+                        <outlet property="homelandTextField" destination="aDM-3f-ZvO" id="nA6-jS-7Sg"/>
+                        <outlet property="initiativeTextField" destination="2C1-vz-x3g" id="9VA-OM-glb"/>
+                        <outlet property="levelTextField" destination="Owk-SE-ZnV" id="naT-Ns-lKA"/>
+                        <outlet property="maxHPTextField" destination="E35-KN-HM7" id="NI7-19-jVM"/>
+                        <outlet property="moneyTextField" destination="TqN-Ok-ofi" id="tbh-kX-xXT"/>
+                        <outlet property="nameTextField" destination="tj9-ZR-f5T" id="eDJ-xj-qN9"/>
+                        <outlet property="nameView" destination="lsI-Ch-jh7" id="hRP-qc-4xL"/>
+                        <outlet property="physicalView" destination="3Ow-GR-BZT" id="hUk-zI-QAj"/>
+                        <outlet property="raceTextField" destination="KKL-Ov-QXx" id="pCk-7D-a2a"/>
+                        <outlet property="skillsCollection" destination="lMO-uM-rbw" id="Io1-OE-eE6"/>
+                        <outlet property="skillsView" destination="2dQ-Px-tDk" id="kGh-ab-qBb"/>
+                        <outlet property="skinColorTextField" destination="o7O-ST-uhU" id="Nfd-o6-G4h"/>
+                        <outlet property="spellResistanceTextField" destination="oYW-eT-puk" id="qKe-Pr-YCX"/>
+                        <outlet property="statistics1View" destination="Dty-XR-6DA" id="f3b-cT-bhH"/>
+                        <outlet property="weightTextField" destination="6ia-rJ-cJP" id="zzA-wk-cxB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="49W-q2-Mw0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -364,6 +390,9 @@
                             <state key="normal" title="New Attribute">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
+                            <connections>
+                                <action selector="newAttributeButton:" destination="71M-0M-1Af" eventType="touchUpInside" id="KJm-FZ-jRq"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" red="0.050151209680000003" green="0.0" blue="0.14021547379999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -813,6 +842,7 @@
                                     <color key="tintColor" red="0.19209929440000001" green="0.0" blue="0.52261844759999998" alpha="1" colorSpace="calibratedRGB"/>
                                     <connections>
                                         <outlet property="attributeTextField" destination="QyP-aM-QOh" id="Nkn-5t-qSv"/>
+                                        <outlet property="secondaryAttributeTextField" destination="2LC-18-VTp" id="vQc-nd-512"/>
                                         <outlet property="valueTextField" destination="nzA-sq-glB" id="mCs-bf-2gZ"/>
                                     </connections>
                                 </collectionViewCell>
@@ -824,6 +854,9 @@
                             <state key="normal" title="New Class Skill">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
+                            <connections>
+                                <action selector="newAttributeButton:" destination="71M-0M-1Af" eventType="touchUpInside" id="k6B-1B-o7x"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" red="0.050151209680000003" green="0.0" blue="0.14021547379999999" alpha="1" colorSpace="calibratedRGB"/>
