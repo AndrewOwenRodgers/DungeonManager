@@ -25,6 +25,11 @@
     return self;
 }
 
+-(IBAction)deleteButton:(id)sender
+{
+    [self.deletionDelegate deleteAttributeOfType:self.attribute.attributeType atIndex:self.attribute.attributeIndex];
+}
+
 -(void)buildView
 {
     self.attributeTextField.text = self.attribute.attributeName;

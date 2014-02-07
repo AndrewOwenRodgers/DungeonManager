@@ -36,6 +36,9 @@
 
 @property (weak, nonatomic) IBOutlet UITextView *BioTextView;//0
 
+
+@property (weak, nonatomic) IBOutlet UICollectionView *attributeCollection;//0
+
 @end
 
 @implementation GameCharacterVC
@@ -65,7 +68,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark -Buttons
+#pragma mark -Buttons and the delete method
 
 - (IBAction)backButton:(id)sender
 {
@@ -74,30 +77,46 @@
 
 - (IBAction)newAttributeButton:(id)sender
 {
+    AttributeData *attribute = [[AttributeData alloc] init];
+    attribute.attributeName = @"New";
+    attribute.attributeValue = 0;
+    
     if ([sender tag] == 0)
     {
-        AttributeData *attribute = [[AttributeData alloc] init];
-        attribute.attributeName = @"New";
-        attribute.attributeValue = 0;
         [self.character.coreAttributes addObject:attribute];
-        
-        [self.delegate saveCharacters];
     }
+    
+    [self.delegate saveCharacters];
+    [self.attributeCollection reloadData];
+}
+
+-(void)deleteAttributeOfType:(NSInteger)type atIndex:(NSInteger)index
+{
+    if (type == 0)
+    {
+        [self.character.coreAttributes removeObjectAtIndex:index];
+    }
+    
+    [self.attributeCollection reloadData];
 }
 
 #pragma mark -CollectionViews
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    AttributeCell *cell;
     if (collectionView.tag == 0)
     {
-        AttributeCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"characterCell" forIndexPath:indexPath];
+        cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"attributeCell" forIndexPath:indexPath];
         cell.attribute = self.character.coreAttributes[indexPath.row];
-        [cell buildView];
-        cell.delegate = self.delegate;
-        return cell;
     }
-    return nil;
+    
+    cell.attribute.attributeType = collectionView.tag;
+    [cell buildView];
+    cell.delegate = self.delegate;
+    cell.deletionDelegate = self;
+    cell.attribute.attributeIndex = [indexPath row];
+    return cell;
 }
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section

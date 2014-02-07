@@ -16,5 +16,7 @@
 @property NSInteger attributeWeight;
 @property NSString *secondaryAttribute;
 @property NSString *attributeDescription;
+@property NSInteger attributeIndex;
+@property NSInteger attributeType;
 
 @end

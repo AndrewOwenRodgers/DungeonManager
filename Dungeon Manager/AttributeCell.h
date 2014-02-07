@@ -10,9 +10,16 @@
 #import "AttributeData.h"
 #import "GameCharacterVC.h"
 
+@protocol DeleteAttribute <NSObject>
+
+-(void)deleteAttributeOfType:(NSInteger)type atIndex:(NSInteger)index;
+
+@end
+
 @interface AttributeCell : UICollectionViewCell
 <UITextFieldDelegate>
 
+@property (unsafe_unretained) id <DeleteAttribute> deletionDelegate;
 @property (unsafe_unretained) id <CharacterSaving> delegate;
 @property (weak, nonatomic) AttributeData *attribute;
 @property (weak, nonatomic) IBOutlet UITextField *attributeTextField;

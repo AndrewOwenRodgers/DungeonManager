@@ -18,7 +18,7 @@
 @end
 
 @interface GameCharacterVC : UIViewController
-<UITextFieldDelegate, UITextViewDelegate, SwipeViewDataSource, SwipeViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate>
+<UITextFieldDelegate, UITextViewDelegate, SwipeViewDataSource, SwipeViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate, DeleteAttribute>
 
 
 @property (weak, nonatomic) IBOutlet SwipeView *formView;
