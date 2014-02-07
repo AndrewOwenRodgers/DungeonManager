@@ -107,16 +107,22 @@
 
 - (UIView *)swipeView:(SwipeView *)swipeView viewForItemAtIndex:(NSInteger)index reusingView:(UIView *)view
 {
+    if (index == 0)
+    {
+        return self.nameView;
+    }
+    if (index == 1)
+    {
+        return self.backgroundView;
+    }
     if (index == 2)
     {
-        return self.scrollView;
+        return self.physicalView;
     }
-    UIView *stuff = [[UIView alloc] initWithFrame:swipeView.frame];
-    stuff.backgroundColor = [UIColor redColor];
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(100, 150, 120, 120)];
-    label.text = [NSString stringWithFormat:@"view number %d", index];
-    [stuff addSubview:label];
-    return stuff;
+    else
+    {
+        return [[UIView alloc] initWithFrame:self.view.frame];
+    }
 }
 
 @end
