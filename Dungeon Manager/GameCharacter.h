@@ -11,21 +11,19 @@
 @interface GameCharacter : NSObject
 <NSCoding>;
 
+//BASIC INFO VIEW
 @property (nonatomic) NSString *characterName;
 //
 @property (nonatomic) NSString *primaryClass;
 //
 @property (nonatomic) int primaryLevel;
 //
-@property (nonatomic) int totalLevel;
-//
-@property (nonatomic) NSString *avatarPath;
-@property (nonatomic) NSString *bio;
-//
 @property (nonatomic) NSString *race;
 //
-@property (nonatomic) NSString *gender;
+@property (nonatomic) int xp;
 //
+
+//BACKGROUND VIEW
 @property (nonatomic) NSString *homeland;
 //
 @property (nonatomic) NSString *deity;
@@ -33,6 +31,12 @@
 @property (nonatomic) NSString *alignment;
 //
 @property (nonatomic) int age;
+//
+@property (nonatomic) NSString *bio;
+//
+
+//APPEARANCE VIEW
+@property (nonatomic) NSString *gender;
 //
 @property (nonatomic) NSString *height;
 //
@@ -45,7 +49,22 @@
 @property (nonatomic) NSString *skinColor;
 //
 
+
+//STATISTICS ONE VIEW
 @property (nonatomic) int maxHealth;
+//
+@property (nonatomic) int currentHealth;
+//
+@property (nonatomic) int initiativeModifier;
+//
+@property (nonatomic) int baseAttackBonus;
+//
+@property (nonatomic) int spellResistance;
+//
+@property (nonatomic) int currency;
+//
+@property (nonatomic) int armorClass;
+
 @property (nonatomic) NSMutableDictionary *coreAttributes;
 @property (nonatomic) NSMutableDictionary *classSkills;
 @property (nonatomic) NSMutableDictionary *classSkillAttributes;
@@ -54,18 +73,18 @@
 @property (nonatomic) NSString *domain;
 @property (nonatomic) NSMutableDictionary *speeds;
 @property (nonatomic) NSMutableArray *languages;
-@property (nonatomic) int initiativeModifier;
-@property (nonatomic) int baseAttackBonus;
-@property (nonatomic) int spellResistance;
 @property (nonatomic) NSMutableDictionary *savingThrows;
 @property (nonatomic) NSMutableDictionary *secondaryClasses;
 
-@property (nonatomic) int currentHealth;
-@property (nonatomic) int currency;
 @property (nonatomic) NSMutableDictionary *inventory;
 @property (nonatomic) NSMutableDictionary *inventoryWeights;
 @property (nonatomic) int inventoryTotalWeight;
-@property (nonatomic) int xp;
 @property (nonatomic) NSString *otherAbilitiesAndWounds;
+
+//OTHERS
+@property (nonatomic) int totalLevel;
+//
+@property (nonatomic) NSString *avatarPath;
+
 
 @end

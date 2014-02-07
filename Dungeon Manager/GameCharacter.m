@@ -46,6 +46,7 @@
     self.initiativeModifier = [decoder decodeIntForKey:@"initiativeModifier"];
     self.baseAttackBonus = [decoder decodeIntForKey:@"baseAttackBonus"];
     self.spellResistance = [decoder decodeIntForKey:@"spellResistance"];
+    self.armorClass = [decoder decodeIntForKey:@"armorClass"];
     self.savingThrows = [decoder decodeObjectForKey:@"savingThrows"];
     self.secondaryClasses = [decoder decodeObjectForKey:@"secondaryClasses"];
     
@@ -93,6 +94,7 @@
     [encoder encodeInt:self.initiativeModifier forKey:@"initiativeModifier"];
     [encoder encodeInt:self.baseAttackBonus forKey:@"baseAttackBonus"];
     [encoder encodeInt:self.spellResistance forKey:@"spellResistance"];
+    [encoder encodeInteger:self.armorClass forKey:@"armorClass"];
     [encoder encodeObject:self.savingThrows forKey:@"savingThrows"];
     [encoder encodeObject:self.secondaryClasses forKey:@"secondaryClasses"];
     
