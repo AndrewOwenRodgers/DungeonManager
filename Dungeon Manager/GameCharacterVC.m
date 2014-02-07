@@ -38,6 +38,7 @@
 
 
 @property (weak, nonatomic) IBOutlet UICollectionView *attributeCollection;//0
+@property (weak, nonatomic) IBOutlet UICollectionView *skillsCollection;//1
 
 @end
 
@@ -85,6 +86,11 @@
     {
         [self.character.coreAttributes addObject:attribute];
     }
+    if ([sender tag] == 1)
+    {
+        attribute.secondaryAttribute = @"New";
+        [self.character.classSkills addObject:attribute];
+    }
     
     [self.delegate saveCharacters];
     [self.attributeCollection reloadData];
@@ -96,7 +102,12 @@
     {
         [self.character.coreAttributes removeObjectAtIndex:index];
     }
+    if (type == 1)
+    {
+        [self.character.classSkills removeObjectAtIndex:index];
+    }
     
+    [self.delegate saveCharacters];
     [self.attributeCollection reloadData];
 }
 
@@ -109,6 +120,11 @@
     {
         cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"attributeCell" forIndexPath:indexPath];
         cell.attribute = self.character.coreAttributes[indexPath.row];
+    }
+    else if (collectionView.tag == 1)
+    {
+        cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"skillsCell" forIndexPath:indexPath];
+        cell.attribute = self.character.classSkills[indexPath.row];
     }
     
     cell.attribute.attributeType = collectionView.tag;
@@ -145,8 +161,6 @@
         self.character.race = textField.text;
     }
     
-    // [textField.text intValue]
-    
     [self.delegate saveCharacters];
 }
 
@@ -166,14 +180,14 @@
 
 - (IBAction)showNextView:(id)sender
 {
-    NSInteger nextIndex = [_formView currentItemIndex] +1;
-    [_formView scrollToItemAtIndex:nextIndex duration:0.4];
+    NSInteger nextIndex = [self.formView currentItemIndex] + 1;
+    [self.formView scrollToItemAtIndex:nextIndex duration:0.4];
 }
 
 - (IBAction)showPreviousView:(id)sender
 {
-    NSInteger nextIndex = [_formView currentItemIndex] -1;
-    [_formView scrollToItemAtIndex:nextIndex duration:0.4];
+    NSInteger nextIndex = [self.formView currentItemIndex] -1;
+    [self.formView scrollToItemAtIndex:nextIndex duration:0.4];
 }
 
 - (NSInteger)numberOfItemsInSwipeView:(SwipeView *)swipeView

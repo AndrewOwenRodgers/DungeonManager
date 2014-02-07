@@ -29,5 +29,7 @@
 @property (weak, nonatomic) IBOutlet UIView *backgroundView;//2
 @property (weak, nonatomic) IBOutlet UIView *physicalView;//3
 @property (weak, nonatomic) IBOutlet UIView *statistics1View;//4
+@property (weak, nonatomic) IBOutlet UIView *attributesView;//5
+@property (weak, nonatomic) IBOutlet UIView *skillsView;//6
 
 @end

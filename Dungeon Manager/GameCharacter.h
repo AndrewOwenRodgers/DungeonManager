@@ -75,6 +75,7 @@
 
 //ATTRIBUTES VIEW
 @property (nonatomic) NSMutableArray *coreAttributes;
+//
 
 //CLASS SKILLS VIEW
 @property (nonatomic) NSMutableArray *classSkills;
@@ -86,8 +87,10 @@
 @property (nonatomic) NSMutableArray *spells;
 @property (nonatomic) NSString *domain;
 
+//INVENTORY VIEW
 @property (nonatomic) NSMutableArray *inventory;
 @property (nonatomic) NSInteger inventoryTotalWeight;
+
 @property (nonatomic) NSString *otherAbilitiesAndWounds;
 
 //OTHERS
