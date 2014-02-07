@@ -15,22 +15,43 @@
     self = [super initWithFrame:frame];
     if (self)
     {
-        // Initialization code
     }
     
     self.attributeTextField.delegate = self;
     self.valueTextField.delegate = self;
     self.secondaryAttributeTextField.delegate = self;
+    self.weightTextField.delegate = self;
     
     return self;
 }
 
+-(void)buildView
+{
+    self.attributeTextField.text = self.attribute.attributeName;
+    self.valueTextField.text = [NSString stringWithFormat:@"%d", self.attribute.attributeValue];
+    self.secondaryAttributeTextField.text = self.attribute.secondaryAttribute;
+    self.weightTextField.text = [NSString stringWithFormat:@"%d", self.attribute.attributeWeight];
+}
+
 -(void)textFieldDidEndEditing:(UITextField *)textField
 {
+    if (textField.tag == 0)
+    {
+        self.attribute.attributeName = textField.text;
+    }
     if (textField.tag == 1)
     {
-        
+        self.attribute.attributeValue = [textField.text integerValue];
     }
+    if (textField.tag == 2)
+    {
+        self.attribute.attributeWeight = [textField.text integerValue];
+    }
+    if (textField.tag == 3)
+    {
+        self.attribute.secondaryAttribute = textField.text;
+    }
+    [self.delegate saveCharacters];
 }
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField

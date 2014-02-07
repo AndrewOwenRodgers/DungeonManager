@@ -8,13 +8,18 @@
 
 #import <UIKit/UIKit.h>
 #import "AttributeData.h"
+#import "GameCharacterVC.h"
 
 @interface AttributeCell : UICollectionViewCell
 <UITextFieldDelegate>
 
+@property (unsafe_unretained) id <CharacterSaving> delegate;
 @property (weak, nonatomic) AttributeData *attribute;
-@property (weak, nonatomic) UITextField *attributeTextField;
-@property (weak, nonatomic) UITextField *valueTextField;
-@property (weak, nonatomic) UITextField *secondaryAttributeTextField;
+@property (weak, nonatomic) IBOutlet UITextField *attributeTextField;
+@property (weak, nonatomic) IBOutlet UITextField *valueTextField;
+@property (weak, nonatomic) IBOutlet UITextField *weightTextField;
+@property (weak, nonatomic) IBOutlet UITextField *secondaryAttributeTextField;
+
+-(void)buildView;
 
 @end

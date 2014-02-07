@@ -984,7 +984,7 @@
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="attributeCell" id="cYH-fG-JX3">
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="attributeCell" id="cYH-fG-JX3" customClass="AttributeCell">
                                                 <rect key="frame" x="5" y="0.0" width="310" height="50"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -1014,6 +1014,10 @@
                                                 </view>
                                                 <color key="backgroundColor" red="0.19209929440000001" green="0.0" blue="0.52261844759999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="tintColor" red="0.19209929440000001" green="0.0" blue="0.52261844759999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <outlet property="attributeTextField" destination="Di0-gE-RwW" id="YFP-y7-spr"/>
+                                                    <outlet property="valueTextField" destination="2rB-wr-NP5" id="xGA-tr-cwl"/>
+                                                </connections>
                                             </collectionViewCell>
                                         </cells>
                                     </collectionView>

@@ -65,9 +65,48 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark -Buttons
+
 - (IBAction)backButton:(id)sender
 {
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (IBAction)newAttributeButton:(id)sender
+{
+    if ([sender tag] == 0)
+    {
+        AttributeData *attribute = [[AttributeData alloc] init];
+        attribute.attributeName = @"New";
+        attribute.attributeValue = 0;
+        [self.character.coreAttributes addObject:attribute];
+        
+        [self.delegate saveCharacters];
+    }
+}
+
+#pragma mark -CollectionViews
+
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (collectionView.tag == 0)
+    {
+        AttributeCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"characterCell" forIndexPath:indexPath];
+        cell.attribute = self.character.coreAttributes[indexPath.row];
+        [cell buildView];
+        cell.delegate = self.delegate;
+        return cell;
+    }
+    return nil;
+}
+
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    if (collectionView.tag == 0)
+    {
+        return self.character.coreAttributes.count;
+    }
+    return 0;
 }
 
 #pragma mark -TextField and TextView editing
