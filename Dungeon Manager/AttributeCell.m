@@ -56,7 +56,7 @@
     {
         self.attribute.secondaryAttribute = textField.text;
     }
-//    [self.delegate saveCharacters];
+    [self.delegate saveCharacters];
 }
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField

@@ -10,12 +10,7 @@
 #import "GameCharacter.h"
 #import <SwipeView.h>
 #import "AttributeCell.h"
-
-@protocol CharacterSaving <NSObject>
-
--(void)saveCharacters;
-
-@end
+#import "CharacterSaving.h"
 
 @interface GameCharacterVC : UIViewController
 <UITextFieldDelegate, UITextViewDelegate, SwipeViewDataSource, SwipeViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate, DeleteAttribute>

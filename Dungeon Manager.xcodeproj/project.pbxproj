@@ -52,6 +52,7 @@
 		07157A5718A4987F0098B94A /* AttributeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttributeCell.m; sourceTree = "<group>"; };
 		07157A5918A4A3B80098B94A /* AttributeData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttributeData.h; sourceTree = "<group>"; };
 		07157A5A18A4A3B80098B94A /* AttributeData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttributeData.m; sourceTree = "<group>"; };
+		074FABBB18A555BD003909FC /* CharacterSaving.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CharacterSaving.h; sourceTree = "<group>"; };
 		07F8BC60189AF2B200DA8806 /* Dungeon Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dungeon Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07F8BC63189AF2B200DA8806 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		07F8BC65189AF2B200DA8806 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -176,6 +177,7 @@
 				07157A5A18A4A3B80098B94A /* AttributeData.m */,
 				07F8BCAE18A1C4C200DA8806 /* getDocumentsDirectory.h */,
 				07F8BCAF18A1C4C200DA8806 /* getDocumentsDirectory.m */,
+				074FABBB18A555BD003909FC /* CharacterSaving.h */,
 				07F8BC7E189AF2B200DA8806 /* Images.xcassets */,
 				07F8BC6A189AF2B200DA8806 /* Supporting Files */,
 			);

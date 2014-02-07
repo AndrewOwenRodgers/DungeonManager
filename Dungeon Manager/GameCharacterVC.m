@@ -85,15 +85,16 @@
     if ([sender tag] == 0)
     {
         [self.character.coreAttributes addObject:attribute];
+        [self.attributeCollection reloadData];
     }
     if ([sender tag] == 1)
     {
         attribute.secondaryAttribute = @"New";
         [self.character.classSkills addObject:attribute];
+        [self.skillsCollection reloadData];
     }
     
     [self.delegate saveCharacters];
-    [self.attributeCollection reloadData];
 }
 
 -(void)deleteAttributeOfType:(NSInteger)type atIndex:(NSInteger)index
@@ -129,7 +130,7 @@
     
     cell.attribute.attributeType = collectionView.tag;
     [cell buildView];
-//    cell.delegate = self.delegate;
+    cell.delegate = self.delegate;
     cell.deletionDelegate = self;
     cell.attribute.attributeIndex = [indexPath row];
     return cell;
@@ -219,7 +220,7 @@
     }
     if (index == 6)
     {
-        return self.skillsCollection;
+        return self.skillsView;
     }
     UIView *stuff = [[UIView alloc] initWithFrame:swipeView.frame];
     stuff.backgroundColor = [UIColor redColor];
