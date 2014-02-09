@@ -10,7 +10,9 @@
 
 @interface GameCharacterVC ()
 
-@property (weak, nonatomic) IBOutlet UITextField *nameTextField;//0
+@property (strong, nonatomic) GameCharacterVC *returner;
+
+@property (strong, nonatomic) IBOutlet UITextField *nameTextField;//0
 @property (weak, nonatomic) IBOutlet UITextField *classTextField;//1
 @property (weak, nonatomic) IBOutlet UITextField *raceTextField;//2
 @property (weak, nonatomic) IBOutlet UITextField *levelTextField;//3
@@ -37,8 +39,8 @@
 @property (weak, nonatomic) IBOutlet UITextView *BioTextView;//0
 
 
-@property (weak, nonatomic) IBOutlet UICollectionView *attributeCollection;//0
-@property (weak, nonatomic) IBOutlet UICollectionView *skillsCollection;//1
+@property (strong, nonatomic) IBOutlet UICollectionView *attributeCollection;//0
+@property (strong, nonatomic) IBOutlet UICollectionView *skillsCollection;//1
 
 @end
 
