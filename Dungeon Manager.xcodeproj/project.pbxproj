@@ -10,6 +10,12 @@
 		07157A5218A419BB0098B94A /* GameCharacterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 07157A5118A419BB0098B94A /* GameCharacterVC.m */; };
 		07157A5818A4987F0098B94A /* AttributeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 07157A5718A4987F0098B94A /* AttributeCell.m */; };
 		07157A5B18A4A3B80098B94A /* AttributeData.m in Sources */ = {isa = PBXBuildFile; fileRef = 07157A5A18A4A3B80098B94A /* AttributeData.m */; };
+		07EAACE118A76BEF00903F5A /* NameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07EAACE018A76BEF00903F5A /* NameView.xib */; };
+		07EAACE518A76D9D00903F5A /* Statistics1View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07EAACE418A76D9D00903F5A /* Statistics1View.xib */; };
+		07EAACE718A7742500903F5A /* BackgroundView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07EAACE618A7742500903F5A /* BackgroundView.xib */; };
+		07EAACE918A7760A00903F5A /* PhysicalView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07EAACE818A7760A00903F5A /* PhysicalView.xib */; };
+		07EAACEF18A8311500903F5A /* AttributeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07EAACEE18A8311500903F5A /* AttributeView.xib */; };
+		07EAACF118A8317800903F5A /* SkillsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07EAACF018A8317800903F5A /* SkillsView.xib */; };
 		07F8BC64189AF2B200DA8806 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07F8BC63189AF2B200DA8806 /* Foundation.framework */; };
 		07F8BC66189AF2B200DA8806 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07F8BC65189AF2B200DA8806 /* CoreGraphics.framework */; };
 		07F8BC68189AF2B200DA8806 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07F8BC67189AF2B200DA8806 /* UIKit.framework */; };
@@ -53,6 +59,12 @@
 		07157A5918A4A3B80098B94A /* AttributeData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttributeData.h; sourceTree = "<group>"; };
 		07157A5A18A4A3B80098B94A /* AttributeData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttributeData.m; sourceTree = "<group>"; };
 		074FABBB18A555BD003909FC /* CharacterSaving.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CharacterSaving.h; sourceTree = "<group>"; };
+		07EAACE018A76BEF00903F5A /* NameView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NameView.xib; sourceTree = "<group>"; };
+		07EAACE418A76D9D00903F5A /* Statistics1View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Statistics1View.xib; sourceTree = "<group>"; };
+		07EAACE618A7742500903F5A /* BackgroundView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BackgroundView.xib; sourceTree = "<group>"; };
+		07EAACE818A7760A00903F5A /* PhysicalView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhysicalView.xib; sourceTree = "<group>"; };
+		07EAACEE18A8311500903F5A /* AttributeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AttributeView.xib; sourceTree = "<group>"; };
+		07EAACF018A8317800903F5A /* SkillsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SkillsView.xib; sourceTree = "<group>"; };
 		07F8BC60189AF2B200DA8806 /* Dungeon Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dungeon Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07F8BC63189AF2B200DA8806 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		07F8BC65189AF2B200DA8806 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -155,6 +167,12 @@
 				07F8BC73189AF2B200DA8806 /* AppDelegate.m */,
 				07F8BC75189AF2B200DA8806 /* Main_iPhone.storyboard */,
 				07F8BC78189AF2B200DA8806 /* Main_iPad.storyboard */,
+				07EAACE018A76BEF00903F5A /* NameView.xib */,
+				07EAACE818A7760A00903F5A /* PhysicalView.xib */,
+				07EAACE618A7742500903F5A /* BackgroundView.xib */,
+				07EAACE418A76D9D00903F5A /* Statistics1View.xib */,
+				07EAACEE18A8311500903F5A /* AttributeView.xib */,
+				07EAACF018A8317800903F5A /* SkillsView.xib */,
 				07F8BC7B189AF2B200DA8806 /* InitialViewController.h */,
 				07F8BC7C189AF2B200DA8806 /* InitialViewController.m */,
 				07F8BC9B189AF82A00DA8806 /* CampaignVC.h */,
@@ -292,9 +310,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				07F8BC7A189AF2B200DA8806 /* Main_iPad.storyboard in Resources */,
+				07EAACE918A7760A00903F5A /* PhysicalView.xib in Resources */,
 				07F8BC7F189AF2B200DA8806 /* Images.xcassets in Resources */,
+				07EAACEF18A8311500903F5A /* AttributeView.xib in Resources */,
+				07EAACE518A76D9D00903F5A /* Statistics1View.xib in Resources */,
 				07F8BC77189AF2B200DA8806 /* Main_iPhone.storyboard in Resources */,
+				07EAACE718A7742500903F5A /* BackgroundView.xib in Resources */,
 				07F8BC6E189AF2B200DA8806 /* InfoPlist.strings in Resources */,
+				07EAACF118A8317800903F5A /* SkillsView.xib in Resources */,
+				07EAACE118A76BEF00903F5A /* NameView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,6 +524,7 @@
 				GCC_PREFIX_HEADER = "Dungeon Manager/Dungeon Manager-Prefix.pch";
 				INFOPLIST_FILE = "Dungeon Manager/Dungeon Manager-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -514,6 +539,7 @@
 				GCC_PREFIX_HEADER = "Dungeon Manager/Dungeon Manager-Prefix.pch";
 				INFOPLIST_FILE = "Dungeon Manager/Dungeon Manager-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

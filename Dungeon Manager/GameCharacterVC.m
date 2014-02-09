@@ -212,32 +212,45 @@
 
 - (UIView *)swipeView:(SwipeView *)swipeView viewForItemAtIndex:(NSInteger)index reusingView:(UIView *)view
 {
+    GameCharacterVC *returner;
     if (index == 1)
     {
-        return self.nameView;
+        returner = [[GameCharacterVC alloc] initWithNibName:@"NameView" bundle:nil];
+        returner.character = self.character;
+        return returner.view;
     }
     if (index == 2)
     {
-        return self.backgroundView;
+        returner = [[GameCharacterVC alloc] initWithNibName:@"BackgroundView" bundle:nil];
+        returner.character = self.character;
+        return returner.view;
     }
     if (index == 3)
     {
-        return self.physicalView;
+        returner = [[GameCharacterVC alloc] initWithNibName:@"PhysicalView" bundle:nil];
+        returner.character = self.character;
+        return returner.view;
     }
     if (index == 4)
     {
-        return self.statistics1View;
+        returner = [[GameCharacterVC alloc] initWithNibName:@"Statistics1View" bundle:nil];
+        returner.character = self.character;
+        return returner.view;
     }
     if (index == 5)
     {
-        return self.attributesView;
+        returner = [[GameCharacterVC alloc] initWithNibName:@"AttributeView" bundle:nil];
+        returner.character = self.character;
+        return returner.view;
     }
     if (index == 6)
     {
-        return self.skillsView;
+        returner = [[GameCharacterVC alloc] initWithNibName:@"SkillsView" bundle:nil];
+        returner.character = self.character;
+        return returner.view;
     }
     UIView *stuff = [[UIView alloc] initWithFrame:swipeView.frame];
-    stuff.backgroundColor = [UIColor redColor];
+    stuff.backgroundColor = [UIColor blueColor];
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(100, 150, 120, 120)];
     label.text = [NSString stringWithFormat:@"view number %d", index];
     [stuff addSubview:label];

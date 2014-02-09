@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4514" systemVersion="13A3028" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GameCharacterVC">
+            <connections>
+                <outlet property="view" destination="yPR-fI-CdI" id="tmA-iR-I7L"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="yPR-fI-CdI">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="t3C-uo-G45">
+                    <rect key="frame" x="110" y="78" width="100" height="100"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="XcC-xD-GhW"/>
+                        <constraint firstAttribute="height" constant="100" id="hEr-a2-8TL"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Attributes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v4d-YM-2Rp">
+                    <rect key="frame" x="0.0" y="186" width="320" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="y1C-kX-alc"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <color key="textColor" red="0.59986139110000003" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="057-PY-gzR">
+                    <rect key="frame" x="0.0" y="262" width="320" height="180"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" red="0.050151209680000003" green="0.0" blue="0.14021547379999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="180" id="gnR-SZ-X8I"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ydf-dc-Gyb">
+                        <size key="itemSize" width="310" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <cells>
+                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="attributeCell" id="mK8-V0-VU8" customClass="AttributeCell">
+                            <rect key="frame" x="5" y="0.0" width="310" height="50"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                <rect key="frame" x="0.0" y="0.0" width="310" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0zr-Tg-gfB" userLabel="skin">
+                                        <rect key="frame" x="210" y="10" width="89" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.11706149189999999" green="0.25381174400000001" blue="0.33659904229999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="0.11706149189999999" green="0.25381174400000001" blue="0.33659904229999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.59986139110000003" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Attribute" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bu0-4c-eiq" userLabel="skin">
+                                        <rect key="frame" x="5" y="10" width="197" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.11706149189999999" green="0.25381174400000001" blue="0.33659904229999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="0.11706149189999999" green="0.25381174400000001" blue="0.33659904229999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.59986139110000003" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <color key="backgroundColor" red="0.19209929440000001" green="0.0" blue="0.52261844759999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="tintColor" red="0.19209929440000001" green="0.0" blue="0.52261844759999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <outlet property="attributeTextField" destination="Bu0-4c-eiq" id="0HD-zV-ihR"/>
+                                <outlet property="valueTextField" destination="0zr-Tg-gfB" id="349-A8-MfB"/>
+                            </connections>
+                        </collectionViewCell>
+                    </cells>
+                </collectionView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lWT-On-7Rg">
+                    <rect key="frame" x="85" y="221" width="150" height="33"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" title="New Attribute">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.050151209680000003" green="0.0" blue="0.14021547379999999" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="lWT-On-7Rg" firstAttribute="top" secondItem="v4d-YM-2Rp" secondAttribute="bottom" constant="14" id="1gh-dQ-ISw"/>
+                <constraint firstItem="v4d-YM-2Rp" firstAttribute="trailing" secondItem="057-PY-gzR" secondAttribute="trailing" id="2HA-iC-oIe"/>
+                <constraint firstItem="v4d-YM-2Rp" firstAttribute="top" secondItem="t3C-uo-G45" secondAttribute="bottom" constant="8" symbolic="YES" id="BtD-Tx-iUu"/>
+                <constraint firstItem="v4d-YM-2Rp" firstAttribute="leading" secondItem="yPR-fI-CdI" secondAttribute="leading" id="Dxh-08-Ci6"/>
+                <constraint firstItem="lWT-On-7Rg" firstAttribute="leading" secondItem="yPR-fI-CdI" secondAttribute="leading" constant="85" id="FpI-Vt-9Qi"/>
+                <constraint firstItem="lWT-On-7Rg" firstAttribute="centerX" secondItem="v4d-YM-2Rp" secondAttribute="centerX" id="HMj-Bb-poP"/>
+                <constraint firstItem="057-PY-gzR" firstAttribute="top" secondItem="lWT-On-7Rg" secondAttribute="bottom" constant="8" symbolic="YES" id="JQe-6r-gyn"/>
+                <constraint firstItem="t3C-uo-G45" firstAttribute="centerX" secondItem="v4d-YM-2Rp" secondAttribute="centerX" id="S64-tB-qk9"/>
+                <constraint firstItem="057-PY-gzR" firstAttribute="leading" secondItem="v4d-YM-2Rp" secondAttribute="leading" id="X9f-VW-mb2"/>
+                <constraint firstAttribute="trailing" secondItem="v4d-YM-2Rp" secondAttribute="trailing" id="kkA-dX-NAB"/>
+                <constraint firstItem="t3C-uo-G45" firstAttribute="top" secondItem="yPR-fI-CdI" secondAttribute="top" constant="78" id="kox-xg-k0U"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
