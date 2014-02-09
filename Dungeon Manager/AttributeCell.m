@@ -10,21 +10,6 @@
 
 @implementation AttributeCell
 
-- (id)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self)
-    {
-    }
-    
-    self.attributeTextField.delegate = self;
-    self.valueTextField.delegate = self;
-    self.secondaryAttributeTextField.delegate = self;
-    self.weightTextField.delegate = self;
-    
-    return self;
-}
-
 -(IBAction)deleteButton:(id)sender
 {
     [self.deletionDelegate deleteAttributeOfType:self.attribute.attributeType atIndex:self.attribute.attributeIndex];
@@ -32,6 +17,11 @@
 
 -(void)buildView
 {
+    self.attributeTextField.delegate = self;
+    self.valueTextField.delegate = self;
+    self.secondaryAttributeTextField.delegate = self;
+    self.weightTextField.delegate = self;
+    
     self.attributeTextField.text = self.attribute.attributeName;
     self.valueTextField.text = [NSString stringWithFormat:@"%d", self.attribute.attributeValue];
     self.secondaryAttributeTextField.text = self.attribute.secondaryAttribute;
