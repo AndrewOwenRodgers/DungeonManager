@@ -9,6 +9,9 @@
 #import "GameCharacterVC.h"
 
 @interface GameCharacterVC ()
+{
+    CGFloat slideheight;
+}
 
 @property (strong, nonatomic) GameCharacterVC *returner;
 
@@ -163,8 +166,57 @@
 
 #pragma mark -TextField and TextView editing
 
+- (void)textFieldDidBeginEditing:(UITextField *)textField //Slides the view up when the keyboard appears
+{
+    CGRect textFieldRect = [self.view.window convertRect:textField.bounds fromView:textField];
+    CGRect viewRect = [self.view.window convertRect:self.view.bounds fromView:self.view];
+    CGFloat midline = textFieldRect.origin.y + (CGFloat)0.5 * textFieldRect.size.height;
+    CGFloat numerator = midline - viewRect.origin.y - (CGFloat)0.2 * viewRect.size.height;
+    CGFloat denominator = (CGFloat)0.6 * viewRect.size.height;
+    CGFloat heightFraction = numerator / denominator;
+    if (heightFraction < 0.0)
+    {
+        heightFraction = 0.0;
+    }
+    else if (heightFraction > 1.0)
+    {
+        heightFraction = 1.0;
+    }
+    UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
+    if (orientation == UIInterfaceOrientationPortrait ||
+        orientation == UIInterfaceOrientationPortraitUpsideDown)
+    {
+        slideheight = floor((CGFloat)216 * heightFraction);
+    }
+    else
+    {
+        slideheight = floor((CGFloat)168 * heightFraction);
+    }
+    CGRect viewFrame = self.view.frame;
+    viewFrame.origin.y -= slideheight;
+    
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationBeginsFromCurrentState:YES];
+    [UIView setAnimationDuration:(CGFloat)0.3];
+    
+    [self.view setFrame:viewFrame];
+    
+    [UIView commitAnimations];
+}
+
 -(void)textFieldDidEndEditing:(UITextField *)textField
 {
+    CGRect viewFrame = self.view.frame;
+    viewFrame.origin.y += slideheight;
+    
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationBeginsFromCurrentState:YES];
+    [UIView setAnimationDuration:(CGFloat)0.3];
+    
+    [self.view setFrame:viewFrame];
+    
+    [UIView commitAnimations];
+    
     if (textField.tag == 0)
     {
         self.character.characterName = textField.text;
@@ -176,6 +228,82 @@
     else if (textField.tag == 2)
     {
         self.character.race = textField.text;
+    }
+    else if (textField.tag == 3)
+    {
+        self.character.primaryLevel = [textField.text integerValue];
+    }
+    else if (textField.tag == 4)
+    {
+        self.character.xp = [textField.text integerValue];
+    }
+    else if (textField.tag == 5)
+    {
+        self.character.homeland = textField.text;
+    }
+    else if (textField.tag == 6)
+    {
+        self.character.deity = textField.text;
+    }
+    else if (textField.tag == 7)
+    {
+        self.character.alignment = textField.text;
+    }
+    else if (textField.tag == 8)
+    {
+        self.character.age = [textField.text integerValue];
+    }
+    else if (textField.tag == 9)
+    {
+        self.character.maxHealth = [textField.text integerValue];
+    }
+    else if (textField.tag == 10)
+    {
+        self.character.currentHealth = [textField.text integerValue];
+    }
+    else if (textField.tag == 11)
+    {
+        self.character.initiativeModifier = [textField.text integerValue];
+    }
+    else if (textField.tag == 12)
+    {
+        self.character.baseAttackBonus = [textField.text integerValue];
+    }
+    else if (textField.tag == 13)
+    {
+        self.character.spellResistance = [textField.text integerValue];
+    }
+    else if (textField.tag == 14)
+    {
+        self.character.currency = [textField.text integerValue];
+    }
+    else if (textField.tag == 21)
+    {
+        self.character.armorClass = [textField.text integerValue];
+    }
+    else if (textField.tag == 15)
+    {
+        self.character.gender = textField.text;
+    }
+    else if (textField.tag == 16)
+    {
+        self.character.height = textField.text;
+    }
+    else if (textField.tag == 17)
+    {
+        self.character.weight = textField.text;
+    }
+    else if (textField.tag == 18)
+    {
+        self.character.hairColor = textField.text;
+    }
+    else if (textField.tag == 19)
+    {
+        self.character.eyeColor = textField.text;
+    }
+    else if (textField.tag == 20)
+    {
+        self.character.skinColor = textField.text;
     }
     
     [self.delegate saveCharacters];

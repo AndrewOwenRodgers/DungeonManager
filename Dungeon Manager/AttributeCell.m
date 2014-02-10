@@ -8,6 +8,13 @@
 
 #import "AttributeCell.h"
 
+@interface AttributeCell()
+{
+    CGFloat slideheight;
+}
+
+@end
+
 @implementation AttributeCell
 
 -(IBAction)deleteButton:(id)sender
@@ -28,8 +35,57 @@
     self.weightTextField.text = [NSString stringWithFormat:@"%d", self.attribute.attributeWeight];
 }
 
+- (void)textFieldDidBeginEditing:(UITextField *)textField //Slides the view up when the keyboard appears
+{
+    CGRect textFieldRect = [self.deletionDelegate.view.window convertRect:textField.bounds fromView:textField];
+    CGRect viewRect = [self.deletionDelegate.view.window convertRect:self.deletionDelegate.view.bounds fromView:self.deletionDelegate.view];
+    CGFloat midline = textFieldRect.origin.y + (CGFloat)0.5 * textFieldRect.size.height;
+    CGFloat numerator = midline - viewRect.origin.y - (CGFloat)0.2 * viewRect.size.height;
+    CGFloat denominator = (CGFloat)0.6 * viewRect.size.height;
+    CGFloat heightFraction = numerator / denominator;
+    if (heightFraction < 0.0)
+    {
+        heightFraction = 0.0;
+    }
+    else if (heightFraction > 1.0)
+    {
+        heightFraction = 1.0;
+    }
+    UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
+    if (orientation == UIInterfaceOrientationPortrait ||
+        orientation == UIInterfaceOrientationPortraitUpsideDown)
+    {
+        slideheight = floor((CGFloat)216 * heightFraction);
+    }
+    else
+    {
+        slideheight = floor((CGFloat)168 * heightFraction);
+    }
+    CGRect viewFrame = self.deletionDelegate.view.frame;
+    viewFrame.origin.y -= slideheight;
+    
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationBeginsFromCurrentState:YES];
+    [UIView setAnimationDuration:(CGFloat)0.3];
+    
+    [self.deletionDelegate.view setFrame:viewFrame];
+    
+    [UIView commitAnimations];
+}
+
 -(void)textFieldDidEndEditing:(UITextField *)textField
 {
+    CGRect viewFrame = self.deletionDelegate.view.frame;
+    viewFrame.origin.y += slideheight;
+    
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationBeginsFromCurrentState:YES];
+    [UIView setAnimationDuration:(CGFloat)0.3];
+    
+    [self.deletionDelegate.view setFrame:viewFrame];
+    
+    [UIView commitAnimations];
+    
     if (textField.tag == 0)
     {
         self.attribute.attributeName = textField.text;

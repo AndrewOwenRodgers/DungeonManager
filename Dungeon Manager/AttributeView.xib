@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GameCharacterVC">
             <connections>
+                <outlet property="attributeCollection" destination="057-PY-gzR" id="wmj-JA-fcA"/>
                 <outlet property="view" destination="yPR-fI-CdI" id="tmA-iR-I7L"/>
             </connections>
         </placeholder>
