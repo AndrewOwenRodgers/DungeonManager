@@ -47,43 +47,7 @@
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
-                    <cells>
-                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="attributeCell" id="mK8-V0-VU8" customClass="AttributeCell">
-                            <rect key="frame" x="5" y="0.0" width="310" height="50"/>
-                            <autoresizingMask key="autoresizingMask"/>
-                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                <rect key="frame" x="0.0" y="0.0" width="310" height="50"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0zr-Tg-gfB" userLabel="skin">
-                                        <rect key="frame" x="210" y="10" width="89" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.11706149189999999" green="0.25381174400000001" blue="0.33659904229999998" alpha="1" colorSpace="calibratedRGB"/>
-                                        <color key="tintColor" red="0.11706149189999999" green="0.25381174400000001" blue="0.33659904229999998" alpha="1" colorSpace="calibratedRGB"/>
-                                        <color key="textColor" red="0.59986139110000003" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                    </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Attribute" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bu0-4c-eiq" userLabel="skin">
-                                        <rect key="frame" x="5" y="10" width="197" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.11706149189999999" green="0.25381174400000001" blue="0.33659904229999998" alpha="1" colorSpace="calibratedRGB"/>
-                                        <color key="tintColor" red="0.11706149189999999" green="0.25381174400000001" blue="0.33659904229999998" alpha="1" colorSpace="calibratedRGB"/>
-                                        <color key="textColor" red="0.59986139110000003" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </view>
-                            <color key="backgroundColor" red="0.19209929440000001" green="0.0" blue="0.52261844759999998" alpha="1" colorSpace="calibratedRGB"/>
-                            <color key="tintColor" red="0.19209929440000001" green="0.0" blue="0.52261844759999998" alpha="1" colorSpace="calibratedRGB"/>
-                            <connections>
-                                <outlet property="attributeTextField" destination="Bu0-4c-eiq" id="0HD-zV-ihR"/>
-                                <outlet property="valueTextField" destination="0zr-Tg-gfB" id="349-A8-MfB"/>
-                            </connections>
-                        </collectionViewCell>
-                    </cells>
+                    <cells/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="Ak4-bk-PYH"/>
                         <outlet property="delegate" destination="-1" id="9bd-k6-qmo"/>
@@ -116,5 +80,40 @@
                 <constraint firstItem="t3C-uo-G45" firstAttribute="top" secondItem="yPR-fI-CdI" secondAttribute="top" constant="78" id="kox-xg-k0U"/>
             </constraints>
         </view>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="attributeCell" id="mK8-V0-VU8" customClass="AttributeCell">
+            <rect key="frame" x="0.0" y="0.0" width="310" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="310" height="50"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0zr-Tg-gfB" userLabel="skin">
+                        <rect key="frame" x="210" y="10" width="89" height="30"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="0.11706149189999999" green="0.25381174400000001" blue="0.33659904229999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.11706149189999999" green="0.25381174400000001" blue="0.33659904229999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="textColor" red="0.59986139110000003" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                    </textField>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Attribute" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bu0-4c-eiq" userLabel="skin">
+                        <rect key="frame" x="5" y="10" width="197" height="30"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="0.11706149189999999" green="0.25381174400000001" blue="0.33659904229999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.11706149189999999" green="0.25381174400000001" blue="0.33659904229999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="textColor" red="0.59986139110000003" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <color key="backgroundColor" red="0.19209929440000001" green="0.0" blue="0.52261844759999998" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="tintColor" red="0.19209929440000001" green="0.0" blue="0.52261844759999998" alpha="1" colorSpace="calibratedRGB"/>
+            <connections>
+                <outlet property="attributeTextField" destination="Bu0-4c-eiq" id="0HD-zV-ihR"/>
+                <outlet property="valueTextField" destination="0zr-Tg-gfB" id="349-A8-MfB"/>
+            </connections>
+        </collectionViewCell>
     </objects>
 </document>

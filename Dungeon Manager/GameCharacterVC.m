@@ -107,7 +107,7 @@
         [self.character.coreAttributes addObject:attribute];
         [self.attributeCollection reloadData];
     }
-    if ([sender tag] == 1)
+    else if ([sender tag] == 1)
     {
         if (!self.character.classSkills)
         {
@@ -140,6 +140,7 @@
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    [collectionView registerClass:[AttributeCell class] forCellWithReuseIdentifier:@"attributeCell"];
     AttributeCell *cell;
     if (collectionView.tag == 0)
     {
@@ -148,7 +149,7 @@
     }
     else if (collectionView.tag == 1)
     {
-        cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"skillsCell" forIndexPath:indexPath];
+        cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"attributeCell" forIndexPath:indexPath];
         cell.attribute = self.character.classSkills[indexPath.row];
     }
     
@@ -165,6 +166,10 @@
     if (collectionView.tag == 0)
     {
         return self.character.coreAttributes.count;
+    }
+    else if (collectionView.tag == 0)
+    {
+        return self.character.classSkills.count;
     }
     return 0;
 }
