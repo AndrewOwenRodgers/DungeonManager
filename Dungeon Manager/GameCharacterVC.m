@@ -140,15 +140,16 @@
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    [collectionView registerClass:[AttributeCell class] forCellWithReuseIdentifier:@"attributeCell"];
     AttributeCell *cell;
     if (collectionView.tag == 0)
     {
+        [collectionView registerNib:[UINib nibWithNibName:@"AttributeCell" bundle:nil] forCellWithReuseIdentifier:@"attributeCell"];
         cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"attributeCell" forIndexPath:indexPath];
         cell.attribute = self.character.coreAttributes[indexPath.row];
     }
     else if (collectionView.tag == 1)
     {
+        [collectionView registerNib:[UINib nibWithNibName:@"SkillCell" bundle:nil] forCellWithReuseIdentifier:@"attributeCell"];
         cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"attributeCell" forIndexPath:indexPath];
         cell.attribute = self.character.classSkills[indexPath.row];
     }
