@@ -11,6 +11,7 @@
 		07157A5218A419BB0098B94A /* GameCharacterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 07157A5118A419BB0098B94A /* GameCharacterVC.m */; };
 		07157A5818A4987F0098B94A /* AttributeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 07157A5718A4987F0098B94A /* AttributeCell.m */; };
 		07157A5B18A4A3B80098B94A /* AttributeData.m in Sources */ = {isa = PBXBuildFile; fileRef = 07157A5A18A4A3B80098B94A /* AttributeData.m */; };
+		072B4C7718A8A6CF0030061E /* CampaignNotesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 072B4C7618A8A6CF0030061E /* CampaignNotesVC.m */; };
 		07EAACE118A76BEF00903F5A /* NameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07EAACE018A76BEF00903F5A /* NameView.xib */; };
 		07EAACE518A76D9D00903F5A /* Statistics1View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07EAACE418A76D9D00903F5A /* Statistics1View.xib */; };
 		07EAACE718A7742500903F5A /* BackgroundView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07EAACE618A7742500903F5A /* BackgroundView.xib */; };
@@ -59,6 +60,8 @@
 		07157A5718A4987F0098B94A /* AttributeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttributeCell.m; sourceTree = "<group>"; };
 		07157A5918A4A3B80098B94A /* AttributeData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttributeData.h; sourceTree = "<group>"; };
 		07157A5A18A4A3B80098B94A /* AttributeData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttributeData.m; sourceTree = "<group>"; };
+		072B4C7518A8A6CF0030061E /* CampaignNotesVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CampaignNotesVC.h; sourceTree = "<group>"; };
+		072B4C7618A8A6CF0030061E /* CampaignNotesVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CampaignNotesVC.m; sourceTree = "<group>"; };
 		074FABBB18A555BD003909FC /* CharacterSaving.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CharacterSaving.h; sourceTree = "<group>"; };
 		07EAACE018A76BEF00903F5A /* NameView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NameView.xib; sourceTree = "<group>"; };
 		07EAACE418A76D9D00903F5A /* Statistics1View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Statistics1View.xib; sourceTree = "<group>"; };
@@ -181,6 +184,8 @@
 				07F8BC9F189AF9D800DA8806 /* CampaignCell.m */,
 				07F8BCA1189AFA3300DA8806 /* Campaign.h */,
 				07F8BCA2189AFA3300DA8806 /* Campaign.m */,
+				072B4C7518A8A6CF0030061E /* CampaignNotesVC.h */,
+				072B4C7618A8A6CF0030061E /* CampaignNotesVC.m */,
 				07F8BCA5189C706300DA8806 /* CharacterCollectionVCViewController.h */,
 				07F8BCA6189C706400DA8806 /* CharacterCollectionVCViewController.m */,
 				07F8BCA8189E191A00DA8806 /* CharacterCell.h */,
@@ -372,6 +377,7 @@
 			files = (
 				07F8BCAD18A0AD1E00DA8806 /* GameCharacter.m in Sources */,
 				07157A5B18A4A3B80098B94A /* AttributeData.m in Sources */,
+				072B4C7718A8A6CF0030061E /* CampaignNotesVC.m in Sources */,
 				07F8BC9D189AF82A00DA8806 /* CampaignVC.m in Sources */,
 				07F8BCA3189AFA3300DA8806 /* Campaign.m in Sources */,
 				07F8BCB018A1C4C200DA8806 /* getDocumentsDirectory.m in Sources */,

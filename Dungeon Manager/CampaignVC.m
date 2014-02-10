@@ -9,6 +9,7 @@
 #import "CampaignVC.h"
 #import "CharacterCollectionVCViewController.h"
 #import "getDocumentsDirectory.h"
+#import "CampaignNotesVC.h"
 
 @interface CampaignVC ()
 
@@ -39,6 +40,11 @@
     {
         CharacterCollectionVCViewController *dest = (CharacterCollectionVCViewController *) segue.destinationViewController;
         dest.filePath = [NSString stringWithFormat:@"%@%@Characters", self.campaignFilePath, self.campaign.title];
+    }
+    else if ([segue.identifier isEqualToString:@"notesSegue"])
+    {
+        CampaignNotesVC *dest = (CampaignNotesVC *) segue.destinationViewController;
+        dest.filePath = [NSString stringWithFormat:@"%@%@Notes", self.campaignFilePath, self.campaign.title];
     }
 }
 

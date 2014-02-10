@@ -19,6 +19,6 @@
 @property (weak, nonatomic) IBOutlet SwipeView *formView;
 
 @property (unsafe_unretained) id <CharacterSaving> delegate;
-@property (weak, nonatomic) GameCharacter *character;
+@property (strong, nonatomic) GameCharacter *character;
 
 @end

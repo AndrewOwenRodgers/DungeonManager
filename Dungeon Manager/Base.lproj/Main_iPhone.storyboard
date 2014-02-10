@@ -409,10 +409,10 @@
             </objects>
             <point key="canvasLocation" x="1674" y="25"/>
         </scene>
-        <!--View Controller-->
+        <!--Campaign NotesVC-->
         <scene sceneID="hch-dR-MAT">
             <objects>
-                <viewController id="t4k-Zw-yC3" sceneMemberID="viewController">
+                <viewController id="t4k-Zw-yC3" customClass="CampaignNotesVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Csl-CJ-AR2"/>
                         <viewControllerLayoutGuide type="bottom" id="8Gc-OI-hnV"/>
@@ -420,9 +420,36 @@
                     <view key="view" contentMode="scaleToFill" id="19k-ss-Nxx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Notes" translatesAutoresizingMaskIntoConstraints="NO" id="zK6-n1-v9i">
+                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="0.050151209680000003" green="0.0" blue="0.14021547379999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.59986139110000003" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vyc-Lp-tY6">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" red="0.4074155746" green="0.28002142140000003" blue="0.7238218246" alpha="1" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <barButtonItem title="&lt; Menu" width="285" id="NBh-Id-gyy">
+                                        <connections>
+                                            <action selector="backButton:" destination="t4k-Zw-yC3" id="StQ-mV-jT9"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <color key="tintColor" red="0.59986139110000003" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="barTintColor" red="0.11706149189999999" green="0.25381174400000001" blue="0.33659904229999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </toolbar>
+                        </subviews>
                         <color key="backgroundColor" red="0.050151209680000003" green="0.0" blue="0.14021547379999999" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="hvK-Gj-cJs"/>
+                    <connections>
+                        <outlet property="notes" destination="zK6-n1-v9i" id="nED-jw-KLO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rNt-TL-CN1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
