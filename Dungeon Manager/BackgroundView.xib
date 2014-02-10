@@ -9,6 +9,7 @@
                 <outlet property="BioTextView" destination="jqZ-tq-VWe" id="aKv-6f-nNU"/>
                 <outlet property="ageTextField" destination="YrC-jL-C57" id="9C4-zH-Xti"/>
                 <outlet property="alignmentTextField" destination="NUE-KX-cpn" id="VWe-6V-7ZY"/>
+                <outlet property="characterImageView" destination="XpJ-bi-ctX" id="G2t-Y4-fSe"/>
                 <outlet property="deityTextField" destination="VFY-Xd-nR0" id="grc-JV-Xtz"/>
                 <outlet property="homelandTextField" destination="8dA-El-xhY" id="7u9-i0-Xvg"/>
                 <outlet property="view" destination="1VE-iQ-gwA" id="dWD-gi-RLS"/>

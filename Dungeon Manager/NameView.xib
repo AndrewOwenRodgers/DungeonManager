@@ -7,6 +7,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GameCharacterVC">
             <connections>
                 <outlet property="XPTextField" destination="iNU-p9-25k" id="cFZ-6n-k9v"/>
+                <outlet property="characterImageView" destination="Mn4-Ad-EAk" id="Cko-QH-OaW"/>
                 <outlet property="classTextField" destination="xDO-Hs-asL" id="lJz-pu-Cf6"/>
                 <outlet property="levelTextField" destination="CVB-i3-TEw" id="Xn1-tY-my6"/>
                 <outlet property="nameTextField" destination="16j-Ez-Emp" id="ouj-PR-1GK"/>

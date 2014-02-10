@@ -13,7 +13,7 @@
 #import "CharacterSaving.h"
 
 @interface GameCharacterVC : UIViewController
-<UITextFieldDelegate, UITextViewDelegate, SwipeViewDataSource, SwipeViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate, DeleteAttribute>
+<UITextFieldDelegate, UITextViewDelegate, SwipeViewDataSource, SwipeViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate, DeleteAttribute, UIImagePickerControllerDelegate, UIActionSheetDelegate, UINavigationControllerDelegate>
 
 
 @property (weak, nonatomic) IBOutlet SwipeView *formView;

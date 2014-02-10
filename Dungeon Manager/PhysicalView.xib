@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GameCharacterVC">
             <connections>
+                <outlet property="characterImageView" destination="GNU-Eh-kxK" id="SmP-6b-slP"/>
                 <outlet property="eyeColorTextField" destination="SPc-iE-8AU" id="5jD-LI-wwo"/>
                 <outlet property="genderTextField" destination="1Ib-uU-muy" id="eYo-JJ-nsf"/>
                 <outlet property="hairColorTextField" destination="BpM-Y7-AUM" id="euy-Yu-4sC"/>

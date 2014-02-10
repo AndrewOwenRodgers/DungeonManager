@@ -23,5 +23,6 @@
 @property (weak, nonatomic) NSString *campaignFilePath;
 @property (strong, nonatomic) NSString *lastCampaignName;
 @property (weak, nonatomic) IBOutlet UITextField *campaignTitleTextField;
+@property (weak, nonatomic) IBOutlet UIImageView *campaignImageView;
 
 @end

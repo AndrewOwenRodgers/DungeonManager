@@ -77,4 +77,59 @@
     [self.delegate saveCampaigns];
 }
 
+#pragma -Camera/Pictures
+
+- (IBAction)startPicker:(id)sender
+{
+    UIActionSheet *mySheet;
+    
+    
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
+    {
+        mySheet = [[UIActionSheet alloc] initWithTitle:@"Pick Photo" delegate:self cancelButtonTitle:@"cancel"destructiveButtonTitle:nil otherButtonTitles: @"Camera", @"Photo Library", nil];
+    }
+    else if ([UIImagePickerController isSourceTypeAvailable: UIImagePickerControllerSourceTypeSavedPhotosAlbum])
+    {
+        mySheet = [[UIActionSheet alloc] initWithTitle:@"Pick Photo" delegate:self cancelButtonTitle:@"cancel"destructiveButtonTitle:nil otherButtonTitles: @"Photo Library", nil];
+    }
+    else
+    {
+        return;
+    }
+    
+    [mySheet showFromBarButtonItem:sender animated:YES];
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    UIImagePickerController *myPicker = [[UIImagePickerController alloc] init];
+    myPicker.delegate = self;
+    myPicker.allowsEditing = YES;
+    
+    if ([[actionSheet buttonTitleAtIndex:buttonIndex] isEqualToString:@"Camera"])
+    {
+        myPicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    }
+    else
+    {
+        myPicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    }
+    
+    [self presentViewController:myPicker animated:YES completion:nil];
+    
+}
+
+- (void) imagePickerController:(UIImagePickerController *)picker
+ didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    [self dismissViewControllerAnimated:YES completion:^{
+        UIImage *editedImage = [info objectForKey: UIImagePickerControllerEditedImage];
+        self.campaignImageView.image = editedImage;
+        
+        NSData *imageData = UIImageJPEGRepresentation(editedImage, 0.5);
+        self.campaign.imagePath = [[getDocumentsDirectory docs] stringByAppendingString: [NSString stringWithFormat:@"%@%@.jpeg", self.campaign.title]];
+        [imageData writeToFile:self.campaign.imagePath atomically:YES];
+    }];
+}
+
 @end

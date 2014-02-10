@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GameCharacterVC">
             <connections>
+                <outlet property="characterImageView" destination="BTi-jb-Bd0" id="fNP-l7-OTx"/>
                 <outlet property="skillsCollection" destination="UHO-kt-Yun" id="j6O-mp-49W"/>
                 <outlet property="view" destination="Vje-ZT-wgo" id="GoI-tl-qOx"/>
             </connections>

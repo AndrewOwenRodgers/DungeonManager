@@ -120,10 +120,16 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" red="0.4074155746" green="0.28002142140000003" blue="0.7238218246" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
-                                    <barButtonItem title="&lt; Campaigns" width="290" style="plain" id="feS-nP-qNR">
+                                    <barButtonItem title="&lt; Campaigns" width="213" style="plain" id="feS-nP-qNR">
                                         <color key="tintColor" red="0.59986139110000003" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <action selector="backButton:" destination="Om5-Q0-7yp" id="mrC-Ag-Jo5"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="camera" id="pge-f2-k0e">
+                                        <color key="tintColor" red="0.59986139110000003" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="startPicker:" destination="Om5-Q0-7yp" id="QKZ-ON-nff"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -207,6 +213,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="nCT-NM-Rw7"/>
                     <connections>
+                        <outlet property="campaignImageView" destination="TzK-Lq-A42" id="6qc-Ku-9ay"/>
                         <outlet property="campaignTitleTextField" destination="UCF-8T-Rjj" id="a09-yr-wyR"/>
                     </connections>
                 </viewController>
@@ -231,10 +238,16 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" red="0.11706149189999999" green="0.25381174400000001" blue="0.33659904229999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
-                                    <barButtonItem title="&lt; Characters" width="281" id="Ja6-DF-8Yz">
+                                    <barButtonItem title="&lt; Characters" width="205" id="Ja6-DF-8Yz">
                                         <color key="tintColor" red="0.59986139110000003" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <action selector="backButton:" destination="71M-0M-1Af" id="jfS-WE-6Si"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="camera" id="xBV-Jp-mZP">
+                                        <color key="tintColor" red="0.59986139110000003" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="startPicker:" destination="71M-0M-1Af" id="fNP-uO-e1j"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>

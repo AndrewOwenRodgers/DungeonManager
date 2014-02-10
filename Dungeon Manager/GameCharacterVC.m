@@ -7,6 +7,7 @@
 //
 
 #import "GameCharacterVC.h"
+#import "getDocumentsDirectory.h"
 
 @interface GameCharacterVC ()
 {
@@ -14,8 +15,9 @@
 }
 
 @property (strong, nonatomic) GameCharacterVC *returner;
+@property (weak, nonatomic) IBOutlet UIImageView *characterImageView;
 
-@property (strong, nonatomic) IBOutlet UITextField *nameTextField;//0
+@property (weak, nonatomic) IBOutlet UITextField *nameTextField;//0
 @property (weak, nonatomic) IBOutlet UITextField *classTextField;//1
 @property (weak, nonatomic) IBOutlet UITextField *raceTextField;//2
 @property (weak, nonatomic) IBOutlet UITextField *levelTextField;//3
@@ -385,6 +387,61 @@
     label.text = [NSString stringWithFormat:@"view number %d", index];
     [stuff addSubview:label];
     return stuff;
+}
+
+#pragma -Camera/Pictures
+
+- (IBAction)startPicker:(id)sender
+{
+    UIActionSheet *mySheet;
+    
+    
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
+    {
+        mySheet = [[UIActionSheet alloc] initWithTitle:@"Pick Photo" delegate:self cancelButtonTitle:@"cancel"destructiveButtonTitle:nil otherButtonTitles: @"Camera", @"Photo Library", nil];
+    }
+    else if ([UIImagePickerController isSourceTypeAvailable: UIImagePickerControllerSourceTypeSavedPhotosAlbum])
+    {
+        mySheet = [[UIActionSheet alloc] initWithTitle:@"Pick Photo" delegate:self cancelButtonTitle:@"cancel"destructiveButtonTitle:nil otherButtonTitles: @"Photo Library", nil];
+    }
+    else
+    {
+        return;
+    }
+    
+    [mySheet showFromBarButtonItem:sender animated:YES];
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    UIImagePickerController *myPicker = [[UIImagePickerController alloc] init];
+    myPicker.delegate = self;
+    myPicker.allowsEditing = YES;
+    
+    if ([[actionSheet buttonTitleAtIndex:buttonIndex] isEqualToString:@"Camera"])
+    {
+        myPicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    }
+    else
+    {
+        myPicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    }
+    
+    [self presentViewController:myPicker animated:YES completion:nil];
+    
+}
+
+- (void) imagePickerController:(UIImagePickerController *)picker
+ didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    [self dismissViewControllerAnimated:YES completion:^{
+        UIImage *editedImage = [info objectForKey: UIImagePickerControllerEditedImage];
+        self.characterImageView.image = editedImage;
+        
+        NSData *imageData = UIImageJPEGRepresentation(editedImage, 0.5);
+        self.character.avatarPath = [[getDocumentsDirectory docs] stringByAppendingString: [NSString stringWithFormat:@"%@%@.jpeg", self.delegate.filePath, self.character.characterName]];
+        [imageData writeToFile:self.character.avatarPath atomically:YES];
+    }];
 }
 
 @end

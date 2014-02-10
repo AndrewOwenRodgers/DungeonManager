@@ -8,6 +8,7 @@
             <connections>
                 <outlet property="armorClassTextField" destination="Oia-G1-49P" id="uQq-ha-4R4"/>
                 <outlet property="babTextField" destination="QRO-Ot-ZWg" id="zFc-HR-Pyt"/>
+                <outlet property="characterImageView" destination="Xp4-OF-SSK" id="nTy-OR-3x3"/>
                 <outlet property="currentHPTextField" destination="bj2-ni-dzh" id="wcl-6y-ksF"/>
                 <outlet property="initiativeTextField" destination="K5R-S7-x9u" id="CIz-Eq-8iU"/>
                 <outlet property="maxHPTextField" destination="uYg-EW-VwD" id="vTP-9i-qgF"/>
