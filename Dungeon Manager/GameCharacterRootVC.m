@@ -20,50 +20,42 @@
 {
     [super viewDidLoad];
     self.gameVCs = [[NSMutableArray alloc] init];
-    for (int i = 1; i < 8; i++)
+    for (int i = 0; i < 8; i++)
     {
-        if (i == 1)
+        GameCharacterVC *returner;
+        
+        if (i == 0)
         {
-            GameCharacterVC *returner;
             returner = [[GameCharacterVC alloc] initWithNibName:@"NameView" bundle:nil];
-            returner.character = self.character;
-            [self.gameVCs addObject:returner];
+        }
+        else if (i == 1)
+        {
+            returner = [[GameCharacterVC alloc] initWithNibName:@"BackgroundView" bundle:nil];
         }
         else if (i == 2)
         {
-            GameCharacterVC *returner;
-            returner = [[GameCharacterVC alloc] initWithNibName:@"BackgroundView" bundle:nil];
-            returner.character = self.character;
-            [self.gameVCs addObject:returner];
+            returner = [[GameCharacterVC alloc] initWithNibName:@"PhysicalView" bundle:nil];
         }
         else if (i == 3)
         {
-            GameCharacterVC *returner;
-            returner = [[GameCharacterVC alloc] initWithNibName:@"PhysicalView" bundle:nil];
-            returner.character = self.character;
-            [self.gameVCs addObject:returner];
+            returner = [[GameCharacterVC alloc] initWithNibName:@"Statistics1View" bundle:nil];
         }
         else if (i == 4)
         {
-            GameCharacterVC *returner;
-            returner = [[GameCharacterVC alloc] initWithNibName:@"Statistics1View" bundle:nil];
-            returner.character = self.character;
-            [self.gameVCs addObject:returner];
+            returner = [[GameCharacterVC alloc] initWithNibName:@"AttributeView" bundle:nil];
         }
         else if (i == 5)
         {
-            GameCharacterVC *returner;
-            returner = [[GameCharacterVC alloc] initWithNibName:@"AttributeView" bundle:nil];
-            returner.character = self.character;
-            [self.gameVCs addObject:returner];
-        }
-        else if (i == 6)
-        {
-            GameCharacterVC *returner;
             returner = [[GameCharacterVC alloc] initWithNibName:@"SkillsView" bundle:nil];
-            returner.character = self.character;
-            [self.gameVCs addObject:returner];
         }
+        else
+        {
+            returner = [[GameCharacterVC alloc ] init];
+        }
+        
+        returner.delegate = self.delegate;
+        returner.character = self.character;
+        [self.gameVCs addObject:returner];
     }
 }
 

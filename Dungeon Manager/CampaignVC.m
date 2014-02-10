@@ -22,6 +22,14 @@
     [super viewDidLoad];
     self.campaignTitleTextField.delegate = self;
     self.campaignTitleTextField.text = self.campaign.title;
+    if ([[NSFileManager defaultManager] fileExistsAtPath:self.campaign.imagePath])
+    {
+        self.campaignImageView.image = [UIImage imageWithContentsOfFile:self.campaign.imagePath];
+    }
+    else
+    {
+        self.campaignImageView.image = nil;
+    }
 }
 
 - (void)didReceiveMemoryWarning

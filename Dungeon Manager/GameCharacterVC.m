@@ -58,6 +58,23 @@
     self.raceTextField.text = self.character.race;
     self.levelTextField.text = [NSString stringWithFormat:@"%d", self.character.primaryLevel];
     self.XPTextField.text = [NSString stringWithFormat:@"%d", self.character.xp];
+    self.homelandTextField.text = self.character.homeland;
+    self.deityTextField.text = self.character.deity;
+    self.alignmentTextField.text = self.character.alignment;
+    self.ageTextField.text = [NSString stringWithFormat:@"%d", self.character.age];
+    self.maxHPTextField.text = [NSString stringWithFormat:@"%d", self.character.maxHealth];
+    self.currentHPTextField.text = [NSString stringWithFormat:@"%d", self.character.currentHealth];
+    self.initiativeTextField.text = [NSString stringWithFormat:@"%d", self.character.initiativeModifier];
+    self.babTextField.text = [NSString stringWithFormat:@"%d", self.character.baseAttackBonus];
+    self.spellResistanceTextField.text = [NSString stringWithFormat:@"%d", self.character.spellResistance];
+    self.moneyTextField.text = [NSString stringWithFormat:@"%d", self.character.currency];
+    self.armorClassTextField.text = [NSString stringWithFormat:@"%d", self.character.armorClass];
+    self.genderTextField.text = self.character.gender;
+    self.heightTextField.text = self.character.height;
+    self.weightTextField.text = self.character.weight;
+    self.hairColorTextField.text = self.character.hairColor;
+    self.eyeColorTextField.text = self.character.eyeColor;
+    self.skinColorTextField.text = self.character.skinColor;
     
     self.BioTextView.text = self.character.bio;
 }
@@ -220,6 +237,11 @@
     else if (textField.tag == 3)
     {
         self.character.primaryLevel = [textField.text integerValue];
+        self.character.totalLevel = self.character.primaryLevel;
+        for (AttributeData *secClass in self.character.secondaryClasses)
+        {
+            self.character.totalLevel = self.character.totalLevel + secClass.attributeValue;
+        }
     }
     else if (textField.tag == 4)
     {
