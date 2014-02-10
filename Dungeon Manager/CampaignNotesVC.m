@@ -18,6 +18,7 @@
 {
     [super viewDidLoad];
 	self.notes.delegate = self;
+    NSFileManager *fm = [NSFileManager defaultManager];
 }
 
 - (void)didReceiveMemoryWarning

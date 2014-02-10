@@ -13,10 +13,7 @@
 #import "CharacterSaving.h"
 
 @interface GameCharacterVC : UIViewController
-<UITextFieldDelegate, UITextViewDelegate, SwipeViewDataSource, SwipeViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate, DeleteAttribute, UIImagePickerControllerDelegate, UIActionSheetDelegate, UINavigationControllerDelegate>
-
-
-@property (weak, nonatomic) IBOutlet SwipeView *formView;
+<UITextFieldDelegate, UITextViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate, DeleteAttribute, UIImagePickerControllerDelegate, UIActionSheetDelegate, UINavigationControllerDelegate>
 
 @property (unsafe_unretained) id <CharacterSaving> delegate;
 @property (strong, nonatomic) GameCharacter *character;

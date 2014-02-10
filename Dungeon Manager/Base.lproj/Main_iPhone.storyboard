@@ -221,10 +221,10 @@
             </objects>
             <point key="canvasLocation" x="1191" y="25"/>
         </scene>
-        <!--Game CharacterVC-->
+        <!--Game Character RootVC-->
         <scene sceneID="MEy-sY-eba">
             <objects>
-                <viewController id="71M-0M-1Af" customClass="GameCharacterVC" sceneMemberID="viewController">
+                <viewController id="71M-0M-1Af" customClass="GameCharacterRootVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yfs-Tk-joK"/>
                         <viewControllerLayoutGuide type="bottom" id="EbL-Wy-iWb"/>

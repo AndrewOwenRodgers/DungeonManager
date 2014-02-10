@@ -84,6 +84,10 @@
                             </connections>
                         </collectionViewCell>
                     </cells>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Ak4-bk-PYH"/>
+                        <outlet property="delegate" destination="-1" id="9bd-k6-qmo"/>
+                    </connections>
                 </collectionView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lWT-On-7Rg">
                     <rect key="frame" x="85" y="221" width="150" height="33"/>
@@ -92,6 +96,9 @@
                     <state key="normal" title="New Attribute">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="newAttributeButton:" destination="-1" eventType="touchUpInside" id="JeA-yx-MJJ"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="0.050151209680000003" green="0.0" blue="0.14021547379999999" alpha="1" colorSpace="calibratedRGB"/>
