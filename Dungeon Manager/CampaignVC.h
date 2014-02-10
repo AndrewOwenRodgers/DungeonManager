@@ -16,7 +16,7 @@
 @end
 
 @interface CampaignVC : UIViewController
-<UITextFieldDelegate>
+<UITextFieldDelegate, UIImagePickerControllerDelegate, UIActionSheetDelegate, UINavigationControllerDelegate>
 
 @property (unsafe_unretained) id <CampaignSaver> delegate;
 @property (weak, nonatomic) Campaign *campaign;

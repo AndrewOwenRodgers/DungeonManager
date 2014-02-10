@@ -117,8 +117,10 @@
             <color key="backgroundColor" red="0.050151209680000003" green="0.0" blue="0.14021547379999999" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="8dA-El-xhY" firstAttribute="top" secondItem="Gyv-lH-rKb" secondAttribute="bottom" constant="7" id="3W3-Kj-Qbi"/>
+                <constraint firstItem="jqZ-tq-VWe" firstAttribute="leading" secondItem="1VE-iQ-gwA" secondAttribute="leading" id="3vk-rZ-8c6"/>
                 <constraint firstItem="Gyv-lH-rKb" firstAttribute="top" secondItem="XpJ-bi-ctX" secondAttribute="bottom" constant="8" symbolic="YES" id="5xn-kL-Ssf"/>
                 <constraint firstItem="NUE-KX-cpn" firstAttribute="leading" secondItem="veZ-Hm-qEn" secondAttribute="trailing" constant="8" symbolic="YES" id="6u8-JF-kii"/>
+                <constraint firstAttribute="bottom" secondItem="jqZ-tq-VWe" secondAttribute="bottom" constant="71" id="7Yd-cp-hbc"/>
                 <constraint firstItem="8dA-El-xhY" firstAttribute="baseline" secondItem="6ei-vh-HP4" secondAttribute="baseline" id="9AU-Mz-i69"/>
                 <constraint firstItem="VFY-Xd-nR0" firstAttribute="top" secondItem="8dA-El-xhY" secondAttribute="bottom" constant="8" symbolic="YES" id="AGN-hA-A4B"/>
                 <constraint firstItem="YrC-jL-C57" firstAttribute="top" secondItem="NUE-KX-cpn" secondAttribute="bottom" constant="8" symbolic="YES" id="Bhe-cn-9nS"/>
@@ -126,13 +128,12 @@
                 <constraint firstItem="veZ-Hm-qEn" firstAttribute="leading" secondItem="jqZ-tq-VWe" secondAttribute="leading" id="Mgr-d2-ln1"/>
                 <constraint firstItem="YrC-jL-C57" firstAttribute="trailing" secondItem="NUE-KX-cpn" secondAttribute="trailing" id="SPi-yU-Va0"/>
                 <constraint firstItem="DMP-NV-dhA" firstAttribute="leading" secondItem="6ei-vh-HP4" secondAttribute="leading" id="V0X-Wd-eY4"/>
-                <constraint firstItem="veZ-Hm-qEn" firstAttribute="leading" secondItem="1VE-iQ-gwA" secondAttribute="leading" id="Vse-Zr-PNc"/>
+                <constraint firstAttribute="trailing" secondItem="VFY-Xd-nR0" secondAttribute="trailing" id="ZWC-Pv-DN3"/>
                 <constraint firstItem="DMP-NV-dhA" firstAttribute="leading" secondItem="veZ-Hm-qEn" secondAttribute="leading" id="acr-ZK-poe"/>
                 <constraint firstItem="veZ-Hm-qEn" firstAttribute="baseline" secondItem="NUE-KX-cpn" secondAttribute="baseline" id="ah7-MP-92x"/>
                 <constraint firstItem="NUE-KX-cpn" firstAttribute="leading" secondItem="VFY-Xd-nR0" secondAttribute="leading" id="cXX-ck-4yt"/>
                 <constraint firstItem="8dA-El-xhY" firstAttribute="leading" secondItem="6ei-vh-HP4" secondAttribute="trailing" constant="8" symbolic="YES" id="cYy-au-4Iw"/>
                 <constraint firstItem="YrC-jL-C57" firstAttribute="leading" secondItem="oz6-xz-TPV" secondAttribute="trailing" constant="31" id="dKh-D3-s7Y"/>
-                <constraint firstAttribute="trailing" secondItem="jqZ-tq-VWe" secondAttribute="trailing" id="dtj-PI-6Qg"/>
                 <constraint firstItem="veZ-Hm-qEn" firstAttribute="centerX" secondItem="oz6-xz-TPV" secondAttribute="centerX" id="f8l-fK-T2q"/>
                 <constraint firstItem="jqZ-tq-VWe" firstAttribute="trailing" secondItem="YrC-jL-C57" secondAttribute="trailing" id="fFg-jn-dLz"/>
                 <constraint firstItem="NUE-KX-cpn" firstAttribute="top" secondItem="VFY-Xd-nR0" secondAttribute="bottom" constant="8" symbolic="YES" id="g0d-BX-EeK"/>
@@ -140,12 +141,11 @@
                 <constraint firstItem="Gyv-lH-rKb" firstAttribute="leading" secondItem="6ei-vh-HP4" secondAttribute="leading" id="gpH-aC-lcO"/>
                 <constraint firstItem="8dA-El-xhY" firstAttribute="trailing" secondItem="Gyv-lH-rKb" secondAttribute="trailing" id="kYI-oF-xvQ"/>
                 <constraint firstItem="NUE-KX-cpn" firstAttribute="trailing" secondItem="VFY-Xd-nR0" secondAttribute="trailing" id="kcx-Ic-S0o"/>
-                <constraint firstAttribute="bottom" secondItem="jqZ-tq-VWe" secondAttribute="bottom" constant="71" id="n3G-3e-ZMh"/>
-                <constraint firstItem="XpJ-bi-ctX" firstAttribute="top" secondItem="1VE-iQ-gwA" secondAttribute="top" constant="78" id="qG6-Zn-mTx"/>
                 <constraint firstItem="VFY-Xd-nR0" firstAttribute="leading" secondItem="DMP-NV-dhA" secondAttribute="trailing" constant="8" symbolic="YES" id="qf0-Qz-NfX"/>
                 <constraint firstItem="8dA-El-xhY" firstAttribute="trailing" secondItem="VFY-Xd-nR0" secondAttribute="trailing" id="t8C-gj-Ef1"/>
                 <constraint firstItem="NUE-KX-cpn" firstAttribute="leading" secondItem="YrC-jL-C57" secondAttribute="leading" id="uDB-FI-Z90"/>
                 <constraint firstItem="jqZ-tq-VWe" firstAttribute="top" secondItem="YrC-jL-C57" secondAttribute="bottom" constant="8" symbolic="YES" id="uJo-jy-H2s"/>
+                <constraint firstItem="XpJ-bi-ctX" firstAttribute="top" secondItem="1VE-iQ-gwA" secondAttribute="top" constant="78" id="v1r-1M-Zik"/>
                 <constraint firstItem="DMP-NV-dhA" firstAttribute="baseline" secondItem="VFY-Xd-nR0" secondAttribute="baseline" id="wEk-sR-ufp"/>
                 <constraint firstItem="YrC-jL-C57" firstAttribute="baseline" secondItem="oz6-xz-TPV" secondAttribute="baseline" id="zAP-ww-hXN"/>
             </constraints>

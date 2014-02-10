@@ -10,7 +10,7 @@
 
 @protocol CharacterSaving <NSObject>
 
-@property NSString *filePath;
+@property (nonatomic) NSString *filePath;
 -(void)saveCharacters;
 
 @end

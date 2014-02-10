@@ -127,8 +127,9 @@
         self.campaignImageView.image = editedImage;
         
         NSData *imageData = UIImageJPEGRepresentation(editedImage, 0.5);
-        self.campaign.imagePath = [[getDocumentsDirectory docs] stringByAppendingString: [NSString stringWithFormat:@"%@%@.jpeg", self.campaign.title]];
+        self.campaign.imagePath = [[getDocumentsDirectory docs]stringByAppendingString: [NSString stringWithFormat:@"/%@.jpeg", self.campaign.title]];
         [imageData writeToFile:self.campaign.imagePath atomically:YES];
+        [self.delegate saveCampaigns];
     }];
 }
 

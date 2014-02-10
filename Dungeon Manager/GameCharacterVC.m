@@ -439,8 +439,9 @@
         self.characterImageView.image = editedImage;
         
         NSData *imageData = UIImageJPEGRepresentation(editedImage, 0.5);
-        self.character.avatarPath = [[getDocumentsDirectory docs] stringByAppendingString: [NSString stringWithFormat:@"%@%@.jpeg", self.delegate.filePath, self.character.characterName]];
+        self.character.avatarPath = [[getDocumentsDirectory docs] stringByAppendingString: [NSString stringWithFormat:@"/%@%@.jpeg", self.delegate.filePath, self.character.characterName]];
         [imageData writeToFile:self.character.avatarPath atomically:YES];
+        [self.delegate saveCharacters];
     }];
 }
 
