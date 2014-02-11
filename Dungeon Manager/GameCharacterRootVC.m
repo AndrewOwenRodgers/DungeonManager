@@ -48,6 +48,10 @@
         {
             returner = [[GameCharacterVC alloc] initWithNibName:@"SkillsView" bundle:nil];
         }
+		else if (i == 6)
+        {
+            returner = [[GameCharacterVC alloc] initWithNibName:@"FeatsView" bundle:nil];
+        }
         else
         {
             returner = [[GameCharacterVC alloc ] init];
@@ -81,7 +85,7 @@
 
 - (NSInteger)numberOfItemsInSwipeView:(SwipeView *)swipeView
 {
-    return 8;
+    return 11;
 }
 
 - (UIView *)swipeView:(SwipeView *)swipeView viewForItemAtIndex:(NSInteger)index reusingView:(UIView *)view

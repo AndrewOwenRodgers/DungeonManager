@@ -28,11 +28,13 @@
     self.valueTextField.delegate = self;
     self.secondaryAttributeTextField.delegate = self;
     self.weightTextField.delegate = self;
+	self.featDescription.delegate = self;
     
     self.attributeTextField.text = self.attribute.attributeName;
     self.valueTextField.text = [NSString stringWithFormat:@"%d", self.attribute.attributeValue];
     self.secondaryAttributeTextField.text = self.attribute.secondaryAttribute;
     self.weightTextField.text = [NSString stringWithFormat:@"%d", self.attribute.attributeWeight];
+	self.featDescription.text = self.attribute.attributeDescription;
 }
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField //Slides the view up when the keyboard appears
@@ -103,6 +105,17 @@
         self.attribute.secondaryAttribute = textField.text;
     }
     [self.delegate saveCharacters];
+}
+
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
+{
+    if ([text hasSuffix:@"\n"])
+	{
+		[textView resignFirstResponder];
+		self.attribute.attributeDescription = textView.text;
+		[self.delegate saveCharacters];
+    }
+    return YES;
 }
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField

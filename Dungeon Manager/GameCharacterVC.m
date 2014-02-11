@@ -45,6 +45,7 @@
 
 @property (strong, nonatomic) IBOutlet UICollectionView *attributeCollection;//0
 @property (strong, nonatomic) IBOutlet UICollectionView *skillsCollection;//1
+@property (strong, nonatomic) IBOutlet UICollectionView *featsCollection;//2
 
 @end
 
@@ -122,6 +123,15 @@
         [self.character.classSkills addObject:attribute];
         [self.skillsCollection reloadData];
     }
+	else if ([sender tag] == 2)
+    {
+        if (!self.character.feats)
+        {
+            self.character.feats = [NSMutableArray array];
+        }
+        [self.character.feats addObject:attribute];
+        [self.featsCollection reloadData];
+    }
     
     [self.delegate saveCharacters];
 }
@@ -138,7 +148,11 @@
         [self.character.classSkills removeObjectAtIndex:index];
 		[self.skillsCollection reloadData];
     }
-    
+	else if (type == 2)
+    {
+        [self.character.feats removeObjectAtIndex:index];
+		[self.featsCollection reloadData];
+    }
     [self.delegate saveCharacters];
 }
 
@@ -159,6 +173,12 @@
         cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"skillCell" forIndexPath:indexPath];
         cell.attribute = self.character.classSkills[indexPath.row];
     }
+	else if (collectionView.tag == 2)
+    {
+        [collectionView registerNib:[UINib nibWithNibName:@"FeatCell" bundle:nil] forCellWithReuseIdentifier:@"featCell"];
+        cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"featCell" forIndexPath:indexPath];
+        cell.attribute = self.character.feats[indexPath.row];
+    }
     
     cell.attribute.attributeType = collectionView.tag;
     [cell buildView];
@@ -177,6 +197,10 @@
     else if (collectionView.tag == 1)
     {
         return self.character.classSkills.count;
+    }
+	else if (collectionView.tag == 2)
+    {
+        return self.character.feats.count;
     }
     return 0;
 }

@@ -18,7 +18,7 @@
 @end
 
 @interface AttributeCell : UICollectionViewCell
-<UITextFieldDelegate>
+<UITextFieldDelegate, UITextViewDelegate>
 
 @property (unsafe_unretained) id <DeleteAttribute> deletionDelegate;
 @property (unsafe_unretained) id <CharacterSaving> delegate;
@@ -27,6 +27,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *valueTextField;
 @property (weak, nonatomic) IBOutlet UITextField *weightTextField;
 @property (weak, nonatomic) IBOutlet UITextField *secondaryAttributeTextField;
+@property (weak, nonatomic) IBOutlet UITextView *featDescription;
 
 -(void)buildView;
 

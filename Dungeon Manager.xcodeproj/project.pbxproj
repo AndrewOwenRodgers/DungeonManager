@@ -13,6 +13,8 @@
 		07157A5B18A4A3B80098B94A /* AttributeData.m in Sources */ = {isa = PBXBuildFile; fileRef = 07157A5A18A4A3B80098B94A /* AttributeData.m */; };
 		072B4C7718A8A6CF0030061E /* CampaignNotesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 072B4C7618A8A6CF0030061E /* CampaignNotesVC.m */; };
 		072B4C7A18A948810030061E /* GameCharacterRootVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 072B4C7918A948810030061E /* GameCharacterRootVC.m */; };
+		0774EF7D18A9EB4B00CB0F8E /* FeatsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0774EF7C18A9EB4B00CB0F8E /* FeatsView.xib */; };
+		0774EF7F18A9EB5900CB0F8E /* FeatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0774EF7E18A9EB5900CB0F8E /* FeatCell.xib */; };
 		0785BA5718A963E800EFD769 /* AttributeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0785BA5618A963E800EFD769 /* AttributeCell.xib */; };
 		0785BAA318A9654000EFD769 /* SkillCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0785BAA218A9654000EFD769 /* SkillCell.xib */; };
 		07EAACE118A76BEF00903F5A /* NameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07EAACE018A76BEF00903F5A /* NameView.xib */; };
@@ -68,6 +70,8 @@
 		072B4C7818A948810030061E /* GameCharacterRootVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameCharacterRootVC.h; sourceTree = "<group>"; };
 		072B4C7918A948810030061E /* GameCharacterRootVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameCharacterRootVC.m; sourceTree = "<group>"; };
 		074FABBB18A555BD003909FC /* CharacterSaving.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CharacterSaving.h; sourceTree = "<group>"; };
+		0774EF7C18A9EB4B00CB0F8E /* FeatsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeatsView.xib; sourceTree = "<group>"; };
+		0774EF7E18A9EB5900CB0F8E /* FeatCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeatCell.xib; sourceTree = "<group>"; };
 		0785BA5618A963E800EFD769 /* AttributeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AttributeCell.xib; sourceTree = "<group>"; };
 		0785BAA218A9654000EFD769 /* SkillCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SkillCell.xib; sourceTree = "<group>"; };
 		07EAACE018A76BEF00903F5A /* NameView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NameView.xib; sourceTree = "<group>"; };
@@ -185,6 +189,8 @@
 				0785BA5618A963E800EFD769 /* AttributeCell.xib */,
 				0708C04C18A841540078A0A3 /* SkillsView.xib */,
 				0785BAA218A9654000EFD769 /* SkillCell.xib */,
+				0774EF7C18A9EB4B00CB0F8E /* FeatsView.xib */,
+				0774EF7E18A9EB5900CB0F8E /* FeatCell.xib */,
 				07F8BC7B189AF2B200DA8806 /* InitialViewController.h */,
 				07F8BC7C189AF2B200DA8806 /* InitialViewController.m */,
 				07F8BC9B189AF82A00DA8806 /* CampaignVC.h */,
@@ -331,9 +337,11 @@
 				0785BA5718A963E800EFD769 /* AttributeCell.xib in Resources */,
 				0785BAA318A9654000EFD769 /* SkillCell.xib in Resources */,
 				07F8BC7A189AF2B200DA8806 /* Main_iPad.storyboard in Resources */,
+				0774EF7D18A9EB4B00CB0F8E /* FeatsView.xib in Resources */,
 				07EAACE918A7760A00903F5A /* PhysicalView.xib in Resources */,
 				07F8BC7F189AF2B200DA8806 /* Images.xcassets in Resources */,
 				07EAACEF18A8311500903F5A /* AttributeView.xib in Resources */,
+				0774EF7F18A9EB5900CB0F8E /* FeatCell.xib in Resources */,
 				07EAACE518A76D9D00903F5A /* Statistics1View.xib in Resources */,
 				07F8BC77189AF2B200DA8806 /* Main_iPhone.storyboard in Resources */,
 				07EAACE718A7742500903F5A /* BackgroundView.xib in Resources */,
