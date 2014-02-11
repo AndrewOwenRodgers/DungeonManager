@@ -15,6 +15,7 @@
 -(void)deleteAttributeOfType:(NSInteger)type atIndex:(NSInteger)index;
 -(void)recalculateWeights;
 @property UIView *view;
+@property (weak, nonatomic) IBOutlet UIImageView *characterImageView;
 
 @end
 

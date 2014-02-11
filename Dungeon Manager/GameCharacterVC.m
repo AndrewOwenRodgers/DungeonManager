@@ -14,8 +14,6 @@
     CGFloat slideheight;
 }
 
-@property (weak, nonatomic) IBOutlet UIImageView *characterImageView;
-
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;//0
 @property (weak, nonatomic) IBOutlet UITextField *classTextField;//1
 @property (weak, nonatomic) IBOutlet UITextField *raceTextField;//2
@@ -333,6 +331,7 @@
     [UIView setAnimationBeginsFromCurrentState:YES];
     [UIView setAnimationDuration:(CGFloat)0.3];
     
+	[self.characterImageView setAlpha:0.f];
     [self.view setFrame:viewFrame];
     
     [UIView commitAnimations];
@@ -356,6 +355,7 @@
     [UIView setAnimationDuration:(CGFloat)0.3];
     
     [self.view setFrame:viewFrame];
+	[self.characterImageView setAlpha:1.f];
     
     [UIView commitAnimations];
     
@@ -493,6 +493,7 @@
     [UIView setAnimationBeginsFromCurrentState:YES];
     [UIView setAnimationDuration:(CGFloat)0.3];
     
+	[self.characterImageView setAlpha:0.f];
     [self.view setFrame:viewFrame];
     
     [UIView commitAnimations];
@@ -516,7 +517,8 @@
     [UIView setAnimationDuration:(CGFloat)0.3];
     
     [self.view setFrame:viewFrame];
-    
+	[self.characterImageView setAlpha:1.f];
+	
     [UIView commitAnimations];
 	
 	[textView resignFirstResponder];

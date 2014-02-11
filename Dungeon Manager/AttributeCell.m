@@ -70,9 +70,18 @@
     [UIView setAnimationBeginsFromCurrentState:YES];
     [UIView setAnimationDuration:(CGFloat)0.3];
     
+	[self.deletionDelegate.characterImageView setAlpha:0.f];
     [self.deletionDelegate.view setFrame:viewFrame];
     
     [UIView commitAnimations];
+	
+	UIToolbar* keyboardDoneButtonView = [[UIToolbar alloc] init];
+	[keyboardDoneButtonView sizeToFit];
+	UIBarButtonItem* doneButton = [[UIBarButtonItem alloc] initWithTitle:@"Done"
+																   style:UIBarButtonItemStyleBordered target:self
+																  action:@selector(textViewBeDone:)];
+	[keyboardDoneButtonView setItems:[NSArray arrayWithObjects:doneButton, nil]];
+	textField.inputAccessoryView = keyboardDoneButtonView;
 }
 
 -(void)textFieldDidEndEditing:(UITextField *)textField
@@ -85,7 +94,8 @@
     [UIView setAnimationDuration:(CGFloat)0.3];
     
     [self.deletionDelegate.view setFrame:viewFrame];
-    
+	[self.deletionDelegate.characterImageView setAlpha:1.f];
+	
     [UIView commitAnimations];
     
     if (textField.tag == 0)
@@ -109,21 +119,75 @@
     [self.delegate saveCharacters];
 }
 
-- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
+-(void)textViewBeDone:(id)sender
 {
-    if ([text hasSuffix:@"\n"])
-	{
-		[textView resignFirstResponder];
-		self.attribute.attributeDescription = textView.text;
-		[self.delegate saveCharacters];
-    }
-    return YES;
+    [self.deletionDelegate.view endEditing:YES];
 }
 
--(BOOL)textFieldShouldReturn:(UITextField *)textField
+-(void)textViewDidBeginEditing:(UITextView *)textView
 {
-    [textField resignFirstResponder];
-    return YES;
+	CGRect textFieldRect = [self.deletionDelegate.view.window convertRect:textView.bounds fromView:textView];
+    CGRect viewRect = [self.deletionDelegate.view.window convertRect:self.deletionDelegate.view.bounds fromView:self.deletionDelegate.view];
+    CGFloat midline = textFieldRect.origin.y + (CGFloat)0.5 * textFieldRect.size.height;
+    CGFloat numerator = midline - viewRect.origin.y - (CGFloat)0.2 * viewRect.size.height;
+    CGFloat denominator = (CGFloat)0.6 * viewRect.size.height;
+    CGFloat heightFraction = numerator / denominator;
+    if (heightFraction < 0.0)
+    {
+        heightFraction = 0.0;
+    }
+    else if (heightFraction > 1.0)
+    {
+        heightFraction = 1.0;
+    }
+    UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
+    if (orientation == UIInterfaceOrientationPortrait ||
+        orientation == UIInterfaceOrientationPortraitUpsideDown)
+    {
+        slideheight = floor((CGFloat)216 * heightFraction);
+    }
+    else
+    {
+        slideheight = floor((CGFloat)168 * heightFraction);
+    }
+    CGRect viewFrame = self.deletionDelegate.view.frame;
+    viewFrame.origin.y -= slideheight;
+    
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationBeginsFromCurrentState:YES];
+    [UIView setAnimationDuration:(CGFloat)0.3];
+    
+	[self.deletionDelegate.characterImageView setAlpha:0.f];
+    [self.deletionDelegate.view setFrame:viewFrame];
+    
+    [UIView commitAnimations];
+	
+	UIToolbar* keyboardDoneButtonView = [[UIToolbar alloc] init];
+	[keyboardDoneButtonView sizeToFit];
+	UIBarButtonItem* doneButton = [[UIBarButtonItem alloc] initWithTitle:@"Done"
+																   style:UIBarButtonItemStyleBordered target:self
+																  action:@selector(textViewBeDone:)];
+	[keyboardDoneButtonView setItems:[NSArray arrayWithObjects:doneButton, nil]];
+	textView.inputAccessoryView = keyboardDoneButtonView;
+}
+
+-(void)textViewDidEndEditing:(UITextView *)textView
+{
+	CGRect viewFrame = self.deletionDelegate.view.frame;
+    viewFrame.origin.y += slideheight;
+    
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationBeginsFromCurrentState:YES];
+    [UIView setAnimationDuration:(CGFloat)0.3];
+    
+    [self.deletionDelegate.view setFrame:viewFrame];
+	[self.deletionDelegate.characterImageView setAlpha:1.f];
+    
+    [UIView commitAnimations];
+	
+	[textView resignFirstResponder];
+	self.attribute.attributeDescription = textView.text;
+	[self.delegate saveCharacters];
 }
 
 @end

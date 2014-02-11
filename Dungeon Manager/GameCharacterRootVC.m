@@ -73,6 +73,7 @@
             returner = [[GameCharacterVC alloc ] init];
         }
         
+		returner.characterImageView = self.characterImageView;
         returner.delegate = self.delegate;
         returner.character = self.character;
         [self.gameVCs addObject:returner];
@@ -101,7 +102,7 @@
 
 - (NSInteger)numberOfItemsInSwipeView:(SwipeView *)swipeView
 {
-    return 11;
+    return 12;
 }
 
 - (UIView *)swipeView:(SwipeView *)swipeView viewForItemAtIndex:(NSInteger)index reusingView:(UIView *)view
@@ -111,10 +112,8 @@
         return ((GameCharacterVC *)self.gameVCs[index - 1]).view;
     }
     UIView *stuff = [[UIView alloc] initWithFrame:swipeView.frame];
-    stuff.backgroundColor = [UIColor blueColor];
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(100, 150, 120, 120)];
-    label.text = [NSString stringWithFormat:@"view number %d", index];
-    [stuff addSubview:label];
+    stuff.backgroundColor = [UIColor colorWithRed:13/255.f green:1/255.f blue:35/255.f alpha:1.0];
+	
     return stuff;
 }
 

@@ -17,5 +17,6 @@
 
 @property (unsafe_unretained) id <CharacterSaving> delegate;
 @property (strong, nonatomic) GameCharacter *character;
+@property (weak, nonatomic) IBOutlet UIImageView *characterImageView;
 
 @end
