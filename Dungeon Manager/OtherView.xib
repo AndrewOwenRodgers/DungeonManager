@@ -26,7 +26,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="Notes here" translatesAutoresizingMaskIntoConstraints="NO" id="TkG-vY-yUu">
-                    <rect key="frame" x="0.0" y="215" width="320" height="353"/>
+                    <rect key="frame" x="0.0" y="215" width="320" height="323"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.11706149189999999" green="0.25381174400000001" blue="0.33659904229999998" alpha="1" colorSpace="calibratedRGB"/>
                     <color key="textColor" red="0.59986139110000003" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -40,8 +40,8 @@
             <color key="backgroundColor" red="0.050151209680000003" green="0.0" blue="0.14021547379999999" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="TkG-vY-yUu" firstAttribute="leading" secondItem="SC2-Mm-XqC" secondAttribute="leading" id="2Rd-Ue-DJ5"/>
-                <constraint firstAttribute="bottom" secondItem="TkG-vY-yUu" secondAttribute="bottom" id="57F-zL-tgU"/>
                 <constraint firstItem="gGm-aG-GtQ" firstAttribute="trailing" secondItem="TkG-vY-yUu" secondAttribute="trailing" id="MBL-pt-eam"/>
+                <constraint firstAttribute="bottom" secondItem="TkG-vY-yUu" secondAttribute="bottom" constant="30" id="aB2-UB-OP1"/>
                 <constraint firstItem="TkG-vY-yUu" firstAttribute="top" secondItem="gGm-aG-GtQ" secondAttribute="bottom" constant="8" symbolic="YES" id="eeb-OJ-4S7"/>
                 <constraint firstAttribute="trailing" secondItem="TkG-vY-yUu" secondAttribute="trailing" id="jLj-R2-VtY"/>
                 <constraint firstItem="gGm-aG-GtQ" firstAttribute="leading" secondItem="TkG-vY-yUu" secondAttribute="leading" id="v6S-o4-sOl"/>

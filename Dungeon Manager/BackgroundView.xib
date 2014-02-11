@@ -68,7 +68,7 @@
                     </connections>
                 </textField>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Bio goes here" translatesAutoresizingMaskIntoConstraints="NO" id="jqZ-tq-VWe" userLabel="bio">
-                    <rect key="frame" x="0.0" y="367" width="320" height="130"/>
+                    <rect key="frame" x="0.0" y="367" width="320" height="160"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.11706149189999999" green="0.25381174400000001" blue="0.33659904229999998" alpha="1" colorSpace="calibratedRGB"/>
                     <color key="textColor" red="0.59986139110000003" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -151,7 +151,7 @@
                 <constraint firstItem="NUE-KX-cpn" firstAttribute="baseline" secondItem="veZ-Hm-qEn" secondAttribute="baseline" id="ogr-u3-cQA"/>
                 <constraint firstItem="YrC-jL-C57" firstAttribute="top" secondItem="NUE-KX-cpn" secondAttribute="bottom" constant="8" symbolic="YES" id="seq-Xs-YCN"/>
                 <constraint firstItem="8dA-El-xhY" firstAttribute="top" secondItem="Gyv-lH-rKb" secondAttribute="bottom" constant="7" id="woN-ou-E1Y"/>
-                <constraint firstAttribute="bottom" secondItem="jqZ-tq-VWe" secondAttribute="bottom" constant="71" id="wpQ-gi-ouW"/>
+                <constraint firstAttribute="bottom" secondItem="jqZ-tq-VWe" secondAttribute="bottom" constant="41" id="wpQ-gi-ouW"/>
             </constraints>
         </view>
     </objects>

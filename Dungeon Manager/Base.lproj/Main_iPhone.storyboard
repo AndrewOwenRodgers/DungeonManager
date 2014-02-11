@@ -171,8 +171,8 @@
                                     <segue destination="aUK-YM-iqV" kind="push" identifier="NPCSegue" id="t88-LG-4b7"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EqM-nS-W5q">
-                                <rect key="frame" x="20" y="357" width="280" height="152"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EqM-nS-W5q">
+                                <rect key="frame" x="20" y="357" width="280" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Session notes">
                                     <color key="titleColor" red="0.59986139110000003" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -184,7 +184,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Unnamed campaign" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UCF-8T-Rjj">
                                 <rect key="frame" x="20" y="175" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.11706149189999999" green="0.25381174400000001" blue="0.33659904229999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.050151209680000003" green="0.0" blue="0.14021547379999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="1nl-Ni-ome"/>
                                 </constraints>
@@ -198,7 +198,6 @@
                             <constraint firstItem="9Cc-hf-sQe" firstAttribute="leading" secondItem="EqM-nS-W5q" secondAttribute="leading" id="0Ji-7d-Lq6"/>
                             <constraint firstItem="EqM-nS-W5q" firstAttribute="top" secondItem="9Cc-hf-sQe" secondAttribute="bottom" constant="8" symbolic="YES" id="2JP-Iw-oxQ"/>
                             <constraint firstItem="EqM-nS-W5q" firstAttribute="trailing" secondItem="9Cc-hf-sQe" secondAttribute="trailing" id="3ci-8H-gCE"/>
-                            <constraint firstItem="Tez-XV-yM4" firstAttribute="top" secondItem="EqM-nS-W5q" secondAttribute="bottom" constant="15" id="3px-sS-KLc"/>
                             <constraint firstAttribute="trailing" secondItem="UCF-8T-Rjj" secondAttribute="trailing" constant="20" symbolic="YES" id="7Yo-So-kEt"/>
                             <constraint firstItem="TzK-Lq-A42" firstAttribute="centerX" secondItem="UCF-8T-Rjj" secondAttribute="centerX" id="7yz-3a-z2O"/>
                             <constraint firstItem="7E1-xN-3UL" firstAttribute="leading" secondItem="UCF-8T-Rjj" secondAttribute="leading" id="ERO-ff-H8W"/>
