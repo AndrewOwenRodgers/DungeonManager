@@ -6,11 +6,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GameCharacterVC">
             <connections>
-                <outlet property="XPTextField" destination="iNU-p9-25k" id="cFZ-6n-k9v"/>
-                <outlet property="classTextField" destination="xDO-Hs-asL" id="lJz-pu-Cf6"/>
-                <outlet property="levelTextField" destination="CVB-i3-TEw" id="Xn1-tY-my6"/>
-                <outlet property="nameTextField" destination="16j-Ez-Emp" id="ouj-PR-1GK"/>
-                <outlet property="raceTextField" destination="Djn-BB-Zwu" id="ijo-Ir-qH8"/>
                 <outlet property="view" destination="SC2-Mm-XqC" id="6jS-N8-l6d"/>
             </connections>
         </placeholder>
@@ -19,149 +14,36 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="16j-Ez-Emp" userLabel="name">
-                    <rect key="frame" x="110" y="215" width="210" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" red="0.11706149189999999" green="0.25381174400000001" blue="0.33659904229999998" alpha="1" colorSpace="calibratedRGB"/>
-                    <color key="tintColor" red="0.11706149189999999" green="0.25381174400000001" blue="0.33659904229999998" alpha="1" colorSpace="calibratedRGB"/>
-                    <color key="textColor" red="0.59986139110000003" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                    <textInputTraits key="textInputTraits"/>
-                    <connections>
-                        <outlet property="delegate" destination="-1" id="hly-qP-DGr"/>
-                    </connections>
-                </textField>
-                <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Class" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xDO-Hs-asL" userLabel="class">
-                    <rect key="frame" x="110" y="253" width="210" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" red="0.11706149189999999" green="0.25381174400000001" blue="0.33659904229999998" alpha="1" colorSpace="calibratedRGB"/>
-                    <color key="tintColor" red="0.11706149189999999" green="0.25381174400000001" blue="0.33659904229999998" alpha="1" colorSpace="calibratedRGB"/>
-                    <color key="textColor" red="0.59986139110000003" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <textInputTraits key="textInputTraits"/>
-                    <connections>
-                        <outlet property="delegate" destination="-1" id="e8u-dC-t65"/>
-                    </connections>
-                </textField>
-                <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Race" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Djn-BB-Zwu" userLabel="race">
-                    <rect key="frame" x="110" y="291" width="210" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" red="0.11706149189999999" green="0.25381174400000001" blue="0.33659904229999998" alpha="1" colorSpace="calibratedRGB"/>
-                    <color key="tintColor" red="0.11706149189999999" green="0.25381174400000001" blue="0.33659904229999998" alpha="1" colorSpace="calibratedRGB"/>
-                    <color key="textColor" red="0.59986139110000003" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <textInputTraits key="textInputTraits"/>
-                    <connections>
-                        <outlet property="delegate" destination="-1" id="ci2-24-xiw"/>
-                    </connections>
-                </textField>
-                <textField opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Level" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CVB-i3-TEw" userLabel="level">
-                    <rect key="frame" x="110" y="329" width="210" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" red="0.11706149189999999" green="0.25381174400000001" blue="0.33659904229999998" alpha="1" colorSpace="calibratedRGB"/>
-                    <color key="tintColor" red="0.11706149189999999" green="0.25381174400000001" blue="0.33659904229999998" alpha="1" colorSpace="calibratedRGB"/>
-                    <color key="textColor" red="0.59986139110000003" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <textInputTraits key="textInputTraits" keyboardType="numberPad" enablesReturnKeyAutomatically="YES"/>
-                    <connections>
-                        <outlet property="delegate" destination="-1" id="FW0-R8-9Hp"/>
-                    </connections>
-                </textField>
-                <textField opaque="NO" clipsSubviews="YES" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="XP" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iNU-p9-25k" userLabel="xp">
-                    <rect key="frame" x="110" y="367" width="210" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" red="0.11706149189999999" green="0.25381174400000001" blue="0.33659904229999998" alpha="1" colorSpace="calibratedRGB"/>
-                    <color key="tintColor" red="0.11706149189999999" green="0.25381174400000001" blue="0.33659904229999998" alpha="1" colorSpace="calibratedRGB"/>
-                    <color key="textColor" red="0.59986139110000003" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <textInputTraits key="textInputTraits" keyboardType="numberPad" enablesReturnKeyAutomatically="YES"/>
-                    <connections>
-                        <outlet property="delegate" destination="-1" id="5Eh-Mm-PKz"/>
-                    </connections>
-                </textField>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FD2-YE-lH0">
-                    <rect key="frame" x="20" y="333" width="50" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="0.59986139110000003" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XP:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3j0-pK-AbE">
-                    <rect key="frame" x="31" y="371" width="28" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="28" id="PCB-FD-RjG"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="0.59986139110000003" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Race:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vVx-kS-Nzo">
-                    <rect key="frame" x="20" y="295" width="50" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="0.59986139110000003" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Class:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LIp-Oc-auv">
-                    <rect key="frame" x="20" y="257" width="50" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="0.59986139110000003" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gbr-Hj-77c">
-                    <rect key="frame" x="20" y="219" width="59" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="0.59986139110000003" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Basic Information" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gGm-aG-GtQ">
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Other Notes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gGm-aG-GtQ">
                     <rect key="frame" x="0.0" y="186" width="320" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="21" id="6im-VO-BLy"/>
+                        <constraint firstAttribute="height" constant="21" id="ptz-44-8gM"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <color key="textColor" red="0.59986139110000003" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" text="Notes here" translatesAutoresizingMaskIntoConstraints="NO" id="TkG-vY-yUu">
+                    <rect key="frame" x="0.0" y="215" width="320" height="353"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.11706149189999999" green="0.25381174400000001" blue="0.33659904229999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="353" id="ctG-S1-sLM"/>
+                    </constraints>
+                    <color key="textColor" red="0.59986139110000003" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
             </subviews>
             <color key="backgroundColor" red="0.050151209680000003" green="0.0" blue="0.14021547379999999" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="16j-Ez-Emp" firstAttribute="top" secondItem="gGm-aG-GtQ" secondAttribute="bottom" constant="8" symbolic="YES" id="2W1-eZ-bDt"/>
-                <constraint firstItem="16j-Ez-Emp" firstAttribute="leading" secondItem="gbr-Hj-77c" secondAttribute="trailing" constant="31" id="Au1-CG-Ydc"/>
-                <constraint firstItem="16j-Ez-Emp" firstAttribute="leading" secondItem="xDO-Hs-asL" secondAttribute="leading" id="B4I-9h-ugt"/>
-                <constraint firstItem="xDO-Hs-asL" firstAttribute="leading" secondItem="LIp-Oc-auv" secondAttribute="trailing" constant="40" id="C5m-9D-5a1"/>
-                <constraint firstItem="vVx-kS-Nzo" firstAttribute="leading" secondItem="LIp-Oc-auv" secondAttribute="leading" id="C6D-Ru-RcC"/>
-                <constraint firstItem="CVB-i3-TEw" firstAttribute="baseline" secondItem="FD2-YE-lH0" secondAttribute="baseline" id="Hk2-xl-HP4"/>
-                <constraint firstItem="Djn-BB-Zwu" firstAttribute="top" secondItem="xDO-Hs-asL" secondAttribute="bottom" constant="8" symbolic="YES" id="K79-KN-JWk"/>
-                <constraint firstItem="xDO-Hs-asL" firstAttribute="leading" secondItem="Djn-BB-Zwu" secondAttribute="leading" id="LXs-Um-hew"/>
-                <constraint firstItem="LIp-Oc-auv" firstAttribute="leading" secondItem="gbr-Hj-77c" secondAttribute="leading" id="NMQ-7w-rsi"/>
-                <constraint firstItem="16j-Ez-Emp" firstAttribute="trailing" secondItem="xDO-Hs-asL" secondAttribute="trailing" id="TJv-yE-o9D"/>
-                <constraint firstItem="iNU-p9-25k" firstAttribute="top" secondItem="CVB-i3-TEw" secondAttribute="bottom" constant="8" symbolic="YES" id="U09-df-YUX"/>
-                <constraint firstItem="xDO-Hs-asL" firstAttribute="top" secondItem="16j-Ez-Emp" secondAttribute="bottom" constant="8" symbolic="YES" id="U4d-Aa-2Rn"/>
-                <constraint firstItem="vVx-kS-Nzo" firstAttribute="baseline" secondItem="Djn-BB-Zwu" secondAttribute="baseline" id="Vhe-x3-mvS"/>
-                <constraint firstItem="LIp-Oc-auv" firstAttribute="baseline" secondItem="xDO-Hs-asL" secondAttribute="baseline" id="aUG-pY-GGJ"/>
-                <constraint firstItem="Djn-BB-Zwu" firstAttribute="leading" secondItem="CVB-i3-TEw" secondAttribute="leading" id="aYj-Mb-um2"/>
-                <constraint firstItem="16j-Ez-Emp" firstAttribute="trailing" secondItem="gGm-aG-GtQ" secondAttribute="trailing" id="dQy-03-rVR"/>
-                <constraint firstItem="vVx-kS-Nzo" firstAttribute="trailing" secondItem="LIp-Oc-auv" secondAttribute="trailing" id="fPI-he-5QZ"/>
-                <constraint firstItem="CVB-i3-TEw" firstAttribute="leading" secondItem="iNU-p9-25k" secondAttribute="leading" id="fl2-Z2-ZJI"/>
-                <constraint firstItem="FD2-YE-lH0" firstAttribute="centerX" secondItem="3j0-pK-AbE" secondAttribute="centerX" id="hB1-je-YrJ"/>
-                <constraint firstItem="CVB-i3-TEw" firstAttribute="top" secondItem="Djn-BB-Zwu" secondAttribute="bottom" constant="8" symbolic="YES" id="hL5-Cb-gKn"/>
-                <constraint firstItem="gbr-Hj-77c" firstAttribute="leading" secondItem="SC2-Mm-XqC" secondAttribute="leading" constant="20" symbolic="YES" id="i54-qu-y1O"/>
-                <constraint firstItem="vVx-kS-Nzo" firstAttribute="leading" secondItem="FD2-YE-lH0" secondAttribute="leading" id="j29-5R-Ouz"/>
-                <constraint firstItem="Djn-BB-Zwu" firstAttribute="trailing" secondItem="CVB-i3-TEw" secondAttribute="trailing" id="mUc-Fj-2Ta"/>
-                <constraint firstItem="CVB-i3-TEw" firstAttribute="trailing" secondItem="iNU-p9-25k" secondAttribute="trailing" id="mbX-5i-Gjl"/>
-                <constraint firstItem="FD2-YE-lH0" firstAttribute="trailing" secondItem="vVx-kS-Nzo" secondAttribute="trailing" id="n1E-8n-r12"/>
-                <constraint firstItem="3j0-pK-AbE" firstAttribute="baseline" secondItem="iNU-p9-25k" secondAttribute="baseline" id="n4Z-ho-dgc"/>
-                <constraint firstItem="iNU-p9-25k" firstAttribute="leading" secondItem="3j0-pK-AbE" secondAttribute="trailing" constant="51" id="nG5-EW-VLf"/>
-                <constraint firstItem="gbr-Hj-77c" firstAttribute="top" secondItem="gGm-aG-GtQ" secondAttribute="bottom" constant="12" id="qmj-Vd-Nfm"/>
-                <constraint firstItem="xDO-Hs-asL" firstAttribute="trailing" secondItem="Djn-BB-Zwu" secondAttribute="trailing" id="r0q-GH-TOc"/>
-                <constraint firstItem="gGm-aG-GtQ" firstAttribute="leading" secondItem="SC2-Mm-XqC" secondAttribute="leading" id="sxP-cM-yej"/>
-                <constraint firstAttribute="trailing" secondItem="CVB-i3-TEw" secondAttribute="trailing" id="uHA-an-Lcu"/>
-                <constraint firstItem="gGm-aG-GtQ" firstAttribute="top" secondItem="SC2-Mm-XqC" secondAttribute="top" constant="186" id="vV9-5a-FAG"/>
+                <constraint firstItem="TkG-vY-yUu" firstAttribute="leading" secondItem="SC2-Mm-XqC" secondAttribute="leading" id="2Rd-Ue-DJ5"/>
+                <constraint firstAttribute="bottom" secondItem="TkG-vY-yUu" secondAttribute="bottom" id="57F-zL-tgU"/>
+                <constraint firstItem="gGm-aG-GtQ" firstAttribute="trailing" secondItem="TkG-vY-yUu" secondAttribute="trailing" id="MBL-pt-eam"/>
+                <constraint firstItem="TkG-vY-yUu" firstAttribute="top" secondItem="gGm-aG-GtQ" secondAttribute="bottom" constant="8" symbolic="YES" id="eeb-OJ-4S7"/>
+                <constraint firstAttribute="trailing" secondItem="TkG-vY-yUu" secondAttribute="trailing" id="jLj-R2-VtY"/>
+                <constraint firstItem="gGm-aG-GtQ" firstAttribute="leading" secondItem="TkG-vY-yUu" secondAttribute="leading" id="v6S-o4-sOl"/>
             </constraints>
         </view>
     </objects>

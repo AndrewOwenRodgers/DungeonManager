@@ -42,6 +42,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *totalWeightLabel;//0
 @property (weak, nonatomic) IBOutlet UITextView *BioTextView;//0
+@property (weak, nonatomic) IBOutlet UITextView *otherTextView;//1
 
 @property (strong, nonatomic) IBOutlet UICollectionView *attributeCollection;//0
 @property (strong, nonatomic) IBOutlet UICollectionView *skillsCollection;//1
@@ -88,6 +89,11 @@
 	self.totalWeightLabel.text = [NSString stringWithFormat:@"%d", self.character.inventoryTotalWeight];
     
     self.BioTextView.text = self.character.bio;
+	self.otherTextView.text = self.character.otherAbilitiesAndWounds;
+	
+//	UITapGestureRecognizer *gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(textViewBeDone:)];
+//	[self.BioTextView addGestureRecognizer:gestureRecognizer];
+//	[self.otherTextView addGestureRecognizer:gestureRecognizer];
 }
 
 - (void)didReceiveMemoryWarning
@@ -330,6 +336,14 @@
     [self.view setFrame:viewFrame];
     
     [UIView commitAnimations];
+	
+	UIToolbar* keyboardDoneButtonView = [[UIToolbar alloc] init];
+	[keyboardDoneButtonView sizeToFit];
+	UIBarButtonItem* doneButton = [[UIBarButtonItem alloc] initWithTitle:@"Done"
+																   style:UIBarButtonItemStyleBordered target:self
+																  action:@selector(textViewBeDone:)];
+	[keyboardDoneButtonView setItems:[NSArray arrayWithObjects:doneButton, nil]];
+	textField.inputAccessoryView = keyboardDoneButtonView;
 }
 
 -(void)textFieldDidEndEditing:(UITextField *)textField
@@ -446,16 +460,81 @@
     [self.delegate saveCharacters];
 }
 
--(BOOL)textFieldShouldReturn:(UITextField *)textField
+-(void)textViewDidBeginEditing:(UITextView *)textView
 {
-    [textField resignFirstResponder];
-    return YES;
+	CGRect textFieldRect = [self.view.window convertRect:textView.bounds fromView:textView];
+    CGRect viewRect = [self.view.window convertRect:self.view.bounds fromView:self.view];
+    CGFloat midline = textFieldRect.origin.y + (CGFloat)0.5 * textFieldRect.size.height;
+    CGFloat numerator = midline - viewRect.origin.y - (CGFloat)0.2 * viewRect.size.height;
+    CGFloat denominator = (CGFloat)0.6 * viewRect.size.height;
+    CGFloat heightFraction = numerator / denominator;
+    if (heightFraction < 0.0)
+    {
+        heightFraction = 0.0;
+    }
+    else if (heightFraction > 1.0)
+    {
+        heightFraction = 1.0;
+    }
+    UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
+    if (orientation == UIInterfaceOrientationPortrait ||
+        orientation == UIInterfaceOrientationPortraitUpsideDown)
+    {
+        slideheight = floor((CGFloat)216 * heightFraction);
+    }
+    else
+    {
+        slideheight = floor((CGFloat)168 * heightFraction);
+    }
+    CGRect viewFrame = self.view.frame;
+    viewFrame.origin.y -= slideheight;
+    
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationBeginsFromCurrentState:YES];
+    [UIView setAnimationDuration:(CGFloat)0.3];
+    
+    [self.view setFrame:viewFrame];
+    
+    [UIView commitAnimations];
+	
+	UIToolbar* keyboardDoneButtonView = [[UIToolbar alloc] init];
+	[keyboardDoneButtonView sizeToFit];
+	UIBarButtonItem* doneButton = [[UIBarButtonItem alloc] initWithTitle:@"Done"
+																   style:UIBarButtonItemStyleBordered target:self
+																  action:@selector(textViewBeDone:)];
+	[keyboardDoneButtonView setItems:[NSArray arrayWithObjects:doneButton, nil]];
+	textView.inputAccessoryView = keyboardDoneButtonView;
 }
 
 -(void)textViewDidEndEditing:(UITextView *)textView
 {
-    self.character.bio = textView.text;
+	CGRect viewFrame = self.view.frame;
+    viewFrame.origin.y += slideheight;
+    
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationBeginsFromCurrentState:YES];
+    [UIView setAnimationDuration:(CGFloat)0.3];
+    
+    [self.view setFrame:viewFrame];
+    
+    [UIView commitAnimations];
+	
+	[textView resignFirstResponder];
+	
+	if (textView.tag == 0)
+	{
+		self.character.bio = textView.text;
+	}
+	else if (textView.tag == 1)
+	{
+		self.character.otherAbilitiesAndWounds = textView.text;
+	}
     [self.delegate saveCharacters];
+}
+
+-(void)textViewBeDone:(id)sender
+{
+    [self.view endEditing:YES];
 }
 
 #pragma -Camera/Pictures

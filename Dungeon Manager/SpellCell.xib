@@ -13,19 +13,19 @@
                 <rect key="frame" x="0.0" y="0.0" width="310" height="100"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Level" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GPG-zi-11e" userLabel="skin">
+                    <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Level" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GPG-zi-11e" userLabel="skin">
                         <rect key="frame" x="124" y="10" width="79" height="30"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" red="0.11706149189999999" green="0.25381174400000001" blue="0.33659904229999998" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.11706149189999999" green="0.25381174400000001" blue="0.33659904229999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="79" id="qmI-1J-ujC"/>
+                            <constraint firstAttribute="width" constant="79" id="T3O-Gc-seZ"/>
                         </constraints>
                         <color key="textColor" red="0.59986139110000003" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                     </textField>
-                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Spell" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OLS-gD-caQ" userLabel="skin">
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Spell" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OLS-gD-caQ" userLabel="skin">
                         <rect key="frame" x="5" y="10" width="114" height="30"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" red="0.11706149189999999" green="0.25381174400000001" blue="0.33659904229999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -38,7 +38,7 @@
                         <rect key="frame" x="293" y="10" width="12" height="30"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="12" id="nOF-rP-QLE"/>
+                            <constraint firstAttribute="width" constant="12" id="MFo-o1-LcB"/>
                         </constraints>
                         <state key="normal" title="X">
                             <color key="titleColor" red="0.057353102402714073" green="1" blue="0.19218280494804718" alpha="1" colorSpace="calibratedRGB"/>
@@ -57,13 +57,13 @@
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                     </textView>
-                    <textField opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Domain" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XfR-oF-xY8" userLabel="skin">
+                    <textField opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Domain" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XfR-oF-xY8" userLabel="skin">
                         <rect key="frame" x="208" y="10" width="79" height="30"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" red="0.11706149189999999" green="0.25381174400000001" blue="0.33659904229999998" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.11706149189999999" green="0.25381174400000001" blue="0.33659904229999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="79" id="zBb-Vy-3Rb"/>
+                            <constraint firstAttribute="width" constant="79" id="VxL-5y-LLr"/>
                         </constraints>
                         <color key="textColor" red="0.59986139110000003" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -74,17 +74,19 @@
             </view>
             <color key="tintColor" red="0.19209929440000001" green="0.0" blue="0.52261844759999998" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="Osl-oA-O93" firstAttribute="leading" secondItem="GPG-zi-11e" secondAttribute="trailing" constant="8" symbolic="YES" id="4Jg-eO-ElT"/>
-                <constraint firstItem="Osl-oA-O93" firstAttribute="baseline" secondItem="GPG-zi-11e" secondAttribute="baseline" id="CsE-Ig-rGh"/>
-                <constraint firstItem="Y7U-QV-nVA" firstAttribute="centerX" secondItem="yrO-If-QAu" secondAttribute="centerX" id="M3u-9r-3I4"/>
-                <constraint firstItem="OLS-gD-caQ" firstAttribute="baseline" secondItem="GPG-zi-11e" secondAttribute="baseline" id="OcA-jd-XSV"/>
-                <constraint firstItem="GPG-zi-11e" firstAttribute="leading" secondItem="OLS-gD-caQ" secondAttribute="trailing" constant="8" symbolic="YES" id="Que-HF-4sp"/>
-                <constraint firstItem="OLS-gD-caQ" firstAttribute="top" secondItem="yrO-If-QAu" secondAttribute="top" constant="10" id="RTk-QX-lnX"/>
-                <constraint firstItem="OLS-gD-caQ" firstAttribute="leading" secondItem="yrO-If-QAu" secondAttribute="leading" constant="5" id="UE7-E6-XER"/>
-                <constraint firstAttribute="bottom" secondItem="Y7U-QV-nVA" secondAttribute="bottom" constant="6" id="XSW-JP-b4R"/>
-                <constraint firstItem="Y7U-QV-nVA" firstAttribute="trailing" secondItem="Osl-oA-O93" secondAttribute="trailing" id="bqE-ZG-urA"/>
-                <constraint firstItem="Y7U-QV-nVA" firstAttribute="top" secondItem="OLS-gD-caQ" secondAttribute="bottom" constant="2" id="eEK-MI-jdk"/>
-                <constraint firstItem="Y7U-QV-nVA" firstAttribute="leading" secondItem="OLS-gD-caQ" secondAttribute="leading" id="vHC-07-2oe"/>
+                <constraint firstItem="OLS-gD-caQ" firstAttribute="baseline" secondItem="GPG-zi-11e" secondAttribute="baseline" id="9j2-k0-m7g"/>
+                <constraint firstItem="Y7U-QV-nVA" firstAttribute="top" secondItem="OLS-gD-caQ" secondAttribute="bottom" constant="2" id="Fa2-KM-OQF"/>
+                <constraint firstItem="XfR-oF-xY8" firstAttribute="baseline" secondItem="Osl-oA-O93" secondAttribute="baseline" id="FlI-0n-Jqy"/>
+                <constraint firstItem="Y7U-QV-nVA" firstAttribute="centerX" secondItem="yrO-If-QAu" secondAttribute="centerX" id="Mg2-c1-cio"/>
+                <constraint firstItem="Osl-oA-O93" firstAttribute="leading" secondItem="XfR-oF-xY8" secondAttribute="trailing" constant="6" id="Nbl-eh-vYp"/>
+                <constraint firstItem="GPG-zi-11e" firstAttribute="leading" secondItem="OLS-gD-caQ" secondAttribute="trailing" constant="5" id="RHI-ue-1mu"/>
+                <constraint firstAttribute="bottom" secondItem="Y7U-QV-nVA" secondAttribute="bottom" constant="6" id="Whq-Dl-5SD"/>
+                <constraint firstItem="XfR-oF-xY8" firstAttribute="baseline" secondItem="GPG-zi-11e" secondAttribute="baseline" id="ZhG-bt-nYG"/>
+                <constraint firstItem="OLS-gD-caQ" firstAttribute="top" secondItem="yrO-If-QAu" secondAttribute="top" constant="10" id="cGc-V0-kvr"/>
+                <constraint firstItem="OLS-gD-caQ" firstAttribute="leading" secondItem="yrO-If-QAu" secondAttribute="leading" constant="5" id="vXt-Mu-jb4"/>
+                <constraint firstItem="Osl-oA-O93" firstAttribute="trailing" secondItem="Y7U-QV-nVA" secondAttribute="trailing" id="xB8-PB-0JB"/>
+                <constraint firstItem="OLS-gD-caQ" firstAttribute="leading" secondItem="Y7U-QV-nVA" secondAttribute="leading" id="yAX-eX-JMe"/>
+                <constraint firstItem="XfR-oF-xY8" firstAttribute="leading" secondItem="GPG-zi-11e" secondAttribute="trailing" constant="5" id="yRL-bj-L7S"/>
             </constraints>
             <size key="customSize" width="310" height="100"/>
             <connections>

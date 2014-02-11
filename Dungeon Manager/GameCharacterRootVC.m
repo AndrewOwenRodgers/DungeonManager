@@ -20,7 +20,7 @@
 {
     [super viewDidLoad];
     self.gameVCs = [[NSMutableArray alloc] init];
-    for (int i = 0; i < 11; i++)
+    for (int i = 0; i < 12; i++)
     {
         GameCharacterVC *returner;
         
@@ -63,6 +63,10 @@
 		else if (i == 9)
         {
             returner = [[GameCharacterVC alloc] initWithNibName:@"InventoryView" bundle:nil];
+        }
+		else if (i == 10)
+        {
+            returner = [[GameCharacterVC alloc] initWithNibName:@"OtherView" bundle:nil];
         }
         else
         {
