@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GameCharacterVC">
             <connections>
+                <outlet property="domainTextField" destination="vyC-de-hvd" id="dBW-kt-w0V"/>
                 <outlet property="spellsCollection" destination="UHO-kt-Yun" id="gnD-DY-HhS"/>
                 <outlet property="view" destination="Vje-ZT-wgo" id="GoI-tl-qOx"/>
             </connections>
@@ -45,7 +46,7 @@
                     </connections>
                 </collectionView>
                 <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7jh-fW-Zm2">
-                    <rect key="frame" x="85" y="221" width="150" height="33"/>
+                    <rect key="frame" x="0.0" y="221" width="150" height="33"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <state key="normal" title="New Spell">
@@ -55,6 +56,14 @@
                         <action selector="newAttributeButton:" destination="-1" eventType="touchUpInside" id="bMZ-Og-giq"/>
                     </connections>
                 </button>
+                <textField opaque="NO" clipsSubviews="YES" tag="22" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Character Domain" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vyC-de-hvd">
+                    <rect key="frame" x="169" y="223" width="131" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.11706149189999999" green="0.25381174400000001" blue="0.33659904229999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="textColor" red="0.59986139110000003" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
             </subviews>
             <color key="backgroundColor" red="0.050151209680000003" green="0.0" blue="0.14021547379999999" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
@@ -62,10 +71,13 @@
                 <constraint firstItem="Fzo-Ah-IL4" firstAttribute="leading" secondItem="UHO-kt-Yun" secondAttribute="leading" id="M1i-bA-qJ8"/>
                 <constraint firstItem="7jh-fW-Zm2" firstAttribute="top" secondItem="Fzo-Ah-IL4" secondAttribute="bottom" constant="14" id="U1V-ai-TEM"/>
                 <constraint firstItem="Fzo-Ah-IL4" firstAttribute="leading" secondItem="Vje-ZT-wgo" secondAttribute="leading" id="UBy-3n-nco"/>
-                <constraint firstItem="7jh-fW-Zm2" firstAttribute="leading" secondItem="Vje-ZT-wgo" secondAttribute="leading" constant="85" id="Y6Q-vi-cba"/>
+                <constraint firstItem="7jh-fW-Zm2" firstAttribute="leading" secondItem="Vje-ZT-wgo" secondAttribute="leading" id="Y6Q-vi-cba"/>
                 <constraint firstItem="Fzo-Ah-IL4" firstAttribute="trailing" secondItem="UHO-kt-Yun" secondAttribute="trailing" id="b7f-NM-xap"/>
-                <constraint firstItem="Fzo-Ah-IL4" firstAttribute="centerX" secondItem="7jh-fW-Zm2" secondAttribute="centerX" id="cAk-IH-x4t"/>
+                <constraint firstItem="Fzo-Ah-IL4" firstAttribute="centerX" secondItem="7jh-fW-Zm2" secondAttribute="centerX" constant="85" id="cAk-IH-x4t"/>
                 <constraint firstAttribute="trailing" secondItem="UHO-kt-Yun" secondAttribute="trailing" id="eCD-9F-J9U"/>
+                <constraint firstItem="UHO-kt-Yun" firstAttribute="top" secondItem="vyC-de-hvd" secondAttribute="bottom" constant="9" id="qPK-hS-kuU"/>
+                <constraint firstItem="vyC-de-hvd" firstAttribute="leading" secondItem="7jh-fW-Zm2" secondAttribute="trailing" constant="19" id="rqm-Ye-tI6"/>
+                <constraint firstAttribute="trailing" secondItem="vyC-de-hvd" secondAttribute="trailing" constant="20" id="sUA-Qs-yC9"/>
                 <constraint firstItem="Fzo-Ah-IL4" firstAttribute="top" secondItem="Vje-ZT-wgo" secondAttribute="top" constant="186" id="tda-Gt-AaT"/>
             </constraints>
         </view>

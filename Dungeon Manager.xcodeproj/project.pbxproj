@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0703D7E918AA112B005382A9 /* OtherView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0703D7E818AA112B005382A9 /* OtherView.xib */; };
 		0708C04D18A841540078A0A3 /* SkillsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0708C04C18A841540078A0A3 /* SkillsView.xib */; };
 		07157A5218A419BB0098B94A /* GameCharacterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 07157A5118A419BB0098B94A /* GameCharacterVC.m */; };
 		07157A5818A4987F0098B94A /* AttributeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 07157A5718A4987F0098B94A /* AttributeCell.m */; };
@@ -64,6 +65,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0703D7E818AA112B005382A9 /* OtherView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OtherView.xib; sourceTree = "<group>"; };
 		0708C04C18A841540078A0A3 /* SkillsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SkillsView.xib; sourceTree = "<group>"; };
 		07157A5018A419BB0098B94A /* GameCharacterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameCharacterVC.h; sourceTree = "<group>"; };
 		07157A5118A419BB0098B94A /* GameCharacterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameCharacterVC.m; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 				0774EF8818AA04C900CB0F8E /* SpellAmountCell.xib */,
 				0774EF8A18AA075600CB0F8E /* InventoryView.xib */,
 				0774EF8C18AA076100CB0F8E /* InventoryCell.xib */,
+				0703D7E818AA112B005382A9 /* OtherView.xib */,
 				07F8BC7B189AF2B200DA8806 /* InitialViewController.h */,
 				07F8BC7C189AF2B200DA8806 /* InitialViewController.m */,
 				07F8BC9B189AF82A00DA8806 /* CampaignVC.h */,
@@ -367,6 +370,7 @@
 				07F8BC77189AF2B200DA8806 /* Main_iPhone.storyboard in Resources */,
 				07EAACE718A7742500903F5A /* BackgroundView.xib in Resources */,
 				07F8BC6E189AF2B200DA8806 /* InfoPlist.strings in Resources */,
+				0703D7E918AA112B005382A9 /* OtherView.xib in Resources */,
 				0774EF8918AA04C900CB0F8E /* SpellAmountCell.xib in Resources */,
 				0708C04D18A841540078A0A3 /* SkillsView.xib in Resources */,
 				0774EF8318A9FD7100CB0F8E /* SpellCell.xib in Resources */,
