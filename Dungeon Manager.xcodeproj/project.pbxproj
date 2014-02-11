@@ -154,6 +154,76 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0704FB2518AAB4FD00F202C3 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				07F8BC75189AF2B200DA8806 /* Main_iPhone.storyboard */,
+				07EAACE018A76BEF00903F5A /* NameView.xib */,
+				07EAACE818A7760A00903F5A /* PhysicalView.xib */,
+				07EAACE618A7742500903F5A /* BackgroundView.xib */,
+				07EAACE418A76D9D00903F5A /* Statistics1View.xib */,
+				07EAACEE18A8311500903F5A /* AttributeView.xib */,
+				0785BA5618A963E800EFD769 /* AttributeCell.xib */,
+				0708C04C18A841540078A0A3 /* SkillsView.xib */,
+				0785BAA218A9654000EFD769 /* SkillCell.xib */,
+				0774EF7C18A9EB4B00CB0F8E /* FeatsView.xib */,
+				0774EF7E18A9EB5900CB0F8E /* FeatCell.xib */,
+				0774EF8018A9FD6800CB0F8E /* SpellsView.xib */,
+				0774EF8218A9FD7100CB0F8E /* SpellCell.xib */,
+				0774EF8418AA04AA00CB0F8E /* SpellAmountsView.xib */,
+				0774EF8818AA04C900CB0F8E /* SpellAmountCell.xib */,
+				0774EF8A18AA075600CB0F8E /* InventoryView.xib */,
+				0774EF8C18AA076100CB0F8E /* InventoryCell.xib */,
+				0703D7E818AA112B005382A9 /* OtherView.xib */,
+			);
+			name = Interface;
+			sourceTree = "<group>";
+		};
+		0704FB2618AAB55A00F202C3 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				07F8BC7B189AF2B200DA8806 /* InitialViewController.h */,
+				07F8BC7C189AF2B200DA8806 /* InitialViewController.m */,
+				07F8BC9B189AF82A00DA8806 /* CampaignVC.h */,
+				07F8BC9C189AF82A00DA8806 /* CampaignVC.m */,
+				072B4C7518A8A6CF0030061E /* CampaignNotesVC.h */,
+				072B4C7618A8A6CF0030061E /* CampaignNotesVC.m */,
+				07F8BCA5189C706300DA8806 /* CharacterCollectionVCViewController.h */,
+				07F8BCA6189C706400DA8806 /* CharacterCollectionVCViewController.m */,
+				07157A5018A419BB0098B94A /* GameCharacterVC.h */,
+				07157A5118A419BB0098B94A /* GameCharacterVC.m */,
+				072B4C7818A948810030061E /* GameCharacterRootVC.h */,
+				072B4C7918A948810030061E /* GameCharacterRootVC.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		0704FB2718AAB5C000F202C3 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				07F8BC9E189AF9D800DA8806 /* CampaignCell.h */,
+				07F8BC9F189AF9D800DA8806 /* CampaignCell.m */,
+				07F8BCA8189E191A00DA8806 /* CharacterCell.h */,
+				07F8BCA9189E191A00DA8806 /* CharacterCell.m */,
+				07157A5618A4987F0098B94A /* AttributeCell.h */,
+				07157A5718A4987F0098B94A /* AttributeCell.m */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		0704FB2918AAB5F000F202C3 /* Data Models */ = {
+			isa = PBXGroup;
+			children = (
+				07F8BCA1189AFA3300DA8806 /* Campaign.h */,
+				07F8BCA2189AFA3300DA8806 /* Campaign.m */,
+				07F8BCAB18A0AD1E00DA8806 /* GameCharacter.h */,
+				07F8BCAC18A0AD1E00DA8806 /* GameCharacter.m */,
+				07157A5918A4A3B80098B94A /* AttributeData.h */,
+				07157A5A18A4A3B80098B94A /* AttributeData.m */,
+			);
+			name = "Data Models";
+			sourceTree = "<group>";
+		};
 		07F8BC57189AF2B100DA8806 = {
 			isa = PBXGroup;
 			children = (
@@ -189,53 +259,15 @@
 		07F8BC69189AF2B200DA8806 /* Dungeon Manager */ = {
 			isa = PBXGroup;
 			children = (
-				07F8BC72189AF2B200DA8806 /* AppDelegate.h */,
 				07F8BC73189AF2B200DA8806 /* AppDelegate.m */,
-				07F8BC75189AF2B200DA8806 /* Main_iPhone.storyboard */,
-				07EAACE018A76BEF00903F5A /* NameView.xib */,
-				07EAACE818A7760A00903F5A /* PhysicalView.xib */,
-				07EAACE618A7742500903F5A /* BackgroundView.xib */,
-				07EAACE418A76D9D00903F5A /* Statistics1View.xib */,
-				07EAACEE18A8311500903F5A /* AttributeView.xib */,
-				0785BA5618A963E800EFD769 /* AttributeCell.xib */,
-				0708C04C18A841540078A0A3 /* SkillsView.xib */,
-				0785BAA218A9654000EFD769 /* SkillCell.xib */,
-				0774EF7C18A9EB4B00CB0F8E /* FeatsView.xib */,
-				0774EF7E18A9EB5900CB0F8E /* FeatCell.xib */,
-				0774EF8018A9FD6800CB0F8E /* SpellsView.xib */,
-				0774EF8218A9FD7100CB0F8E /* SpellCell.xib */,
-				0774EF8418AA04AA00CB0F8E /* SpellAmountsView.xib */,
-				0774EF8818AA04C900CB0F8E /* SpellAmountCell.xib */,
-				0774EF8A18AA075600CB0F8E /* InventoryView.xib */,
-				0774EF8C18AA076100CB0F8E /* InventoryCell.xib */,
-				0703D7E818AA112B005382A9 /* OtherView.xib */,
-				07F8BC7B189AF2B200DA8806 /* InitialViewController.h */,
-				07F8BC7C189AF2B200DA8806 /* InitialViewController.m */,
-				07F8BC9B189AF82A00DA8806 /* CampaignVC.h */,
-				07F8BC9C189AF82A00DA8806 /* CampaignVC.m */,
-				07F8BC9E189AF9D800DA8806 /* CampaignCell.h */,
-				07F8BC9F189AF9D800DA8806 /* CampaignCell.m */,
-				07F8BCA1189AFA3300DA8806 /* Campaign.h */,
-				07F8BCA2189AFA3300DA8806 /* Campaign.m */,
-				072B4C7518A8A6CF0030061E /* CampaignNotesVC.h */,
-				072B4C7618A8A6CF0030061E /* CampaignNotesVC.m */,
-				07F8BCA5189C706300DA8806 /* CharacterCollectionVCViewController.h */,
-				07F8BCA6189C706400DA8806 /* CharacterCollectionVCViewController.m */,
-				07F8BCA8189E191A00DA8806 /* CharacterCell.h */,
-				07F8BCA9189E191A00DA8806 /* CharacterCell.m */,
-				07157A5018A419BB0098B94A /* GameCharacterVC.h */,
-				07157A5118A419BB0098B94A /* GameCharacterVC.m */,
-				072B4C7818A948810030061E /* GameCharacterRootVC.h */,
-				072B4C7918A948810030061E /* GameCharacterRootVC.m */,
-				07F8BCAB18A0AD1E00DA8806 /* GameCharacter.h */,
-				07F8BCAC18A0AD1E00DA8806 /* GameCharacter.m */,
-				07157A5618A4987F0098B94A /* AttributeCell.h */,
-				07157A5718A4987F0098B94A /* AttributeCell.m */,
-				07157A5918A4A3B80098B94A /* AttributeData.h */,
-				07157A5A18A4A3B80098B94A /* AttributeData.m */,
+				07F8BC72189AF2B200DA8806 /* AppDelegate.h */,
 				07F8BCAE18A1C4C200DA8806 /* getDocumentsDirectory.h */,
 				07F8BCAF18A1C4C200DA8806 /* getDocumentsDirectory.m */,
 				074FABBB18A555BD003909FC /* CharacterSaving.h */,
+				0704FB2518AAB4FD00F202C3 /* Interface */,
+				0704FB2618AAB55A00F202C3 /* View Controllers */,
+				0704FB2718AAB5C000F202C3 /* Cells */,
+				0704FB2918AAB5F000F202C3 /* Data Models */,
 				07F8BC7E189AF2B200DA8806 /* Images.xcassets */,
 				07F8BC6A189AF2B200DA8806 /* Supporting Files */,
 			);
