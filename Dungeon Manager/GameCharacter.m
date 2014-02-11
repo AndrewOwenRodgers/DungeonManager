@@ -38,6 +38,7 @@
     self.classSkills = [decoder decodeObjectForKey:@"classSkills"];
     self.feats = [decoder decodeObjectForKey:@"feats"];
     self.spells = [decoder decodeObjectForKey:@"spells"];
+	self.spellAmounts = [decoder decodeObjectForKey:@"spellAmounts"];
     self.domain = [decoder decodeObjectForKey:@"domain"];
     self.speeds = [decoder decodeObjectForKey:@"speeds"];
     self.languages = [decoder decodeObjectForKey:@"languages"];
@@ -84,6 +85,7 @@
     [encoder encodeObject:self.classSkills forKey:@"classSkills"];
     [encoder encodeObject:self.feats forKey:@"feats"];
     [encoder encodeObject:self.spells forKey:@"spells"];
+	[encoder encodeObject:self.spellAmounts forKey:@"spellAmounts"];
     [encoder encodeObject:self.domain forKey:@"domain"];
     [encoder encodeObject:self.speeds forKey:@"speeds"];
     [encoder encodeObject:self.languages forKey:@"languages"];

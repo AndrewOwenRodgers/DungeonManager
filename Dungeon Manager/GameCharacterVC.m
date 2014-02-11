@@ -38,14 +38,17 @@
 @property (weak, nonatomic) IBOutlet UITextField *hairColorTextField;//18
 @property (weak, nonatomic) IBOutlet UITextField *eyeColorTextField;//19
 @property (weak, nonatomic) IBOutlet UITextField *skinColorTextField;//20
+@property (weak, nonatomic) IBOutlet UITextField *domainTextField;//22
 
-
+@property (weak, nonatomic) IBOutlet UILabel *totalWeightLabel;//0
 @property (weak, nonatomic) IBOutlet UITextView *BioTextView;//0
-
 
 @property (strong, nonatomic) IBOutlet UICollectionView *attributeCollection;//0
 @property (strong, nonatomic) IBOutlet UICollectionView *skillsCollection;//1
 @property (strong, nonatomic) IBOutlet UICollectionView *featsCollection;//2
+@property (strong, nonatomic) IBOutlet UICollectionView *spellsCollection;//3
+@property (strong, nonatomic) IBOutlet UICollectionView *spellAmountCollection;//4
+@property (strong, nonatomic) IBOutlet UICollectionView *inventoryCollection;//5
 
 @end
 
@@ -81,6 +84,8 @@
     self.hairColorTextField.text = self.character.hairColor;
     self.eyeColorTextField.text = self.character.eyeColor;
     self.skinColorTextField.text = self.character.skinColor;
+	self.domainTextField.text = self.character.domain;
+	self.totalWeightLabel.text = [NSString stringWithFormat:@"%d", self.character.inventoryTotalWeight];
     
     self.BioTextView.text = self.character.bio;
 }
@@ -129,8 +134,39 @@
         {
             self.character.feats = [NSMutableArray array];
         }
+		attribute.attributeDescription = @"Feat description";
         [self.character.feats addObject:attribute];
         [self.featsCollection reloadData];
+    }
+	else if ([sender tag] == 3)
+    {
+        if (!self.character.spells)
+        {
+            self.character.spells = [NSMutableArray array];
+        }
+		attribute.attributeDescription = @"Spell description";
+        [self.character.spells addObject:attribute];
+        [self.spellsCollection reloadData];
+    }
+	else if ([sender tag] == 4)
+    {
+        if (!self.character.spellAmounts)
+        {
+            self.character.spellAmounts = [NSMutableArray array];
+        }
+        [self.character.spellAmounts addObject:attribute];
+        [self.spellAmountCollection reloadData];
+    }
+	else if ([sender tag] == 5)
+    {
+        if (!self.character.inventory)
+        {
+            self.character.inventory = [NSMutableArray array];
+        }
+		attribute.attributeDescription = @"Item description";
+		attribute.attributeWeight = 0;
+        [self.character.inventory addObject:attribute];
+        [self.inventoryCollection reloadData];
     }
     
     [self.delegate saveCharacters];
@@ -153,7 +189,32 @@
         [self.character.feats removeObjectAtIndex:index];
 		[self.featsCollection reloadData];
     }
+	else if (type == 3)
+    {
+        [self.character.spells removeObjectAtIndex:index];
+		[self.spellsCollection reloadData];
+    }
+	else if (type == 4)
+    {
+        [self.character.spellAmounts removeObjectAtIndex:index];
+		[self.spellAmountCollection reloadData];
+    }
+	else if (type == 5)
+    {
+        [self.character.inventory removeObjectAtIndex:index];
+		[self.inventoryCollection reloadData];
+    }
     [self.delegate saveCharacters];
+}
+
+-(void)recalculateWeights
+{
+	self.character.inventoryTotalWeight = 0;
+	for (AttributeData *inventoryItem in self.character.inventory)
+	{
+		self.character.inventoryTotalWeight = self.character.inventoryTotalWeight + inventoryItem.attributeWeight;
+	}
+	self.totalWeightLabel.text = [NSString stringWithFormat:@"%d", self.character.inventoryTotalWeight];
 }
 
 #pragma mark -CollectionViews
@@ -179,6 +240,24 @@
         cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"featCell" forIndexPath:indexPath];
         cell.attribute = self.character.feats[indexPath.row];
     }
+	else if (collectionView.tag == 3)
+    {
+        [collectionView registerNib:[UINib nibWithNibName:@"SpellCell" bundle:nil] forCellWithReuseIdentifier:@"spellCell"];
+        cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"spellCell" forIndexPath:indexPath];
+        cell.attribute = self.character.spells[indexPath.row];
+    }
+	else if (collectionView.tag == 4)
+    {
+        [collectionView registerNib:[UINib nibWithNibName:@"SpellAmountCell" bundle:nil] forCellWithReuseIdentifier:@"spellAmountCell"];
+        cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"spellAmountCell" forIndexPath:indexPath];
+        cell.attribute = self.character.spellAmounts[indexPath.row];
+    }
+	else if (collectionView.tag == 5)
+    {
+        [collectionView registerNib:[UINib nibWithNibName:@"InventoryCell" bundle:nil] forCellWithReuseIdentifier:@"inventoryCell"];
+        cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"inventoryCell" forIndexPath:indexPath];
+        cell.attribute = self.character.inventory[indexPath.row];
+    }
     
     cell.attribute.attributeType = collectionView.tag;
     [cell buildView];
@@ -201,6 +280,18 @@
 	else if (collectionView.tag == 2)
     {
         return self.character.feats.count;
+    }
+	else if (collectionView.tag == 3)
+    {
+        return self.character.spells.count;
+    }
+	else if (collectionView.tag == 4)
+    {
+        return self.character.spellAmounts.count;
+    }
+	else if (collectionView.tag == 5)
+    {
+        return self.character.inventory.count;
     }
     return 0;
 }
@@ -350,6 +441,10 @@
     else if (textField.tag == 20)
     {
         self.character.skinColor = textField.text;
+    }
+	else if (textField.tag == 22)
+    {
+        self.character.domain = textField.text;
     }
     
     [self.delegate saveCharacters];

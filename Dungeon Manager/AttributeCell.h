@@ -13,6 +13,7 @@
 @protocol DeleteAttribute <NSObject>
 
 -(void)deleteAttributeOfType:(NSInteger)type atIndex:(NSInteger)index;
+-(void)recalculateWeights;
 @property UIView *view;
 
 @end

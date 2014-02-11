@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4514" systemVersion="13A3028" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="center" reuseIdentifier="spellCell" id="yrO-If-QAu" customClass="AttributeCell">
+            <rect key="frame" x="0.0" y="0.0" width="310" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="310" height="100"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Level" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GPG-zi-11e" userLabel="skin">
+                        <rect key="frame" x="206" y="10" width="79" height="30"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="0.11706149189999999" green="0.25381174400000001" blue="0.33659904229999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.11706149189999999" green="0.25381174400000001" blue="0.33659904229999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="79" id="qmI-1J-ujC"/>
+                        </constraints>
+                        <color key="textColor" red="0.59986139110000003" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                    </textField>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Spell" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OLS-gD-caQ" userLabel="skin">
+                        <rect key="frame" x="5" y="10" width="193" height="30"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="0.11706149189999999" green="0.25381174400000001" blue="0.33659904229999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.11706149189999999" green="0.25381174400000001" blue="0.33659904229999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="textColor" red="0.59986139110000003" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Osl-oA-O93">
+                        <rect key="frame" x="293" y="10" width="12" height="30"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="12" id="nOF-rP-QLE"/>
+                        </constraints>
+                        <state key="normal" title="X">
+                            <color key="titleColor" red="0.057353102402714073" green="1" blue="0.19218280494804718" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="deleteButton:" destination="yrO-If-QAu" eventType="touchUpInside" id="ikc-Cx-3Gj"/>
+                        </connections>
+                    </button>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Spell description here" translatesAutoresizingMaskIntoConstraints="NO" id="Y7U-QV-nVA">
+                        <rect key="frame" x="5" y="42" width="300" height="52"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="0.11706149189999999" green="0.25381174400000001" blue="0.33659904229999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.11706149189999999" green="0.25381174400000001" blue="0.33659904229999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="textColor" red="0.59986139110000003" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
+                    </textView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <color key="tintColor" red="0.19209929440000001" green="0.0" blue="0.52261844759999998" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="Osl-oA-O93" firstAttribute="leading" secondItem="GPG-zi-11e" secondAttribute="trailing" constant="8" symbolic="YES" id="4Jg-eO-ElT"/>
+                <constraint firstItem="Osl-oA-O93" firstAttribute="baseline" secondItem="GPG-zi-11e" secondAttribute="baseline" id="CsE-Ig-rGh"/>
+                <constraint firstItem="Y7U-QV-nVA" firstAttribute="centerX" secondItem="yrO-If-QAu" secondAttribute="centerX" id="M3u-9r-3I4"/>
+                <constraint firstItem="OLS-gD-caQ" firstAttribute="baseline" secondItem="GPG-zi-11e" secondAttribute="baseline" id="OcA-jd-XSV"/>
+                <constraint firstItem="GPG-zi-11e" firstAttribute="leading" secondItem="OLS-gD-caQ" secondAttribute="trailing" constant="8" symbolic="YES" id="Que-HF-4sp"/>
+                <constraint firstItem="OLS-gD-caQ" firstAttribute="top" secondItem="yrO-If-QAu" secondAttribute="top" constant="10" id="RTk-QX-lnX"/>
+                <constraint firstItem="OLS-gD-caQ" firstAttribute="leading" secondItem="yrO-If-QAu" secondAttribute="leading" constant="5" id="UE7-E6-XER"/>
+                <constraint firstAttribute="bottom" secondItem="Y7U-QV-nVA" secondAttribute="bottom" constant="6" id="XSW-JP-b4R"/>
+                <constraint firstItem="Y7U-QV-nVA" firstAttribute="trailing" secondItem="Osl-oA-O93" secondAttribute="trailing" id="bqE-ZG-urA"/>
+                <constraint firstItem="Y7U-QV-nVA" firstAttribute="top" secondItem="OLS-gD-caQ" secondAttribute="bottom" constant="2" id="eEK-MI-jdk"/>
+                <constraint firstItem="Y7U-QV-nVA" firstAttribute="leading" secondItem="OLS-gD-caQ" secondAttribute="leading" id="vHC-07-2oe"/>
+            </constraints>
+            <size key="customSize" width="310" height="100"/>
+            <connections>
+                <outlet property="attributeTextField" destination="OLS-gD-caQ" id="JJy-15-jUk"/>
+                <outlet property="featDescription" destination="Y7U-QV-nVA" id="oJk-CM-CZ7"/>
+                <outlet property="valueTextField" destination="GPG-zi-11e" id="bT8-jO-hlL"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+</document>

@@ -83,10 +83,14 @@
 
 //FEATS VIEW
 @property (nonatomic) NSMutableArray *feats;
+//
 
 //SPELLS VIEW
 @property (nonatomic) NSMutableArray *spells;
 @property (nonatomic) NSString *domain;
+
+//SPELLS VIEW 2
+@property (nonatomic) NSMutableArray *spellAmounts;
 
 //INVENTORY VIEW
 @property (nonatomic) NSMutableArray *inventory;

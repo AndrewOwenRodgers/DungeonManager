@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4514" systemVersion="13A3028" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GameCharacterVC">
+            <connections>
+                <outlet property="spellsCollection" destination="UHO-kt-Yun" id="gnD-DY-HhS"/>
+                <outlet property="view" destination="Vje-ZT-wgo" id="GoI-tl-qOx"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Vje-ZT-wgo">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spells" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fzo-Ah-IL4">
+                    <rect key="frame" x="0.0" y="186" width="320" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="n6Y-83-LPp"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <color key="textColor" red="0.59986139110000003" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="3" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="UHO-kt-Yun">
+                    <rect key="frame" x="0.0" y="262" width="320" height="180"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" red="0.050151209680000003" green="0.0" blue="0.14021547379999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="180" id="Ygf-U1-ahm"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5tS-1y-Gvf">
+                        <size key="itemSize" width="310" height="100"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <cells/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="k3P-71-BKx"/>
+                        <outlet property="delegate" destination="-1" id="h2w-jP-dLk"/>
+                    </connections>
+                </collectionView>
+                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7jh-fW-Zm2">
+                    <rect key="frame" x="85" y="221" width="150" height="33"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" title="New Spell">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="newAttributeButton:" destination="-1" eventType="touchUpInside" id="bMZ-Og-giq"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.050151209680000003" green="0.0" blue="0.14021547379999999" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="UHO-kt-Yun" firstAttribute="top" secondItem="7jh-fW-Zm2" secondAttribute="bottom" constant="8" symbolic="YES" id="7KW-eE-iCK"/>
+                <constraint firstItem="Fzo-Ah-IL4" firstAttribute="leading" secondItem="UHO-kt-Yun" secondAttribute="leading" id="M1i-bA-qJ8"/>
+                <constraint firstItem="7jh-fW-Zm2" firstAttribute="top" secondItem="Fzo-Ah-IL4" secondAttribute="bottom" constant="14" id="U1V-ai-TEM"/>
+                <constraint firstItem="Fzo-Ah-IL4" firstAttribute="leading" secondItem="Vje-ZT-wgo" secondAttribute="leading" id="UBy-3n-nco"/>
+                <constraint firstItem="7jh-fW-Zm2" firstAttribute="leading" secondItem="Vje-ZT-wgo" secondAttribute="leading" constant="85" id="Y6Q-vi-cba"/>
+                <constraint firstItem="Fzo-Ah-IL4" firstAttribute="trailing" secondItem="UHO-kt-Yun" secondAttribute="trailing" id="b7f-NM-xap"/>
+                <constraint firstItem="Fzo-Ah-IL4" firstAttribute="centerX" secondItem="7jh-fW-Zm2" secondAttribute="centerX" id="cAk-IH-x4t"/>
+                <constraint firstAttribute="trailing" secondItem="UHO-kt-Yun" secondAttribute="trailing" id="eCD-9F-J9U"/>
+                <constraint firstItem="Fzo-Ah-IL4" firstAttribute="top" secondItem="Vje-ZT-wgo" secondAttribute="top" constant="186" id="tda-Gt-AaT"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
