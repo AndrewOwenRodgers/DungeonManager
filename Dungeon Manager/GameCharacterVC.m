@@ -106,8 +106,6 @@
 - (IBAction)newAttributeButton:(id)sender
 {
     AttributeData *attribute = [[AttributeData alloc] init];
-    attribute.attributeName = @"New";
-    attribute.attributeValue = 0;
     
     if ([sender tag] == 0)
     {
@@ -123,8 +121,7 @@
         if (!self.character.classSkills)
         {
             self.character.classSkills = [NSMutableArray array];
-        }
-        attribute.secondaryAttribute = @"New";
+		}
         [self.character.classSkills addObject:attribute];
         [self.skillsCollection reloadData];
     }
@@ -164,7 +161,6 @@
             self.character.inventory = [NSMutableArray array];
         }
 		attribute.attributeDescription = @"Item description";
-		attribute.attributeWeight = 0;
         [self.character.inventory addObject:attribute];
         [self.inventoryCollection reloadData];
     }
@@ -212,7 +208,7 @@
 	self.character.inventoryTotalWeight = 0;
 	for (AttributeData *inventoryItem in self.character.inventory)
 	{
-		self.character.inventoryTotalWeight = self.character.inventoryTotalWeight + inventoryItem.attributeWeight;
+		self.character.inventoryTotalWeight = self.character.inventoryTotalWeight + (inventoryItem.attributeWeight * inventoryItem.attributeValue);
 	}
 	self.totalWeightLabel.text = [NSString stringWithFormat:@"%d", self.character.inventoryTotalWeight];
 }

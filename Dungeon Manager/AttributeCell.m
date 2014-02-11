@@ -95,6 +95,7 @@
     if (textField.tag == 1)
     {
         self.attribute.attributeValue = [textField.text integerValue];
+		[self.deletionDelegate recalculateWeights];
     }
     if (textField.tag == 2)
     {

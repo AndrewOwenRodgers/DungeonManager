@@ -17,6 +17,10 @@
 		0774EF7F18A9EB5900CB0F8E /* FeatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0774EF7E18A9EB5900CB0F8E /* FeatCell.xib */; };
 		0774EF8118A9FD6800CB0F8E /* SpellsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0774EF8018A9FD6800CB0F8E /* SpellsView.xib */; };
 		0774EF8318A9FD7100CB0F8E /* SpellCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0774EF8218A9FD7100CB0F8E /* SpellCell.xib */; };
+		0774EF8518AA04AA00CB0F8E /* SpellAmountsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0774EF8418AA04AA00CB0F8E /* SpellAmountsView.xib */; };
+		0774EF8918AA04C900CB0F8E /* SpellAmountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0774EF8818AA04C900CB0F8E /* SpellAmountCell.xib */; };
+		0774EF8B18AA075600CB0F8E /* InventoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0774EF8A18AA075600CB0F8E /* InventoryView.xib */; };
+		0774EF8D18AA076100CB0F8E /* InventoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0774EF8C18AA076100CB0F8E /* InventoryCell.xib */; };
 		0785BA5718A963E800EFD769 /* AttributeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0785BA5618A963E800EFD769 /* AttributeCell.xib */; };
 		0785BAA318A9654000EFD769 /* SkillCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0785BAA218A9654000EFD769 /* SkillCell.xib */; };
 		07EAACE118A76BEF00903F5A /* NameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07EAACE018A76BEF00903F5A /* NameView.xib */; };
@@ -76,6 +80,10 @@
 		0774EF7E18A9EB5900CB0F8E /* FeatCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeatCell.xib; sourceTree = "<group>"; };
 		0774EF8018A9FD6800CB0F8E /* SpellsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpellsView.xib; sourceTree = "<group>"; };
 		0774EF8218A9FD7100CB0F8E /* SpellCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpellCell.xib; sourceTree = "<group>"; };
+		0774EF8418AA04AA00CB0F8E /* SpellAmountsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpellAmountsView.xib; sourceTree = "<group>"; };
+		0774EF8818AA04C900CB0F8E /* SpellAmountCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpellAmountCell.xib; sourceTree = "<group>"; };
+		0774EF8A18AA075600CB0F8E /* InventoryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InventoryView.xib; sourceTree = "<group>"; };
+		0774EF8C18AA076100CB0F8E /* InventoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InventoryCell.xib; sourceTree = "<group>"; };
 		0785BA5618A963E800EFD769 /* AttributeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AttributeCell.xib; sourceTree = "<group>"; };
 		0785BAA218A9654000EFD769 /* SkillCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SkillCell.xib; sourceTree = "<group>"; };
 		07EAACE018A76BEF00903F5A /* NameView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NameView.xib; sourceTree = "<group>"; };
@@ -197,6 +205,10 @@
 				0774EF7E18A9EB5900CB0F8E /* FeatCell.xib */,
 				0774EF8018A9FD6800CB0F8E /* SpellsView.xib */,
 				0774EF8218A9FD7100CB0F8E /* SpellCell.xib */,
+				0774EF8418AA04AA00CB0F8E /* SpellAmountsView.xib */,
+				0774EF8818AA04C900CB0F8E /* SpellAmountCell.xib */,
+				0774EF8A18AA075600CB0F8E /* InventoryView.xib */,
+				0774EF8C18AA076100CB0F8E /* InventoryCell.xib */,
 				07F8BC7B189AF2B200DA8806 /* InitialViewController.h */,
 				07F8BC7C189AF2B200DA8806 /* InitialViewController.m */,
 				07F8BC9B189AF82A00DA8806 /* CampaignVC.h */,
@@ -348,13 +360,17 @@
 				07F8BC7F189AF2B200DA8806 /* Images.xcassets in Resources */,
 				07EAACEF18A8311500903F5A /* AttributeView.xib in Resources */,
 				0774EF8118A9FD6800CB0F8E /* SpellsView.xib in Resources */,
+				0774EF8D18AA076100CB0F8E /* InventoryCell.xib in Resources */,
 				0774EF7F18A9EB5900CB0F8E /* FeatCell.xib in Resources */,
 				07EAACE518A76D9D00903F5A /* Statistics1View.xib in Resources */,
+				0774EF8518AA04AA00CB0F8E /* SpellAmountsView.xib in Resources */,
 				07F8BC77189AF2B200DA8806 /* Main_iPhone.storyboard in Resources */,
 				07EAACE718A7742500903F5A /* BackgroundView.xib in Resources */,
 				07F8BC6E189AF2B200DA8806 /* InfoPlist.strings in Resources */,
+				0774EF8918AA04C900CB0F8E /* SpellAmountCell.xib in Resources */,
 				0708C04D18A841540078A0A3 /* SkillsView.xib in Resources */,
 				0774EF8318A9FD7100CB0F8E /* SpellCell.xib in Resources */,
+				0774EF8B18AA075600CB0F8E /* InventoryView.xib in Resources */,
 				07EAACE118A76BEF00903F5A /* NameView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

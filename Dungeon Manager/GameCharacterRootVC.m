@@ -56,6 +56,14 @@
         {
             returner = [[GameCharacterVC alloc] initWithNibName:@"SpellsView" bundle:nil];
         }
+		else if (i == 8)
+        {
+            returner = [[GameCharacterVC alloc] initWithNibName:@"SpellAmountsView" bundle:nil];
+        }
+		else if (i == 9)
+        {
+            returner = [[GameCharacterVC alloc] initWithNibName:@"InventoryView" bundle:nil];
+        }
         else
         {
             returner = [[GameCharacterVC alloc ] init];
