@@ -44,8 +44,8 @@
                         <outlet property="delegate" destination="-1" id="h2w-jP-dLk"/>
                     </connections>
                 </collectionView>
-                <button opaque="NO" tag="2" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7jh-fW-Zm2">
-                    <rect key="frame" x="85" y="221" width="150" height="33"/>
+                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7jh-fW-Zm2">
+                    <rect key="frame" x="85" y="221" width="149" height="33"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <state key="normal" title="New Feat">
