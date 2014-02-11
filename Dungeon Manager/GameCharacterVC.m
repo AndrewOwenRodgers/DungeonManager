@@ -355,6 +355,13 @@
     [UIView setAnimationDuration:(CGFloat)0.3];
     
     [self.view setFrame:viewFrame];
+    
+    [UIView commitAnimations];
+	
+	[UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationBeginsFromCurrentState:YES];
+    [UIView setAnimationDuration:(CGFloat)0.3];
+    
 	[self.characterImageView setAlpha:1.f];
     
     [UIView commitAnimations];
@@ -517,8 +524,15 @@
     [UIView setAnimationDuration:(CGFloat)0.3];
     
     [self.view setFrame:viewFrame];
-	[self.characterImageView setAlpha:1.f];
+    
+    [UIView commitAnimations];
 	
+	[UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationBeginsFromCurrentState:YES];
+    [UIView setAnimationDuration:(CGFloat)0.3];
+    
+	[self.characterImageView setAlpha:1.f];
+    
     [UIView commitAnimations];
 	
 	[textView resignFirstResponder];

@@ -11,6 +11,7 @@
 @interface GameCharacterRootVC ()
 
 @property (strong, nonatomic) NSMutableArray *gameVCs;
+@property (strong, nonatomic) NSMutableArray *namesArray;
 
 @end
 
@@ -20,7 +21,7 @@
 {
     [super viewDidLoad];
     self.gameVCs = [[NSMutableArray alloc] init];
-    for (int i = 0; i < 12; i++)
+    for (int i = 0; i < 11; i++)
     {
         GameCharacterVC *returner;
         
@@ -78,6 +79,7 @@
         returner.character = self.character;
         [self.gameVCs addObject:returner];
     }
+	self.namesArray = [[NSMutableArray alloc] initWithObjects:@"Basic Info", @"Background", @"Appearance", @"Basic Stats", @"Attributes", @"Skills", @"Feats", @"Spells 1", @"Spells 2", @"Inventory", @"Other", nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -100,6 +102,16 @@
     [self.formView scrollToItemAtIndex:nextIndex duration:0.4];
 }
 
+- (IBAction)showCharacterRoot:(id)sender
+{
+    [self.formView scrollToItemAtIndex:0 duration:0.4];
+}
+
+- (IBAction)showViewAtIndex:(id)sender
+{
+    [self.formView scrollToItemAtIndex:([sender tag] + 1) duration:0.4];
+}
+
 - (NSInteger)numberOfItemsInSwipeView:(SwipeView *)swipeView
 {
     return 12;
@@ -111,9 +123,26 @@
     {
         return ((GameCharacterVC *)self.gameVCs[index - 1]).view;
     }
+	
+	
+	
     UIView *stuff = [[UIView alloc] initWithFrame:swipeView.frame];
     stuff.backgroundColor = [UIColor colorWithRed:13/255.f green:1/255.f blue:35/255.f alpha:1.0];
+//	stuff.contentSize = CGSizeMake(swipeView.frame.size.width, swipeView.frame.size.height * 1.1);
+//	stuff.showsVerticalScrollIndicator = YES;
 	
+	for (int i = 0; i < self.gameVCs.count; i++)
+	{
+		UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+		[button addTarget:self
+				   action:@selector(showViewAtIndex:)
+		 forControlEvents:UIControlEventTouchDown];
+		[button setTitle:self.namesArray[i] forState:UIControlStateNormal];
+		button.titleLabel.textColor = [UIColor colorWithRed:153/255.f green:1.f blue:1.f alpha:1.0];
+		button.frame = CGRectMake(80.0, (190.f + (23 * i)), 160.0, 13.0);
+		button.tag = i;
+		[stuff addSubview:button];
+	}
     return stuff;
 }
 

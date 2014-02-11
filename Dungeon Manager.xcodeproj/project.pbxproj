@@ -36,7 +36,6 @@
 		07F8BC70189AF2B200DA8806 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F8BC6F189AF2B200DA8806 /* main.m */; };
 		07F8BC74189AF2B200DA8806 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F8BC73189AF2B200DA8806 /* AppDelegate.m */; };
 		07F8BC77189AF2B200DA8806 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07F8BC75189AF2B200DA8806 /* Main_iPhone.storyboard */; };
-		07F8BC7A189AF2B200DA8806 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07F8BC78189AF2B200DA8806 /* Main_iPad.storyboard */; };
 		07F8BC7D189AF2B200DA8806 /* InitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F8BC7C189AF2B200DA8806 /* InitialViewController.m */; };
 		07F8BC7F189AF2B200DA8806 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07F8BC7E189AF2B200DA8806 /* Images.xcassets */; };
 		07F8BC86189AF2B200DA8806 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07F8BC85189AF2B200DA8806 /* XCTest.framework */; };
@@ -104,7 +103,6 @@
 		07F8BC72189AF2B200DA8806 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = AppDelegate.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		07F8BC73189AF2B200DA8806 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AppDelegate.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		07F8BC76189AF2B200DA8806 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		07F8BC79189AF2B200DA8806 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		07F8BC7B189AF2B200DA8806 /* InitialViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InitialViewController.h; sourceTree = "<group>"; };
 		07F8BC7C189AF2B200DA8806 /* InitialViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InitialViewController.m; sourceTree = "<group>"; };
 		07F8BC7E189AF2B200DA8806 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -194,7 +192,6 @@
 				07F8BC72189AF2B200DA8806 /* AppDelegate.h */,
 				07F8BC73189AF2B200DA8806 /* AppDelegate.m */,
 				07F8BC75189AF2B200DA8806 /* Main_iPhone.storyboard */,
-				07F8BC78189AF2B200DA8806 /* Main_iPad.storyboard */,
 				07EAACE018A76BEF00903F5A /* NameView.xib */,
 				07EAACE818A7760A00903F5A /* PhysicalView.xib */,
 				07EAACE618A7742500903F5A /* BackgroundView.xib */,
@@ -357,7 +354,6 @@
 			files = (
 				0785BA5718A963E800EFD769 /* AttributeCell.xib in Resources */,
 				0785BAA318A9654000EFD769 /* SkillCell.xib in Resources */,
-				07F8BC7A189AF2B200DA8806 /* Main_iPad.storyboard in Resources */,
 				0774EF7D18A9EB4B00CB0F8E /* FeatsView.xib in Resources */,
 				07EAACE918A7760A00903F5A /* PhysicalView.xib in Resources */,
 				07F8BC7F189AF2B200DA8806 /* Images.xcassets in Resources */,
@@ -480,14 +476,6 @@
 			name = Main_iPhone.storyboard;
 			sourceTree = "<group>";
 		};
-		07F8BC78189AF2B200DA8806 /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				07F8BC79189AF2B200DA8806 /* Base */,
-			);
-			name = Main_iPad.storyboard;
-			sourceTree = "<group>";
-		};
 		07F8BC8E189AF2B200DA8806 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -584,6 +572,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Dungeon Manager/Dungeon Manager-Prefix.pch";
 				INFOPLIST_FILE = "Dungeon Manager/Dungeon Manager-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -602,6 +591,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Dungeon Manager/Dungeon Manager-Prefix.pch";
 				INFOPLIST_FILE = "Dungeon Manager/Dungeon Manager-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;

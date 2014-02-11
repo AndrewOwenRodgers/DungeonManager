@@ -266,7 +266,13 @@
                                             <action selector="showPreviousView:" destination="71M-0M-1Af" id="yCG-MY-zDF"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="f9d-Uq-7LQ"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="XMt-7A-Caq"/>
+                                    <barButtonItem title="contents" id="juM-pm-fS1">
+                                        <connections>
+                                            <action selector="showCharacterRoot:" destination="71M-0M-1Af" id="eEi-3d-He1"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="AwY-Hv-vzl"/>
                                     <barButtonItem title="next page" id="1eK-yN-Q4Y">
                                         <connections>
                                             <action selector="showNextView:" destination="71M-0M-1Af" id="mQT-9o-CUI"/>
@@ -326,7 +332,7 @@
                             <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="91A-QB-r9E">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="529"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" red="0.050980396568775177" green="0.0039215688593685627" blue="0.13725490868091583" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="backgroundColor" red="0.050151209680000003" green="0.0" blue="0.14021547379999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="erw-4Q-p1H">
                                     <size key="itemSize" width="300" height="75"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>

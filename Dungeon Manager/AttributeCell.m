@@ -94,8 +94,15 @@
     [UIView setAnimationDuration:(CGFloat)0.3];
     
     [self.deletionDelegate.view setFrame:viewFrame];
-	[self.deletionDelegate.characterImageView setAlpha:1.f];
+    
+    [UIView commitAnimations];
 	
+	[UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationBeginsFromCurrentState:YES];
+    [UIView setAnimationDuration:(CGFloat)0.3];
+    
+	[self.deletionDelegate.characterImageView setAlpha:1.f];
+    
     [UIView commitAnimations];
     
     if (textField.tag == 0)
@@ -181,6 +188,13 @@
     [UIView setAnimationDuration:(CGFloat)0.3];
     
     [self.deletionDelegate.view setFrame:viewFrame];
+    
+    [UIView commitAnimations];
+	
+	[UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationBeginsFromCurrentState:YES];
+    [UIView setAnimationDuration:(CGFloat)0.3];
+    
 	[self.deletionDelegate.characterImageView setAlpha:1.f];
     
     [UIView commitAnimations];
