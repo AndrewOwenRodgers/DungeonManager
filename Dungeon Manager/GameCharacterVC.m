@@ -53,6 +53,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+	if ([[NSFileManager defaultManager] fileExistsAtPath:self.character.avatarPath])
+	{
+		self.characterImageView.image = [UIImage imageWithContentsOfFile:self.character.avatarPath];
+	}
+	
     self.nameTextField.text = self.character.characterName;
     self.classTextField.text = self.character.primaryClass;
     self.raceTextField.text = self.character.race;
@@ -126,14 +131,15 @@
     if (type == 0)
     {
         [self.character.coreAttributes removeObjectAtIndex:index];
+		[self.attributeCollection reloadData];
     }
-    if (type == 1)
+    else if (type == 1)
     {
         [self.character.classSkills removeObjectAtIndex:index];
+		[self.skillsCollection reloadData];
     }
     
     [self.delegate saveCharacters];
-    [self.attributeCollection reloadData];
 }
 
 #pragma mark -CollectionViews
@@ -149,8 +155,8 @@
     }
     else if (collectionView.tag == 1)
     {
-        [collectionView registerNib:[UINib nibWithNibName:@"SkillCell" bundle:nil] forCellWithReuseIdentifier:@"attributeCell"];
-        cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"attributeCell" forIndexPath:indexPath];
+        [collectionView registerNib:[UINib nibWithNibName:@"SkillCell" bundle:nil] forCellWithReuseIdentifier:@"skillCell"];
+        cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"skillCell" forIndexPath:indexPath];
         cell.attribute = self.character.classSkills[indexPath.row];
     }
     
@@ -168,7 +174,7 @@
     {
         return self.character.coreAttributes.count;
     }
-    else if (collectionView.tag == 0)
+    else if (collectionView.tag == 1)
     {
         return self.character.classSkills.count;
     }
@@ -376,7 +382,6 @@
     }
     
     [self presentViewController:myPicker animated:YES completion:nil];
-    
 }
 
 - (void) imagePickerController:(UIImagePickerController *)picker
@@ -387,7 +392,7 @@
         self.characterImageView.image = editedImage;
         
         NSData *imageData = UIImageJPEGRepresentation(editedImage, 0.5);
-        self.character.avatarPath = [[getDocumentsDirectory docs] stringByAppendingString: [NSString stringWithFormat:@"/%@%@.jpeg", self.delegate.filePath, self.character.characterName]];
+        self.character.avatarPath = [NSString stringWithFormat:@"%@%@.jpeg", self.delegate.filePath, self.character.characterName];
         [imageData writeToFile:self.character.avatarPath atomically:YES];
         [self.delegate saveCharacters];
     }];

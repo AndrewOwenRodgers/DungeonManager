@@ -13,11 +13,11 @@
                         <viewControllerLayoutGuide type="bottom" id="o7Q-qu-Lwb"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="oM4-MH-iHW">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="436"/>
+                            <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="oM4-MH-iHW">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="0.050151209677419352" green="0.0" blue="0.14021547379032259" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="b0X-HE-trB">
@@ -69,8 +69,8 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kjW-50-9ea">
-                                <rect key="frame" x="0.0" y="436" width="320" height="44"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kjW-50-9ea">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" red="0.4074155746" green="0.28002142140000003" blue="0.7238218246" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
@@ -85,6 +85,15 @@
                             </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="kjW-50-9ea" secondAttribute="bottom" id="5sx-GI-azJ"/>
+                            <constraint firstItem="oM4-MH-iHW" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="7Dh-IX-dKa"/>
+                            <constraint firstItem="oM4-MH-iHW" firstAttribute="trailing" secondItem="kjW-50-9ea" secondAttribute="trailing" id="A0j-gp-iXb"/>
+                            <constraint firstItem="oM4-MH-iHW" firstAttribute="leading" secondItem="kjW-50-9ea" secondAttribute="leading" id="JR5-Rk-ZIf"/>
+                            <constraint firstItem="oM4-MH-iHW" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="Vve-Xu-Uyb"/>
+                            <constraint firstItem="kjW-50-9ea" firstAttribute="top" secondItem="oM4-MH-iHW" secondAttribute="bottom" id="WPa-Ra-9Zh"/>
+                            <constraint firstAttribute="trailing" secondItem="kjW-50-9ea" secondAttribute="trailing" id="ZI6-B2-lGw"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="yQh-nf-QyX"/>
                     <connections>
@@ -104,11 +113,11 @@
                         <viewControllerLayoutGuide type="bottom" id="ee7-bB-44X"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="gOe-UN-VPi">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tez-XV-yM4">
-                                <rect key="frame" x="0.0" y="436" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" red="0.4074155746" green="0.28002142140000003" blue="0.7238218246" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -166,7 +175,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EqM-nS-W5q">
-                                <rect key="frame" x="20" y="357" width="280" height="64"/>
+                                <rect key="frame" x="20" y="357" width="280" height="152"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.19209929440000001" green="0.0" blue="0.52261844759999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Session notes"/>
@@ -227,11 +236,11 @@
                         <viewControllerLayoutGuide type="bottom" id="w9F-QI-Lvs"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kyW-c0-3Vp" customClass="SwipeView">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0l7-En-Is0">
-                                <rect key="frame" x="0.0" y="436" width="320" height="44"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0l7-En-Is0">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" red="0.11706149189999999" green="0.25381174400000001" blue="0.33659904229999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
@@ -250,7 +259,7 @@
                                 </items>
                                 <color key="barTintColor" red="0.11706149189999999" green="0.25381174400000001" blue="0.33659904229999998" alpha="1" colorSpace="calibratedRGB"/>
                             </toolbar>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PE0-uG-RBh">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PE0-uG-RBh">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
@@ -269,8 +278,26 @@
                                 <color key="tintColor" red="0.4074155746" green="0.80560105849999997" blue="0.7238218246" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="barTintColor" red="0.19209929440000001" green="0.0" blue="0.52261844759999998" alpha="1" colorSpace="calibratedRGB"/>
                             </toolbar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IVK-Tf-2AY">
+                                <rect key="frame" x="110" y="76" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Q3v-Zb-szR"/>
+                                    <constraint firstAttribute="height" constant="100" id="rwA-xU-hLD"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="IVK-Tf-2AY" firstAttribute="centerX" secondItem="PE0-uG-RBh" secondAttribute="centerX" id="GST-aK-81l"/>
+                            <constraint firstItem="0l7-En-Is0" firstAttribute="trailing" secondItem="PE0-uG-RBh" secondAttribute="trailing" id="SYg-Zd-2Oh"/>
+                            <constraint firstItem="PE0-uG-RBh" firstAttribute="top" secondItem="kyW-c0-3Vp" secondAttribute="top" id="p6Y-HZ-fyx"/>
+                            <constraint firstAttribute="bottom" secondItem="0l7-En-Is0" secondAttribute="bottom" id="ryC-fb-IhM"/>
+                            <constraint firstItem="IVK-Tf-2AY" firstAttribute="top" secondItem="PE0-uG-RBh" secondAttribute="bottom" constant="32" id="siP-zt-HkS"/>
+                            <constraint firstItem="PE0-uG-RBh" firstAttribute="leading" secondItem="0l7-En-Is0" secondAttribute="leading" id="trb-v6-yTz"/>
+                            <constraint firstItem="0l7-En-Is0" firstAttribute="leading" secondItem="kyW-c0-3Vp" secondAttribute="leading" id="uey-7v-fkc"/>
+                            <constraint firstAttribute="trailing" secondItem="PE0-uG-RBh" secondAttribute="trailing" id="vHG-xH-zoH"/>
+                        </constraints>
                         <connections>
                             <outlet property="dataSource" destination="71M-0M-1Af" id="ByS-Sy-bnL"/>
                             <outlet property="delegate" destination="71M-0M-1Af" id="qzM-de-Zaq"/>
@@ -278,12 +305,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="cRj-Yo-Hgy"/>
                     <connections>
+                        <outlet property="characterImageView" destination="IVK-Tf-2AY" id="ZvR-Gg-Fxg"/>
                         <outlet property="formView" destination="kyW-c0-3Vp" id="UWi-KH-BFJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="49W-q2-Mw0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2140" y="25"/>
+            <point key="canvasLocation" x="2142" y="25"/>
         </scene>
         <!--Character CollectionVC View Controller-->
         <scene sceneID="c0z-Oq-vgw">
@@ -294,11 +322,11 @@
                         <viewControllerLayoutGuide type="bottom" id="wd7-N3-RLs"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="JLU-fi-Xui">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="91A-QB-r9E">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="441"/>
+                            <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="91A-QB-r9E">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="529"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="0.050151209680000003" green="0.0" blue="0.14021547379999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="erw-4Q-p1H">
@@ -358,8 +386,8 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lgg-cd-DWT">
-                                <rect key="frame" x="0.0" y="436" width="320" height="44"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lgg-cd-DWT">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" red="0.4074155746" green="0.28002142140000003" blue="0.7238218246" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
@@ -380,6 +408,15 @@
                             </toolbar>
                         </subviews>
                         <color key="backgroundColor" red="0.050151209680000003" green="0.0" blue="0.14021547379999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Lgg-cd-DWT" firstAttribute="leading" secondItem="91A-QB-r9E" secondAttribute="leading" id="9dC-6r-5Pp"/>
+                            <constraint firstItem="91A-QB-r9E" firstAttribute="trailing" secondItem="Lgg-cd-DWT" secondAttribute="trailing" id="HTb-Md-7iq"/>
+                            <constraint firstItem="wd7-N3-RLs" firstAttribute="top" secondItem="91A-QB-r9E" secondAttribute="bottom" constant="39" id="QcZ-Mr-XXF"/>
+                            <constraint firstAttribute="trailing" secondItem="91A-QB-r9E" secondAttribute="trailing" id="kde-lb-Qof"/>
+                            <constraint firstItem="91A-QB-r9E" firstAttribute="leading" secondItem="JLU-fi-Xui" secondAttribute="leading" id="mlg-Co-Ffb"/>
+                            <constraint firstItem="91A-QB-r9E" firstAttribute="top" secondItem="JLU-fi-Xui" secondAttribute="top" id="olm-Lm-beD"/>
+                            <constraint firstAttribute="bottom" secondItem="Lgg-cd-DWT" secondAttribute="bottom" id="wcA-LA-ho7"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="hh7-WP-VWH"/>
                     <connections>
@@ -399,25 +436,30 @@
                         <viewControllerLayoutGuide type="bottom" id="wSn-nQ-dfW"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="19k-ss-Nxx">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Notes" translatesAutoresizingMaskIntoConstraints="NO" id="zK6-n1-v9i">
-                                <rect key="frame" x="0.0" y="44" width="320" height="436"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Notes" translatesAutoresizingMaskIntoConstraints="NO" id="zK6-n1-v9i">
+                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="0.050151209680000003" green="0.0" blue="0.14021547379999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" red="0.59986139110000003" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vyc-Lp-tY6">
-                                <rect key="frame" x="0.0" y="-88" width="320" height="44"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vyc-Lp-tY6">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" red="0.4074155746" green="0.28002142140000003" blue="0.7238218246" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
-                                    <barButtonItem title="&lt; Menu" width="285" id="NBh-Id-gyy">
+                                    <barButtonItem title="&lt; Menu" width="185" id="NBh-Id-gyy">
                                         <connections>
                                             <action selector="backButton:" destination="t4k-Zw-yC3" id="StQ-mV-jT9"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Save" width="92" id="dRO-iw-TgQ">
+                                        <connections>
+                                            <action selector="saveButton:" destination="t4k-Zw-yC3" id="frB-nO-Ojz"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -426,6 +468,15 @@
                             </toolbar>
                         </subviews>
                         <color key="backgroundColor" red="0.050151209680000003" green="0.0" blue="0.14021547379999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Vyc-Lp-tY6" firstAttribute="trailing" secondItem="zK6-n1-v9i" secondAttribute="trailing" id="Ex9-DJ-6Yi"/>
+                            <constraint firstItem="zK6-n1-v9i" firstAttribute="top" secondItem="Vyc-Lp-tY6" secondAttribute="bottom" id="Gl6-Ny-ZiW"/>
+                            <constraint firstItem="zK6-n1-v9i" firstAttribute="leading" secondItem="Vyc-Lp-tY6" secondAttribute="leading" id="Hqe-NA-Yom"/>
+                            <constraint firstAttribute="trailing" secondItem="zK6-n1-v9i" secondAttribute="trailing" id="Xs8-rY-YYL"/>
+                            <constraint firstAttribute="bottom" secondItem="zK6-n1-v9i" secondAttribute="bottom" id="aNp-YY-1cd"/>
+                            <constraint firstItem="Vyc-Lp-tY6" firstAttribute="top" secondItem="19k-ss-Nxx" secondAttribute="top" id="jyb-M3-yQf"/>
+                            <constraint firstItem="zK6-n1-v9i" firstAttribute="leading" secondItem="19k-ss-Nxx" secondAttribute="leading" id="n2v-pR-Iio"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="hvK-Gj-cJs"/>
                     <connections>
@@ -460,7 +511,7 @@
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="t88-LG-4b7"/>

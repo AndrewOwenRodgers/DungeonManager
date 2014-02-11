@@ -4,15 +4,9 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AttributeCell">
-            <connections>
-                <outlet property="attributeTextField" destination="OLS-gD-caQ" id="uq9-io-Cno"/>
-                <outlet property="secondaryAttributeTextField" destination="PvD-D3-ihm" id="joL-8h-TaB"/>
-                <outlet property="valueTextField" destination="GPG-zi-11e" id="BO7-G2-EDf"/>
-            </connections>
-        </placeholder>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="center" reuseIdentifier="attributeCell" id="yrO-If-QAu" customClass="AttributeCell">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="center" reuseIdentifier="skillCell" id="yrO-If-QAu" customClass="AttributeCell">
             <rect key="frame" x="0.0" y="0.0" width="310" height="50"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -54,7 +48,7 @@
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
                         <connections>
-                            <action selector="deleteButton:" destination="-1" eventType="touchUpInside" id="wti-ps-iwi"/>
+                            <action selector="deleteButton:" destination="yrO-If-QAu" eventType="touchUpInside" id="ikc-Cx-3Gj"/>
                         </connections>
                     </button>
                 </subviews>
@@ -62,6 +56,11 @@
             </view>
             <color key="backgroundColor" red="0.19209929440000001" green="0.0" blue="0.52261844759999998" alpha="1" colorSpace="calibratedRGB"/>
             <color key="tintColor" red="0.19209929440000001" green="0.0" blue="0.52261844759999998" alpha="1" colorSpace="calibratedRGB"/>
+            <connections>
+                <outlet property="attributeTextField" destination="OLS-gD-caQ" id="JJy-15-jUk"/>
+                <outlet property="secondaryAttributeTextField" destination="PvD-D3-ihm" id="sbq-2W-sTA"/>
+                <outlet property="valueTextField" destination="GPG-zi-11e" id="bT8-jO-hlL"/>
+            </connections>
         </collectionViewCell>
     </objects>
 </document>

@@ -7,7 +7,6 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GameCharacterVC">
             <connections>
                 <outlet property="attributeCollection" destination="057-PY-gzR" id="wmj-JA-fcA"/>
-                <outlet property="characterImageView" destination="t3C-uo-G45" id="T6i-T1-hPm"/>
                 <outlet property="view" destination="yPR-fI-CdI" id="tmA-iR-I7L"/>
             </connections>
         </placeholder>
@@ -16,15 +15,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="t3C-uo-G45">
-                    <rect key="frame" x="110" y="78" width="100" height="100"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="100" id="XcC-xD-GhW"/>
-                        <constraint firstAttribute="height" constant="100" id="hEr-a2-8TL"/>
-                    </constraints>
-                </imageView>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Attributes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v4d-YM-2Rp">
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Attributes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v4d-YM-2Rp">
                     <rect key="frame" x="0.0" y="186" width="320" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <constraints>
@@ -34,7 +25,7 @@
                     <color key="textColor" red="0.59986139110000003" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="057-PY-gzR">
+                <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="057-PY-gzR">
                     <rect key="frame" x="0.0" y="262" width="320" height="180"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" red="0.050151209680000003" green="0.0" blue="0.14021547379999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -53,7 +44,7 @@
                         <outlet property="delegate" destination="-1" id="9bd-k6-qmo"/>
                     </connections>
                 </collectionView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lWT-On-7Rg">
+                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lWT-On-7Rg">
                     <rect key="frame" x="85" y="221" width="150" height="33"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -69,15 +60,12 @@
             <constraints>
                 <constraint firstItem="lWT-On-7Rg" firstAttribute="top" secondItem="v4d-YM-2Rp" secondAttribute="bottom" constant="14" id="1gh-dQ-ISw"/>
                 <constraint firstItem="v4d-YM-2Rp" firstAttribute="trailing" secondItem="057-PY-gzR" secondAttribute="trailing" id="2HA-iC-oIe"/>
-                <constraint firstItem="v4d-YM-2Rp" firstAttribute="top" secondItem="t3C-uo-G45" secondAttribute="bottom" constant="8" symbolic="YES" id="BtD-Tx-iUu"/>
                 <constraint firstItem="v4d-YM-2Rp" firstAttribute="leading" secondItem="yPR-fI-CdI" secondAttribute="leading" id="Dxh-08-Ci6"/>
                 <constraint firstItem="lWT-On-7Rg" firstAttribute="leading" secondItem="yPR-fI-CdI" secondAttribute="leading" constant="85" id="FpI-Vt-9Qi"/>
                 <constraint firstItem="lWT-On-7Rg" firstAttribute="centerX" secondItem="v4d-YM-2Rp" secondAttribute="centerX" id="HMj-Bb-poP"/>
                 <constraint firstItem="057-PY-gzR" firstAttribute="top" secondItem="lWT-On-7Rg" secondAttribute="bottom" constant="8" symbolic="YES" id="JQe-6r-gyn"/>
-                <constraint firstItem="t3C-uo-G45" firstAttribute="centerX" secondItem="v4d-YM-2Rp" secondAttribute="centerX" id="S64-tB-qk9"/>
                 <constraint firstItem="057-PY-gzR" firstAttribute="leading" secondItem="v4d-YM-2Rp" secondAttribute="leading" id="X9f-VW-mb2"/>
                 <constraint firstAttribute="trailing" secondItem="v4d-YM-2Rp" secondAttribute="trailing" id="kkA-dX-NAB"/>
-                <constraint firstItem="t3C-uo-G45" firstAttribute="top" secondItem="yPR-fI-CdI" secondAttribute="top" constant="78" id="kox-xg-k0U"/>
             </constraints>
         </view>
     </objects>

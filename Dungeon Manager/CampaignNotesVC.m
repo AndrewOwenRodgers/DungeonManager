@@ -19,6 +19,10 @@
     [super viewDidLoad];
 	self.notes.delegate = self;
     NSFileManager *fm = [NSFileManager defaultManager];
+	if ([fm fileExistsAtPath:self.filePath])
+	{
+		self.notes.text = [NSKeyedUnarchiver unarchiveObjectWithFile:self.filePath];
+	}
 }
 
 - (void)didReceiveMemoryWarning
@@ -29,6 +33,11 @@
 -(IBAction)backButton:(id)sender
 {
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+-(IBAction)saveButton:(id)sender
+{
+	[NSKeyedArchiver archiveRootObject:self.notes.text toFile:self.filePath];
 }
 
 @end

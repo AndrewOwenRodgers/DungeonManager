@@ -11,7 +11,7 @@
 @interface CampaignNotesVC : UIViewController
 <UITextViewDelegate>;
 
-@property (weak, nonatomic) NSString *filePath;
+@property (strong, nonatomic) NSString *filePath;
 @property (weak, nonatomic) IBOutlet UITextView *notes;
 
 - (IBAction)backButton:(id)sender;

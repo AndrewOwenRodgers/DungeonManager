@@ -4,12 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AttributeCell">
-            <connections>
-                <outlet property="attributeTextField" destination="DcY-kf-wH2" id="8x7-Zr-Gkk"/>
-                <outlet property="valueTextField" destination="qE3-71-8Sx" id="EeT-NB-1pZ"/>
-            </connections>
-        </placeholder>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="attributeCell" id="P0q-5S-O6M" customClass="AttributeCell">
             <rect key="frame" x="0.0" y="0.0" width="310" height="50"/>
@@ -44,7 +39,7 @@
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
                         <connections>
-                            <action selector="deleteButton:" destination="-1" eventType="touchUpInside" id="yRk-Cl-8FX"/>
+                            <action selector="deleteButton:" destination="P0q-5S-O6M" eventType="touchUpInside" id="frF-jC-pUf"/>
                         </connections>
                     </button>
                 </subviews>
@@ -52,6 +47,10 @@
             </view>
             <color key="backgroundColor" red="0.19209929440000001" green="0.0" blue="0.52261844759999998" alpha="1" colorSpace="calibratedRGB"/>
             <color key="tintColor" red="0.19209929440000001" green="0.0" blue="0.52261844759999998" alpha="1" colorSpace="calibratedRGB"/>
+            <connections>
+                <outlet property="attributeTextField" destination="DcY-kf-wH2" id="nAH-a6-DZD"/>
+                <outlet property="valueTextField" destination="qE3-71-8Sx" id="csn-BY-cbs"/>
+            </connections>
         </collectionViewCell>
     </objects>
 </document>
