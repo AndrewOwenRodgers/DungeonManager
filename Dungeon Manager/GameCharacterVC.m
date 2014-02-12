@@ -368,6 +368,12 @@
     
     if (textField.tag == 0)
     {
+		if (self.character.avatarPath)
+		{
+			NSString *oldPath = self.character.avatarPath;
+			self.character.avatarPath = [self.character.avatarPath stringByReplacingOccurrencesOfString: self.character.characterName withString:textField.text];
+			[[NSFileManager defaultManager] moveItemAtPath:oldPath toPath:self.character.avatarPath error:nil];
+		}
         self.character.characterName = textField.text;
     }
     else if (textField.tag == 1)

@@ -100,6 +100,7 @@
             [fileManager moveItemAtPath:completePath toPath:newPath error:nil];
         }
     }
+	self.campaign.imagePath = [self.campaign.imagePath stringByReplacingOccurrencesOfString: self.lastCampaignName withString:self.campaign.title];
     [self.delegate saveCampaigns];
 }
 -(void) buttonSetUp:(UIButton *)button
