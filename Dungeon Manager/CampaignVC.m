@@ -30,6 +30,10 @@
     {
         self.campaignImageView.image = nil;
     }
+	self.campaignImageView.layer.cornerRadius = 40;
+	self.campaignImageView.layer.masksToBounds = YES;
+    [self.campaignImageView.layer setBorderColor: [[UIColor grayColor] CGColor]];
+	[self.campaignImageView.layer setBorderWidth: 3.0];
 }
 
 - (void)didReceiveMemoryWarning

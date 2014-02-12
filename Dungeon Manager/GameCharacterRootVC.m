@@ -80,6 +80,11 @@
         [self.gameVCs addObject:returner];
     }
 	self.namesArray = [[NSMutableArray alloc] initWithObjects:@"Basic Info", @"Background", @"Appearance", @"Basic Stats", @"Attributes", @"Skills", @"Feats", @"Spells 1", @"Spells 2", @"Inventory", @"Other", nil];
+	
+	self.characterImageView.layer.cornerRadius = 40;
+	self.characterImageView.layer.masksToBounds = YES;
+    [self.characterImageView.layer setBorderColor: [[UIColor grayColor] CGColor]];
+	[self.characterImageView.layer setBorderWidth: 3.0];
 }
 
 - (void)didReceiveMemoryWarning
@@ -138,9 +143,24 @@
 				   action:@selector(showViewAtIndex:)
 		 forControlEvents:UIControlEventTouchDown];
 		[button setTitle:self.namesArray[i] forState:UIControlStateNormal];
-		button.titleLabel.textColor = [UIColor colorWithRed:153/255.f green:1.f blue:1.f alpha:1.0];
-		button.frame = CGRectMake(80.0, (190.f + (23 * i)), 160.0, 13.0);
+		[button setTitleColor:[UIColor colorWithRed:153/255.f green:1.f blue:1.f alpha:1.0] forState:UIControlStateNormal];
+		button.layer.cornerRadius = 15;
+		button.layer.masksToBounds = YES;
+		[button.layer setBorderColor: [[UIColor colorWithRed:153/255.f green:1.f blue:1.f alpha:1.0] CGColor]];
+		[button.layer setBorderWidth: 3.0];
+		
+		CGFloat offsetX, offsetY;
+		offsetY = (190.f + (40 * (i / 2)));
+		
+		if (i % 2 == 0) {
+			offsetX = 0;
+		} else {
+			offsetX = 160;
+		}
+
+		button.frame = CGRectMake(offsetX, offsetY, 140.0, 30.0);
 		button.tag = i;
+		button.backgroundColor = [UIColor colorWithRed:30/255.f green:65/255.f blue:86/255.f alpha:1.0];
 		[stuff addSubview:button];
 	}
     return stuff;
