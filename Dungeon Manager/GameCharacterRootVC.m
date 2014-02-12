@@ -81,7 +81,7 @@
     }
 	self.namesArray = [[NSMutableArray alloc] initWithObjects:@"Basic Info", @"Background", @"Appearance", @"Basic Stats", @"Attributes", @"Skills", @"Feats", @"Spells 1", @"Spells 2", @"Inventory", @"Other", nil];
 	
-	self.characterImageView.layer.cornerRadius = 40;
+	self.characterImageView.layer.cornerRadius = 50;
 	self.characterImageView.layer.masksToBounds = YES;
     [self.characterImageView.layer setBorderColor: [[UIColor grayColor] CGColor]];
 	[self.characterImageView.layer setBorderWidth: 3.0];
@@ -153,9 +153,9 @@
 		offsetY = (190.f + (40 * (i / 2)));
 		
 		if (i % 2 == 0) {
-			offsetX = 0;
+			offsetX = 10;
 		} else {
-			offsetX = 160;
+			offsetX = 170;
 		}
 
 		button.frame = CGRectMake(offsetX, offsetY, 140.0, 30.0);

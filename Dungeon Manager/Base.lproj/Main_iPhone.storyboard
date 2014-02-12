@@ -173,9 +173,12 @@
                                     <segue destination="aUK-YM-iqV" kind="push" identifier="NPCSegue" id="t88-LG-4b7"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EqM-nS-W5q">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EqM-nS-W5q">
                                 <rect key="frame" x="20" y="357" width="280" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="lHK-gW-pfx"/>
+                                </constraints>
                                 <state key="normal" title="Session notes">
                                     <color key="titleColor" red="0.59986139110000003" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -220,6 +223,9 @@
                     <connections>
                         <outlet property="campaignImageView" destination="TzK-Lq-A42" id="6qc-Ku-9ay"/>
                         <outlet property="campaignTitleTextField" destination="UCF-8T-Rjj" id="a09-yr-wyR"/>
+                        <outlet property="characterButton" destination="7E1-xN-3UL" id="MkD-Yi-wVO"/>
+                        <outlet property="notesButton" destination="EqM-nS-W5q" id="W4e-KD-x1x"/>
+                        <outlet property="npcButton" destination="9Cc-hf-sQe" id="5Ne-KN-NgQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xZ5-1h-qAC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -446,7 +452,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Notes" translatesAutoresizingMaskIntoConstraints="NO" id="zK6-n1-v9i">
-                                <rect key="frame" x="0.0" y="44" width="320" height="244"/>
+                                <rect key="frame" x="0.0" y="44" width="320" height="285"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="0.050151209680000003" green="0.0" blue="0.14021547379999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" red="0.59986139110000003" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -479,7 +485,7 @@
                             <constraint firstItem="zK6-n1-v9i" firstAttribute="top" secondItem="Vyc-Lp-tY6" secondAttribute="bottom" id="Gl6-Ny-ZiW"/>
                             <constraint firstItem="zK6-n1-v9i" firstAttribute="leading" secondItem="Vyc-Lp-tY6" secondAttribute="leading" id="Hqe-NA-Yom"/>
                             <constraint firstAttribute="trailing" secondItem="zK6-n1-v9i" secondAttribute="trailing" id="Xs8-rY-YYL"/>
-                            <constraint firstItem="wSn-nQ-dfW" firstAttribute="top" secondItem="zK6-n1-v9i" secondAttribute="bottom" constant="280" id="iwU-Fk-onW"/>
+                            <constraint firstItem="wSn-nQ-dfW" firstAttribute="top" secondItem="zK6-n1-v9i" secondAttribute="bottom" constant="239" id="iwU-Fk-onW"/>
                             <constraint firstItem="Vyc-Lp-tY6" firstAttribute="top" secondItem="19k-ss-Nxx" secondAttribute="top" id="jyb-M3-yQf"/>
                             <constraint firstItem="zK6-n1-v9i" firstAttribute="leading" secondItem="19k-ss-Nxx" secondAttribute="leading" id="n2v-pR-Iio"/>
                         </constraints>

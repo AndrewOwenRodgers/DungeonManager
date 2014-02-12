@@ -13,6 +13,10 @@
 
 @interface CampaignVC ()
 
+@property (weak, nonatomic) IBOutlet UIButton *characterButton;
+@property (weak, nonatomic) IBOutlet UIButton *npcButton;
+@property (weak, nonatomic) IBOutlet UIButton *notesButton;
+
 @end
 
 @implementation CampaignVC
@@ -30,10 +34,14 @@
     {
         self.campaignImageView.image = nil;
     }
-	self.campaignImageView.layer.cornerRadius = 40;
+	self.campaignImageView.layer.cornerRadius = 50;
 	self.campaignImageView.layer.masksToBounds = YES;
     [self.campaignImageView.layer setBorderColor: [[UIColor grayColor] CGColor]];
 	[self.campaignImageView.layer setBorderWidth: 3.0];
+	
+	[self buttonSetUp:self.characterButton];
+	[self buttonSetUp:self.npcButton];
+	[self buttonSetUp:self.notesButton];
 }
 
 - (void)didReceiveMemoryWarning
@@ -93,6 +101,16 @@
         }
     }
     [self.delegate saveCampaigns];
+}
+-(void) buttonSetUp:(UIButton *)button
+{
+	[button setTitleColor:[UIColor colorWithRed:153/255.f green:1.f blue:1.f alpha:1.0] forState:UIControlStateNormal];
+	button.layer.cornerRadius = 30;
+	button.layer.masksToBounds = YES;
+	[button.layer setBorderColor: [[UIColor colorWithRed:153/255.f green:1.f blue:1.f alpha:1.0] CGColor]];
+	[button.layer setBorderWidth: 3.0];
+
+	button.backgroundColor = [UIColor colorWithRed:30/255.f green:65/255.f blue:86/255.f alpha:1.0];
 }
 
 #pragma -Camera/Pictures

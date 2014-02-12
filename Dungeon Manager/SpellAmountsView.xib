@@ -26,11 +26,11 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="4" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="UHO-kt-Yun">
-                    <rect key="frame" x="0.0" y="262" width="320" height="180"/>
+                    <rect key="frame" x="0.0" y="281" width="320" height="161"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" red="0.050151209680000003" green="0.0" blue="0.14021547379999999" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="180" id="Ygf-U1-ahm"/>
+                        <constraint firstAttribute="height" constant="161" id="Ygf-U1-ahm"/>
                     </constraints>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5tS-1y-Gvf">
                         <size key="itemSize" width="310" height="50"/>
@@ -55,10 +55,31 @@
                         <action selector="newAttributeButton:" destination="-1" eventType="touchUpInside" id="bMZ-Og-giq"/>
                     </connections>
                 </button>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gn4-ek-NSo">
+                    <rect key="frame" x="49" y="252" width="49" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="49" id="Qvg-XJ-Dyf"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Per Day:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UXC-oN-JQS">
+                    <rect key="frame" x="200" y="252" width="71" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="71" id="TI1-Ld-SyZ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="0.050151209680000003" green="0.0" blue="0.14021547379999999" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="UHO-kt-Yun" firstAttribute="top" secondItem="7jh-fW-Zm2" secondAttribute="bottom" constant="8" symbolic="YES" id="7KW-eE-iCK"/>
+                <constraint firstItem="UHO-kt-Yun" firstAttribute="top" secondItem="7jh-fW-Zm2" secondAttribute="bottom" constant="27" id="7KW-eE-iCK"/>
+                <constraint firstItem="Gn4-ek-NSo" firstAttribute="baseline" secondItem="UXC-oN-JQS" secondAttribute="baseline" id="BPC-Qg-egZ"/>
                 <constraint firstItem="Fzo-Ah-IL4" firstAttribute="top" secondItem="Vje-ZT-wgo" secondAttribute="top" constant="186" id="IkZ-7Z-jmH"/>
                 <constraint firstItem="Fzo-Ah-IL4" firstAttribute="leading" secondItem="UHO-kt-Yun" secondAttribute="leading" id="M1i-bA-qJ8"/>
                 <constraint firstItem="7jh-fW-Zm2" firstAttribute="leading" secondItem="Vje-ZT-wgo" secondAttribute="leading" constant="49" id="PdK-1Y-Mo6"/>
@@ -66,7 +87,10 @@
                 <constraint firstItem="Fzo-Ah-IL4" firstAttribute="trailing" secondItem="UHO-kt-Yun" secondAttribute="trailing" id="b7f-NM-xap"/>
                 <constraint firstItem="Fzo-Ah-IL4" firstAttribute="centerX" secondItem="7jh-fW-Zm2" secondAttribute="centerX" id="cAk-IH-x4t"/>
                 <constraint firstAttribute="trailing" secondItem="UHO-kt-Yun" secondAttribute="trailing" id="lIa-2t-mTD"/>
+                <constraint firstItem="Gn4-ek-NSo" firstAttribute="leading" secondItem="7jh-fW-Zm2" secondAttribute="leading" id="mG3-Y8-Q2Y"/>
                 <constraint firstItem="UHO-kt-Yun" firstAttribute="leading" secondItem="Vje-ZT-wgo" secondAttribute="leading" id="s0m-5m-k6e"/>
+                <constraint firstItem="UHO-kt-Yun" firstAttribute="top" secondItem="Gn4-ek-NSo" secondAttribute="bottom" constant="8" symbolic="YES" id="tFO-B0-RU8"/>
+                <constraint firstItem="UXC-oN-JQS" firstAttribute="trailing" secondItem="7jh-fW-Zm2" secondAttribute="trailing" id="zfm-ZV-lav"/>
             </constraints>
         </view>
     </objects>

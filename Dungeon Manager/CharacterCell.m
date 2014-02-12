@@ -32,7 +32,7 @@
     {
         self.characterAvatar.image = nil;
     }
-	self.characterAvatar.layer.cornerRadius = 60;
+	self.characterAvatar.layer.cornerRadius = 75;
 	self.characterAvatar.layer.masksToBounds = YES;
     [self.characterAvatar.layer setBorderColor: [[UIColor grayColor] CGColor]];
 	[self.characterAvatar.layer setBorderWidth: 3.0];
