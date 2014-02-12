@@ -34,7 +34,7 @@
     {
         self.campaignImageView.image = nil;
     }
-	self.campaignImageView.layer.cornerRadius = 50;
+	self.campaignImageView.layer.cornerRadius = 75;
 	self.campaignImageView.layer.masksToBounds = YES;
     [self.campaignImageView.layer setBorderColor: [[UIColor grayColor] CGColor]];
 	[self.campaignImageView.layer setBorderWidth: 3.0];
@@ -100,7 +100,25 @@
             [fileManager moveItemAtPath:completePath toPath:newPath error:nil];
         }
     }
+	
 	self.campaign.imagePath = [self.campaign.imagePath stringByReplacingOccurrencesOfString: self.lastCampaignName withString:self.campaign.title];
+
+	NSString *characterPath = [NSString stringWithFormat:@"%@%@Characters", self.campaignFilePath, self.campaign.title];
+	NSMutableArray *charactersArray = [NSKeyedUnarchiver unarchiveObjectWithFile:characterPath];
+	for (GameCharacter *character in charactersArray)
+	{
+		character.avatarPath = [character.avatarPath stringByReplacingOccurrencesOfString:self.lastCampaignName withString:self.campaign.title];
+	}
+	[NSKeyedArchiver archiveRootObject:charactersArray toFile:characterPath];
+	
+	NSString *npcPath = [NSString stringWithFormat:@"%@%@NPCs", self.campaignFilePath, self.campaign.title];
+	NSMutableArray *npcArray = [NSKeyedUnarchiver unarchiveObjectWithFile:npcPath];
+	for (GameCharacter *character in npcArray)
+	{
+		character.avatarPath = [character.avatarPath stringByReplacingOccurrencesOfString:self.lastCampaignName withString:self.campaign.title];
+	}
+	[NSKeyedArchiver archiveRootObject:npcArray toFile:npcPath];
+
     [self.delegate saveCampaigns];
 }
 -(void) buttonSetUp:(UIButton *)button
