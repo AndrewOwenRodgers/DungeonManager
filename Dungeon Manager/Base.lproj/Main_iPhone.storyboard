@@ -158,10 +158,13 @@
                                     <color key="titleColor" red="0.59986139110000003" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="pressed:" destination="Om5-Q0-7yp" eventType="touchDown" id="ia9-Ej-Igy"/>
+                                    <action selector="released:" destination="Om5-Q0-7yp" eventType="touchUpInside" id="X5L-6T-PTw"/>
+                                    <action selector="released:" destination="Om5-Q0-7yp" eventType="touchUpOutside" id="dKx-Pn-XJR"/>
                                     <segue destination="aUK-YM-iqV" kind="push" identifier="characterSegue" id="gCd-g4-h8Q"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Cc-hf-sQe">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Cc-hf-sQe">
                                 <rect key="frame" x="20" y="285" width="280" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
@@ -171,10 +174,13 @@
                                     <color key="titleColor" red="0.59986139110000003" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="pressed:" destination="Om5-Q0-7yp" eventType="touchDown" id="rbG-tn-W5q"/>
+                                    <action selector="released:" destination="Om5-Q0-7yp" eventType="touchUpOutside" id="f2f-Xh-hAX"/>
+                                    <action selector="released:" destination="Om5-Q0-7yp" eventType="touchUpInside" id="yaP-F6-9oI"/>
                                     <segue destination="aUK-YM-iqV" kind="push" identifier="NPCSegue" id="t88-LG-4b7"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EqM-nS-W5q">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EqM-nS-W5q">
                                 <rect key="frame" x="20" y="357" width="280" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
@@ -184,6 +190,9 @@
                                     <color key="titleColor" red="0.59986139110000003" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="pressed:" destination="Om5-Q0-7yp" eventType="touchDown" id="xHj-BY-TO5"/>
+                                    <action selector="released:" destination="Om5-Q0-7yp" eventType="touchUpOutside" id="y5e-wX-1Lb"/>
+                                    <action selector="released:" destination="Om5-Q0-7yp" eventType="touchUpInside" id="yh8-tH-BEm"/>
                                     <segue destination="t4k-Zw-yC3" kind="push" identifier="notesSegue" id="T0P-U1-5xv"/>
                                 </connections>
                             </button>

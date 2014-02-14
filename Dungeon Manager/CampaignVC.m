@@ -188,4 +188,33 @@
     }];
 }
 
+#pragma mark -Disabling Multitouch
+
+- (IBAction) pressed: (id) sender
+{
+    if ([sender tag] == 0)
+    {
+    	self.npcButton.enabled = false;
+    	self.notesButton.enabled = false;
+    }
+    else if ([sender tag] == 1)
+    {
+    	self.characterButton.enabled = false;
+    	self.notesButton.enabled = false;
+    }
+    else if ([sender tag] == 2)
+    {
+    	self.npcButton.enabled = false;
+    	self.notesButton.enabled = false;
+    }
+}
+
+// hook this up to "Touch Up Inside" and "Touch Up Outside"
+- (IBAction) released: (id) sender
+{
+    self.characterButton.enabled = true;
+    self.npcButton.enabled = true;
+    self.notesButton.enabled = true;
+}
+
 @end
