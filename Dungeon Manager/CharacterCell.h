@@ -22,6 +22,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *characterName;
 @property (weak, nonatomic) IBOutlet UILabel *levelAndClass;
 @property (nonatomic) NSInteger characterIndex;
+@property (weak, nonatomic) IBOutlet UIButton *deleteButton;
 @property (weak, nonatomic) GameCharacter *cellCharacter;
 
 -(void)initializeDisplay;

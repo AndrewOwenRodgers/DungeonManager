@@ -12,6 +12,7 @@
 		07157A5218A419BB0098B94A /* GameCharacterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 07157A5118A419BB0098B94A /* GameCharacterVC.m */; };
 		07157A5818A4987F0098B94A /* AttributeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 07157A5718A4987F0098B94A /* AttributeCell.m */; };
 		07157A5B18A4A3B80098B94A /* AttributeData.m in Sources */ = {isa = PBXBuildFile; fileRef = 07157A5A18A4A3B80098B94A /* AttributeData.m */; };
+		071E489318ADA37400EA96EC /* DiceVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 071E489218ADA37400EA96EC /* DiceVC.m */; };
 		072B4C7718A8A6CF0030061E /* CampaignNotesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 072B4C7618A8A6CF0030061E /* CampaignNotesVC.m */; };
 		072B4C7A18A948810030061E /* GameCharacterRootVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 072B4C7918A948810030061E /* GameCharacterRootVC.m */; };
 		0765C72118AAD9C80057D60F /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0704FB2A18AABC8700F202C3 /* Main_iPad.storyboard */; };
@@ -74,6 +75,8 @@
 		07157A5718A4987F0098B94A /* AttributeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttributeCell.m; sourceTree = "<group>"; };
 		07157A5918A4A3B80098B94A /* AttributeData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttributeData.h; sourceTree = "<group>"; };
 		07157A5A18A4A3B80098B94A /* AttributeData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttributeData.m; sourceTree = "<group>"; };
+		071E489118ADA37400EA96EC /* DiceVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiceVC.h; sourceTree = "<group>"; };
+		071E489218ADA37400EA96EC /* DiceVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiceVC.m; sourceTree = "<group>"; };
 		072B4C7518A8A6CF0030061E /* CampaignNotesVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CampaignNotesVC.h; sourceTree = "<group>"; };
 		072B4C7618A8A6CF0030061E /* CampaignNotesVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CampaignNotesVC.m; sourceTree = "<group>"; };
 		072B4C7818A948810030061E /* GameCharacterRootVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameCharacterRootVC.h; sourceTree = "<group>"; };
@@ -189,6 +192,8 @@
 				07F8BC7C189AF2B200DA8806 /* InitialViewController.m */,
 				07F8BC9B189AF82A00DA8806 /* CampaignVC.h */,
 				07F8BC9C189AF82A00DA8806 /* CampaignVC.m */,
+				071E489118ADA37400EA96EC /* DiceVC.h */,
+				071E489218ADA37400EA96EC /* DiceVC.m */,
 				072B4C7518A8A6CF0030061E /* CampaignNotesVC.h */,
 				072B4C7618A8A6CF0030061E /* CampaignNotesVC.m */,
 				07F8BCA5189C706300DA8806 /* CharacterCollectionVCViewController.h */,
@@ -460,6 +465,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07F8BCAD18A0AD1E00DA8806 /* GameCharacter.m in Sources */,
+				071E489318ADA37400EA96EC /* DiceVC.m in Sources */,
 				07157A5B18A4A3B80098B94A /* AttributeData.m in Sources */,
 				072B4C7718A8A6CF0030061E /* CampaignNotesVC.m in Sources */,
 				072B4C7A18A948810030061E /* GameCharacterRootVC.m in Sources */,

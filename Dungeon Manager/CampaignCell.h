@@ -19,6 +19,9 @@
 @property (unsafe_unretained) id <CampaignDeletion> delegate;
 @property (weak, nonatomic) IBOutlet UILabel *campaignLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *campaignImageView;
+@property (weak, nonatomic) IBOutlet UIButton *deleteButton;
 @property NSInteger campaignNumber;
+
+-(void)makeDeleteButtonRound;
 
 @end

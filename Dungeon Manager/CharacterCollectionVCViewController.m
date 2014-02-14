@@ -27,6 +27,10 @@
     {
         self.characters = [NSKeyedUnarchiver unarchiveObjectWithFile:self.filePath];
     }
+	if (!self.characters)
+	{
+		self.characters = [[NSMutableArray alloc] init];
+	}
 }
 
 - (void)didReceiveMemoryWarning

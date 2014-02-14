@@ -36,6 +36,8 @@
 	self.characterAvatar.layer.masksToBounds = YES;
     [self.characterAvatar.layer setBorderColor: [[UIColor grayColor] CGColor]];
 	[self.characterAvatar.layer setBorderWidth: 3.0];
+	self.deleteButton.layer.cornerRadius = 10;
+	self.deleteButton.layer.masksToBounds = YES;
 }
 
 - (IBAction)deleteButton:(id)sender

@@ -10,6 +10,12 @@
 
 @implementation CampaignCell
 
+-(void)makeDeleteButtonRound
+{
+	self.deleteButton.layer.cornerRadius = 10;
+	self.deleteButton.layer.masksToBounds = YES;
+}
+
 - (IBAction)deleteButton:(id)sender
 {
     [self.delegate deleteCampaign:self.campaignNumber];

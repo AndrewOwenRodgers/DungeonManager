@@ -12,8 +12,34 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+	self.mainController = (UINavigationController*)  self.window.rootViewController;
+	self.pressThreeFingers = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(tapScreen)];
+	self.pressThreeFingers.numberOfTouchesRequired = 3;
+	self.pressThreeFingers.minimumPressDuration = 0.5;
+	
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(enableTouches) name:@"ReenableTouches" object:nil];
+	[self enableTouches];
+
     return YES;
+}
+													   
+-(void)tapScreen
+{
+	[self.window removeGestureRecognizer:self.pressThreeFingers];
+	
+	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+	{
+		[self.mainController pushViewController:[[UIStoryboard storyboardWithName:@"Main_iPad" bundle:nil] instantiateViewControllerWithIdentifier:@"diceController"] animated:YES];
+	}
+	else
+	{
+		[self.mainController pushViewController:[[UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil] instantiateViewControllerWithIdentifier:@"diceController"] animated:YES];
+	}
+}
+
+-(void)enableTouches
+{
+	[self.window addGestureRecognizer:self.pressThreeFingers];
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application

@@ -13,11 +13,11 @@
                         <viewControllerLayoutGuide type="bottom" id="o7Q-qu-Lwb"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="oM4-MH-iHW">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="436"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="0.050151209677419352" green="0.0" blue="0.14021547379032259" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="b0X-HE-trB">
@@ -46,8 +46,8 @@
                                                     <color key="textColor" red="0.55924954379562042" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" alpha="0.69999999999999973" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7dJ-2o-O7G">
-                                                    <rect key="frame" x="52" y="117" width="46" height="13"/>
+                                                <button opaque="NO" alpha="0.59999999999999964" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7dJ-2o-O7G">
+                                                    <rect key="frame" x="52" y="110" width="46" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="0.0" green="0.26967381386861317" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <state key="normal" title="Delete">
@@ -64,13 +64,14 @@
                                         <connections>
                                             <outlet property="campaignImageView" destination="CuC-zn-5rn" id="Hbi-Hf-tic"/>
                                             <outlet property="campaignLabel" destination="3Xp-EE-ayf" id="4I3-3m-zaG"/>
+                                            <outlet property="deleteButton" destination="7dJ-2o-O7G" id="wvX-rl-aMw"/>
                                             <segue destination="Om5-Q0-7yp" kind="push" identifier="campaignSegue" id="moj-uk-gs3"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kjW-50-9ea">
-                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="436" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" red="0.4074155746" green="0.28002142140000003" blue="0.7238218246" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
@@ -113,11 +114,11 @@
                         <viewControllerLayoutGuide type="bottom" id="ee7-bB-44X"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="gOe-UN-VPi">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tez-XV-yM4">
-                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="436" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" red="0.4074155746" green="0.28002142140000003" blue="0.7238218246" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -241,11 +242,11 @@
                         <viewControllerLayoutGuide type="bottom" id="w9F-QI-Lvs"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kyW-c0-3Vp" customClass="SwipeView">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0l7-En-Is0">
-                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="436" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" red="0.11706149189999999" green="0.25381174400000001" blue="0.33659904229999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
@@ -333,11 +334,11 @@
                         <viewControllerLayoutGuide type="bottom" id="wd7-N3-RLs"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="JLU-fi-Xui">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="91A-QB-r9E">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="529"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="441"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="0.050151209680000003" green="0.0" blue="0.14021547379999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="erw-4Q-p1H">
@@ -366,8 +367,8 @@
                                                     <color key="textColor" red="0.5607843137254902" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gwp-tG-RHq">
-                                                    <rect key="frame" x="52" y="113" width="46" height="17"/>
+                                                <button opaque="NO" alpha="0.59999999999999987" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gwp-tG-RHq">
+                                                    <rect key="frame" x="52" y="110" width="46" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="0.0" green="0.2696738139" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <state key="normal" title="Delete">
@@ -392,6 +393,7 @@
                                         <connections>
                                             <outlet property="characterAvatar" destination="q78-au-1TJ" id="QWV-6g-Muk"/>
                                             <outlet property="characterName" destination="ROe-dv-8bv" id="bbp-R9-e8c"/>
+                                            <outlet property="deleteButton" destination="gwp-tG-RHq" id="yMw-4K-l03"/>
                                             <outlet property="levelAndClass" destination="ww3-cD-a01" id="0ok-DN-PFj"/>
                                             <segue destination="71M-0M-1Af" kind="push" identifier="characterVCSegue" id="a7b-Ez-mnc"/>
                                         </connections>
@@ -399,7 +401,7 @@
                                 </cells>
                             </collectionView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lgg-cd-DWT">
-                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="436" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" red="0.4074155746" green="0.28002142140000003" blue="0.7238218246" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
@@ -448,11 +450,11 @@
                         <viewControllerLayoutGuide type="bottom" id="wSn-nQ-dfW"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="19k-ss-Nxx">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Notes" translatesAutoresizingMaskIntoConstraints="NO" id="zK6-n1-v9i">
-                                <rect key="frame" x="0.0" y="44" width="320" height="285"/>
+                                <rect key="frame" x="0.0" y="44" width="320" height="197"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="0.050151209680000003" green="0.0" blue="0.14021547379999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" red="0.59986139110000003" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -499,6 +501,262 @@
             </objects>
             <point key="canvasLocation" x="1674" y="771"/>
         </scene>
+        <!--DiceVC-->
+        <scene sceneID="P4S-HF-GKm">
+            <objects>
+                <viewController storyboardIdentifier="diceController" id="eTR-ep-Lqs" customClass="DiceVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1Mh-fS-02D"/>
+                        <viewControllerLayoutGuide type="bottom" id="d8g-nl-Rd0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oVT-d5-S7O">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rJz-9U-LQ7">
+                                <rect key="frame" x="0.0" y="436" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" red="0.4074155746" green="0.28002142140000003" blue="0.7238218246" alpha="1" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <barButtonItem title="&lt; Back" width="293" style="plain" id="nso-gj-B4k">
+                                        <color key="tintColor" red="0.59986139110000003" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="backButton:" destination="eTR-ep-Lqs" id="VRY-Te-gJO"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <color key="barTintColor" red="0.11706149189999999" green="0.25381174400000001" blue="0.33659904229999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </toolbar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HkX-xx-13t">
+                                <rect key="frame" x="116" y="20" width="44" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="4CJ-Pn-MQZ"/>
+                                    <constraint firstAttribute="width" constant="44" id="hkW-4r-Ry3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-MediumItalic" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="Roll!">
+                                    <color key="titleColor" red="0.56078431370000004" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="rolledDice:" destination="eTR-ep-Lqs" eventType="touchUpInside" id="3jh-cv-oK5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JBV-0g-kJZ">
+                                <rect key="frame" x="256" y="20" width="44" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-MediumItalic" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="Roll!">
+                                    <color key="titleColor" red="0.56078431370000004" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="rolledDice:" destination="eTR-ep-Lqs" eventType="touchUpInside" id="kfo-X8-x1n"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="d4:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5YX-qB-w0n">
+                                <rect key="frame" x="20" y="20" width="42" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.11706149189999999" green="0.25381174400000001" blue="0.33659904229999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.56078431370000004" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EoZ-Wl-dAQ">
+                                <rect key="frame" x="0.0" y="366" width="320" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.050151209680000003" green="0.0" blue="0.14021547379999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="4Ou-it-unt"/>
+                                </constraints>
+                                <color key="textColor" red="0.56078431370000004" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rolls:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ZW-eE-PnK">
+                                <rect key="frame" x="136" y="337" width="48" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="48" id="BVI-Se-gt0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.56078431370000004" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="d6:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WFH-N1-dcE">
+                                <rect key="frame" x="168" y="21" width="42" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.11706149189999999" green="0.25381174400000001" blue="0.33659904229999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.56078431370000004" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="d8:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I67-EZ-Okk">
+                                <rect key="frame" x="20" y="70" width="42" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.11706149189999999" green="0.25381174400000001" blue="0.33659904229999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.56078431370000004" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="d10:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8dH-mk-7Ef">
+                                <rect key="frame" x="168" y="70" width="42" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.11706149189999999" green="0.25381174400000001" blue="0.33659904229999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.56078431370000004" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tu4-PJ-67T">
+                                <rect key="frame" x="116" y="68" width="44" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="jVn-tj-ulr"/>
+                                    <constraint firstAttribute="height" constant="44" id="lfK-Qu-Lgl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-MediumItalic" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="Roll!">
+                                    <color key="titleColor" red="0.56078431370000004" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="rolledDice:" destination="eTR-ep-Lqs" eventType="touchUpInside" id="dpf-4M-4hA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uGH-ct-bb8">
+                                <rect key="frame" x="256" y="72" width="44" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="fxb-jh-5QW"/>
+                                    <constraint firstAttribute="width" constant="44" id="ySs-NI-4HM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-MediumItalic" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="Roll!">
+                                    <color key="titleColor" red="0.56078431370000004" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="rolledDice:" destination="eTR-ep-Lqs" eventType="touchUpInside" id="vec-e6-3jK"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="d12:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xjK-gK-hlo">
+                                <rect key="frame" x="20" y="120" width="42" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.11706149189999999" green="0.25381174400000001" blue="0.33659904229999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.56078431370000004" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="d20:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YSI-RH-kPc">
+                                <rect key="frame" x="168" y="122" width="42" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.11706149189999999" green="0.25381174400000001" blue="0.33659904229999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.56078431370000004" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TBk-Jh-kkW">
+                                <rect key="frame" x="116" y="120" width="44" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="vDx-N5-hgq"/>
+                                    <constraint firstAttribute="width" constant="44" id="ycv-IU-7x5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-MediumItalic" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="Roll!">
+                                    <color key="titleColor" red="0.56078431370000004" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="rolledDice:" destination="eTR-ep-Lqs" eventType="touchUpInside" id="6cz-FK-PGN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rgn-Xk-9vR">
+                                <rect key="frame" x="256" y="120" width="44" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="7S7-2L-5Od"/>
+                                    <constraint firstAttribute="height" constant="44" id="84m-8M-XWz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-MediumItalic" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="Roll!">
+                                    <color key="titleColor" red="0.56078431370000004" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="rolledDice:" destination="eTR-ep-Lqs" eventType="touchUpInside" id="ZK8-9v-3Pm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rdu-E0-pPQ">
+                                <rect key="frame" x="256" y="172" width="44" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="3w7-Ef-al2"/>
+                                    <constraint firstAttribute="height" constant="44" id="wZW-i4-IDf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-MediumItalic" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="Roll!">
+                                    <color key="titleColor" red="0.56078431370000004" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="rolledDice:" destination="eTR-ep-Lqs" eventType="touchUpInside" id="0th-6E-EoB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.050151209680000003" green="0.0" blue="0.14021547379999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="WFH-N1-dcE" firstAttribute="leading" secondItem="8dH-mk-7Ef" secondAttribute="leading" id="39T-s9-iTA"/>
+                            <constraint firstItem="WFH-N1-dcE" firstAttribute="top" secondItem="1Mh-fS-02D" secondAttribute="bottom" constant="1" id="3bd-iI-zvG"/>
+                            <constraint firstItem="rJz-9U-LQ7" firstAttribute="top" secondItem="EoZ-Wl-dAQ" secondAttribute="bottom" id="4Ap-k2-naq"/>
+                            <constraint firstItem="8dH-mk-7Ef" firstAttribute="trailing" secondItem="WFH-N1-dcE" secondAttribute="trailing" id="4b7-Wr-SOA"/>
+                            <constraint firstItem="Tu4-PJ-67T" firstAttribute="top" secondItem="HkX-xx-13t" secondAttribute="bottom" constant="4" id="6h0-gL-aAJ"/>
+                            <constraint firstItem="JBV-0g-kJZ" firstAttribute="leading" secondItem="HkX-xx-13t" secondAttribute="trailing" constant="96" id="C8i-Jf-JGp"/>
+                            <constraint firstItem="JBV-0g-kJZ" firstAttribute="leading" secondItem="WFH-N1-dcE" secondAttribute="trailing" constant="46" id="CcI-c7-vs1"/>
+                            <constraint firstItem="WFH-N1-dcE" firstAttribute="leading" secondItem="HkX-xx-13t" secondAttribute="trailing" constant="8" symbolic="YES" id="ERk-i2-9fu"/>
+                            <constraint firstItem="uGH-ct-bb8" firstAttribute="top" secondItem="JBV-0g-kJZ" secondAttribute="bottom" constant="8" symbolic="YES" id="FSU-Lv-1m2"/>
+                            <constraint firstItem="I67-EZ-Okk" firstAttribute="baseline" secondItem="8dH-mk-7Ef" secondAttribute="baseline" id="I80-3o-5Dy"/>
+                            <constraint firstItem="HkX-xx-13t" firstAttribute="leading" secondItem="5YX-qB-w0n" secondAttribute="trailing" constant="54" id="Jyh-ZX-1iK"/>
+                            <constraint firstAttribute="trailing" secondItem="rJz-9U-LQ7" secondAttribute="trailing" id="LKn-HQ-HOK"/>
+                            <constraint firstItem="5YX-qB-w0n" firstAttribute="leading" secondItem="oVT-d5-S7O" secondAttribute="leading" constant="20" symbolic="YES" id="NUk-OF-PSY"/>
+                            <constraint firstAttribute="trailing" secondItem="JBV-0g-kJZ" secondAttribute="trailing" constant="20" symbolic="YES" id="OnT-mp-SNI"/>
+                            <constraint firstItem="uGH-ct-bb8" firstAttribute="leading" secondItem="JBV-0g-kJZ" secondAttribute="leading" id="R83-aQ-buh"/>
+                            <constraint firstItem="WFH-N1-dcE" firstAttribute="centerY" secondItem="HkX-xx-13t" secondAttribute="centerY" id="RYI-wU-YLk"/>
+                            <constraint firstItem="5YX-qB-w0n" firstAttribute="top" secondItem="1Mh-fS-02D" secondAttribute="bottom" id="URh-YN-0I6"/>
+                            <constraint firstItem="EoZ-Wl-dAQ" firstAttribute="leading" secondItem="oVT-d5-S7O" secondAttribute="leading" id="W6P-iW-YMJ"/>
+                            <constraint firstItem="8dH-mk-7Ef" firstAttribute="top" secondItem="WFH-N1-dcE" secondAttribute="bottom" constant="7" id="WWd-go-vdU"/>
+                            <constraint firstItem="8dH-mk-7Ef" firstAttribute="leading" secondItem="Tu4-PJ-67T" secondAttribute="trailing" constant="8" symbolic="YES" id="XB3-1D-bEu"/>
+                            <constraint firstItem="I67-EZ-Okk" firstAttribute="top" secondItem="5YX-qB-w0n" secondAttribute="bottom" constant="8" symbolic="YES" id="YVk-nn-B1O"/>
+                            <constraint firstItem="0ZW-eE-PnK" firstAttribute="centerX" secondItem="EoZ-Wl-dAQ" secondAttribute="centerX" id="aGX-Kz-uEZ"/>
+                            <constraint firstItem="rJz-9U-LQ7" firstAttribute="trailing" secondItem="EoZ-Wl-dAQ" secondAttribute="trailing" id="eXW-da-aNW"/>
+                            <constraint firstItem="JBV-0g-kJZ" firstAttribute="trailing" secondItem="uGH-ct-bb8" secondAttribute="trailing" id="eky-qI-WAE"/>
+                            <constraint firstItem="HkX-xx-13t" firstAttribute="top" secondItem="JBV-0g-kJZ" secondAttribute="top" id="gZc-9I-FDc"/>
+                            <constraint firstItem="JBV-0g-kJZ" firstAttribute="bottom" secondItem="HkX-xx-13t" secondAttribute="bottom" id="hl5-Pf-DEz"/>
+                            <constraint firstItem="I67-EZ-Okk" firstAttribute="top" secondItem="8dH-mk-7Ef" secondAttribute="top" id="iCN-fj-xcF"/>
+                            <constraint firstItem="EoZ-Wl-dAQ" firstAttribute="top" secondItem="0ZW-eE-PnK" secondAttribute="bottom" constant="8" symbolic="YES" id="ieW-AV-vwX"/>
+                            <constraint firstAttribute="bottom" secondItem="rJz-9U-LQ7" secondAttribute="bottom" id="kQh-mT-Nsd"/>
+                            <constraint firstItem="I67-EZ-Okk" firstAttribute="leading" secondItem="5YX-qB-w0n" secondAttribute="leading" id="lhr-lj-DmQ"/>
+                            <constraint firstItem="I67-EZ-Okk" firstAttribute="trailing" secondItem="5YX-qB-w0n" secondAttribute="trailing" id="oqq-ea-m0q"/>
+                            <constraint firstItem="Tu4-PJ-67T" firstAttribute="bottom" secondItem="8dH-mk-7Ef" secondAttribute="bottom" id="qwD-wW-jbx"/>
+                            <constraint firstItem="HkX-xx-13t" firstAttribute="top" secondItem="oVT-d5-S7O" secondAttribute="top" constant="20" symbolic="YES" id="qwT-gf-bjJ"/>
+                            <constraint firstItem="EoZ-Wl-dAQ" firstAttribute="leading" secondItem="rJz-9U-LQ7" secondAttribute="leading" id="wEy-HL-KBU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="d10RollLabel" destination="8dH-mk-7Ef" id="Nj2-eR-Rin"/>
+                        <outlet property="d12RollLabel" destination="xjK-gK-hlo" id="vNG-eA-LxD"/>
+                        <outlet property="d20RollLabel" destination="YSI-RH-kPc" id="EVH-pO-MAb"/>
+                        <outlet property="d4RollLabel" destination="5YX-qB-w0n" id="LmT-7C-JBa"/>
+                        <outlet property="d6RollLabel" destination="WFH-N1-dcE" id="CzQ-H1-3Gc"/>
+                        <outlet property="d8RollLabel" destination="I67-EZ-Okk" id="PHQ-s9-Ps3"/>
+                        <outlet property="diceRollDisplay" destination="EoZ-Wl-dAQ" id="V65-sE-0Wn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5CI-oh-caK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2156" y="768"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="30p-KR-UGw">
             <objects>
@@ -523,7 +781,7 @@
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="t88-LG-4b7"/>
