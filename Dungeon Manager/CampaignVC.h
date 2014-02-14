@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Campaign.h"
+#import "ShakeVC.h"
 
 @protocol CampaignSaver <NSObject>
 
@@ -15,7 +16,7 @@
 
 @end
 
-@interface CampaignVC : UIViewController
+@interface CampaignVC : ShakeVC
 <UITextFieldDelegate, UIImagePickerControllerDelegate, UIActionSheetDelegate, UINavigationControllerDelegate>
 
 @property (unsafe_unretained) id <CampaignSaver> delegate;

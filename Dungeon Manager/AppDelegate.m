@@ -8,25 +8,27 @@
 
 #import "AppDelegate.h"
 
+@interface AppDelegate()
+
+@property (nonatomic) BOOL isShaking;
+@property (nonatomic) UIAccelerationValue *lastAcceleration;
+
+@end
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
 	self.mainController = (UINavigationController*)  self.window.rootViewController;
-	self.pressThreeFingers = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(tapScreen)];
-	self.pressThreeFingers.numberOfTouchesRequired = 3;
-	self.pressThreeFingers.minimumPressDuration = 0.5;
 	
-	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(enableTouches) name:@"ReenableTouches" object:nil];
-	[self enableTouches];
-
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(goToDice) name:@"GotShaken" object:nil];
+	
     return YES;
 }
-													   
--(void)tapScreen
+
+
+-(void)goToDice
 {
-	[self.window removeGestureRecognizer:self.pressThreeFingers];
-	
 	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 	{
 		[self.mainController pushViewController:[[UIStoryboard storyboardWithName:@"Main_iPad" bundle:nil] instantiateViewControllerWithIdentifier:@"diceController"] animated:YES];
@@ -35,11 +37,6 @@
 	{
 		[self.mainController pushViewController:[[UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil] instantiateViewControllerWithIdentifier:@"diceController"] animated:YES];
 	}
-}
-
--(void)enableTouches
-{
-	[self.window addGestureRecognizer:self.pressThreeFingers];
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application

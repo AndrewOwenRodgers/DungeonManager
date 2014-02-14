@@ -32,6 +32,8 @@
 		07EAACE718A7742500903F5A /* BackgroundView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07EAACE618A7742500903F5A /* BackgroundView.xib */; };
 		07EAACE918A7760A00903F5A /* PhysicalView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07EAACE818A7760A00903F5A /* PhysicalView.xib */; };
 		07EAACEF18A8311500903F5A /* AttributeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07EAACEE18A8311500903F5A /* AttributeView.xib */; };
+		07F3481618AEB77300BBED03 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07F3481518AEB77300BBED03 /* CoreMotion.framework */; };
+		07F3481918AEB88200BBED03 /* ShakeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F3481818AEB88200BBED03 /* ShakeVC.m */; };
 		07F8BC64189AF2B200DA8806 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07F8BC63189AF2B200DA8806 /* Foundation.framework */; };
 		07F8BC66189AF2B200DA8806 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07F8BC65189AF2B200DA8806 /* CoreGraphics.framework */; };
 		07F8BC68189AF2B200DA8806 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07F8BC67189AF2B200DA8806 /* UIKit.framework */; };
@@ -97,6 +99,9 @@
 		07EAACE618A7742500903F5A /* BackgroundView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BackgroundView.xib; sourceTree = "<group>"; };
 		07EAACE818A7760A00903F5A /* PhysicalView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhysicalView.xib; sourceTree = "<group>"; };
 		07EAACEE18A8311500903F5A /* AttributeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AttributeView.xib; sourceTree = "<group>"; };
+		07F3481518AEB77300BBED03 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		07F3481718AEB88200BBED03 /* ShakeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShakeVC.h; sourceTree = "<group>"; };
+		07F3481818AEB88200BBED03 /* ShakeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShakeVC.m; sourceTree = "<group>"; };
 		07F8BC60189AF2B200DA8806 /* Dungeon Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dungeon Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07F8BC63189AF2B200DA8806 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		07F8BC65189AF2B200DA8806 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -139,6 +144,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07F3481618AEB77300BBED03 /* CoreMotion.framework in Frameworks */,
 				07F8BC66189AF2B200DA8806 /* CoreGraphics.framework in Frameworks */,
 				07F8BC68189AF2B200DA8806 /* UIKit.framework in Frameworks */,
 				07F8BC64189AF2B200DA8806 /* Foundation.framework in Frameworks */,
@@ -188,6 +194,8 @@
 		0704FB2618AAB55A00F202C3 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				07F3481718AEB88200BBED03 /* ShakeVC.h */,
+				07F3481818AEB88200BBED03 /* ShakeVC.m */,
 				07F8BC7B189AF2B200DA8806 /* InitialViewController.h */,
 				07F8BC7C189AF2B200DA8806 /* InitialViewController.m */,
 				07F8BC9B189AF82A00DA8806 /* CampaignVC.h */,
@@ -255,6 +263,7 @@
 		07F8BC62189AF2B200DA8806 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				07F3481518AEB77300BBED03 /* CoreMotion.framework */,
 				07F8BC63189AF2B200DA8806 /* Foundation.framework */,
 				07F8BC65189AF2B200DA8806 /* CoreGraphics.framework */,
 				07F8BC67189AF2B200DA8806 /* UIKit.framework */,
@@ -478,6 +487,7 @@
 				07F8BCA0189AF9D800DA8806 /* CampaignCell.m in Sources */,
 				07157A5218A419BB0098B94A /* GameCharacterVC.m in Sources */,
 				07F8BC74189AF2B200DA8806 /* AppDelegate.m in Sources */,
+				07F3481918AEB88200BBED03 /* ShakeVC.m in Sources */,
 				07F8BC70189AF2B200DA8806 /* main.m in Sources */,
 				07F8BCAA189E191A00DA8806 /* CharacterCell.m in Sources */,
 			);

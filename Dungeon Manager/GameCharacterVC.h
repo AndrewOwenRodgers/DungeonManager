@@ -11,8 +11,9 @@
 #import <SwipeView.h>
 #import "AttributeCell.h"
 #import "CharacterSaving.h"
+#import "ShakeVC.h"
 
-@interface GameCharacterVC : UIViewController
+@interface GameCharacterVC : ShakeVC
 <UITextFieldDelegate, UITextViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate, DeleteAttribute, UIImagePickerControllerDelegate, UIActionSheetDelegate, UINavigationControllerDelegate>
 
 @property (unsafe_unretained) id <CharacterSaving> delegate;

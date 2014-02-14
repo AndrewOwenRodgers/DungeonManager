@@ -10,8 +10,9 @@
 #import "CharacterCell.h"
 #import "GameCharacter.h"
 #import "GameCharacterVC.h"
+#import "ShakeVC.h"
 
-@interface CharacterCollectionVCViewController : UIViewController
+@interface CharacterCollectionVCViewController : ShakeVC
 <UICollectionViewDelegate, UICollectionViewDataSource, NSCoding, CharacterDeletion, CharacterSaving>
 
 @property (strong, nonatomic) NSMutableArray *characters;

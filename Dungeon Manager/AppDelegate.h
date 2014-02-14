@@ -12,6 +12,5 @@
 
 @property (strong, nonatomic) UIWindow *window;
 @property (weak, nonatomic) UINavigationController* mainController;
-@property (strong, nonatomic) UILongPressGestureRecognizer *pressThreeFingers;
 
 @end

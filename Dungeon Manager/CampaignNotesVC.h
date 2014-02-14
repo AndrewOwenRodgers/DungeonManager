@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ShakeVC.h"
 
-@interface CampaignNotesVC : UIViewController
+@interface CampaignNotesVC : ShakeVC
 <UITextViewDelegate>;
 
 @property (strong, nonatomic) NSString *filePath;

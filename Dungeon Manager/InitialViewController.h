@@ -10,8 +10,9 @@
 #import "Campaign.h"
 #import "CampaignCell.h"
 #import "CampaignVC.h"
+#import "ShakeVC.h"
 
-@interface InitialViewController : UIViewController
+@interface InitialViewController : ShakeVC
 <UICollectionViewDataSource, UICollectionViewDelegate, NSCoding, CampaignDeletion, CampaignSaver>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *campaignCollection;

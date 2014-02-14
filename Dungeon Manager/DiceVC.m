@@ -12,6 +12,9 @@
 {
     CGFloat slideheight;
 }
+
+@property (strong, nonatomic) NSOperationQueue *backgroundQueue;
+
 @end
 
 @implementation DiceVC
@@ -33,6 +36,7 @@
 	self.numberOfd20s.delegate = self;
 	self.numberOfCustomDice.delegate = self;
 	self.numberOfFacesOnCustomDice.delegate = self;
+	self.backgroundQueue = [[NSOperationQueue alloc] init];
 }
 
 -(void)setUpLabel:(UILabel*)label
@@ -50,62 +54,68 @@
 
 -(IBAction)rolledDice:(id)sender
 {
-	if([sender tag] == 4)
-	{
-		[self roll:[self.numberOfd4s.text integerValue] ofDiceType:[sender tag]];
-	}
-	else if ([sender tag] == 6)
-	{
-		[self roll:[self.numberOfd6s.text integerValue] ofDiceType:[sender tag]];
-	}
-	else if ([sender tag] == 8)
-	{
-		[self roll:[self.numberOfd8s.text integerValue] ofDiceType:[sender tag]];
-	}
-	else if ([sender tag] == 10)
-	{
-		[self roll:[self.numberOfd10s.text integerValue] ofDiceType:[sender tag]];
-	}
-	else if ([sender tag] == 12)
-	{
-		[self roll:[self.numberOfd12s.text integerValue] ofDiceType:[sender tag]];
-	}
-	else if ([sender tag] == 20)
-	{
-		[self roll:[self.numberOfd20s.text integerValue] ofDiceType:[sender tag]];
-	}
-	else
-	{
-		[self roll:[self.numberOfCustomDice.text integerValue] ofDiceType:[self.numberOfFacesOnCustomDice.text integerValue]];
-	}
+	[self.backgroundQueue addOperationWithBlock:
+	 ^{
+		if([sender tag] == 4)
+		{
+			[self roll:[self.numberOfd4s.text integerValue] ofDiceType:[sender tag]];
+		}
+		else if ([sender tag] == 6)
+		{
+			[self roll:[self.numberOfd6s.text integerValue] ofDiceType:[sender tag]];
+		}
+		else if ([sender tag] == 8)
+		{
+			[self roll:[self.numberOfd8s.text integerValue] ofDiceType:[sender tag]];
+		}
+		else if ([sender tag] == 10)
+		{
+			[self roll:[self.numberOfd10s.text integerValue] ofDiceType:[sender tag]];
+		}
+		else if ([sender tag] == 12)
+		{
+			[self roll:[self.numberOfd12s.text integerValue] ofDiceType:[sender tag]];
+		}
+		else if ([sender tag] == 20)
+		{
+			[self roll:[self.numberOfd20s.text integerValue] ofDiceType:[sender tag]];
+		}
+		else
+		{
+			[self roll:[self.numberOfCustomDice.text integerValue] ofDiceType:[self.numberOfFacesOnCustomDice.text integerValue]];
+		}
+	 }];
 }
 
 -(void)roll:(NSInteger)numberOfDice ofDiceType:(NSInteger)numberOfFacesOnDice
 {
-	NSString *newDiceString = [NSString stringWithFormat:@"d%ds:", numberOfFacesOnDice];
+	NSString *newDiceString = [NSString stringWithFormat:@"d%lis", (long)numberOfFacesOnDice];
 	
 	for (int i = 0; i < numberOfDice; i++)
 	{
 		if (i == (numberOfDice - 1))
 		{
-			newDiceString = [newDiceString stringByAppendingString: [NSString stringWithFormat:@" %d", arc4random_uniform(numberOfFacesOnDice)]];
+			newDiceString = [newDiceString stringByAppendingString: [NSString stringWithFormat:@" %d", (arc4random_uniform(numberOfFacesOnDice) + 1)]];
 		}
 		else
 		{
-			newDiceString = [newDiceString stringByAppendingString: [NSString stringWithFormat:@" %d ::", arc4random_uniform(numberOfFacesOnDice)]];
+			newDiceString = [newDiceString stringByAppendingString: [NSString stringWithFormat:@" %d ::", (arc4random_uniform(numberOfFacesOnDice) + 1)]];
 		}
 	}
 	
 	newDiceString = [newDiceString stringByAppendingString:@"\r"];
 	
-	if (self.diceRollDisplay.text)
-	{
-		self.diceRollDisplay.text = [newDiceString stringByAppendingString:self.diceRollDisplay.text];
-	}
-	else
-	{
-		self.diceRollDisplay.text = newDiceString;
-	}
+	[[NSOperationQueue mainQueue] addOperationWithBlock:
+	^{
+		if (self.diceRollDisplay.text)
+		{
+			self.diceRollDisplay.text = [newDiceString stringByAppendingString:self.diceRollDisplay.text];
+		}
+		else
+		{
+			self.diceRollDisplay.text = newDiceString;
+		}
+	}];
 }
 
 - (IBAction)backButton:(id)sender
