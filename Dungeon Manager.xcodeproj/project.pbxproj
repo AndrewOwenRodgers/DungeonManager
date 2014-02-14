@@ -13,6 +13,7 @@
 		07157A5818A4987F0098B94A /* AttributeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 07157A5718A4987F0098B94A /* AttributeCell.m */; };
 		07157A5B18A4A3B80098B94A /* AttributeData.m in Sources */ = {isa = PBXBuildFile; fileRef = 07157A5A18A4A3B80098B94A /* AttributeData.m */; };
 		071E489318ADA37400EA96EC /* DiceVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 071E489218ADA37400EA96EC /* DiceVC.m */; };
+		071E489418AE010300EA96EC /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07F8BC75189AF2B200DA8806 /* Main_iPhone.storyboard */; };
 		072B4C7718A8A6CF0030061E /* CampaignNotesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 072B4C7618A8A6CF0030061E /* CampaignNotesVC.m */; };
 		072B4C7A18A948810030061E /* GameCharacterRootVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 072B4C7918A948810030061E /* GameCharacterRootVC.m */; };
 		0765C72118AAD9C80057D60F /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0704FB2A18AABC8700F202C3 /* Main_iPad.storyboard */; };
@@ -37,7 +38,6 @@
 		07F8BC6E189AF2B200DA8806 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07F8BC6C189AF2B200DA8806 /* InfoPlist.strings */; };
 		07F8BC70189AF2B200DA8806 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F8BC6F189AF2B200DA8806 /* main.m */; };
 		07F8BC74189AF2B200DA8806 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F8BC73189AF2B200DA8806 /* AppDelegate.m */; };
-		07F8BC77189AF2B200DA8806 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07F8BC75189AF2B200DA8806 /* Main_iPhone.storyboard */; };
 		07F8BC7D189AF2B200DA8806 /* InitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F8BC7C189AF2B200DA8806 /* InitialViewController.m */; };
 		07F8BC7F189AF2B200DA8806 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07F8BC7E189AF2B200DA8806 /* Images.xcassets */; };
 		07F8BC86189AF2B200DA8806 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07F8BC85189AF2B200DA8806 /* XCTest.framework */; };
@@ -392,6 +392,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				071E489418AE010300EA96EC /* Main_iPhone.storyboard in Resources */,
 				0785BA5718A963E800EFD769 /* AttributeCell.xib in Resources */,
 				0785BAA318A9654000EFD769 /* SkillCell.xib in Resources */,
 				0774EF7D18A9EB4B00CB0F8E /* FeatsView.xib in Resources */,
@@ -404,7 +405,6 @@
 				07EAACE518A76D9D00903F5A /* Statistics1View.xib in Resources */,
 				0774EF8518AA04AA00CB0F8E /* SpellAmountsView.xib in Resources */,
 				0765C72118AAD9C80057D60F /* Main_iPad.storyboard in Resources */,
-				07F8BC77189AF2B200DA8806 /* Main_iPhone.storyboard in Resources */,
 				07EAACE718A7742500903F5A /* BackgroundView.xib in Resources */,
 				07F8BC6E189AF2B200DA8806 /* InfoPlist.strings in Resources */,
 				0703D7E918AA112B005382A9 /* OtherView.xib in Resources */,
