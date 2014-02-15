@@ -189,4 +189,16 @@
     [self.view endEditing:YES];
 }
 
+-(BOOL)canBecomeFirstResponder
+{
+    return YES;
+}
+
+- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event {
+    if (motion == UIEventSubtypeMotionShake)
+    {
+		[self.navigationController popViewControllerAnimated:YES];
+	}
+}
+
 @end
