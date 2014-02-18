@@ -68,7 +68,7 @@
     {
         cell.campaignImageView.image = nil;
     }
-	cell.campaignImageView.layer.cornerRadius = 75;
+	cell.campaignImageView.layer.cornerRadius = (cell.campaignImageView.frame.size.height / 2);
 	cell.campaignImageView.layer.masksToBounds = YES;
     [cell.campaignImageView.layer setBorderColor: [[UIColor grayColor] CGColor]];
 	[cell.campaignImageView.layer setBorderWidth: 3.0];

@@ -81,7 +81,7 @@
     }
 	self.namesArray = [[NSMutableArray alloc] initWithObjects:@"Basic Info", @"Background", @"Appearance", @"Basic Stats", @"Attributes", @"Skills", @"Feats", @"Spells 1", @"Spells 2", @"Inventory", @"Other", nil];
 	
-	self.characterImageView.layer.cornerRadius = 50;
+	self.characterImageView.layer.cornerRadius = (self.characterImageView.frame.size.height / 2);
 	self.characterImageView.layer.masksToBounds = YES;
     [self.characterImageView.layer setBorderColor: [[UIColor grayColor] CGColor]];
 	[self.characterImageView.layer setBorderWidth: 3.0];
