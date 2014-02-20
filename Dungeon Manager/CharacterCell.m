@@ -35,8 +35,15 @@
 	self.characterAvatar.layer.cornerRadius = (self.characterAvatar.frame.size.height / 2);
 	self.characterAvatar.layer.masksToBounds = YES;
     [self.characterAvatar.layer setBorderColor: [[UIColor grayColor] CGColor]];
-	[self.characterAvatar.layer setBorderWidth: 3.0];
-	self.deleteButton.layer.cornerRadius = 10;
+	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+	{
+		[self.characterAvatar.layer setBorderWidth: 6.0];
+	}
+	else
+	{
+		[self.characterAvatar.layer setBorderWidth: 3.0];
+	}
+	self.deleteButton.layer.cornerRadius = self.deleteButton.frame.size.height / 3;
 	self.deleteButton.layer.masksToBounds = YES;
 }
 

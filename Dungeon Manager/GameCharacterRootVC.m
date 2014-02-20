@@ -147,7 +147,15 @@
 		button.layer.cornerRadius = 15;
 		button.layer.masksToBounds = YES;
 		[button.layer setBorderColor: [[UIColor colorWithRed:153/255.f green:1.f blue:1.f alpha:1.0] CGColor]];
-		[button.layer setBorderWidth: 3.0];
+
+		if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+		{
+			[button.layer setBorderWidth: 6.0];
+		}
+		else
+		{
+			[button.layer setBorderWidth: 3.0];
+		}
 		
 		CGFloat offsetX, offsetY;
 		offsetY = (190.f + (40 * (i / 2)));

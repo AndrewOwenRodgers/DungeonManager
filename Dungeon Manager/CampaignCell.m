@@ -12,7 +12,7 @@
 
 -(void)makeDeleteButtonRound
 {
-	self.deleteButton.layer.cornerRadius = 10;
+	self.deleteButton.layer.cornerRadius = self.deleteButton.frame.size.height / 3;
 	self.deleteButton.layer.masksToBounds = YES;
 }
 

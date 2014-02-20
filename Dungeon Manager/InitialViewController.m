@@ -71,7 +71,14 @@
 	cell.campaignImageView.layer.cornerRadius = (cell.campaignImageView.frame.size.height / 2);
 	cell.campaignImageView.layer.masksToBounds = YES;
     [cell.campaignImageView.layer setBorderColor: [[UIColor grayColor] CGColor]];
-	[cell.campaignImageView.layer setBorderWidth: 3.0];
+	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+	{
+		[cell.campaignImageView.layer setBorderWidth: 6.0];
+	}
+	else
+	{
+		[cell.campaignImageView.layer setBorderWidth: 3.0];
+	}
 	[cell makeDeleteButtonRound];
 
     return cell;

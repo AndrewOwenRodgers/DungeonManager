@@ -39,6 +39,20 @@
     [self.campaignImageView.layer setBorderColor: [[UIColor grayColor] CGColor]];
 	[self.campaignImageView.layer setBorderWidth: 3.0];
 	
+	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+	{
+		NSLayoutConstraint *constraint = [NSLayoutConstraint
+									  constraintWithItem:self.campaignImageView
+									  attribute:NSLayoutAttributeWidth
+									  relatedBy:NSLayoutRelationEqual
+									  toItem:self.campaignImageView
+									  attribute:NSLayoutAttributeHeight
+									  multiplier:1.0
+									  constant:0];
+		constraint.priority = 1000;
+		[self.campaignImageView.superview addConstraint:constraint];
+	}
+	
 	[self buttonSetUp:self.characterButton];
 	[self buttonSetUp:self.npcButton];
 	[self buttonSetUp:self.notesButton];
@@ -124,10 +138,17 @@
 -(void) buttonSetUp:(UIButton *)button
 {
 	[button setTitleColor:[UIColor colorWithRed:153/255.f green:1.f blue:1.f alpha:1.0] forState:UIControlStateNormal];
-	button.layer.cornerRadius = 30;
+	button.layer.cornerRadius = button.frame.size.height / 2;
 	button.layer.masksToBounds = YES;
 	[button.layer setBorderColor: [[UIColor colorWithRed:153/255.f green:1.f blue:1.f alpha:1.0] CGColor]];
-	[button.layer setBorderWidth: 3.0];
+	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+	{
+		[button.layer setBorderWidth: 6.0];
+	}
+	else
+	{
+		[button.layer setBorderWidth: 3.0];
+	}
 
 	button.backgroundColor = [UIColor colorWithRed:30/255.f green:65/255.f blue:86/255.f alpha:1.0];
 }
