@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="4514" systemVersion="13A3028" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GameCharacterVC">
+            <connections>
+                <outlet property="BioTextView" destination="zup-F7-CQE" id="L8C-0X-u57"/>
+                <outlet property="ageTextField" destination="qCG-D6-WOt" id="LDa-BC-8eR"/>
+                <outlet property="alignmentTextField" destination="DRT-7i-whm" id="Yeu-2P-7gN"/>
+                <outlet property="deityTextField" destination="vCw-bF-UTT" id="mjz-vm-MrL"/>
+                <outlet property="homelandTextField" destination="Ur3-Or-nbe" id="hxS-9y-IxC"/>
+                <outlet property="view" destination="pP0-jA-Xc2" id="r3E-Xs-JxX"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="pP0-jA-Xc2">
+            <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Homeland" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ur3-Or-nbe" userLabel="homeland">
+                    <rect key="frame" x="158" y="636" width="590" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.11706149189999999" green="0.25381174400000001" blue="0.33659904229999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="tintColor" red="0.11706149189999999" green="0.25381174400000001" blue="0.33659904229999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="textColor" red="0.59986139110000003" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="6Gt-bF-Khg"/>
+                    </connections>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Deity" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vCw-bF-UTT" userLabel="deity">
+                    <rect key="frame" x="93" y="674" width="655" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.11706149189999999" green="0.25381174400000001" blue="0.33659904229999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="tintColor" red="0.11706149189999999" green="0.25381174400000001" blue="0.33659904229999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="textColor" red="0.59986139110000003" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="R3f-Aq-oCk"/>
+                    </connections>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Alignment" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DRT-7i-whm" userLabel="alignment">
+                    <rect key="frame" x="158" y="712" width="590" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.11706149189999999" green="0.25381174400000001" blue="0.33659904229999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="tintColor" red="0.11706149189999999" green="0.25381174400000001" blue="0.33659904229999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="textColor" red="0.59986139110000003" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="K9w-6j-AiR"/>
+                    </connections>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Age" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qCG-D6-WOt" userLabel="age">
+                    <rect key="frame" x="93" y="750" width="655" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.11706149189999999" green="0.25381174400000001" blue="0.33659904229999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="tintColor" red="0.11706149189999999" green="0.25381174400000001" blue="0.33659904229999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="textColor" red="0.59986139110000003" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="HmM-fg-2re"/>
+                    </connections>
+                </textField>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Bio goes here" translatesAutoresizingMaskIntoConstraints="NO" id="zup-F7-CQE" userLabel="bio">
+                    <rect key="frame" x="20" y="788" width="728" height="200"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.11706149189999999" green="0.25381174400000001" blue="0.33659904229999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="Zrt-Ga-Lxs"/>
+                    </constraints>
+                    <color key="textColor" red="0.59986139110000003" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="oSU-Wa-1Bs"/>
+                    </connections>
+                </textView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Background" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kTC-FH-RD6">
+                    <rect key="frame" x="224" y="488" width="320" height="40"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="320" id="4mS-Jm-kqf"/>
+                        <constraint firstAttribute="height" constant="40" id="T1x-cq-57q"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                    <color key="textColor" red="0.59986139110000003" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Homeland:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tgg-l4-IjJ">
+                    <rect key="frame" x="20" y="640" width="107" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="107" id="PIV-pz-mJu"/>
+                        <constraint firstAttribute="height" constant="21" id="vRI-Zo-b9B"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                    <color key="textColor" red="0.59986139110000003" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deity:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EPA-c5-DYY">
+                    <rect key="frame" x="20" y="678" width="58" height="22"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                    <color key="textColor" red="0.59986139110000003" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alignment:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OZx-bR-1Jk">
+                    <rect key="frame" x="20" y="713" width="107" height="27"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                    <color key="textColor" red="0.59986139110000003" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GjQ-LD-San">
+                    <rect key="frame" x="20" y="751" width="46" height="27"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="46" id="cYm-Wj-DvD"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                    <color key="textColor" red="0.59986139110000003" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.050151209680000003" green="0.0" blue="0.14021547379999999" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="EPA-c5-DYY" firstAttribute="leading" secondItem="OZx-bR-1Jk" secondAttribute="leading" id="1yL-FJ-Tu4"/>
+                <constraint firstItem="qCG-D6-WOt" firstAttribute="trailing" secondItem="DRT-7i-whm" secondAttribute="trailing" id="2kf-4V-mo3"/>
+                <constraint firstItem="OZx-bR-1Jk" firstAttribute="leading" secondItem="GjQ-LD-San" secondAttribute="leading" id="9ku-JE-5ux"/>
+                <constraint firstItem="Tgg-l4-IjJ" firstAttribute="leading" secondItem="EPA-c5-DYY" secondAttribute="leading" id="AVo-c5-hQ7"/>
+                <constraint firstItem="vCw-bF-UTT" firstAttribute="leading" secondItem="EPA-c5-DYY" secondAttribute="trailing" constant="15" id="GQ9-S0-aIY"/>
+                <constraint firstItem="zup-F7-CQE" firstAttribute="centerX" secondItem="kTC-FH-RD6" secondAttribute="centerX" id="Gwh-7e-gAU"/>
+                <constraint firstItem="DRT-7i-whm" firstAttribute="trailing" secondItem="vCw-bF-UTT" secondAttribute="trailing" id="I5m-RW-Eca"/>
+                <constraint firstItem="Tgg-l4-IjJ" firstAttribute="leading" secondItem="pP0-jA-Xc2" secondAttribute="leading" constant="20" symbolic="YES" id="Ix2-tS-uPd"/>
+                <constraint firstItem="vCw-bF-UTT" firstAttribute="top" secondItem="Ur3-Or-nbe" secondAttribute="bottom" constant="8" symbolic="YES" id="O34-iK-JPT"/>
+                <constraint firstItem="vCw-bF-UTT" firstAttribute="centerY" secondItem="EPA-c5-DYY" secondAttribute="centerY" id="OCd-2n-faV"/>
+                <constraint firstItem="Ur3-Or-nbe" firstAttribute="leading" secondItem="Tgg-l4-IjJ" secondAttribute="trailing" constant="31" id="OLs-7r-u2X"/>
+                <constraint firstItem="vCw-bF-UTT" firstAttribute="top" secondItem="Tgg-l4-IjJ" secondAttribute="bottom" constant="13" id="PUt-fo-7eP"/>
+                <constraint firstAttribute="bottom" secondItem="zup-F7-CQE" secondAttribute="bottom" constant="36" id="Qjg-Yd-tta"/>
+                <constraint firstItem="OZx-bR-1Jk" firstAttribute="top" secondItem="EPA-c5-DYY" secondAttribute="bottom" constant="13" id="RMj-zn-tJv"/>
+                <constraint firstItem="qCG-D6-WOt" firstAttribute="leading" secondItem="GjQ-LD-San" secondAttribute="trailing" constant="27" id="Ru8-uj-82v"/>
+                <constraint firstItem="Tgg-l4-IjJ" firstAttribute="trailing" secondItem="OZx-bR-1Jk" secondAttribute="trailing" id="TJn-b0-aLK"/>
+                <constraint firstItem="qCG-D6-WOt" firstAttribute="top" secondItem="DRT-7i-whm" secondAttribute="bottom" constant="8" symbolic="YES" id="TQt-wi-IZb"/>
+                <constraint firstItem="vCw-bF-UTT" firstAttribute="baseline" secondItem="EPA-c5-DYY" secondAttribute="baseline" id="bBR-P1-J3m"/>
+                <constraint firstItem="Ur3-Or-nbe" firstAttribute="trailing" secondItem="vCw-bF-UTT" secondAttribute="trailing" id="d9e-Vt-VMJ"/>
+                <constraint firstItem="zup-F7-CQE" firstAttribute="top" secondItem="GjQ-LD-San" secondAttribute="bottom" constant="10" id="ekh-ap-pDe"/>
+                <constraint firstItem="Ur3-Or-nbe" firstAttribute="leading" secondItem="DRT-7i-whm" secondAttribute="leading" id="fGK-mb-Rkt"/>
+                <constraint firstItem="zup-F7-CQE" firstAttribute="trailing" secondItem="qCG-D6-WOt" secondAttribute="trailing" id="gLn-Ny-WjV"/>
+                <constraint firstAttribute="trailing" secondItem="Ur3-Or-nbe" secondAttribute="trailing" constant="20" symbolic="YES" id="kK8-HP-TqB"/>
+                <constraint firstItem="qCG-D6-WOt" firstAttribute="leading" secondItem="vCw-bF-UTT" secondAttribute="leading" id="kR4-JC-VQl"/>
+                <constraint firstItem="Ur3-Or-nbe" firstAttribute="top" secondItem="kTC-FH-RD6" secondAttribute="bottom" constant="108" id="kfO-jG-xp7"/>
+                <constraint firstItem="OZx-bR-1Jk" firstAttribute="top" secondItem="vCw-bF-UTT" secondAttribute="bottom" constant="9" id="naD-k1-BkX"/>
+                <constraint firstItem="DRT-7i-whm" firstAttribute="top" secondItem="vCw-bF-UTT" secondAttribute="bottom" constant="8" symbolic="YES" id="sVZ-Ek-nqM"/>
+                <constraint firstItem="zup-F7-CQE" firstAttribute="top" secondItem="qCG-D6-WOt" secondAttribute="bottom" constant="8" symbolic="YES" id="tjr-GJ-eXH"/>
+                <constraint firstItem="zup-F7-CQE" firstAttribute="leading" secondItem="GjQ-LD-San" secondAttribute="leading" id="v9b-HO-FLD"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

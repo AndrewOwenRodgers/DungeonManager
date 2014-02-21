@@ -24,55 +24,108 @@
     for (int i = 0; i < 11; i++)
     {
         GameCharacterVC *returner;
-        
-        if (i == 0)
-        {
-            returner = [[GameCharacterVC alloc] initWithNibName:@"NameView" bundle:nil];
-        }
-        else if (i == 1)
-        {
-            returner = [[GameCharacterVC alloc] initWithNibName:@"BackgroundView" bundle:nil];
-        }
-        else if (i == 2)
-        {
-            returner = [[GameCharacterVC alloc] initWithNibName:@"PhysicalView" bundle:nil];
-        }
-        else if (i == 3)
-        {
-            returner = [[GameCharacterVC alloc] initWithNibName:@"Statistics1View" bundle:nil];
-        }
-        else if (i == 4)
-        {
-            returner = [[GameCharacterVC alloc] initWithNibName:@"AttributeView" bundle:nil];
-        }
-        else if (i == 5)
-        {
-            returner = [[GameCharacterVC alloc] initWithNibName:@"SkillsView" bundle:nil];
-        }
-		else if (i == 6)
-        {
-            returner = [[GameCharacterVC alloc] initWithNibName:@"FeatsView" bundle:nil];
-        }
-		else if (i == 7)
-        {
-            returner = [[GameCharacterVC alloc] initWithNibName:@"SpellsView" bundle:nil];
-        }
-		else if (i == 8)
-        {
-            returner = [[GameCharacterVC alloc] initWithNibName:@"SpellAmountsView" bundle:nil];
-        }
-		else if (i == 9)
-        {
-            returner = [[GameCharacterVC alloc] initWithNibName:@"InventoryView" bundle:nil];
-        }
-		else if (i == 10)
-        {
-            returner = [[GameCharacterVC alloc] initWithNibName:@"OtherView" bundle:nil];
-        }
-        else
-        {
-            returner = [[GameCharacterVC alloc ] init];
-        }
+		if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+		{
+			if (i == 0)
+			{
+				returner = [[GameCharacterVC alloc] initWithNibName:@"NameViewiPad" bundle:nil];
+			}
+			else if (i == 1)
+			{
+				returner = [[GameCharacterVC alloc] initWithNibName:@"BackgroundViewiPad" bundle:nil];
+			}
+			else if (i == 2)
+			{
+				returner = [[GameCharacterVC alloc] initWithNibName:@"PhysicalViewiPad" bundle:nil];
+			}
+			else if (i == 3)
+			{
+				returner = [[GameCharacterVC alloc] initWithNibName:@"Statistics1ViewiPad" bundle:nil];
+			}
+			else if (i == 4)
+			{
+				returner = [[GameCharacterVC alloc] initWithNibName:@"AttributeViewiPad" bundle:nil];
+			}
+			else if (i == 5)
+			{
+				returner = [[GameCharacterVC alloc] initWithNibName:@"SkillsViewiPad" bundle:nil];
+			}
+			else if (i == 6)
+			{
+				returner = [[GameCharacterVC alloc] initWithNibName:@"FeatsViewiPad" bundle:nil];
+			}
+			else if (i == 7)
+			{
+				returner = [[GameCharacterVC alloc] initWithNibName:@"SpellsViewiPad" bundle:nil];
+			}
+			else if (i == 8)
+			{
+				returner = [[GameCharacterVC alloc] initWithNibName:@"SpellAmountsViewiPad" bundle:nil];
+			}
+			else if (i == 9)
+			{
+				returner = [[GameCharacterVC alloc] initWithNibName:@"InventoryViewiPad" bundle:nil];
+			}
+			else if (i == 10)
+			{
+				returner = [[GameCharacterVC alloc] initWithNibName:@"OtherViewiPad" bundle:nil];
+			}
+			else
+			{
+				returner = [[GameCharacterVC alloc ] init];
+			}
+		}
+		else
+		{
+			if (i == 0)
+			{
+				returner = [[GameCharacterVC alloc] initWithNibName:@"NameView" bundle:nil];
+			}
+			else if (i == 1)
+			{
+				returner = [[GameCharacterVC alloc] initWithNibName:@"BackgroundView" bundle:nil];
+			}
+			else if (i == 2)
+			{
+				returner = [[GameCharacterVC alloc] initWithNibName:@"PhysicalView" bundle:nil];
+			}
+			else if (i == 3)
+			{
+				returner = [[GameCharacterVC alloc] initWithNibName:@"Statistics1View" bundle:nil];
+			}
+			else if (i == 4)
+			{
+				returner = [[GameCharacterVC alloc] initWithNibName:@"AttributeView" bundle:nil];
+			}
+			else if (i == 5)
+			{
+				returner = [[GameCharacterVC alloc] initWithNibName:@"SkillsView" bundle:nil];
+			}
+			else if (i == 6)
+			{
+				returner = [[GameCharacterVC alloc] initWithNibName:@"FeatsView" bundle:nil];
+			}
+			else if (i == 7)
+			{
+				returner = [[GameCharacterVC alloc] initWithNibName:@"SpellsView" bundle:nil];
+			}
+			else if (i == 8)
+			{
+				returner = [[GameCharacterVC alloc] initWithNibName:@"SpellAmountsView" bundle:nil];
+			}
+			else if (i == 9)
+			{
+				returner = [[GameCharacterVC alloc] initWithNibName:@"InventoryView" bundle:nil];
+			}
+			else if (i == 10)
+			{
+				returner = [[GameCharacterVC alloc] initWithNibName:@"OtherView" bundle:nil];
+			}
+			else
+			{
+				returner = [[GameCharacterVC alloc ] init];
+			}
+		}
         
 		returner.characterImageView = self.characterImageView;
         returner.delegate = self.delegate;

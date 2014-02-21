@@ -362,7 +362,7 @@
     [UIView setAnimationBeginsFromCurrentState:YES];
     [UIView setAnimationDuration:(CGFloat)0.3];
     
-	[self.characterImageView setAlpha:1.f];
+	[self.characterImageView setAlpha:1.f]; 
     
     [UIView commitAnimations];
     

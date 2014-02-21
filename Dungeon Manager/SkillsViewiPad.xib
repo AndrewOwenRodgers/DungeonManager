@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="4514" systemVersion="13A3028" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GameCharacterVC">
+            <connections>
+                <outlet property="skillsCollection" destination="b56-KY-Khg" id="EU7-8b-IfE"/>
+                <outlet property="view" destination="rVH-s6-Y62" id="8Dk-d3-4Gp"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="rVH-s6-Y62">
+            <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Class Skills" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tzr-ZN-r3d">
+                    <rect key="frame" x="224" y="488" width="320" height="26"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="26" id="eME-mG-ttl"/>
+                        <constraint firstAttribute="width" constant="320" id="m9M-uW-fMT"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                    <color key="textColor" red="0.59986139110000003" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="b56-KY-Khg">
+                    <rect key="frame" x="0.0" y="574" width="768" height="450"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" red="0.050151209680000003" green="0.0" blue="0.14021547379999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="450" id="iCI-k5-4B7"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="8Sy-IS-nA8">
+                        <size key="itemSize" width="310" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <cells/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="jWM-Ll-Zw6"/>
+                        <outlet property="delegate" destination="-1" id="gzX-9m-LVK"/>
+                    </connections>
+                </collectionView>
+                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WIm-PW-4tX">
+                    <rect key="frame" x="310" y="528" width="149" height="33"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="33" id="i3m-zH-KDX"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                    <state key="normal" title="New Class Skill">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="newAttributeButton:" destination="-1" eventType="touchUpInside" id="My7-Ku-vJ9"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.050151209680000003" green="0.0" blue="0.14021547379999999" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="b56-KY-Khg" secondAttribute="trailing" id="2wR-Cb-utd"/>
+                <constraint firstItem="tzr-ZN-r3d" firstAttribute="centerX" secondItem="WIm-PW-4tX" secondAttribute="centerX" id="MJ2-cu-wbv"/>
+                <constraint firstItem="b56-KY-Khg" firstAttribute="centerX" secondItem="WIm-PW-4tX" secondAttribute="centerX" id="Nzl-fM-ldT"/>
+                <constraint firstItem="b56-KY-Khg" firstAttribute="leading" secondItem="rVH-s6-Y62" secondAttribute="leading" id="TXG-Dg-f6o"/>
+                <constraint firstItem="WIm-PW-4tX" firstAttribute="top" secondItem="tzr-ZN-r3d" secondAttribute="bottom" constant="14" id="ToX-U6-6eE"/>
+                <constraint firstItem="b56-KY-Khg" firstAttribute="top" secondItem="WIm-PW-4tX" secondAttribute="bottom" constant="13" id="VPu-Tr-XwH"/>
+                <constraint firstAttribute="bottom" secondItem="b56-KY-Khg" secondAttribute="bottom" id="b87-Z8-cmT"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
