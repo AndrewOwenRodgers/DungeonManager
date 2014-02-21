@@ -195,32 +195,41 @@
 		[button addTarget:self
 				   action:@selector(showViewAtIndex:)
 		 forControlEvents:UIControlEventTouchDown];
-		[button setTitle:self.namesArray[i] forState:UIControlStateNormal];
-		[button setTitleColor:[UIColor colorWithRed:153/255.f green:1.f blue:1.f alpha:1.0] forState:UIControlStateNormal];
-		button.layer.cornerRadius = 15;
-		button.layer.masksToBounds = YES;
-		[button.layer setBorderColor: [[UIColor colorWithRed:153/255.f green:1.f blue:1.f alpha:1.0] CGColor]];
-
+		CGFloat offsetX, offsetY;
+		
 		if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 		{
-			[button.layer setBorderWidth: 6.0];
+			offsetY = (500.f + (70 * (i / 2)));
+			
+			if (i % 2 == 0) {
+				offsetX = 10;
+			} else {
+				offsetX = 394;
+			}
+			
+			button.frame = CGRectMake(offsetX, offsetY, 364.0, 60.0);
+			[button.layer setBorderWidth: 5.0];
 		}
 		else
 		{
+			offsetY = (190.f + (40 * (i / 2)));
+			
+			if (i % 2 == 0) {
+				offsetX = 10;
+			} else {
+				offsetX = 170;
+			}
+			
+			button.frame = CGRectMake(offsetX, offsetY, 140.0, 30.0);
 			[button.layer setBorderWidth: 3.0];
 		}
-		
-		CGFloat offsetX, offsetY;
-		offsetY = (190.f + (40 * (i / 2)));
-		
-		if (i % 2 == 0) {
-			offsetX = 10;
-		} else {
-			offsetX = 170;
-		}
 
-		button.frame = CGRectMake(offsetX, offsetY, 140.0, 30.0);
 		button.tag = i;
+		[button setTitle:self.namesArray[i] forState:UIControlStateNormal];
+		[button setTitleColor:[UIColor colorWithRed:153/255.f green:1.f blue:1.f alpha:1.0] forState:UIControlStateNormal];
+		button.layer.cornerRadius = button.frame.size.height / 2;
+		button.layer.masksToBounds = YES;
+		[button.layer setBorderColor: [[UIColor colorWithRed:153/255.f green:1.f blue:1.f alpha:1.0] CGColor]];
 		button.backgroundColor = [UIColor colorWithRed:30/255.f green:65/255.f blue:86/255.f alpha:1.0];
 		[stuff addSubview:button];
 	}
