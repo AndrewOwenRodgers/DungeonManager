@@ -38,6 +38,7 @@
 		079E58C018B71F4C00C26011 /* SpellAmountsViewiPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 079E58BF18B71F4C00C26011 /* SpellAmountsViewiPad.xib */; };
 		079E58C218B720C400C26011 /* InventoryViewiPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 079E58C118B720C400C26011 /* InventoryViewiPad.xib */; };
 		079E58C418B720E800C26011 /* OtherViewiPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 079E58C318B720E800C26011 /* OtherViewiPad.xib */; };
+		07C8C92B18C7B36400782ABF /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07C8C92A18C7B36400782ABF /* iAd.framework */; };
 		07EAACE118A76BEF00903F5A /* NameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07EAACE018A76BEF00903F5A /* NameView.xib */; };
 		07EAACE518A76D9D00903F5A /* Statistics1View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07EAACE418A76D9D00903F5A /* Statistics1View.xib */; };
 		07EAACE718A7742500903F5A /* BackgroundView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07EAACE618A7742500903F5A /* BackgroundView.xib */; };
@@ -116,6 +117,7 @@
 		079E58BF18B71F4C00C26011 /* SpellAmountsViewiPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpellAmountsViewiPad.xib; sourceTree = "<group>"; };
 		079E58C118B720C400C26011 /* InventoryViewiPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InventoryViewiPad.xib; sourceTree = "<group>"; };
 		079E58C318B720E800C26011 /* OtherViewiPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OtherViewiPad.xib; sourceTree = "<group>"; };
+		07C8C92A18C7B36400782ABF /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		07EAACE018A76BEF00903F5A /* NameView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NameView.xib; sourceTree = "<group>"; };
 		07EAACE418A76D9D00903F5A /* Statistics1View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Statistics1View.xib; sourceTree = "<group>"; };
 		07EAACE618A7742500903F5A /* BackgroundView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BackgroundView.xib; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07C8C92B18C7B36400782ABF /* iAd.framework in Frameworks */,
 				07F3481618AEB77300BBED03 /* CoreMotion.framework in Frameworks */,
 				07F8BC66189AF2B200DA8806 /* CoreGraphics.framework in Frameworks */,
 				07F8BC68189AF2B200DA8806 /* UIKit.framework in Frameworks */,
@@ -296,6 +299,7 @@
 		07F8BC62189AF2B200DA8806 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				07C8C92A18C7B36400782ABF /* iAd.framework */,
 				07F3481518AEB77300BBED03 /* CoreMotion.framework */,
 				07F8BC63189AF2B200DA8806 /* Foundation.framework */,
 				07F8BC65189AF2B200DA8806 /* CoreGraphics.framework */,
