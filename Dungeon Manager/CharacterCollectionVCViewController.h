@@ -13,7 +13,7 @@
 #import "ShakeVC.h"
 
 @interface CharacterCollectionVCViewController : ShakeVC
-<UICollectionViewDelegate, UICollectionViewDataSource, NSCoding, CharacterDeletion, CharacterSaving>
+<UICollectionViewDelegate, UICollectionViewDataSource, NSCoding, UIAlertViewDelegate, CharacterDeletion, CharacterSaving>
 
 @property (strong, nonatomic) NSMutableArray *characters;
 @property (nonatomic) BOOL isPCVC;

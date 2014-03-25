@@ -13,6 +13,7 @@
 
 @property (strong, nonatomic) NSMutableArray *campaignArray;
 @property (strong, nonatomic) NSString *campaignFilePath;
+@property (nonatomic) NSInteger deleteNumber;
 
 @end
 
@@ -100,14 +101,14 @@
     {
         for (Campaign *campaign in self.campaignArray)
         {
-            if ([campaign.title isEqualToString:[NSString stringWithFormat:@"Campaign %i", matchingTitleCounter]])
+            if ([campaign.title isEqualToString:[NSString stringWithFormat:@"Campaign %li", (long)matchingTitleCounter]])
             {
                 matchingTitleCounter++;
             }
         }
     }
 
-    newCampaign.title = [NSString stringWithFormat:@"Campaign %i", matchingTitleCounter];
+    newCampaign.title = [NSString stringWithFormat:@"Campaign %li", (long)matchingTitleCounter];
     
     [self.campaignArray addObject:newCampaign];
     [self.campaignCollection reloadData];
@@ -115,26 +116,40 @@
     [self saveCampaigns];
 }
 
--(void)deleteCampaign: (NSInteger)campaignNumber
+-(void)deleteCampaign:(NSInteger)campaignNumber
 {
-    Campaign *deletedCampaign = [self.campaignArray objectAtIndex:campaignNumber];
-    [self.campaignArray removeObjectAtIndex:campaignNumber];
-    NSString *searchString = deletedCampaign.title;
-    
-    NSFileManager *fileManager = [NSFileManager defaultManager];
-    NSArray *filesInDocs = [fileManager contentsOfDirectoryAtPath:[getDocumentsDirectory docs]
-                                                            error:nil];
-    
-    for (NSString *path in filesInDocs)
-    {
-        NSString *completePath = [[[getDocumentsDirectory docs] stringByAppendingString:@"/"] stringByAppendingString:path];
-        if (!([completePath rangeOfString:searchString].location == NSNotFound))
-        {
-            [fileManager removeItemAtPath:completePath error:nil];
-        }
+	self.deleteNumber = campaignNumber;
+	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Are you sure?"
+													message:@"Once you delete the campaign, it'll be gone forever"
+												   delegate:self
+										  cancelButtonTitle:@"Yep!"
+										  otherButtonTitles:@"Never mind!", nil];
+	[alert show];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == alertView.cancelButtonIndex)
+	{
+		Campaign *deletedCampaign = [self.campaignArray objectAtIndex:self.deleteNumber];
+		[self.campaignArray removeObjectAtIndex:self.deleteNumber];
+		NSString *searchString = deletedCampaign.title;
+		
+		NSFileManager *fileManager = [NSFileManager defaultManager];
+		NSArray *filesInDocs = [fileManager contentsOfDirectoryAtPath:[getDocumentsDirectory docs]
+																error:nil];
+		
+		for (NSString *path in filesInDocs)
+		{
+			NSString *completePath = [[[getDocumentsDirectory docs] stringByAppendingString:@"/"] stringByAppendingString:path];
+			if (!([completePath rangeOfString:searchString].location == NSNotFound))
+			{
+				[fileManager removeItemAtPath:completePath error:nil];
+			}
+		}
+		[self saveCampaigns];
+		[self.campaignCollection reloadData];
     }
-    [self saveCampaigns];
-    [self.campaignCollection reloadData];
 }
 
 -(void) saveCampaigns

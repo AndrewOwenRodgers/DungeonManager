@@ -10,6 +10,8 @@
 
 @interface CharacterCollectionVCViewController ()
 
+@property (nonatomic) NSInteger deleteNumber;
+
 @end
 
 @implementation CharacterCollectionVCViewController
@@ -76,16 +78,23 @@
 
 -(void)deleteCharacter: (NSInteger)characterNumber
 {
+	self.deleteNumber = characterNumber;
 	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Are you sure?"
 													message:@"Once you delete the character, it'll be gone forever"
-												   delegate:nil
+												   delegate:self
 										  cancelButtonTitle:@"Yep!"
 										  otherButtonTitles:@"Never mind!", nil];
 	[alert show];
-	
-    [self.characters removeObjectAtIndex:characterNumber];
-    [self.characterCollection reloadData];
-    [self saveCharacters];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == alertView.cancelButtonIndex)
+	{
+		[self.characters removeObjectAtIndex:self.deleteNumber];
+		[self.characterCollection reloadData];
+		[self saveCharacters];
+    }
 }
 
 -(void)saveCharacters
