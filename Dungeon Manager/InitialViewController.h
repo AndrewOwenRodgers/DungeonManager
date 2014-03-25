@@ -11,6 +11,7 @@
 #import "CampaignCell.h"
 #import "CampaignVC.h"
 #import "ShakeVC.h"
+#import <iAd/ADBannerView.h>
 
 @interface InitialViewController : ShakeVC
 <UICollectionViewDataSource, UICollectionViewDelegate, NSCoding, CampaignDeletion, CampaignSaver>
@@ -18,5 +19,6 @@
 @property (weak, nonatomic) IBOutlet UICollectionView *campaignCollection;
 
 -(void)deleteCampaign: (NSInteger)campaignNumber;
+@property (weak, nonatomic) IBOutlet ADBannerView *banner;
 
 @end

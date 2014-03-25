@@ -111,6 +111,7 @@
                     <navigationItem key="navigationItem" id="yQh-nf-QyX"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="banner" destination="pfc-Mx-Xuc" id="ZQC-T0-B4j"/>
                         <outlet property="campaignCollection" destination="oM4-MH-iHW" id="tMf-Mv-sMY"/>
                     </connections>
                 </viewController>
@@ -470,6 +471,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="hh7-WP-VWH"/>
                     <connections>
+                        <outlet property="banner" destination="ffX-lC-qbo" id="Y0x-ft-wPe"/>
                         <outlet property="characterCollection" destination="91A-QB-r9E" id="1tm-E0-eXA"/>
                     </connections>
                 </viewController>
@@ -543,6 +545,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="hvK-Gj-cJs"/>
                     <connections>
+                        <outlet property="banner" destination="N10-zJ-9lG" id="du5-Re-ikI"/>
                         <outlet property="notes" destination="zK6-n1-v9i" id="nED-jw-KLO"/>
                     </connections>
                 </viewController>
@@ -939,6 +942,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="banner" destination="bCL-TU-1X2" id="2q2-eE-We2"/>
                         <outlet property="d10RollLabel" destination="8dH-mk-7Ef" id="Nj2-eR-Rin"/>
                         <outlet property="d12RollLabel" destination="xjK-gK-hlo" id="vNG-eA-LxD"/>
                         <outlet property="d20RollLabel" destination="YSI-RH-kPc" id="EVH-pO-MAb"/>

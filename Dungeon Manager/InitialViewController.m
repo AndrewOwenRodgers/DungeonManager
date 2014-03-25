@@ -9,6 +9,7 @@
 #import "InitialViewController.h"
 #import "getDocumentsDirectory.h"
 
+
 @interface InitialViewController ()
 
 @property (strong, nonatomic) NSMutableArray *campaignArray;

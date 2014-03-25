@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <iAd/ADBannerView.h>
 
 @interface DiceVC : UIViewController
-<UITextFieldDelegate>
+<UITextFieldDelegate, ADBannerViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextView *diceRollDisplay;
 @property (weak, nonatomic) IBOutlet UITextField *numberOfd4s;
@@ -26,6 +27,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *d10RollLabel;
 @property (weak, nonatomic) IBOutlet UILabel *d12RollLabel;
 @property (weak, nonatomic) IBOutlet UILabel *d20RollLabel;
+@property (weak, nonatomic) IBOutlet ADBannerView *banner;
 
 - (IBAction)backButton:(id)sender;
 

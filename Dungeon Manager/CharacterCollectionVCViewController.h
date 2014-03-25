@@ -11,14 +11,16 @@
 #import "GameCharacter.h"
 #import "GameCharacterVC.h"
 #import "ShakeVC.h"
+#import <iAd/ADBannerView.h>
 
 @interface CharacterCollectionVCViewController : ShakeVC
-<UICollectionViewDelegate, UICollectionViewDataSource, NSCoding, UIAlertViewDelegate, CharacterDeletion, CharacterSaving>
+<UICollectionViewDelegate, UICollectionViewDataSource, NSCoding, UIAlertViewDelegate, CharacterDeletion, CharacterSaving, ADBannerViewDelegate>
 
 @property (strong, nonatomic) NSMutableArray *characters;
 @property (nonatomic) BOOL isPCVC;
 @property (weak, nonatomic) IBOutlet UICollectionView *characterCollection;
 @property (strong, nonatomic) NSString *filePath;
+@property (weak, nonatomic) IBOutlet ADBannerView *banner;
 
 -(void)deleteCharacter:(NSInteger)characterNumber;
 

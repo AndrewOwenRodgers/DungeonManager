@@ -111,6 +111,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Ix8-Qu-ITs"/>
                     <connections>
+                        <outlet property="banner" destination="STY-2M-GNX" id="5vB-kM-bUT"/>
                         <outlet property="campaignCollection" destination="enc-hr-IzB" id="pQB-ir-SLv"/>
                     </connections>
                 </viewController>
@@ -266,6 +267,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Mnq-TR-CAo"/>
                     <connections>
+                        <outlet property="banner" destination="axG-Za-lr1" id="Ruv-oO-edh"/>
                         <outlet property="campaignImageView" destination="0gl-Ap-gJZ" id="4xJ-CV-c1H"/>
                         <outlet property="campaignTitleTextField" destination="fco-y5-aNi" id="8Te-jP-yWC"/>
                         <outlet property="characterButton" destination="pS0-dg-1ez" id="9zH-lL-hpJ"/>
@@ -418,6 +420,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="vF5-Bu-xfr"/>
                     <connections>
+                        <outlet property="banner" destination="x8i-if-dY7" id="fUc-n1-M9U"/>
                         <outlet property="characterCollection" destination="B0V-D1-mPU" id="0J0-91-F15"/>
                     </connections>
                 </viewController>
@@ -491,6 +494,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="y51-rG-32f"/>
                     <connections>
+                        <outlet property="banner" destination="cbd-Vr-zfh" id="bi7-4P-8EP"/>
                         <outlet property="notes" destination="KZy-1s-t0I" id="E27-Rf-QUS"/>
                     </connections>
                 </viewController>
@@ -992,6 +996,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="banner" destination="Be6-3N-j9v" id="sdi-KW-HdN"/>
                         <outlet property="d10RollLabel" destination="7qC-es-lr8" id="xJw-J0-nB4"/>
                         <outlet property="d12RollLabel" destination="ey6-rO-cY9" id="L45-hV-X7D"/>
                         <outlet property="d20RollLabel" destination="9K6-XY-ec9" id="vgR-ny-eME"/>

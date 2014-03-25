@@ -8,12 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "ShakeVC.h"
+#import <iAd/ADBannerView.h>
 
 @interface CampaignNotesVC : ShakeVC
-<UITextViewDelegate>;
+<UITextViewDelegate, ADBannerViewDelegate>;
 
 @property (strong, nonatomic) NSString *filePath;
 @property (weak, nonatomic) IBOutlet UITextView *notes;
+@property (weak, nonatomic) IBOutlet ADBannerView *banner;
 
 - (IBAction)backButton:(id)sender;
 
