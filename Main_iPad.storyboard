@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A3028" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="INp-86-LQa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="INp-86-LQa">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--Initial View Controller-->
@@ -90,6 +90,9 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="480" id="4iU-Me-jXK"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="sBo-lR-r71" id="lRJ-Pc-6wl"/>
+                                </connections>
                             </adBannerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -241,6 +244,9 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="480" id="HJR-ld-rPB"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="Vyk-JB-ISV" id="vfj-Gi-hGd"/>
+                                </connections>
                             </adBannerView>
                         </subviews>
                         <color key="backgroundColor" red="0.050151209680000003" green="0.0" blue="0.14021547379999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -391,6 +397,9 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="480" id="MsW-33-Qrl"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="G0P-Ld-Sup" id="Bex-5H-1hw"/>
+                                </connections>
                             </adBannerView>
                         </subviews>
                         <color key="backgroundColor" red="0.050151209680000003" green="0.0" blue="0.14021547379999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -462,6 +471,9 @@
                                     <constraint firstAttribute="height" constant="66" id="AmS-Ed-gdl"/>
                                     <constraint firstAttribute="width" constant="480" id="n52-z4-pxv"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="mww-m4-lfK" id="n7S-cX-f9R"/>
+                                </connections>
                             </adBannerView>
                         </subviews>
                         <color key="backgroundColor" red="0.050151209680000003" green="0.0" blue="0.14021547379999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -877,11 +889,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="Be6-3N-j9v">
-                                <rect key="frame" x="0.0" y="0.0" width="480" height="66"/>
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="66"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="480" id="biP-F5-8z0"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="B9O-dD-tq4" id="T1i-rm-1GO"/>
+                                </connections>
                             </adBannerView>
                         </subviews>
                         <color key="backgroundColor" red="0.050151209680000003" green="0.0" blue="0.14021547379999999" alpha="1" colorSpace="calibratedRGB"/>

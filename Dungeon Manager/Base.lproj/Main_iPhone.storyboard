@@ -88,6 +88,9 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="X4F-tG-WEc"/>
+                                </connections>
                             </adBannerView>
                         </subviews>
                         <color key="backgroundColor" red="0.050151209680000003" green="0.0" blue="0.14021547379999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -446,6 +449,9 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="t6B-tB-zsA"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="aUK-YM-iqV" id="z5Y-K8-SRK"/>
+                                </connections>
                             </adBannerView>
                         </subviews>
                         <color key="backgroundColor" red="0.050151209680000003" green="0.0" blue="0.14021547379999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -516,6 +522,9 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="RzF-q9-d09"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="t4k-Zw-yC3" id="5Yp-SU-LfI"/>
+                                </connections>
                             </adBannerView>
                         </subviews>
                         <color key="backgroundColor" red="0.050151209680000003" green="0.0" blue="0.14021547379999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -832,6 +841,9 @@
                             <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="bCL-TU-1X2">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="eTR-ep-Lqs" id="YYh-eZ-Rq6"/>
+                                </connections>
                             </adBannerView>
                         </subviews>
                         <color key="backgroundColor" red="0.050151209680000003" green="0.0" blue="0.14021547379999999" alpha="1" colorSpace="calibratedRGB"/>
