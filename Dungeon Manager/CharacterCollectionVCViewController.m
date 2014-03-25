@@ -76,8 +76,14 @@
 
 -(void)deleteCharacter: (NSInteger)characterNumber
 {
+	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Are you sure?"
+													message:@"Once you delete the character, it'll be gone forever"
+												   delegate:nil
+										  cancelButtonTitle:@"Yep!"
+										  otherButtonTitles:@"Never mind!", nil];
+	[alert show];
+	
     [self.characters removeObjectAtIndex:characterNumber];
-    
     [self.characterCollection reloadData];
     [self saveCharacters];
 }

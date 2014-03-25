@@ -20,6 +20,6 @@
 @property (weak, nonatomic) IBOutlet UICollectionView *characterCollection;
 @property (strong, nonatomic) NSString *filePath;
 
--(void)deleteCharacter:(int)characterNumber;
+-(void)deleteCharacter:(NSInteger)characterNumber;
 
 @end
