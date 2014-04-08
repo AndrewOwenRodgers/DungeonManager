@@ -11,10 +11,9 @@
 #import "GameCharacter.h"
 #import "GameCharacterVC.h"
 #import "ShakeVC.h"
-#import <iAd/ADBannerView.h>
 
 @interface CharacterCollectionVCViewController : ShakeVC
-<UICollectionViewDelegate, UICollectionViewDataSource, NSCoding, UIAlertViewDelegate, CharacterDeletion, CharacterSaving, ADBannerViewDelegate>
+<UICollectionViewDelegate, UICollectionViewDataSource, NSCoding, UIAlertViewDelegate, CharacterDeletion, CharacterSaving>
 
 @property (strong, nonatomic) NSMutableArray *characters;
 @property (nonatomic) BOOL isPCVC;

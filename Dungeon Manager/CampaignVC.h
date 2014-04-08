@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "Campaign.h"
 #import "ShakeVC.h"
-#import <iAd/ADBannerView.h>
 
 @protocol CampaignSaver <NSObject>
 
@@ -18,7 +17,7 @@
 @end
 
 @interface CampaignVC : ShakeVC
-<UITextFieldDelegate, UIImagePickerControllerDelegate, UIActionSheetDelegate, UINavigationControllerDelegate, ADBannerViewDelegate>
+<UITextFieldDelegate, UIImagePickerControllerDelegate, UIActionSheetDelegate, UINavigationControllerDelegate>
 
 @property (unsafe_unretained) id <CampaignSaver> delegate;
 @property (weak, nonatomic) Campaign *campaign;

@@ -8,10 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "ShakeVC.h"
-#import <iAd/ADBannerView.h>
 
 @interface CampaignNotesVC : ShakeVC
-<UITextViewDelegate, ADBannerViewDelegate>;
+<UITextViewDelegate>;
 
 @property (strong, nonatomic) NSString *filePath;
 @property (weak, nonatomic) IBOutlet UITextView *notes;

@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <iAd/ADBannerView.h>
 
 @interface ShakeVC : UIViewController
+<ADBannerViewDelegate>
 
 @end
