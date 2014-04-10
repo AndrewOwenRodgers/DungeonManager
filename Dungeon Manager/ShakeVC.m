@@ -40,4 +40,20 @@
 	}
 }
 
+#pragma mark - iAds
+
+- (void)bannerViewDidLoadAd:(ADBannerView *)banner {
+    if (banner.hidden) {
+        banner.hidden = FALSE;
+    }
+}
+
+- (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
+{
+    if (!banner.hidden)
+    {
+        banner.hidden = TRUE;
+    }
+}
+
 @end
