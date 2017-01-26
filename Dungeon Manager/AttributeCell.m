@@ -31,9 +31,9 @@
 	self.featDescription.delegate = self;
     
     self.attributeTextField.text = self.attribute.attributeName;
-    self.valueTextField.text = [NSString stringWithFormat:@"%d", self.attribute.attributeValue];
+    self.valueTextField.text = [NSString stringWithFormat:@"%zd", self.attribute.attributeValue];
     self.secondaryAttributeTextField.text = self.attribute.secondaryAttribute;
-    self.weightTextField.text = [NSString stringWithFormat:@"%d", self.attribute.attributeWeight];
+    self.weightTextField.text = [NSString stringWithFormat:@"%zd", self.attribute.attributeWeight];
 	self.featDescription.text = self.attribute.attributeDescription;
 }
 
@@ -78,7 +78,7 @@
 	UIToolbar* keyboardDoneButtonView = [[UIToolbar alloc] init];
 	[keyboardDoneButtonView sizeToFit];
 	UIBarButtonItem* doneButton = [[UIBarButtonItem alloc] initWithTitle:@"Done"
-																   style:UIBarButtonItemStyleBordered target:self
+																   style:UIBarButtonItemStylePlain target:self
 																  action:@selector(textViewBeDone:)];
 	[keyboardDoneButtonView setItems:[NSArray arrayWithObjects:doneButton, nil]];
 	textField.inputAccessoryView = keyboardDoneButtonView;
@@ -172,7 +172,7 @@
 	UIToolbar* keyboardDoneButtonView = [[UIToolbar alloc] init];
 	[keyboardDoneButtonView sizeToFit];
 	UIBarButtonItem* doneButton = [[UIBarButtonItem alloc] initWithTitle:@"Done"
-																   style:UIBarButtonItemStyleBordered target:self
+																   style:UIBarButtonItemStylePlain target:self
 																  action:@selector(textViewBeDone:)];
 	[keyboardDoneButtonView setItems:[NSArray arrayWithObjects:doneButton, nil]];
 	textView.inputAccessoryView = keyboardDoneButtonView;

@@ -58,7 +58,7 @@
     {
         for (GameCharacter *character in self.characters)
         {
-            if ([character.characterName isEqualToString:[NSString stringWithFormat:@"Unnamed %i", matchingTitleCounter]])
+            if ([character.characterName isEqualToString:[NSString stringWithFormat:@"Unnamed %zd", matchingTitleCounter]])
             {
                 matchingTitleCounter++;
             }
@@ -66,7 +66,7 @@
     }
     //There are better ways to run this search, but I'll do that later.
     
-    character.characterName = [NSString stringWithFormat:@"Unnamed %i", matchingTitleCounter];
+    character.characterName = [NSString stringWithFormat:@"Unnamed %zd", matchingTitleCounter];
     
     character.primaryClass = @"Person";
     character.totalLevel = 1;
