@@ -22,7 +22,7 @@
 - (void) initializeDisplay
 {
     self.characterName.text = self.cellCharacter.characterName;
-    self.levelAndClass.text = [NSString stringWithFormat:@"Level %i %@", self.cellCharacter.totalLevel, self.cellCharacter.primaryClass];
+    self.levelAndClass.text = [NSString stringWithFormat:@"Level %zd %@", self.cellCharacter.totalLevel, self.cellCharacter.primaryClass];
     
     if (self.cellCharacter.avatarPath)
     {

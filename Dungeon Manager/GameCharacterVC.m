@@ -64,19 +64,19 @@
     self.nameTextField.text = self.character.characterName;
     self.classTextField.text = self.character.primaryClass;
     self.raceTextField.text = self.character.race;
-    self.levelTextField.text = [NSString stringWithFormat:@"%d", self.character.primaryLevel];
-    self.XPTextField.text = [NSString stringWithFormat:@"%d", self.character.xp];
+    self.levelTextField.text = [NSString stringWithFormat:@"%zd", self.character.primaryLevel];
+    self.XPTextField.text = [NSString stringWithFormat:@"%zd", self.character.xp];
     self.homelandTextField.text = self.character.homeland;
     self.deityTextField.text = self.character.deity;
     self.alignmentTextField.text = self.character.alignment;
-    self.ageTextField.text = [NSString stringWithFormat:@"%d", self.character.age];
-    self.maxHPTextField.text = [NSString stringWithFormat:@"%d", self.character.maxHealth];
-    self.currentHPTextField.text = [NSString stringWithFormat:@"%d", self.character.currentHealth];
-    self.initiativeTextField.text = [NSString stringWithFormat:@"%d", self.character.initiativeModifier];
-    self.babTextField.text = [NSString stringWithFormat:@"%d", self.character.baseAttackBonus];
-    self.spellResistanceTextField.text = [NSString stringWithFormat:@"%d", self.character.spellResistance];
-    self.moneyTextField.text = [NSString stringWithFormat:@"%d", self.character.currency];
-    self.armorClassTextField.text = [NSString stringWithFormat:@"%d", self.character.armorClass];
+    self.ageTextField.text = [NSString stringWithFormat:@"%zd", self.character.age];
+    self.maxHPTextField.text = [NSString stringWithFormat:@"%zd", self.character.maxHealth];
+    self.currentHPTextField.text = [NSString stringWithFormat:@"%zd", self.character.currentHealth];
+    self.initiativeTextField.text = [NSString stringWithFormat:@"%zd", self.character.initiativeModifier];
+    self.babTextField.text = [NSString stringWithFormat:@"%zd", self.character.baseAttackBonus];
+    self.spellResistanceTextField.text = [NSString stringWithFormat:@"%zd", self.character.spellResistance];
+    self.moneyTextField.text = [NSString stringWithFormat:@"%zd", self.character.currency];
+    self.armorClassTextField.text = [NSString stringWithFormat:@"%zd", self.character.armorClass];
     self.genderTextField.text = self.character.gender;
     self.heightTextField.text = self.character.height;
     self.weightTextField.text = self.character.weight;
@@ -84,7 +84,7 @@
     self.eyeColorTextField.text = self.character.eyeColor;
     self.skinColorTextField.text = self.character.skinColor;
 	self.domainTextField.text = self.character.domain;
-	self.totalWeightLabel.text = [NSString stringWithFormat:@"%d", self.character.inventoryTotalWeight];
+	self.totalWeightLabel.text = [NSString stringWithFormat:@"%zd", self.character.inventoryTotalWeight];
     
     self.BioTextView.text = self.character.bio;
 	self.otherTextView.text = self.character.otherAbilitiesAndWounds;
@@ -214,7 +214,7 @@
 	{
 		self.character.inventoryTotalWeight = self.character.inventoryTotalWeight + (inventoryItem.attributeWeight * inventoryItem.attributeValue);
 	}
-	self.totalWeightLabel.text = [NSString stringWithFormat:@"%d", self.character.inventoryTotalWeight];
+	self.totalWeightLabel.text = [NSString stringWithFormat:@"%zd", self.character.inventoryTotalWeight];
 }
 
 #pragma mark -CollectionViews
@@ -339,7 +339,7 @@
 	UIToolbar* keyboardDoneButtonView = [[UIToolbar alloc] init];
 	[keyboardDoneButtonView sizeToFit];
 	UIBarButtonItem* doneButton = [[UIBarButtonItem alloc] initWithTitle:@"Done"
-																   style:UIBarButtonItemStyleBordered target:self
+																   style:UIBarButtonItemStylePlain target:self
 																  action:@selector(textViewBeDone:)];
 	[keyboardDoneButtonView setItems:[NSArray arrayWithObjects:doneButton, nil]];
 	textField.inputAccessoryView = keyboardDoneButtonView;
@@ -514,7 +514,7 @@
 	UIToolbar* keyboardDoneButtonView = [[UIToolbar alloc] init];
 	[keyboardDoneButtonView sizeToFit];
 	UIBarButtonItem* doneButton = [[UIBarButtonItem alloc] initWithTitle:@"Done"
-																   style:UIBarButtonItemStyleBordered target:self
+																   style:UIBarButtonItemStylePlain target:self
 																  action:@selector(textViewBeDone:)];
 	[keyboardDoneButtonView setItems:[NSArray arrayWithObjects:doneButton, nil]];
 	textView.inputAccessoryView = keyboardDoneButtonView;

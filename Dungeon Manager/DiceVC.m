@@ -95,11 +95,11 @@
 	{
 		if (i == (numberOfDice - 1))
 		{
-			newDiceString = [newDiceString stringByAppendingString: [NSString stringWithFormat:@" %d", (arc4random_uniform(numberOfFacesOnDice) + 1)]];
+			newDiceString = [newDiceString stringByAppendingString: [NSString stringWithFormat:@" %d", (arc4random_uniform((unsigned int)numberOfFacesOnDice) + 1)]];
 		}
 		else
 		{
-			newDiceString = [newDiceString stringByAppendingString: [NSString stringWithFormat:@" %d ::", (arc4random_uniform(numberOfFacesOnDice) + 1)]];
+			newDiceString = [newDiceString stringByAppendingString: [NSString stringWithFormat:@" %d ::", (arc4random_uniform((unsigned int)numberOfFacesOnDice) + 1)]];
 		}
 	}
 	
@@ -164,7 +164,7 @@
 	UIToolbar* keyboardDoneButtonView = [[UIToolbar alloc] init];
 	[keyboardDoneButtonView sizeToFit];
 	UIBarButtonItem* doneButton = [[UIBarButtonItem alloc] initWithTitle:@"Done"
-																   style:UIBarButtonItemStyleBordered target:self
+																   style:UIBarButtonItemStylePlain target:self
 																  action:@selector(textViewBeDone:)];
 	[keyboardDoneButtonView setItems:[NSArray arrayWithObjects:doneButton, nil]];
 	textField.inputAccessoryView = keyboardDoneButtonView;
